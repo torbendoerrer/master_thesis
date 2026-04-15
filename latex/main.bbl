@@ -1,0 +1,439 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{hoveExperiencesConductingSemistructured2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cc161aff2a542aa4c6ee2cc3d0f40bb1}{%
+           family={Hove},
+           familyi={H\bibinitperiod},
+           given={Siw\bibnamedelima Elisabeth},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25cd486853e6e2db64f379e001b1c324}{%
+           family={Anda},
+           familyi={A\bibinitperiod},
+           given={Bente},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{fullhash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{fullhashraw}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{bibnamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorbibnamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authornamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorfullhash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorfullhashraw}{5f8a96c0b18915520039aaa03b7a0f98}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{11th {{IEEE International Software Metrics Symposium}} ({{METRICS}}'05)}
+      \field{title}{Experiences from Conducting Semi-Structured Interviews in Empirical Software Engineering Research}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{10\bibrangedash pp}
+      \range{pages}{-1}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\WDJ7Y9EC\Hove und Anda - 2005 - Experiences from conducting semi-structured interviews in empirical software engineering research.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/1509301/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/1509301/
+      \endverb
+    \endentry
+    \entry{mayringQualitativeContentAnalysis2014}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=354e18c4014b84fb9bd1af1fc4d7371e}{%
+           family={Mayring},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {AUT}%
+      }
+      \strng{namehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{fullhash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{fullhashraw}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{bibnamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorbibnamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authornamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorfullhash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorfullhashraw}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{shorttitle}{Qualitative Content Analysis}
+      \field{title}{Qualitative Content Analysis: Theoretical Foundation, Basic Procedures and Software Solution}
+      \field{urlday}{7}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\3EX9PVSV\Mayring - 2014 - Qualitative content analysis theoretical foundation, basic procedures and software solution.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
+      \endverb
+    \endentry
+    \entry{runesonGuidelinesConductingReporting2009}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={Höst},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhashraw}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{bibnamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorbibnamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authornamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhashraw}{d487493fbde07f44f703e74cfc39b73d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1382-3256, 1573-7616}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{shortjournal}{Empir Software Eng}
+      \field{title}{Guidelines for Conducting and Reporting Case Study Research in Software Engineering}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 164}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s10664-008-9102-8
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\N6NE4MD7\Runeson und Höst - 2009 - Guidelines for conducting and reporting case study research in software engineering.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10664-008-9102-8
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10664-008-9102-8
+      \endverb
+    \endentry
+    \entry{seamanQualitativeMethodsEmpirical1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=12944d73629f9742efc9d2f6f71fdd5c}{%
+           family={Seaman},
+           familyi={S\bibinitperiod},
+           given={Carolyn\bibnamedelima B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{fullhash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{fullhashraw}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{bibnamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorbibnamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authornamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorfullhash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorfullhashraw}{12944d73629f9742efc9d2f6f71fdd5c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on software engineering}
+      \field{number}{4}
+      \field{title}{Qualitative Methods in Empirical Studies of Software Engineering}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{25}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{557\bibrangedash 572}
+      \range{pages}{16}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\F56KPK24\Seaman - 1999 - Qualitative methods in empirical studies of software engineering.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/799955/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/799955/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{hoveExperiencesConductingSemistructured2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cc161aff2a542aa4c6ee2cc3d0f40bb1}{%
+           family={Hove},
+           familyi={H\bibinitperiod},
+           given={Siw\bibnamedelima Elisabeth},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25cd486853e6e2db64f379e001b1c324}{%
+           family={Anda},
+           familyi={A\bibinitperiod},
+           given={Bente},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{fullhash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{fullhashraw}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{bibnamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorbibnamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authornamehash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorfullhash}{5f8a96c0b18915520039aaa03b7a0f98}
+      \strng{authorfullhashraw}{5f8a96c0b18915520039aaa03b7a0f98}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{11th {{IEEE International Software Metrics Symposium}} ({{METRICS}}'05)}
+      \field{title}{Experiences from Conducting Semi-Structured Interviews in Empirical Software Engineering Research}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{10\bibrangedash pp}
+      \range{pages}{-1}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\WDJ7Y9EC\Hove und Anda - 2005 - Experiences from conducting semi-structured interviews in empirical software engineering research.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/1509301/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/1509301/
+      \endverb
+    \endentry
+    \entry{mayringQualitativeContentAnalysis2014}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=354e18c4014b84fb9bd1af1fc4d7371e}{%
+           family={Mayring},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {AUT}%
+      }
+      \strng{namehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{fullhash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{fullhashraw}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{bibnamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorbibnamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authornamehash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorfullhash}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \strng{authorfullhashraw}{354e18c4014b84fb9bd1af1fc4d7371e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{shorttitle}{Qualitative Content Analysis}
+      \field{title}{Qualitative Content Analysis: Theoretical Foundation, Basic Procedures and Software Solution}
+      \field{urlday}{7}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\3EX9PVSV\Mayring - 2014 - Qualitative content analysis theoretical foundation, basic procedures and software solution.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
+      \endverb
+    \endentry
+    \entry{runesonGuidelinesConductingReporting2009}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={Höst},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhashraw}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{bibnamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorbibnamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authornamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhashraw}{d487493fbde07f44f703e74cfc39b73d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1382-3256, 1573-7616}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2}
+      \field{shortjournal}{Empir Software Eng}
+      \field{title}{Guidelines for Conducting and Reporting Case Study Research in Software Engineering}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 164}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s10664-008-9102-8
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\N6NE4MD7\Runeson und Höst - 2009 - Guidelines for conducting and reporting case study research in software engineering.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10664-008-9102-8
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10664-008-9102-8
+      \endverb
+    \endentry
+    \entry{seamanQualitativeMethodsEmpirical1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=12944d73629f9742efc9d2f6f71fdd5c}{%
+           family={Seaman},
+           familyi={S\bibinitperiod},
+           given={Carolyn\bibnamedelima B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{fullhash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{fullhashraw}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{bibnamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorbibnamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authornamehash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorfullhash}{12944d73629f9742efc9d2f6f71fdd5c}
+      \strng{authorfullhashraw}{12944d73629f9742efc9d2f6f71fdd5c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on software engineering}
+      \field{number}{4}
+      \field{title}{Qualitative Methods in Empirical Studies of Software Engineering}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{25}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{557\bibrangedash 572}
+      \range{pages}{16}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\F56KPK24\Seaman - 1999 - Qualitative methods in empirical studies of software engineering.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/799955/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/799955/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,30 @@
+% !TeX root = main.tex
+
+\documentclass[12pt, a4paper, oneside]{book}
+
+% --- Pakete ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Zitierstil (BibLaTeX mit Biber)
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{literatur.bib} % Deine exportierte Datei
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+    \title{Konzeption und Evaluation eines Multi-Agenten-Systems zur automatisierten Migration von imperativer LO-VC Logik zu deklarativer AVC Syntax am Beispiel der msg systems ag }
+    \author{Torben Dörrer}
+\end{titlepage}
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{chapter/01_einleitung}
+\include{chapter/03_experteninterview}
+
+\backmatter
+\printbibliography % Hier erscheint das Verzeichnis
+
+\end{document}
