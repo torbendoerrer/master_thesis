@@ -6,6 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage[title, titletoc]{appendix}
 
 % Zitierstil (BibLaTeX mit Biber)
 \usepackage[backend=biber, style=apa]{biblatex}
@@ -24,7 +26,13 @@
 \include{chapter/01_einleitung}
 \include{chapter/03_experteninterview}
 
+
 \backmatter
 \printbibliography % Hier erscheint das Verzeichnis
+
+\begin{appendices}
+        % Hier binden wir die Anhang-Datei ein
+        \include{chapter/anhang}
+\end{appendices}
 
 \end{document}
