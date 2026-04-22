@@ -1,0 +1,119 @@
+% !TeX root = ../main.tex
+\chapter{Related Work}
+\label{ch:relatedwork}
+Die Automatisierung komplexer Software-Migrationen erfordert ein tiefgreifendes Verständnis sowohl 
+der proprietären Zieldomäne als auch der neuesten informationstechnischen Möglichkeiten. 
+Da die wissenschaftliche Forschungslage an der direkten Schnittstelle zwischen proprietärer 
+SAP-Migration und generativer Künstlicher Intelligenz bislang äußerst dünn besetzt ist, ordnet 
+dieses Kapitel die vorliegende Arbeit anhand hochaktueller Publikationen aus angrenzenden 
+Disziplinen in den Stand der Technik ein. Hierzu werden zunächst die spezifischen prozessualen 
+Hürden bei der Transformation von SAP-Konfigurationsmodellen beleuchtet, um die Limitierungen 
+aktueller Standardwerkzeuge aufzuzeigen. Daran anknüpfend wird der Einsatz von Large Language 
+Models (LLMs) für die Code-Migration diskutiert, wobei insbesondere die empirisch belegten Grenzen 
+monolithischer Ansätze bei strikten Architekturvorgaben herausgearbeitet werden. Abschließend wird 
+der aktuelle State of the Art zu Multi-Agenten-Systemen (MAS) vorgestellt, um die methodische 
+Forschungslücke für die semantische Migration von proprietärer Constraint-Logik logisch herzuleiten.
+
+Die Migration von etablierten ERP-Systemen auf SAP S/4HANA zwingt Unternehmen zur Überführung ihrer 
+historisch gewachsenen Produktmodelle von der klassischen Variantenkonfiguration (LO-VC) in die 
+Advanced Variant Configuration (AVC). \textcite{matilainenChangeRequirementsProduct2024} verdeutlicht in seiner Untersuchung zu 
+S/4HANA-Produktdatenstrukturen, dass dieser Systemwechsel weit über ein rein syntaktisches Update 
+hinausgeht. Aufgrund der exponentiell wachsenden Variantenvielfalt bei konfigurierbaren Materialien 
+wird im AVC eine strikte Modellierung durch neue Konfigurationsprofile und harte deklarative 
+Constraints zwingend erforderlich.
+
+Ein kritischer Erfolgsfaktor der Migration ist dabei die vorgelagerte Datenbereinigung. Wie 
+\textcite{matilainenChangeRequirementsProduct2024} aufzeigt, müssen historische Altlasten und ungenutzte Merkmale vor der 
+Systemumstellung zwingend identifiziert und entfernt werden, um die Performance und Struktur des 
+neuen Systems nicht zu belasten. Obgleich SAP für diesen Prozess Standardwerkzeuge, wie 
+beispielsweise Transition Workspaces und das Migration Cockpit, zur Verfügung stellt, stoßen diese 
+bei der logischen Transformation an ihre Grenzen. Diese Werkzeuge arbeiten primär deterministisch 
+und fokussieren sich auf die reine Massendatenübernahme. Die komplexe, semantische Restrukturierung 
+von historischem Beziehungswissen in die deklarative AVC-Logik sowie die inhaltliche Bereinigung 
+des Legacy-Codes verbleiben als stark fragmentierter, manueller Flaschenhals bei den Fachexperten. 
+Die Literatur verdeutlicht somit, dass die konzeptionelle Vorbereitung und Logik-Transformation im 
+aktuellen Industrie-Standard stark manuell geprägt ist, woraus sich ein zwingender Bedarf an 
+intelligenten Automatisierungsansätzen ableitet.
+
+Die rasanten Fortschritte im Bereich der Large Language Models (LLMs) haben die Möglichkeiten der 
+automatisierten Code-Generierung und -Transformation grundlegend erweitert \parencite{karabiyikRefactorGPTChatGPTbasedMultiagent2025}. 
+Dennoch belegen aktuelle Forschungsarbeiten, dass der direkte Einsatz von LLMs für die Migration 
+komplexer Altsysteme – oft als „Single-Prompt-Ansatz“ oder „Monolithic Prompting“ bezeichnet – in 
+realen Produktionsumgebungen kaum praktikable Ergebnisse liefert.
+
+Die Ursache hierfür liegt primär in der Unfähigkeit monolithischer Ansätze, spezifische 
+Architekturvorgaben und interne Framework-Abhängigkeiten zu berücksichtigen. \textcite{motiLegacyTranslateLLMbasedMultiAgent2026} 
+demonstrieren in ihrer Untersuchung zum Framework LegacyTranslate, dass naive LLM-Übersetzungen 
+bei der Migration industrieller Codebasen eine Kompilierrate von 0 \% erreichen können. Während der 
+generierte Code zwar syntaktisch korrekt erscheint, scheitert er an der fehlenden Integration
+notwendiger interner Schnittstellen (APIs) und domänenspezifischer Logik \parencite{motiLegacyTranslateLLMbasedMultiAgent2026}. 
+Ähnliche Defizite dokumentieren Xu et al. (2025) im Kontext von MANTRA: Während spezialisierte 
+Systeme hohe Erfolgsquoten erzielen, erreichen monolithische Basismodelle bei komplexen 
+strukturellen Änderungen (wie dem „Move Method“-Refactoring) lediglich eine Erfolgsquote von 8,7 \%.
+
+Darüber hinaus identifizieren \textcite{karabiyikRefactorGPTChatGPTbasedMultiagent2025} und 
+\textcite{oueslatiRefAgentMultiagentLLMbased2026} konzeptionelle Schwächen 
+in der Kontrollierbarkeit solcher „One-Shot“-Ansätze. Ohne eine Aufteilung in modulare 
+Arbeitsschritte bleibt der Transformationsprozess eine intransparente „Blackbox“, die keine 
+funktionalen Garantien bietet und bei längeren Interaktionen zu Halluzinationen neigt 
+\parencite{oueslatiRefAgentMultiagentLLMbased2026,karabiyikRefactorGPTChatGPTbasedMultiagent2025}. Die Literatur macht somit deutlich, dass für eine 
+erfolgreiche semantische Transformation – insbesondere unter Berücksichtigung von restriktiven 
+Vorgaben wie der SAP „Clean Core“-Strategie – eine Loslösung von statischen Einzelinstruktionen hin 
+zu dynamischen, mehrstufigen Prozessen zwingend erforderlich ist.
+
+Um die Unzulänglichkeiten monolithischer Ansätze zu überwinden, rückt die aktuelle Forschung 
+zunehmend Multi-Agenten-Systeme (MAS) in den Fokus, die auf dem Prinzip der verteilten Kognition 
+und spezialisierter Rollenverteilung basieren. Das Kernkonzept dieser Architekturen besteht darin, 
+den Transformationsprozess in logisch abgegrenzte Teilaufgaben zu zerlegen, die von kooperierenden 
+Agenten autonom bearbeitet werden \parencite{oueslatiRefAgentMultiagentLLMbased2026,karabiyikRefactorGPTChatGPTbasedMultiagent2025}.
+
+Ein wegweisendes Paradigma stellt hierbei die sequentielle Orchestrierung dar, wie sie im Framework 
+RefactorGPT realisiert wird. Durch die Aufteilung in spezialisierte Rollen – von der Analyse der 
+Strategie über die strukturelle Transformation bis hin zur Fehlerbehebung durch einen dedizierten 
+„FixerAgent“ – wird der Migrationsprozess von einer intransparenten Blackbox in einen 
+kontrollierbaren und modularen Workflow überführt \parencite{karabiyikRefactorGPTChatGPTbasedMultiagent2025}. 
+Die Überlegenheit dieser Rollenspezialisierung wird durch das Framework RefAgent bestätigt: 
+\textcite{oueslatiRefAgentMultiagentLLMbased2026} belegen empirisch, dass ein System aus 
+spezialisierten Agenten für Planung, Generierung und Validierung die Fehlerquote und die Neigung 
+zu Halluzinationen bei komplexen Interaktionen signifikant reduziert.
+
+Ein zentrales Merkmal dieser modernen Architekturen ist die Integration autonomer Feedback-Schleifen
+zur Sicherstellung der funktionalen Korrektheit. Das System MANTRA nutzt hierfür einen 
+„Repair Agent“, der mittels „Verbal Reinforcement Learning“ Compiler-Fehler und Test-Logs 
+analysiert, um den generierten Code iterativ zu korrigieren. Dieser Ansatz ermöglichte eine 
+Steigerung der Erfolgsquote bei komplexen Transformationen von 8,7 \% auf 82,8 \% \parencite{xuMANTRAEnhancingAutomated2025}.
+
+Speziell für die Migration in restriktiven Unternehmensumgebungen verdeutlicht das Projekt 
+LegacyTranslate \textcite{motiLegacyTranslateLLMbasedMultiAgent2026} zudem die Notwendigkeit des 
+sogenannten „API Grounding“. 
+Da die bloße Übersetzung der Syntax in industriellen Frameworks oft zu nicht kompilierbarem Code 
+führt, integriert LegacyTranslate spezialisierte Agenten, die den Zielcode aktiv an interne 
+Architekturvorgaben und Bibliotheken anpassen \parencite{motiLegacyTranslateLLMbasedMultiAgent2026}. Zusammenfassend lässt der 
+aktuelle Stand der Forschung erkennen, dass die Kombination aus rollenbasierter Spezialisierung, 
+kontextueller Anreicherung und iterativen Validierungszyklen die einzige methodische Antwort auf 
+die Komplexität industrieller Legacy-Migrationen darstellt.
+
+
+Trotz der empirisch nachgewiesenen Überlegenheit von Multi-Agenten-Systemen bei der Automatisierung 
+von Code-Übersetzungen offenbart die aktuelle Literatur eine signifikante Lücke hinsichtlich 
+proprietärer ERP-Ökosysteme. Während etablierte Frameworks wie MANTRA \textcite{xuMANTRAEnhancingAutomated2025} 
+oder LegacyTranslate \textcite{motiLegacyTranslateLLMbasedMultiAgent2026} primär auf 
+objektorientierte oder klassisch prozedurale Standardsprachen (wie Java oder PL/SQL) 
+fokussiert sind, fehlt bislang die Anwendung kollaborativer KI-Architekturen auf die 
+domänenspezifische Constraint-Logik der SAP.
+
+Wie die Untersuchung von \textcite{matilainenChangeRequirementsProduct2024} verdeutlicht, 
+erfordert die Migration von LO-VC zu AVC nicht nur eine syntaktische Konvertierung, sondern 
+eine tiefgreifende semantische Restrukturierung. Hierzu zählen insbesondere die inhaltliche 
+Auflösung historischer, kognitiver Altlasten und die Überführung prozeduraler Vorbedingungen in ein 
+streng deklaratives, mathematisches Lösungsnetzwerk. Bisherige wissenschaftliche MAS-Ansätze 
+bieten keine architektonische Antwort auf dieses fachliche Umdenken und die strikten 
+„Clean Core“-Richtlinien, die bei der SAP-Migration als harte Systemgrenzen fungieren.
+
+Genau an dieser methodischen Schnittstelle setzt die vorliegende Arbeit an. Sie schließt die 
+identifizierte Forschungslücke, indem sie die Konzepte arbeitsteiliger Agenten-Architekturen auf 
+die spezifischen Herausforderungen der SAP-Variantenkonfiguration überträgt. Durch die Konzeption 
+und Evaluierung eines spezialisierten Multi-Agenten-Systems zur semantischen Migration von LO-VC 
+nach AVC wird ein Lösungsansatz entwickelt, der den aktuellen manuellen Flaschenhals der 
+Logik-Transformation systematisch adressiert und das Systemverhalten aktiv an die moderne 
+Zielarchitektur anpasst.

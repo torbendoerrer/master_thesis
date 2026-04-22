@@ -1,19 +1,21 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Experteninterview}{2}{}%
-\contentsline {section}{\numberline {1.1}Zielsetzung und Erkenntnisinteresse}{2}{}%
-\contentsline {section}{\numberline {1.2}Methodisches Forschungsdesign}{2}{}%
-\contentsline {section}{\numberline {1.3}Datenerhebung und Auswertung}{4}{}%
-\contentsline {section}{\numberline {1.4}Ergebnisse der Befragung}{5}{}%
-\contentsline {subsection}{\numberline {1.4.1}Kognitive Altlasten und historischer Code}{6}{}%
-\contentsline {subsection}{\numberline {1.4.2}Paradigmenwechsel und syntaktisches Umdenken}{6}{}%
-\contentsline {subsection}{\numberline {1.4.3}Fragmentierung manueller Prozessschritte}{6}{}%
-\contentsline {subsection}{\numberline {1.4.4}Limitierungen bestehender Standard-Tools}{7}{}%
-\contentsline {subsection}{\numberline {1.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{7}{}%
-\contentsline {subsection}{\numberline {1.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{7}{}%
-\contentsline {section}{\numberline {1.5}Implikationen für die Systemarchitektur}{8}{}%
-\contentsline {subsection}{\numberline {1.5.1}Funktionale Anforderungen aus der Expertenperspektive}{8}{}%
-\contentsline {subsection}{\numberline {1.5.2}Architektonische Paradigmen und Beratungsansatz}{8}{}%
-\contentsline {subsection}{\numberline {1.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{9}{}%
-\contentsline {subsection}{\numberline {1.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{9}{}%
-\contentsline {chapter}{Anhang Anhang}{11}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{12}{}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{}%
+\contentsline {chapter}{\numberline {2}Related Work}{2}{}%
+\contentsline {chapter}{\numberline {3}Experteninterview}{6}{}%
+\contentsline {section}{\numberline {3.1}Zielsetzung und Erkenntnisinteresse}{6}{}%
+\contentsline {section}{\numberline {3.2}Methodisches Forschungsdesign}{6}{}%
+\contentsline {section}{\numberline {3.3}Datenerhebung und Auswertung}{8}{}%
+\contentsline {section}{\numberline {3.4}Ergebnisse der Befragung}{9}{}%
+\contentsline {subsection}{\numberline {3.4.1}Kognitive Altlasten und historischer Code}{10}{}%
+\contentsline {subsection}{\numberline {3.4.2}Paradigmenwechsel und syntaktisches Umdenken}{10}{}%
+\contentsline {subsection}{\numberline {3.4.3}Fragmentierung manueller Prozessschritte}{10}{}%
+\contentsline {subsection}{\numberline {3.4.4}Limitierungen bestehender Standard-Tools}{11}{}%
+\contentsline {subsection}{\numberline {3.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{11}{}%
+\contentsline {subsection}{\numberline {3.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{11}{}%
+\contentsline {section}{\numberline {3.5}Implikationen für die Systemarchitektur}{12}{}%
+\contentsline {subsection}{\numberline {3.5.1}Funktionale Anforderungen aus der Expertenperspektive}{12}{}%
+\contentsline {subsection}{\numberline {3.5.2}Architektonische Paradigmen und Beratungsansatz}{12}{}%
+\contentsline {subsection}{\numberline {3.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{13}{}%
+\contentsline {subsection}{\numberline {3.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{13}{}%
+\contentsline {chapter}{Anhang Anhang}{16}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{17}{}%

@@ -72,6 +72,96 @@
       \verb https://ieeexplore.ieee.org/abstract/document/1509301/
       \endverb
     \endentry
+    \entry{karabiyikRefactorGPTChatGPTbasedMultiagent2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd10f7c9eeb32019e0cd5d2645209d8}{%
+           family={Karabiyik},
+           familyi={K\bibinitperiod},
+           given={Muhammed\bibnamedelima Abdulhamid},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PeerJ Inc.}%
+      }
+      \strng{namehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{fullhash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{fullhashraw}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{bibnamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorbibnamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authornamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorfullhash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorfullhashraw}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{journaltitle}{PeerJ Computer Science}
+      \field{shorttitle}{{{RefactorGPT}}}
+      \field{title}{{{RefactorGPT}}: A {{ChatGPT-based}} Multi-Agent Framework for Automated Code Refactoring}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e3257}
+      \range{pages}{-1}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\A5Y5C46L\Karabiyik - 2025 - RefactorGPT a ChatGPT-based multi-agent framework for automated code refactoring.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://peerj.com/articles/cs-3257/
+      \endverb
+      \verb{url}
+      \verb https://peerj.com/articles/cs-3257/
+      \endverb
+    \endentry
+    \entry{matilainenChangeRequirementsProduct2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=03d1d78b15ce8ef87066e0dc8499a6e2}{%
+           family={Matilainen},
+           familyi={M\bibinitperiod},
+           given={Aleksi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{fullhash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{fullhashraw}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{bibnamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorbibnamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authornamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorfullhash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorfullhashraw}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Change Requirements on Product Data Structures in {{S}}/{{4HANA}} Implementation}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\IK7NIKPC\Matilainen - 2024 - Change requirements on product data structures in S4HANA implementation.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://osuva.uwasa.fi/items/8bf7ae52-e756-4fca-9a25-c0510c58ad34
+      \endverb
+      \verb{url}
+      \verb https://osuva.uwasa.fi/items/8bf7ae52-e756-4fca-9a25-c0510c58ad34
+      \endverb
+    \endentry
     \entry{mayringQualitativeContentAnalysis2014}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=354e18c4014b84fb9bd1af1fc4d7371e}{%
@@ -116,6 +206,141 @@
       \verb{url}
       \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
       \endverb
+    \endentry
+    \entry{motiLegacyTranslateLLMbasedMultiAgent2026}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c9cb054617bc16d50493574f52cd9903}{%
+           family={Moti},
+           familyi={M\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf5ecc92b8d862b341e8f12f5a7dd1f9}{%
+           family={Soudani},
+           familyi={S\bibinitperiod},
+           given={Heydar},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,useprefix=false,hash=4980ff310b0ded885351c6f146ccecac}{%
+           family={Kogel},
+           familyi={K\bibinitperiod},
+           given={Jonck},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{adfc38bc656ecb646f03868195a07815}
+      \strng{fullhash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{fullhashraw}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{bibnamehash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authorbibnamehash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authornamehash}{adfc38bc656ecb646f03868195a07815}
+      \strng{authorfullhash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authorfullhashraw}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Modernizing large legacy systems remains a major challenge in enterprise environments, particularly when migration must preserve domain-specific logic while conforming to internal architectural frameworks and shared APIs. Direct application of Large Language Models (LLMs) for code translation often produces syntactically valid outputs that fail to compile or integrate within existing production frameworks, limiting their practical adoption in real-world modernization efforts. In this paper, we propose LegacyTranslate, a multi-agent framework for API-aware code translation, developed and evaluated in the context of an ongoing modernization effort at a financial institution migrating approximately 2.5 million lines of PL/SQL to Java. The core idea is to use specialized LLM-based agents, each addressing a different aspect of the translation challenge. Specifically, LegacyTranslate consists of three agents: Initial Translation Agent produces an initial Java translation using retrieved in-context examples; API Grounding Agent aligns the code with existing APIs by retrieving relevant entries from an API knowledge base; and Refinement Agent iteratively refines the output using compiler feedback and API suggestions to improve correctness. Our experiments show that each agent contributes to better translation quality. The Initial Translation Agent alone achieves 45.6\% compilable outputs and 30.9\% test-pass rate. With API Grounding Agent and Refinement Agent, compilation improves by an additional 8\% and test-pass accuracy increases by 3\%.}
+      \field{day}{14}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{LegacyTranslate}}}
+      \field{title}{{{LegacyTranslate}}: {{LLM-based Multi-Agent Method}} for {{Legacy Code Translation}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2603.14054
+      \endverb
+      \verb{eprint}
+      \verb 2603.14054
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\TMTQSXHV\Moti et al. - 2026 - LegacyTranslate LLM-based Multi-Agent Method for Legacy Code Translation.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2603.14054
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2603.14054
+      \endverb
+      \keyw{Computer Science - Software Engineering}
+    \endentry
+    \entry{oueslatiRefAgentMultiagentLLMbased2026}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1ac33727c28d74d89c5f5601608ed4a2}{%
+           family={Oueslati},
+           familyi={O\bibinitperiod},
+           given={Khouloud},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82dc9c0306cce3191982ca32dd546fd7}{%
+           family={Lamothe},
+           familyi={L\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6c3765c6a405d9d7ef595e760e76337}{%
+           family={Khomh},
+           familyi={K\bibinitperiod},
+           given={Foutse},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbe0a20cc0daef6e339cdaab57cb1e3a}
+      \strng{fullhash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{fullhashraw}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{bibnamehash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authorbibnamehash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authornamehash}{bbe0a20cc0daef6e339cdaab57cb1e3a}
+      \strng{authorfullhash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authorfullhashraw}{135ab4ae34383e89d8c473562094f6d2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Large Language Models (LLMs) have substantially influenced various software engineering tasks. Indeed, in the case of software refactoring, traditional LLMs have shown the ability to reduce development time and enhance code quality. However, these LLMs often rely on static, detailed instructions for specific tasks. In contrast, LLM-based agents can dynamically adapt to evolving contexts and autonomously make decisions by interacting with software tools and executing workflows. In this paper, we explore the potential of LLM-based agents in supporting refactoring activities. Specifically, we introduce RefAgent, a multi-agent LLM-based framework for end-to-end software refactoring. RefAgent consists of specialized agents responsible for planning, executing, testing, and iteratively refining refactorings using self-reflection and tool-calling capabilities. We evaluate RefAgent on eight open-source Java projects, comparing its effectiveness against a single-agent approach, a search-based refactoring tool, and historical developer refactorings. Our assessment focuses on: (1) the impact of generated refactorings on software quality, (2) the ability to identify refactoring opportunities, and (3) the contribution of each LLM agent through an ablation study. Our results show that RefAgent achieves a median unit test pass rate of 90\%, reduces code smells by a median of 52.5\%, and improves key quality attributes (e.g., reusability) by a median of 8.6\%. Additionally, it closely aligns with developer refactorings and the search-based tool in identifying refactoring opportunities, attaining a median F1-score of 79.15\% and 72.7\%, respectively. Compared to single-agent approaches, RefAgent improves the median unit test pass rate by 64.7\% and the median compilation success rate by 40.1\%. These findings highlight the promise of multi-agent architectures in advancing automated software refactoring.}
+      \field{day}{4}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{RefAgent}}}
+      \field{title}{{{RefAgent}}: {{A Multi-agent LLM-based Framework}} for {{Automatic Software Refactoring}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2511.03153
+      \endverb
+      \verb{eprint}
+      \verb 2511.03153
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\MTZLR6MB\Oueslati et al. - 2026 - RefAgent A Multi-agent LLM-based Framework for Automatic Software Refactoring.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2511.03153
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2511.03153
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Software Engineering}
     \endentry
     \entry{runesonGuidelinesConductingReporting2009}{article}{}{}
       \name{author}{2}{}{%
@@ -224,6 +449,84 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/abstract/document/799955/
       \endverb
+    \endentry
+    \entry{xuMANTRAEnhancingAutomated2025}{online}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a5ab85576e889ea41e4bcffe621702ea}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yisen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37177639f418a6c6c34ed11f1d8ee99c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2940ca58b4235cb9eb8884edb1d60e4e}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jinqiu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=602b79476e9bb2ff881448f41d280b0a}{%
+           family={Tse-Hsun},
+           familyi={T\bibinithyphendelim H\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ef6bf3fd02c2c92bf0e156d4b5b818ac}{%
+           family={Chen},
+           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=8b462a840aef89589219d435050ee370}{%
+           family={Tsantalis},
+           familyi={T\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c0a0ab71e79444f15a3f759c2d98271}
+      \strng{fullhash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{fullhashraw}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{bibnamehash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authorbibnamehash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authornamehash}{8c0a0ab71e79444f15a3f759c2d98271}
+      \strng{authorfullhash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authorfullhashraw}{279457494a74341dffb5e0d8b9fd9090}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Maintaining and scaling software systems relies heavily on effective code refactoring, yet this process remains labor-intensive, requiring developers to carefully analyze existing codebases and prevent the introduction of new defects. Although recent advancements have leveraged Large Language Models (LLMs) to automate refactoring tasks, current solutions are constrained in scope and lack mechanisms to guarantee code compilability and successful test execution. In this work, we introduce MANTRA, a comprehensive LLM agent-based framework that automates method-level refactoring. MANTRA integrates Context-Aware Retrieval-Augmented Generation, coordinated Multi-Agent Collaboration, and Verbal Reinforcement Learning to emulate human decision-making during refactoring while preserving code correctness and readability. Our empirical study, conducted on 703 instances of "pure refactorings" (i.e., code changes exclusively involving structural improvements), drawn from 10 representative Java projects, covers the six most prevalent refactoring operations. Experimental results demonstrate that MANTRA substantially surpasses a baseline LLM model (RawGPT ), achieving an 82.8\% success rate (582/703) in producing code that compiles and passes all tests, compared to just 8.7\% (61/703) with RawGPT. Moreover, in comparison to IntelliJ's LLM-powered refactoring tool (EM-Assist), MANTRA exhibits a 50\% improvement in generating Extract Method transformations. A usability study involving 37 professional developers further shows that refactorings performed by MANTRA are perceived to be as readable and reusable as human-written code, and in certain cases, even more favorable. These results highlight the practical advantages of MANTRA and emphasize the growing potential of LLM-based systems in advancing the automation of software refactoring tasks.}
+      \field{day}{27}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{MANTRA}}}
+      \field{title}{{{MANTRA}}: {{Enhancing Automated Method-Level Refactoring}} with {{Contextual RAG}} and {{Multi-Agent LLM Collaboration}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.14340
+      \endverb
+      \verb{eprint}
+      \verb 2503.14340
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\4TTHQPT8\Xu et al. - 2025 - MANTRA Enhancing Automated Method-Level Refactoring with Contextual RAG and Multi-Agent LLM Collabo.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2503.14340
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2503.14340
+      \endverb
+      \keyw{Computer Science - Software Engineering}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
@@ -280,6 +583,96 @@
       \verb https://ieeexplore.ieee.org/abstract/document/1509301/
       \endverb
     \endentry
+    \entry{karabiyikRefactorGPTChatGPTbasedMultiagent2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd10f7c9eeb32019e0cd5d2645209d8}{%
+           family={Karabiyik},
+           familyi={K\bibinitperiod},
+           given={Muhammed\bibnamedelima Abdulhamid},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PeerJ Inc.}%
+      }
+      \strng{namehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{fullhash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{fullhashraw}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{bibnamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorbibnamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authornamehash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorfullhash}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \strng{authorfullhashraw}{8fd10f7c9eeb32019e0cd5d2645209d8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{journaltitle}{PeerJ Computer Science}
+      \field{shorttitle}{{{RefactorGPT}}}
+      \field{title}{{{RefactorGPT}}: A {{ChatGPT-based}} Multi-Agent Framework for Automated Code Refactoring}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e3257}
+      \range{pages}{-1}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\A5Y5C46L\Karabiyik - 2025 - RefactorGPT a ChatGPT-based multi-agent framework for automated code refactoring.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://peerj.com/articles/cs-3257/
+      \endverb
+      \verb{url}
+      \verb https://peerj.com/articles/cs-3257/
+      \endverb
+    \endentry
+    \entry{matilainenChangeRequirementsProduct2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=03d1d78b15ce8ef87066e0dc8499a6e2}{%
+           family={Matilainen},
+           familyi={M\bibinitperiod},
+           given={Aleksi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{fullhash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{fullhashraw}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{bibnamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorbibnamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authornamehash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorfullhash}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \strng{authorfullhashraw}{03d1d78b15ce8ef87066e0dc8499a6e2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Change Requirements on Product Data Structures in {{S}}/{{4HANA}} Implementation}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\IK7NIKPC\Matilainen - 2024 - Change requirements on product data structures in S4HANA implementation.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://osuva.uwasa.fi/items/8bf7ae52-e756-4fca-9a25-c0510c58ad34
+      \endverb
+      \verb{url}
+      \verb https://osuva.uwasa.fi/items/8bf7ae52-e756-4fca-9a25-c0510c58ad34
+      \endverb
+    \endentry
     \entry{mayringQualitativeContentAnalysis2014}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=354e18c4014b84fb9bd1af1fc4d7371e}{%
@@ -324,6 +717,141 @@
       \verb{url}
       \verb https://www.ssoar.info/ssoar/bitstream/handle/document/39517/ssoar-2014-mayring-Qualitative_content_analysis_theoretical_foundation.pdf
       \endverb
+    \endentry
+    \entry{motiLegacyTranslateLLMbasedMultiAgent2026}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c9cb054617bc16d50493574f52cd9903}{%
+           family={Moti},
+           familyi={M\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf5ecc92b8d862b341e8f12f5a7dd1f9}{%
+           family={Soudani},
+           familyi={S\bibinitperiod},
+           given={Heydar},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,useprefix=false,hash=4980ff310b0ded885351c6f146ccecac}{%
+           family={Kogel},
+           familyi={K\bibinitperiod},
+           given={Jonck},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{adfc38bc656ecb646f03868195a07815}
+      \strng{fullhash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{fullhashraw}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{bibnamehash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authorbibnamehash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authornamehash}{adfc38bc656ecb646f03868195a07815}
+      \strng{authorfullhash}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \strng{authorfullhashraw}{7f0a3b7356996e2d0140aeab6ff11d50}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Modernizing large legacy systems remains a major challenge in enterprise environments, particularly when migration must preserve domain-specific logic while conforming to internal architectural frameworks and shared APIs. Direct application of Large Language Models (LLMs) for code translation often produces syntactically valid outputs that fail to compile or integrate within existing production frameworks, limiting their practical adoption in real-world modernization efforts. In this paper, we propose LegacyTranslate, a multi-agent framework for API-aware code translation, developed and evaluated in the context of an ongoing modernization effort at a financial institution migrating approximately 2.5 million lines of PL/SQL to Java. The core idea is to use specialized LLM-based agents, each addressing a different aspect of the translation challenge. Specifically, LegacyTranslate consists of three agents: Initial Translation Agent produces an initial Java translation using retrieved in-context examples; API Grounding Agent aligns the code with existing APIs by retrieving relevant entries from an API knowledge base; and Refinement Agent iteratively refines the output using compiler feedback and API suggestions to improve correctness. Our experiments show that each agent contributes to better translation quality. The Initial Translation Agent alone achieves 45.6\% compilable outputs and 30.9\% test-pass rate. With API Grounding Agent and Refinement Agent, compilation improves by an additional 8\% and test-pass accuracy increases by 3\%.}
+      \field{day}{14}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{LegacyTranslate}}}
+      \field{title}{{{LegacyTranslate}}: {{LLM-based Multi-Agent Method}} for {{Legacy Code Translation}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2603.14054
+      \endverb
+      \verb{eprint}
+      \verb 2603.14054
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\TMTQSXHV\Moti et al. - 2026 - LegacyTranslate LLM-based Multi-Agent Method for Legacy Code Translation.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2603.14054
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2603.14054
+      \endverb
+      \keyw{Computer Science - Software Engineering}
+    \endentry
+    \entry{oueslatiRefAgentMultiagentLLMbased2026}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1ac33727c28d74d89c5f5601608ed4a2}{%
+           family={Oueslati},
+           familyi={O\bibinitperiod},
+           given={Khouloud},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82dc9c0306cce3191982ca32dd546fd7}{%
+           family={Lamothe},
+           familyi={L\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6c3765c6a405d9d7ef595e760e76337}{%
+           family={Khomh},
+           familyi={K\bibinitperiod},
+           given={Foutse},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbe0a20cc0daef6e339cdaab57cb1e3a}
+      \strng{fullhash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{fullhashraw}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{bibnamehash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authorbibnamehash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authornamehash}{bbe0a20cc0daef6e339cdaab57cb1e3a}
+      \strng{authorfullhash}{135ab4ae34383e89d8c473562094f6d2}
+      \strng{authorfullhashraw}{135ab4ae34383e89d8c473562094f6d2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Large Language Models (LLMs) have substantially influenced various software engineering tasks. Indeed, in the case of software refactoring, traditional LLMs have shown the ability to reduce development time and enhance code quality. However, these LLMs often rely on static, detailed instructions for specific tasks. In contrast, LLM-based agents can dynamically adapt to evolving contexts and autonomously make decisions by interacting with software tools and executing workflows. In this paper, we explore the potential of LLM-based agents in supporting refactoring activities. Specifically, we introduce RefAgent, a multi-agent LLM-based framework for end-to-end software refactoring. RefAgent consists of specialized agents responsible for planning, executing, testing, and iteratively refining refactorings using self-reflection and tool-calling capabilities. We evaluate RefAgent on eight open-source Java projects, comparing its effectiveness against a single-agent approach, a search-based refactoring tool, and historical developer refactorings. Our assessment focuses on: (1) the impact of generated refactorings on software quality, (2) the ability to identify refactoring opportunities, and (3) the contribution of each LLM agent through an ablation study. Our results show that RefAgent achieves a median unit test pass rate of 90\%, reduces code smells by a median of 52.5\%, and improves key quality attributes (e.g., reusability) by a median of 8.6\%. Additionally, it closely aligns with developer refactorings and the search-based tool in identifying refactoring opportunities, attaining a median F1-score of 79.15\% and 72.7\%, respectively. Compared to single-agent approaches, RefAgent improves the median unit test pass rate by 64.7\% and the median compilation success rate by 40.1\%. These findings highlight the promise of multi-agent architectures in advancing automated software refactoring.}
+      \field{day}{4}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{RefAgent}}}
+      \field{title}{{{RefAgent}}: {{A Multi-agent LLM-based Framework}} for {{Automatic Software Refactoring}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2511.03153
+      \endverb
+      \verb{eprint}
+      \verb 2511.03153
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\MTZLR6MB\Oueslati et al. - 2026 - RefAgent A Multi-agent LLM-based Framework for Automatic Software Refactoring.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2511.03153
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2511.03153
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Software Engineering}
     \endentry
     \entry{runesonGuidelinesConductingReporting2009}{article}{}{}
       \name{author}{2}{}{%
@@ -432,6 +960,84 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/abstract/document/799955/
       \endverb
+    \endentry
+    \entry{xuMANTRAEnhancingAutomated2025}{online}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a5ab85576e889ea41e4bcffe621702ea}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yisen},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37177639f418a6c6c34ed11f1d8ee99c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2940ca58b4235cb9eb8884edb1d60e4e}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jinqiu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=602b79476e9bb2ff881448f41d280b0a}{%
+           family={Tse-Hsun},
+           familyi={T\bibinithyphendelim H\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ef6bf3fd02c2c92bf0e156d4b5b818ac}{%
+           family={Chen},
+           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=8b462a840aef89589219d435050ee370}{%
+           family={Tsantalis},
+           familyi={T\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8c0a0ab71e79444f15a3f759c2d98271}
+      \strng{fullhash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{fullhashraw}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{bibnamehash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authorbibnamehash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authornamehash}{8c0a0ab71e79444f15a3f759c2d98271}
+      \strng{authorfullhash}{279457494a74341dffb5e0d8b9fd9090}
+      \strng{authorfullhashraw}{279457494a74341dffb5e0d8b9fd9090}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Maintaining and scaling software systems relies heavily on effective code refactoring, yet this process remains labor-intensive, requiring developers to carefully analyze existing codebases and prevent the introduction of new defects. Although recent advancements have leveraged Large Language Models (LLMs) to automate refactoring tasks, current solutions are constrained in scope and lack mechanisms to guarantee code compilability and successful test execution. In this work, we introduce MANTRA, a comprehensive LLM agent-based framework that automates method-level refactoring. MANTRA integrates Context-Aware Retrieval-Augmented Generation, coordinated Multi-Agent Collaboration, and Verbal Reinforcement Learning to emulate human decision-making during refactoring while preserving code correctness and readability. Our empirical study, conducted on 703 instances of "pure refactorings" (i.e., code changes exclusively involving structural improvements), drawn from 10 representative Java projects, covers the six most prevalent refactoring operations. Experimental results demonstrate that MANTRA substantially surpasses a baseline LLM model (RawGPT ), achieving an 82.8\% success rate (582/703) in producing code that compiles and passes all tests, compared to just 8.7\% (61/703) with RawGPT. Moreover, in comparison to IntelliJ's LLM-powered refactoring tool (EM-Assist), MANTRA exhibits a 50\% improvement in generating Extract Method transformations. A usability study involving 37 professional developers further shows that refactorings performed by MANTRA are perceived to be as readable and reusable as human-written code, and in certain cases, even more favorable. These results highlight the practical advantages of MANTRA and emphasize the growing potential of LLM-based systems in advancing the automation of software refactoring tasks.}
+      \field{day}{27}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{shorttitle}{{{MANTRA}}}
+      \field{title}{{{MANTRA}}: {{Enhancing Automated Method-Level Refactoring}} with {{Contextual RAG}} and {{Multi-Agent LLM Collaboration}}}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2503.14340
+      \endverb
+      \verb{eprint}
+      \verb 2503.14340
+      \endverb
+      \verb{file}
+      \verb C:\Users\juerg\Zotero\storage\4TTHQPT8\Xu et al. - 2025 - MANTRA Enhancing Automated Method-Level Refactoring with Contextual RAG and Multi-Agent LLM Collabo.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2503.14340
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2503.14340
+      \endverb
+      \keyw{Computer Science - Software Engineering}
     \endentry
   \enddatalist
 \endrefsection
