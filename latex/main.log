@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.31)  22 APR 2026 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.31)  23 APR 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,28 +549,38 @@ Kapitel 2.
 
 
 ]
-Overfull \hbox (37.67201pt too wide) in paragraph at lines 38--43
+Overfull \hbox (37.67201pt too wide) in paragraph at lines 39--55
 \T1/cmr/m/n/12 ha-ben die Mög-lich-kei-ten der au-to-ma-ti-sier-ten Code-Generierung und -Transformation
  []
 
 
-Overfull \hbox (9.86264pt too wide) in paragraph at lines 38--43
+Overfull \hbox (9.86264pt too wide) in paragraph at lines 39--55
 \T1/cmr/m/n/12 grund-le-gend er-wei-tert ([]Ka-ra-biyik, 2025). Den-noch be-le-gen ak-tu-el-le For-schungs-
  []
 
 
-Overfull \hbox (9.19827pt too wide) in paragraph at lines 54--63
+Overfull \hbox (15.25516pt too wide) in paragraph at lines 39--55
+\T1/cmr/m/n/12 Un-ter-su-chung zum Fra-me-work Le-ga-cy-Trans-la-te, dass nai-ve LLM-Übersetzungen
+ []
+
+
+Overfull \hbox (2.35014pt too wide) in paragraph at lines 39--55
+\T1/cmr/m/n/12 scheint, schei-tert er an der feh-len-den In-te-gra-ti-on not-wen-di-ger in-ter-ner Schnitt-
+ []
+
+
+Overfull \hbox (9.19827pt too wide) in paragraph at lines 56--66
 \T1/cmr/m/n/12 kon-zep-tio-nel-le Schwä-chen in der Kon-trol-lier-bar-keit sol-cher ^^ROne-Shot^^P-Ansätze.
  []
 
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 69.
+(babel)             Reported on input line 80.
 [3]
-Overfull \hbox (22.54219pt too wide) in paragraph at lines 97--104
-\T1/cmr/m/n/12 tu-el-le Li-te-ra-tur ei-ne si-gni-fi-kan-te Lücke hin-sicht-lich pro-prie-tä-rer ERP-Ökosysteme.
+Overfull \hbox (1.36569pt too wide) in paragraph at lines 93--102
+[]\T1/cmr/m/n/12 Trotz der em-pi-risch nach-ge-wie-se-nen Über-le-gen-heit von MAS bei der Code-
  []
 
-[4]) [5]
+) [4] [5]
 \openout2 = `chapter/04_experteninterview.aux'.
 
  (chapter/04_experteninterview.tex
@@ -730,17 +740,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13579 strings out of 467866
- 261367 string characters out of 5418313
- 1225977 words of memory out of 5000000
- 42283 multiletter control sequences out of 15000+600000
+ 13574 strings out of 467866
+ 261312 string characters out of 5418313
+ 1225957 words of memory out of 5000000
+ 42278 multiletter control sequences out of 15000+600000
  640471 words of font info for 65 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2098b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk>
-Output written on main.pdf (23 pages, 257566 bytes).
+Output written on main.pdf (23 pages, 257812 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
+ 509 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
