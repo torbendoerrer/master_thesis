@@ -1,0 +1,52 @@
+% !TeX root = ../main.tex
+\chapter{Theoretische Grundlagen}
+\label{ch:theory}
+\section{Domänenspezifische Grundlagen: SAP Variantenkonfiguration}
+\subsection{Einführung in die logische Architektur der Variantenkonfiguration}
+
+In der modernen Fertigungsindustrie erfordert die Abbildung kundenindividueller Produkte hochflexible 
+Systemstrukturen. Die grundlegende informationstechnische Idee der Variantenkonfiguration besteht darin, ein 
+Produkt durch eine Vielzahl möglicher Ausprägungen zu definieren, welche durch ein iteratives Regelwerk logisch 
+miteinander verknüpft sind, um komplexe Geschäftsprozesse strukturiert abzubilden. Da die Ausmultiplikation aller 
+möglichen Kombinationsmöglichkeiten die Anzahl der Varianten schnell in die Millionen oder in extremen Fällen der 
+Anlagenfertigung bis in den Bereich von Quadrillionen ($10^{24}$) treiben kann, ist die Anlage diskreter Stammdaten 
+für jede einzelne Ausprägung in der Praxis unmöglich (zitat). 
+
+Als systemtechnische Antwort auf diese kombinatorische Explosion fungiert im SAP-System der sogenannte 
+\textit{konfigurierbare Materialstamm} (KMAT). 
+Dieser dient als universaler Platzhalter, unter dem die gesamte Variantenvielfalt eines Produkts 
+informationstechnisch zusammengefasst wird (zitat). 
+Um diese Vielfalt in einer sogenannten Bewertungsoberfläche abzubilden, greift die SAP-Architektur auf 
+drei zentrale Strukturkomponenten zurück (zitat):
+
+\begin{itemize}
+    \item \textbf{Merkmale (Characteristics):} Sie definieren die spezifischen Eigenschaften eines Produkts 
+    (wie beispielsweise die Lackierung oder die Traglast eines Gabelstaplers).
+    \item \textbf{Variantenklassen:} Diese dienen der logischen Bündelung der Merkmale und werden direkt dem 
+    konfigurierbaren Materialstamm zugeordnet.
+    \item \textbf{Konfigurationsprofil:} Dieses fungiert als übergeordnetes Steuerungselement, das die Stammdaten 
+    zusammenhält und den Konfigurationsprozess maßgeblich regelt.
+\end{itemize}
+
+Ein zentrales Paradigma der SAP-Variantenkonfiguration zur Bewältigung dieser Komplexität ist das sogenannte 
+Maximal-Prinzip. Anstatt ein Produkt aus einzelnen Modulen additiv zu einem 100\,\%-Modell zusammenzusetzen, 
+basiert die Architektur auf einem subtraktiven 150\,\%-Modell. Hierfür wird eine 
+\textit{konfigurierbare Maximalstückliste} (Super BOM) eingesetzt. Diese umfasst sämtliche Bauteile und 
+Komponenten, die für jedwede theoretisch mögliche Variante des Produkts jemals benötigt werden könnten 
+(zitat). Während des Konfigurationsprozesses können dieser Stückliste keine neuen 
+Elemente hinzugefügt, sondern lediglich nicht benötigte Komponenten herausgefiltert werden.
+
+Die logische Brücke zwischen der kaufmännischen Konfiguration und der technischen Fertigung bildet das 
+\textit{Beziehungswissen} (Object Dependencies). Metaphorisch gesprochen übersetzt dieses Regelwerk das 
+kundenseitige „Wünschen“ in der Bewertungsoberfläche in das fertigungsseitige „Erhalten“ in Form der ausgedünnten 
+Stückliste (zitat). Konkret wird dies durch Steuerungsmechanismen wie 
+\textit{Auswahlbedingungen} (Selection Conditions) realisiert. Wenn ein Kunde beispielsweise aus einem Angebot von 
+sechs Motoren einen spezifischen Antrieb wählt, determinieren die Auswahlbedingungen des Beziehungswissens, 
+dass die fünf nicht gewählten Motoren aus der finalen Fertigungsstückliste eliminiert werden 
+(zitat). 
+
+Die Zusammenhänge dieser fundamentalen Architekturkomponenten – vom konfigurierbaren Materialstamm über die 
+Bewertungsoberfläche bis hin zur Maximalstückliste und dem steuernden Beziehungswissen – sind in Abbildung 
+\ref{fig:variantenkonfig} schematisch zusammengefasst.
+
+(Hier kommt die Grafik rein)
