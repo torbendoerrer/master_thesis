@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777980766.89084 "main.bcf" "main.bbl" "main" 1777980875.33559 0
-  "literatur.bib" 1776776478 14544 2790a5e51d8296501d364f514da88566 ""
-  "main.bcf" 1777980874 137261 c3f4c343bc3d7319ead73936cb505ca9 "pdflatex"
+["biber main"] 1778072057.77477 "main.bcf" "main.bbl" "main" 1778072070.12549 0
+  "literatur.bib" 1778069516 14893 bd479e4ca3b86c78e5dc789931ce3653 ""
+  "main.bcf" 1778072069 138116 69a69dd265c6f1453d67c0b265fca518 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777980872.10523 "c:/Users/juerg/projects/ma_thesis/latex/main.tex" "main.pdf" "main" 1777980875.33716 0
+["pdflatex"] 1778072066.54492 "c:/Users/juerg/projects/ma_thesis/latex/main.tex" "main.pdf" "main" 1778072070.12716 0
   "C:/Users/juerg/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1776344336 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/juerg/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1774951828 31952 36d1ed038dbd53dd8cec83fcd6229319 ""
   "C:/Users/juerg/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1776257818 40136 ee1fcc4ea9244194e952c80fc2467c48 ""
@@ -105,21 +105,21 @@
   "C:/Users/juerg/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf" 1776343910 86361 b1505f9ecf1691b3675ed80a2be8268a ""
   "c:/Users/juerg/projects/ma_thesis/latex/main.tex" 1777980648 1073 d01023c15cc1b75121ba794b39f09ae3 ""
-  "chapter/01_einleitung.aux" 1777980873 4249 fd82746980710a13376e31a57737f94d "pdflatex"
+  "chapter/01_einleitung.aux" 1778072068 4249 fd82746980710a13376e31a57737f94d "pdflatex"
   "chapter/01_einleitung.tex" 1776860931 82 22f3d791805a99e866cc2820f647946f ""
-  "chapter/02_theoretische_grundlagen.aux" 1777980873 4628 04f031f627d58b6f0826a58b5fd75f15 "pdflatex"
-  "chapter/02_theoretische_grundlagen.tex" 1777980761 3801 43242efcf65dad60890a0efb931f1518 ""
-  "chapter/03_related_work.aux" 1777980873 4303 f5da8024be80cd053d58ef41e26ab866 "pdflatex"
+  "chapter/02_theoretische_grundlagen.aux" 1778072068 4866 33e59841787ef166f56982bd55b12ac2 "pdflatex"
+  "chapter/02_theoretische_grundlagen.tex" 1778072038 8330 379960eab9e8ac7fde6fdcd25304ef11 ""
+  "chapter/03_related_work.aux" 1778072068 4304 ce1504d473b85a34260bd7a13c0d2354 "pdflatex"
   "chapter/03_related_work.tex" 1777980127 9253 727048d41c74b3fcb2991040c05bfa90 ""
-  "chapter/04_experteninterview.aux" 1777980874 6667 258e8a88a8a432a672d31e37b86036be "pdflatex"
+  "chapter/04_experteninterview.aux" 1778072069 6673 b233bd42aa83f66d4e88cd68a8e943c1 "pdflatex"
   "chapter/04_experteninterview.tex" 1776861786 18663 08a8fa98e0cc1cae4f3e8366c461f702 ""
-  "chapter/anhang.aux" 1777980874 4552 b3d65089bf9ddc55fef48caa5a5159d1 "pdflatex"
+  "chapter/anhang.aux" 1778072069 4552 d66118ba2ab1c1d52699f2a0844717b2 "pdflatex"
   "chapter/anhang.tex" 1776345315 602 9399a3859e7a42b33e14f8a430d0f7fe ""
-  "main.aux" 1777980874 7675 af3bce564b6662fdaa7e3bbba1b8f266 "pdflatex"
-  "main.bbl" 1777980872 53919 3ac0cee1c0e65ef1ea2070416c13baac "biber main"
-  "main.run.xml" 1777980874 2422 66809e2bbfb704ef55413be929c66bc7 "pdflatex"
+  "main.aux" 1778072069 9571 a66ca4386c229437f4317b4c38d928c1 "pdflatex"
+  "main.bbl" 1778072062 58585 0456c59bca321a4734e698f573f7ce04 "biber main"
+  "main.run.xml" 1778072069 2422 b5b9913da1458032c4a916d0e4e8050b "pdflatex"
   "main.tex" 1777980648 1073 d01023c15cc1b75121ba794b39f09ae3 ""
-  "main.toc" 1777980874 2072 646f4cfe30a48c2c81427aebb706abc2 "pdflatex"
+  "main.toc" 1778072069 2210 7e123652a670ea9e9e9dee3b310737fd "pdflatex"
   (generated)
   "chapter/01_einleitung.aux"
   "chapter/02_theoretische_grundlagen.aux"

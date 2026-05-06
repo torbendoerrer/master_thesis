@@ -19,6 +19,65 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{blumohrAdvancedVariantConfiguration2023}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3352eb0276a10473199b3a99e3482091}{%
+           family={Blumöhr},
+           familyi={B\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3166dc40976bd20450a860241da5e87c}{%
+           family={Kölbl},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=32e4d932c2c87d9f4bfb575621afb06b}{%
+           family={Neuhaus},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0edb6b9c1bafe7727fc20c04349c7f70}{%
+           family={Ukalovic},
+           familyi={U\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Rheinwerk Publishing}%
+      }
+      \strng{namehash}{1eb69f6a0affb1241128a84c710599d4}
+      \strng{fullhash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{fullhashraw}{279d299e369b623f8184ef6c7a80212d}
+      \strng{bibnamehash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authorbibnamehash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authornamehash}{1eb69f6a0affb1241128a84c710599d4}
+      \strng{authorfullhash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authorfullhashraw}{279d299e369b623f8184ef6c7a80212d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced Variant Configuration in {{SAP S}}/{{4HANA}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://katalog.ub.uni-heidelberg.de/titel/69115224
+      \endverb
+      \verb{url}
+      \verb https://katalog.ub.uni-heidelberg.de/titel/69115224
+      \endverb
+    \endentry
     \entry{hoveExperiencesConductingSemistructured2005}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cc161aff2a542aa4c6ee2cc3d0f40bb1}{%
@@ -530,6 +589,65 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
+    \entry{blumohrAdvancedVariantConfiguration2023}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3352eb0276a10473199b3a99e3482091}{%
+           family={Blumöhr},
+           familyi={B\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3166dc40976bd20450a860241da5e87c}{%
+           family={Kölbl},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=32e4d932c2c87d9f4bfb575621afb06b}{%
+           family={Neuhaus},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0edb6b9c1bafe7727fc20c04349c7f70}{%
+           family={Ukalovic},
+           familyi={U\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Rheinwerk Publishing}%
+      }
+      \strng{namehash}{1eb69f6a0affb1241128a84c710599d4}
+      \strng{fullhash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{fullhashraw}{279d299e369b623f8184ef6c7a80212d}
+      \strng{bibnamehash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authorbibnamehash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authornamehash}{1eb69f6a0affb1241128a84c710599d4}
+      \strng{authorfullhash}{279d299e369b623f8184ef6c7a80212d}
+      \strng{authorfullhashraw}{279d299e369b623f8184ef6c7a80212d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced Variant Configuration in {{SAP S}}/{{4HANA}}}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://katalog.ub.uni-heidelberg.de/titel/69115224
+      \endverb
+      \verb{url}
+      \verb https://katalog.ub.uni-heidelberg.de/titel/69115224
+      \endverb
+    \endentry
     \entry{hoveExperiencesConductingSemistructured2005}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=cc161aff2a542aa4c6ee2cc3d0f40bb1}{%

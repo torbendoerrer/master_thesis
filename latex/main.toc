@@ -3,22 +3,23 @@
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{2}{}%
 \contentsline {section}{\numberline {2.1}Domänenspezifische Grundlagen: SAP Variantenkonfiguration}{2}{}%
 \contentsline {subsection}{\numberline {2.1.1}Einführung in die logische Architektur der Variantenkonfiguration}{2}{}%
-\contentsline {chapter}{\numberline {3}Related Work}{4}{}%
-\contentsline {chapter}{\numberline {4}Experteninterview}{8}{}%
-\contentsline {section}{\numberline {4.1}Zielsetzung und Erkenntnisinteresse}{8}{}%
-\contentsline {section}{\numberline {4.2}Methodisches Forschungsdesign}{8}{}%
-\contentsline {section}{\numberline {4.3}Datenerhebung und Auswertung}{10}{}%
-\contentsline {section}{\numberline {4.4}Ergebnisse der Befragung}{11}{}%
-\contentsline {subsection}{\numberline {4.4.1}Kognitive Altlasten und historischer Code}{12}{}%
-\contentsline {subsection}{\numberline {4.4.2}Paradigmenwechsel und syntaktisches Umdenken}{12}{}%
-\contentsline {subsection}{\numberline {4.4.3}Fragmentierung manueller Prozessschritte}{12}{}%
-\contentsline {subsection}{\numberline {4.4.4}Limitierungen bestehender Standard-Tools}{13}{}%
-\contentsline {subsection}{\numberline {4.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{13}{}%
-\contentsline {subsection}{\numberline {4.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{13}{}%
-\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur}{14}{}%
-\contentsline {subsection}{\numberline {4.5.1}Funktionale Anforderungen aus der Expertenperspektive}{14}{}%
-\contentsline {subsection}{\numberline {4.5.2}Architektonische Paradigmen und Beratungsansatz}{14}{}%
-\contentsline {subsection}{\numberline {4.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{15}{}%
-\contentsline {subsection}{\numberline {4.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{15}{}%
-\contentsline {chapter}{Anhang Anhang}{18}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{19}{}%
+\contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{3}{}%
+\contentsline {chapter}{\numberline {3}Related Work}{6}{}%
+\contentsline {chapter}{\numberline {4}Experteninterview}{10}{}%
+\contentsline {section}{\numberline {4.1}Zielsetzung und Erkenntnisinteresse}{10}{}%
+\contentsline {section}{\numberline {4.2}Methodisches Forschungsdesign}{10}{}%
+\contentsline {section}{\numberline {4.3}Datenerhebung und Auswertung}{12}{}%
+\contentsline {section}{\numberline {4.4}Ergebnisse der Befragung}{13}{}%
+\contentsline {subsection}{\numberline {4.4.1}Kognitive Altlasten und historischer Code}{14}{}%
+\contentsline {subsection}{\numberline {4.4.2}Paradigmenwechsel und syntaktisches Umdenken}{14}{}%
+\contentsline {subsection}{\numberline {4.4.3}Fragmentierung manueller Prozessschritte}{14}{}%
+\contentsline {subsection}{\numberline {4.4.4}Limitierungen bestehender Standard-Tools}{15}{}%
+\contentsline {subsection}{\numberline {4.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{15}{}%
+\contentsline {subsection}{\numberline {4.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{15}{}%
+\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur}{16}{}%
+\contentsline {subsection}{\numberline {4.5.1}Funktionale Anforderungen aus der Expertenperspektive}{16}{}%
+\contentsline {subsection}{\numberline {4.5.2}Architektonische Paradigmen und Beratungsansatz}{16}{}%
+\contentsline {subsection}{\numberline {4.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{17}{}%
+\contentsline {subsection}{\numberline {4.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{17}{}%
+\contentsline {chapter}{Anhang Anhang}{20}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{21}{}%

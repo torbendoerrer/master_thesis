@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.31)  5 MAY 2026 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.31)  6 MAY 2026 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,7 +519,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
 
-Overfull \hbox (14.5415pt too wide) in paragraph at lines 21--21
+Overfull \hbox (4.294pt too wide) in paragraph at lines 6--6
+ [][] []\T1/cmr/m/n/12 Die klas-si-sche Va-ri-an-ten-kon-fi-gu-ra-ti-on (LO-VC) im Kon- 
+ []
+
+
+Overfull \hbox (14.5415pt too wide) in paragraph at lines 22--22
  [][] []\T1/cmr/m/n/12 Konzeptionelle Not-wen-dig-keit ei-ner Multi-Agenten-Struktur [][]  
  []
 
@@ -561,15 +566,29 @@ Overfull \hbox (1.52798pt too wide) in paragraph at lines 39--47
 
 LaTeX Warning: Reference `fig:variantenkonfig' on page 3 undefined on input line 50.
 
-)
+
+Overfull \hbox (1.73553pt too wide) in paragraph at lines 54--54
+[]\T1/cmr/bx/n/14.4 Die klas-si-sche Va-ri-an-ten-kon-fi-gu-ra-ti-on (LO-VC) im
+ []
+
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 27.
- [3]
+(babel)             Reported on input line 63.
+[3]
+Overfull \hbox (24.27913pt too wide) in paragraph at lines 82--87
+[]\T1/cmr/bx/n/12 Abbildung mo-der-ner Ge-sch�fts-mo-del-le: \T1/cmr/m/n/12 Klas-si-sche LO-VC-Strukturen
+ []
+
+
+Overfull \hbox (29.6238pt too wide) in paragraph at lines 91--96
+\T1/cmr/m/n/12 ent-wi-ckelt. Ei-ne nach-tr�g-li-che In-te-gra-ti-on in die ver-al-te-te LO-VC-Architektur
+ []
+
+[4]) [5]
 \openout2 = `chapter/03_related_work.aux'.
 
  (chapter/03_related_work.tex
 Kapitel 3.
-[4
+[6
 
 
 
@@ -599,22 +618,22 @@ Overfull \hbox (9.19827pt too wide) in paragraph at lines 56--66
 \T1/cmr/m/n/12 kon-zep-tio-nel-le Schw�-chen in der Kon-trol-lier-bar-keit sol-cher ^^ROne-Shot^^P-Ans�tze.
  []
 
-[5]
+[7]
 Overfull \hbox (1.36569pt too wide) in paragraph at lines 93--102
 []\T1/cmr/m/n/12 Trotz der em-pi-risch nach-ge-wie-se-nen �ber-le-gen-heit von MAS bei der Code-
  []
 
-) [6] [7]
+) [8] [9]
 \openout2 = `chapter/04_experteninterview.aux'.
 
  (chapter/04_experteninterview.tex
 Kapitel 4.
-[8
+[10
 
 
 
 
-] [9] [10] [11] [12]
+] [11] [12] [13] [14]
 Overfull \hbox (5.2938pt too wide) in paragraph at lines 59--59
 []\T1/cmr/bx/n/14.4 Manueller Auf-wand und Feh-ler-an-f�l-lig-keit im Test-
  []
@@ -624,12 +643,12 @@ Overfull \hbox (6.36469pt too wide) in paragraph at lines 62--62
 []\T1/cmr/bx/n/14.4 Zeitliche Me-tri-ken und Iden-ti-fi-ka-ti-on von Fla-schen-
  []
 
-[13]
+[15]
 Overfull \hbox (1.09186pt too wide) in paragraph at lines 81--82
 []\T1/cmr/bx/n/12 Interaktive As-sis-tenz (Consulting-Ansatz): \T1/cmr/m/n/12 Das Sys-tem darf nicht
  []
 
-[14]
+[16]
 Overfull \hbox (11.87543pt too wide) in paragraph at lines 85--85
 []\T1/cmr/bx/n/14.4 Konzeptionelle Not-wen-dig-keit ei-ner Multi-Agenten-
  []
@@ -639,31 +658,31 @@ Overfull \hbox (8.21118pt too wide) in paragraph at lines 86--87
 \T1/cmr/m/n/12 Die He-te-ro-ge-ni-t�t der An-for-de-run-gen ^^U von der Ana-ly-se kom-ple-xer Z-Functions
  []
 
-) [15]
+) [17]
 Overfull \hbox (4.42525pt too wide) in paragraph at lines 34--34
 [][]\T1/cmr/m/n/12 Hove, S. E., & An-da, B. (2005). Ex-pe-ri-ences from Con-duc-ting Semi-Structured
  []
 
+[18
 
+
+
+
+]
 Overfull \hbox (3.0815pt too wide) in paragraph at lines 34--34
 \T1/cmr/m/it/12 MAN-TRA: En-han-cing Au-to-ma-ted Method-Level Re-fac-to-ring with Con-
  []
 
-[16
-
-
-
-
-] [17]
+[19]
 \openout2 = `chapter/anhang.aux'.
 
- (chapter/anhang.tex [18
+ (chapter/anhang.tex [20
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=78, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=84, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf  used on input line 18.
@@ -674,7 +693,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengefü
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=80, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=86, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
@@ -683,7 +702,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[19
+[21
 
 ]
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
@@ -698,12 +717,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
- [20
+ [22
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=95, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=101, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
@@ -715,44 +734,44 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[21
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=100, page=3, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[22
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=105, page=4, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [23
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=107, page=3, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[24
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=112, page=4, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[25
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]) (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/anhang.aux))
  ***********
@@ -763,27 +782,22 @@ L3 programming layer <2026-01-19>
 
 LaTeX Warning: There were undefined references.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13601 strings out of 467866
- 262672 string characters out of 5418313
- 1228571 words of memory out of 5000000
- 42298 multiletter control sequences out of 15000+600000
+ 13617 strings out of 467866
+ 263120 string characters out of 5418313
+ 1228769 words of memory out of 5000000
+ 42314 multiletter control sequences out of 15000+600000
  640471 words of font info for 65 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2098b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\juerg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/juerg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/juerg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (25 pages, 289810 bytes).
+Output written on main.pdf (27 pages, 299787 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
+ 569 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

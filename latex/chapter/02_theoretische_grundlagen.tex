@@ -50,3 +50,57 @@ Bewertungsoberfläche bis hin zur Maximalstückliste und dem steuernden Beziehun
 \ref{fig:variantenkonfig} schematisch zusammengefasst.
 
 (Hier kommt die Grafik rein)
+
+\subsection{Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}
+\label{sec:lovc_context}
+
+Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, ist zunächst eine Einordnung 
+in die Evolution der SAP-Systemlandschaften erforderlich. Während das bisherige Kernprodukt 
+\textit{SAP ERP} (oft auch als SAP R/3 bezeichnet) über Jahrzehnte den Standard darstellte, markiert 
+\textit{SAP S/4HANA} eine fundamentale Neuausrichtung der Softwarearchitektur, insbesondere durch die 
+Nutzung der In-Memory-Datenbanktechnologie \parencite[vgl.][S. 28]{blumohrAdvancedVariantConfiguration2023}. 
+In diesem Zuge wurde für die Variantenkonfiguration ein neues technologisches Fundament geschaffen.
+
+Der Begriff \textit{Logistics Variant Configuration} (LO-VC) dient heute primär als Retronym, um die 
+klassische Art der Konfiguration von der neuen \textit{Advanced Variant Configuration} (AVC) abzugrenzen 
+\parencite[vgl.][S. 32]{blumohrAdvancedVariantConfiguration2023}. Obwohl LO-VC in aktuellen S/4HANA-Installationen 
+(On-Premise und Private Cloud) aus Gründen der Abwärtskompatibilität weiterhin verfügbar ist, gilt sie 
+technologisch als veralteter Standard. 
+
+Wie bereits in den Grundlagen erläutert, basiert LO-VC auf einem prozeduralen Paradigma, das historisch 
+bedingt oft durch einen „Learning-by-Doing“-Ansatz in den Unternehmen gewachsen ist. Dies führte dazu, 
+dass Modelle häufig unnötig komplex durch den Einsatz von Prozeduren und Aktionen anstatt 
+leistungsfähigerer Constraints gestaltet wurden \parencite[vgl.][S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu 
+AVC wird in der Literatur daher nicht nur als technisches Upgrade, sondern als strategische Notwendigkeit 
+beschrieben, die durch folgende Kernaspekte begründet wird:
+
+\begin{itemize}
+    \item \textbf{Rückkehr zum Standard und Vereinfachung:} AVC stellt den künftigen Standard dar. Die 
+    Migration bietet Unternehmen die Chance, historisch gewachsene, schwer wartbare „Spaghetti-Logiken“ 
+    zu dekonstruieren und durch eine moderne, leichter wiederverwendbare Modellierung zu ersetzen 
+    \parencite[vgl.][S. 57\,f.]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Abbildung moderner Geschäftsmodelle:} Klassische LO-VC-Strukturen sind primär auf den 
+    reinen Verkauf von Produkten (SD-Kontext) ausgelegt. Moderne Strategien wie das 
+    \textit{Solution Bundling} (Kombination aus Produkt, Dienstleistung und Abonnements) lassen sich im 
+    Standard nur über AVC und die damit verknüpften neuen Objektträger wie die \textit{Solution Quote} 
+    abbilden \parencite[vgl.][S. 59]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Technologische Überlegenheit:} AVC nutzt mit \textit{Gecode} eine moderne 
+    Constraint-Solving-Engine, die im Gegensatz zur sequenziellen LO-VC-Logik analytische Prinzipien 
+    verfolgt und damit eine deutlich höhere Performance und Flexibilität bietet 
+    \parencite[vgl.][S. 59]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Zukunftsfähigkeit (KI und Analytics):} Innovative Technologien wie 
+    \textit{Artificial Intelligence} (AI) oder \textit{Machine Learning} (ML) sowie moderne 
+    Auswertungsmethoden via \textit{CDS-Views} werden nativ für AVC entwickelt. Eine nachträgliche 
+    Integration in die veraltete LO-VC-Architektur gleicht lediglich einer „Renovierung“, die nie den 
+    Leistungsumfang einer Neuentwicklung erreichen kann \parencite[vgl.][S. 61]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Human-Resource-Aspekt:} Angesichts des Fachkräftemangels ist die Arbeit mit moderner 
+    Softwarearchitektur ein entscheidender Faktor bei der Gewinnung von Talenten. Die Wartung einer über 
+    25 Jahre alten Softwarelösung ist im Vergleich zur Vorreiterrolle in einer intelligenten 
+    Fertigungsumgebung auf Basis aktueller Technologie weniger attraktiv für qualifizierten Nachwuchs 
+    \parencite[vgl.][S. 60]{blumohrAdvancedVariantConfiguration2023}.
+\end{itemize}
+
+Zusammenfassend lässt sich festhalten, dass der Verbleib in der LO-VC-Welt zwar kurzfristig 
+Transformationsaufwände vermeidet, langfristig jedoch das Risiko erhöht, den Anschluss an technologische 
+Innovationen zu verlieren und den Aufwand für eine spätere Migration durch das wachsende technologische 
+Delta exponentiell zu vergrößern \parencite[vgl.][S. 61]{blumohrAdvancedVariantConfiguration2023}.
