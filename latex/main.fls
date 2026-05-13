@@ -200,6 +200,7 @@ INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tf
 INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT main.toc
+INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsl1200.tfm
 INPUT .\chapter\01_einleitung.tex
 INPUT .\chapter\01_einleitung.tex
 OUTPUT chapter\01_einleitung.aux
@@ -217,7 +218,6 @@ INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx172
 INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
 INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT C:\Users\juerg\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsl1200.tfm
 INPUT .\chapter\03_related_work.tex
 INPUT .\chapter\03_related_work.tex
 OUTPUT chapter\03_related_work.aux
@@ -286,8 +286,6 @@ INPUT main.run.xml
 OUTPUT main.run.xml
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
-INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
-INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
@@ -296,6 +294,8 @@ INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
+INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
 INPUT C:\Users\juerg\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk

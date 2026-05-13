@@ -104,3 +104,50 @@ Zusammenfassend lässt sich festhalten, dass der Verbleib in der LO-VC-Welt zwar
 Transformationsaufwände vermeidet, langfristig jedoch das Risiko erhöht, den Anschluss an technologische 
 Innovationen zu verlieren und den Aufwand für eine spätere Migration durch das wachsende technologische 
 Delta exponentiell zu vergrößern \parencite[vgl.][S. 61]{blumohrAdvancedVariantConfiguration2023}.
+
+\subsection{Die moderne Architektur (AVC) und das Constraint-Paradigma}
+\label{sec:avc_constraint}
+
+Die Antwort auf die konzeptionellen Schwächen und technischen Limitierungen der klassischen 
+Variantenkonfiguration bildet die Einführung der \textit{Advanced Variant Configuration} (AVC) in SAP 
+S/4HANA. Um den stetig wachsenden Anforderungen an Performance und Modellierungskomplexität 
+(wie beispielsweise in den \textit{Make-to-Order}- oder \textit{Engineer-to-Order}-Szenarien) gerecht zu 
+werden, vollzieht SAP mit AVC nicht nur ein syntaktisches Update, sondern einen fundamentalen 
+informationstechnischen Paradigmenwechsel unter der Haube der Konfigurations-Engine 
+\parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}.
+
+Während das bisherige LO-VC-System, wie in Kapitel \ref{sec:lovc_context} beschrieben, auf einer 
+iterativen, imperativen Abarbeitung von Befehlen und Prozeduren basierte, nutzt AVC einen grundlegend 
+deklarativen Lösungsansatz. Das technologische Herzstück der AVC-Architektur bildet ein neu integrierter 
+\textit{Constraint Solver} namens \textit{Gecode}, eine ursprünglich quelloffene Softwarebibliothek, 
+die in Zusammenarbeit mit dem Fraunhofer-Institut ITWM tief in den SAP-Standard eingebettet und für 
+komplexe Produktkonfigurationen erweitert wurde \parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}.
+
+Der Einsatz dieser Engine überführt den Konfigurationsprozess mathematisch in ein sogenanntes 
+\textit{Constraint Satisfaction Problem} (CSP). Bei einem CSP geht es aus informatischer Sicht nicht mehr 
+darum, eine Liste von Instruktionen nacheinander abzuarbeiten, um einen Endzustand zu berechnen. 
+Stattdessen wird das gesamte Modell als ein Netzwerk aus Variablen (den SAP-Merkmalen) und den 
+zugehörigen Wertebereichen (den Domänen) definiert. Das Beziehungswissen wird in diesem Paradigma als 
+harte Bedingungen (\textit{Constraints}) formuliert, die festlegen, welche Merkmalskombinationen 
+zulässig sind und welche sich gegenseitig ausschließen. Ziel des CSP-Solvers ist es, eine gültige 
+Belegung für alle Variablen zu finden, bei der kein einziger Constraint verletzt wird. 
+
+Dieser deklarative Ansatz bringt tiefgreifende Auswirkungen auf die Benutzerführung und die 
+Systemstabilität mit sich. Sobald ein Anwender während der Konfiguration in der Benutzeroberfläche einen 
+Wert für ein bestimmtes Merkmal wählt, schränkt die Gecode-Engine die Domänen (Wertebereiche) aller 
+anderen abhängigen Merkmale in Echtzeit ein \parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}. 
+Anstatt einen Fehler erst nach der sequenziellen Abarbeitung einer Prozedur auszuwerfen, eliminiert der 
+Solver unmögliche Auswahlmöglichkeiten präventiv aus dem Suchraum. Dies verhindert effektiv die 
+Entstehung inkonsistenter Konfigurationen.
+
+Darüber hinaus bietet AVC erweiterte Simulations- und Analysemöglichkeiten, wie beispielsweise den 
+\textit{Dependency Trace}. Dieser ermöglicht es Konstrukteuren und Modellierern, in einem 
+\textit{Inspector Panel} genau nachzuvollziehen, welches Constraint für die Einschränkung eines 
+bestimmten Merkmals verantwortlich ist \parencite[vgl.][S. 37]{blumohrAdvancedVariantConfiguration2023}. 
+
+Zusammenfassend markiert AVC durch die Gecode-Engine den Wechsel von der Frage „\textit{Wie} berechne 
+ich die Variante Schritt für Schritt?“ hin zu der Frage „\textit{Welche} globalen Bedingungen müssen für 
+ein gültiges Endprodukt erfüllt sein?“. Genau dieser Paradigmenwechsel vom Imperativen zum Deklarativen 
+stellt Unternehmen bei der Systemmigration vor die immense Herausforderung, historisch gewachsene, 
+prozedurale Altlasten semantisch zu dekonstruieren und in das neue, netzwerkbasierte Constraint-Paradigma 
+zu transformieren.
