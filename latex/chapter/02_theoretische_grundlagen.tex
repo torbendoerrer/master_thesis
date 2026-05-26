@@ -151,3 +151,169 @@ ein gültiges Endprodukt erfüllt sein?“. Genau dieser Paradigmenwechsel vom I
 stellt Unternehmen bei der Systemmigration vor die immense Herausforderung, historisch gewachsene, 
 prozedurale Altlasten semantisch zu dekonstruieren und in das neue, netzwerkbasierte Constraint-Paradigma 
 zu transformieren.
+
+\section{Generative künstliche Intelligenz im Software Engineering}
+\subsection{Large Language Models für Quellcode}
+\label{subsec:llms_fuer_code}
+
+In den vergangenen Jahren haben Systeme der Künstlichen Intelligenz (KI), insbesondere sogenannte Large 
+Language Models (LLMs), einen rasanten und tiefgreifenden technologischen Aufstieg erlebt. Was als 
+Werkzeug für rein statistische Textvervollständigungen begann, hat sich zu mächtigen kognitiven 
+Architekturen entwickelt. Diese Modelle dringen zunehmend in den Bereich des Software Engineerings vor 
+und verändern die Art und Weise, wie Software entworfen, analysiert und transformiert wird, grundlegend. 
+Um das Potenzial dieser Technologie für automatisierte Migrationsprozesse zu verstehen, ist ein 
+grundlegendes Verständnis der zugrundeliegenden mathematisch-technischen Prinzipien sowie der Methoden 
+zu deren Steuerung erforderlich.
+
+\subsubsection{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}
+Die heutige Generation marktbeherrschender Sprachmodelle basiert fast ausnahmslos auf der wegweisenden 
+Transformer-Architektur, die durch \cite{vaswaniAttentionAllYou2017} eingeführt wurde. Der entscheidende 
+informationstechnische Durchbruch des Transformers liegt in der vollständigen Abkehr von früheren 
+rekurrenten neuronalen Netzen (RNNs) oder Long Short-Term Memory-Netzwerken (LSTMs). Während diese 
+älteren Architekturen Eingabesequenzen – wie natürlichen Text oder Quellcode – streng sequenziell, 
+mithin Zeichen für Zeichen oder Zeile für Zeile verarbeiten mussten, bricht der Transformer dieses 
+lineare Paradigma auf.
+
+Dies gelingt durch die Einführung des sogenannten \textit{Self-Attention-Mechanismus} 
+(Selbstaufmerksamkeit). Dieser Mechanismus erlaubt es dem Modell, alle Elemente (Token) einer Sequenz 
+zeitgleich und vollständig parallel zu verarbeiten. Mathematisch berechnet das Netzwerk für jedes Token 
+innerhalb eines Kontextes einen Gewichtungsfaktor relativ zu allen anderen Token der Sequenz. Dadurch 
+wird bestimmt, wie viel „Aufmerksamkeit“ einem Wort oder Code-Snippet im Verhältnis zum Rest des Textes 
+beigemessen werden muss. 
+
+Im Kontext des Software Engineerings löst diese Architektur das fundamentale Problem weitreichender 
+Abhängigkeiten (\textit{Long-Range Dependencies}). Wenn beispielsweise eine Variable am Anfang einer 
+umfangreichen Code-Datei deklariert und hunderte Zeilen später in einer komplexen logischen Bedingung 
+aufgerufen wird, verkürzt der Transformer den informationellen Pfad im Netzwerk auf eine konstante Länge. 
+Der Self-Attention-Mechanismus berechnet die direkte strukturelle Verknüpfung zwischen Deklaration und 
+Aufruf unabhängig von ihrer physischen Distanz im Dokument. Quellcode wird somit nicht als linearer Text, 
+sondern als ein Netz simultan interagierender logischer Einheiten interpretiert.
+
+\subsubsection{In-Context Learning und Few-Shot Prompting}
+Die Fähigkeit, tiefe semantische Strukturen zu erfassen, wirft die Frage auf, wie diese Modelle ohne 
+immensen Rechenaufwand für spezifische, proprietäre Aufgabensteuerungen eingesetzt werden können. 
+Historisch erforderte die Anpassung eines neuronalen Netzes an eine neue Domäne ein ressourcenintensives 
+\textit{Fine-Tuning}, bei dem die internen Gewichte des Modells durch überwachtes Lernen angepasst 
+wurden. Moderne LLMs weisen jedoch ab einer kritischen Skalierungsgröße sogenannte emergente Fähigkeiten 
+auf, die dieses Paradigma verschieben.
+
+Wie durch \cite{brownLanguageModelsAre2020} nachgewiesen wurde, verhalten sich ausreichend große Sprachmodelle 
+weitgehend aufgabenunabhängig (\textit{task-agnostisch}). Anstatt die Modellparameter dauerhaft zu 
+modifizieren, findet das Lernen direkt zur Laufzeit innerhalb des Eingabefensters statt – ein Konzept, 
+das als \textit{In-Context Learning} (ICL) bezeichnet wird. Das Modell nutzt sein im Pre-Training 
+erworbenes, generalistisches Strukturwissen, um eine neue Aufgabe fließend und unmittelbar aus den im 
+Prompt gegebenen Mustern abzuleiten.
+
+Eine der mächtigsten Methoden des In-Context Learnings ist das \textit{Few-Shot Prompting}. Hierbei 
+werden dem Modell im Eingabetext neben der eigentlichen Instruktion einige wenige konkrete 
+Demonstrationen (Musterbeispiele) übergeben, die eine Eingabe und die dazugehörige korrekte Zielausgabe 
+abbilden. Ohne dass ein einziges Gradientenupdate im neuronalen Netz stattfindet, adaptiert das LLM die 
+logische Analogie zwischen den Beispielen und wendet diese fehlerfrei auf die neue, ungesehene 
+Zielaufgabe an. Für komplexe Domänen bietet dies den Vorteil, dass Modelle flexibel und agil gesteuert 
+werden können, solange der Prompt die notwendigen logischen Leitplanken bereitstellt.
+
+\subsubsection{Das Paradoxon der Code-Übersetzung}
+Für den konkreten Einsatz generativer KI im Software Engineering liefert die umfassende Systematisierung 
+von \cite{zhengSurveyLargeLanguage2023} eine wesentliche differenzierende Erkenntnis bezüglich der Modellauswahl. 
+Entgegen der intuitiven Annahme, dass für Programmieraufgaben spezialisierte Modelle stets vorzuziehen 
+sind, zeigt sich in empirischen Studien ein zweigeteiltes Bild.
+
+Auf der einen Seite existieren hochspezialisierte, verhältnismäßig kleine Sprachmodelle 
+(\textit{Code LLMs}), die exklusiv auf riesigen Quellcode-Korpora trainiert wurden. Beim Agieren auf 
+einer „grünen Wiese“ – mithin bei der isolierten Generierung von Standardfunktionen oder der 
+automatisierten Erstellung von Unit-Tests – übertreffen diese dedizierten Code-Modelle die gigantischen, 
+allgemeinsprachlichen Modelle oft deutlich. Sie weisen eine hohe syntaktische Präzision auf und sind in 
+ihrer Ausführung hochgradig effizient.
+
+Auf der anderen Seite verkehrt sich dieses Leistungsverhältnis ins Gegenteil, sobald die Aufgabe in den 
+Bereich der \textit{Code-Übersetzung} (\textit{Code Translation}) fällt. Bei der Migration bestehender 
+Logik von einer Quellsprache oder einem Paradigma in eine andere Zielarchitektur dominieren führende, 
+generalistische Großmodelle (wie beispielsweise GPT-4) die spezialisierten Code-Modelle signifikant. 
+
+Die wissenschaftliche Begründung hierfür liegt in der Natur der Problemstellung: Eine Software-Migration 
+ist kein rein syntaktisches Substitutionsproblem, bei dem lediglich Schlüsselwörter ausgetauscht werden. 
+Es handelt sich vielmehr um ein komplexes Abstraktions- und Logikproblem. Das Modell muss den 
+semantischen Kern, die implizite Absicht und die vernetzten Bedingungen des Altsystems vollständig 
+durchdringen, diese in eine sprachunabhängige logische Repräsentation abstrahieren und anschließend 
+unter den restriktiven Bedingungen des Zielparadigmas neu formulieren. Für derart vielschichtige 
+logische Schlussfolgerungen (\textit{Reasoning}) ist das breite Weltwissen und die schiere kognitive 
+Kapazität der großen, generalistischen Modelle unabdingbar, während rein syntaxfokussierte Code-Modelle 
+an den abstrakten Paradigmenwechseln scheitern.
+
+\subsection{Limitationen monolithischer Ansätze}
+\label{subsec:limitationen_monolithischer_ansaetze}
+
+Obgleich die im vorherigen Abschnitt beschriebenen Fähigkeiten moderner Großmodelle zur semantischen 
+Erfassung und Übersetzung von Quellcode beachtlich sind, stößt der praktische Einsatz in industriellen 
+Software-Engineering-Projekten an fundamentale Grenzen. In der Praxis und der aktuellen Forschung werden 
+Ansätze, bei denen eine komplexe Aufgabe in einer einzigen Interaktionsschleife – mithin über einen 
+einzelnen, isolierten Eingabeaufforderungs-Befehl (\textit{Single-Prompt} oder 
+\textit{One-Shot}-Verfahren) – gelöst werden soll, als \textit{monolithische Ansätze} bezeichnet. 
+Um die Notwendigkeit fortgeschrittener, verteilter Architekturen zu begründen, müssen die 
+systemimmanenten Schwachstellen dieser monolithischen Herangehensweise auf zwei Ebenen analysiert 
+werden: der algorithmischen Komplexität der Logikketten und der strukturellen Komplexität systemweiter 
+Abhängigkeiten.
+
+\subsubsection{Die Komplexitätsfalle und das probabilistische Paradigma}
+Die primäre algorithmische Limitierung monolithischer Prompts bei logisch anspruchsvollen Aufgaben 
+wurde bereits frühzeitig durch OpenAI im Rahmen der Vorstellung des Codex-Modells empirisch dokumentiert. 
+Wie \cite{chenEvaluatingLargeLanguage2021} nachweisen, sind LLMs hervorragend in der Lage, isolierte, in sich 
+geschlossene Programmieraufgaben zu lösen, sofern die Spezifikation klar umrissen ist. 
+
+Das Leistungsvermögen bricht jedoch mathematisch nachweisbar ein, sobald eine Spezifikation lange 
+Ketten sequenzieller oder verschachtelter Operationen verlangt (\textit{Chaining-Problem}). Die Autoren 
+zeigen, dass die Erfolgsquote des Modells mit zunehmender Anzahl logisch verknüpfter Bausteine 
+innerhalb der Anforderung exponentiell abfällt \cite{chenEvaluatingLargeLanguage2021}. Für die Migration historisch 
+gewachsener SAP-Regelwerke (wie dem klassischen \textit{Variant Configuration}-Modell LOVC) ist diese 
+Erkenntnis von kritischer Bedeutung: Solche Altsysteme bestehen typischerweise aus hochgradig 
+verschachtelten, prozeduralen Abhängigkeiten und logischen Verzweigungen. Ein monolithischer Prompt 
+zwingt das Modell, diese gesamte kognitive Last simultan zu verarbeiten und den Zielcode in einem 
+einzigen autoregressiven Durchlauf fehlerfrei zu generieren. Dies überschreitet die inhärenten 
+Fähigkeiten zur logischen Vorausschau des Modells, da es Token für Token auf Basis von 
+Wahrscheinlichkeiten generiert, ohne eine echte logische Tiefenprüfung vorzunehmen.
+
+Darüber hinaus beleuchtet das Paper eine fundamentale Schwäche des probabilistischen Charakters von 
+Sprachmodellen. Die Metrik $pass@1$ – welche die Wahrscheinlichkeit beschreibt, dass ein einzelner 
+generierter Code-Entwurf funktional korrekt ist – ist bei komplexen Aufgabenstellungen extrem gering. 
+Erst durch das wiederholte Generieren unabhängiger Stichproben ($pass@k$) und eine anschließende 
+externe Verifizierung steigt die Erfolgsquote signifikant an \cite{chenEvaluatingLargeLanguage2021}. Ein 
+monolithischer Ansatz bietet jedoch keinerlei inhärente Mechanismen für ein solches iteratives 
+\textit{Sampling} oder eine automatisierte Qualitätskontrolle, wodurch fehlerhafte Syntax oder logische 
+Fehlschlüsse unkorrigiert in das Zielergebnis einfließen.
+
+\subsubsection{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}
+Während die Arbeit von Chen et al. die Schwächen auf Ebene einzelner Funktionen aufzeigt, skaliert der 
+aktuellere \textit{SWE-bench}-Benchmark von \cite{jimenezSwebenchCanLanguage2024} diese Analyse auf das Niveau 
+realer, industrieller Software-Repositories. Im Rahmen dieses Frameworks wurden führende Sprachmodelle 
+mit echten, komplexen Problemstellungen aus großen Open-Source-Projekten konfrontiert, bei denen 
+Änderungen nicht isoliert, sondern über Systemgrenzen hinweg durchgeführt werden mussten.
+
+Die Ergebnisse dieses Benchmarks offenbaren ein klares Defizit monolithischer Großmodelle: Selbst 
+hochgradig leistungsfähige, kommerzielle Flaggschiff-Modelle wie GPT-4 oder Claude waren im 
+monolithischen \textit{Single-Prompt}-Setting überfordert und konnten weit unter $5\%$ der realen 
+Software-Probleme erfolgreich lösen \cite{jimenezSwebenchCanLanguage2024}. Die Autoren identifizieren zwei 
+Hauptursachen für dieses drastische Scheitern:
+
+\begin{enumerate}
+    \item \textbf{Mangelndes Verständnis globaler Abhängigkeiten:} Monolithische LLMs scheitern an der 
+    Identifikation von \textit{Cross-File-Dependencies}. Sie sind zwar in der Lage, den lokal 
+    übergebenen Code-Kontext zu modifizieren, überblicken jedoch nicht, welche Auswirkungen diese 
+    Modifikation auf andere, im Kontext nicht enthaltene Klassen, Schnittstellen oder Datenstrukturen 
+    des Gesamtsystems hat. Bei einer SAP AVC-Migration, die auf einem global vernetzten, deklarativen 
+    \textit{Constraint}-Netzwerk basiert, führt dieser blinde Fleck unweigerlich zu fatalen 
+    Inkonsistenzen im Gesamtsystem.
+    \item \textbf{Fehlen einer interaktiven Ausführungsumgebung:} Ein monolithischer Prompt agiert als 
+    reine Text-zu-Text-Transformation in einer isolierten Umgebung (Black-Box). Dem Modell fehlt 
+    jeglicher Zugriff auf einen Compiler, einen Interpreter oder Testprotokolle. In der realen 
+    Softwareentwicklung ist die fehlerfreie Code-Erstellung jedoch ein hochgradig interaktiver, 
+    iterativer Prozess. Ohne die Möglichkeit, den generierten Code testweise auszuführen und das daraus 
+    resultierende Compiler-Feedback dynamisch zu interpretieren, ist das Modell gezwungen, die 
+    syntaktische Korrektheit blind zu erraten.
+\end{enumerate}
+
+Zusammenfassend lässt sich konstatieren, dass monolithische KI-Ansätze aufgrund der exponentiellen 
+Fehleranfälligkeit bei langen Logikketten, des Mangels an systemweiter Kontextverarbeitung und der 
+Isolation von echten Ausführungsumgebungen für komplexe Architektur-Transformationen ungeeignet sind. 
+Diese wissenschaftlich dokumentierte Forschungslücke erfordert den Übergang von isolierten Prompts hin 
+zu dynamischen, interaktiven Multi-Agenten-Systemen, die in der Lage sind, Aufgaben modular aufzuteilen 
+und durch kontinuierliche Feedbackschleifen zu validieren.
