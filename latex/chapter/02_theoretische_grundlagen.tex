@@ -5,19 +5,22 @@
 \subsection{Einführung in die logische Architektur der Variantenkonfiguration}
 
 In der modernen Fertigungsindustrie erfordert die Abbildung kundenindividueller Produkte hochflexible 
-Systemstrukturen. Die grundlegende informationstechnische Idee der Variantenkonfiguration besteht darin, ein 
-Produkt durch eine Vielzahl möglicher Ausprägungen zu definieren, welche durch ein iteratives Regelwerk logisch 
-miteinander verknüpft sind, um komplexe Geschäftsprozesse strukturiert abzubilden. Da die Ausmultiplikation aller 
-möglichen Kombinationsmöglichkeiten die Anzahl der Varianten schnell in die Millionen oder in extremen Fällen der 
-Anlagenfertigung bis in den Bereich von Quadrillionen ($10^{24}$) treiben kann, ist die Anlage diskreter Stammdaten 
-für jede einzelne Ausprägung in der Praxis unmöglich (zitat). 
+Systemstrukturen. Die grundlegende informationstechnische Idee der Variantenkonfiguration besteht darin, 
+ein konfigurierbares Produkt – wie beispielsweise einen Personenkraftwagen – nicht als unzählige, 
+separat gepflegte Endprodukte anzulegen, sondern als ein zentrales Grundmodell, das durch diverse 
+Ausprägungen (wie Lackierung, Motorisierung oder Bereifung) spezifiziert wird. Diese Ausprägungen sind 
+durch ein logisches Regelwerk miteinander verknüpft, um technische und kaufmännische Restriktionen 
+abzubilden. Da die Kombination aller möglichen Merkmalsausprägungen die Anzahl der finalen Varianten 
+schnell in die Millionen oder, in extremen Fällen der Anlagenfertigung, bis in den Bereich von 
+Quadrillionen ($10^{24}$) treiben kann, ist die Anlage diskreter Stammdaten für jede einzelne physische 
+Ausprägung in der IT-Praxis unmöglich \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
 
 Als systemtechnische Antwort auf diese kombinatorische Explosion fungiert im SAP-System der sogenannte 
-\textit{konfigurierbare Materialstamm} (KMAT). 
+\textit{konfigurierbare Materialstamm}. 
 Dieser dient als universaler Platzhalter, unter dem die gesamte Variantenvielfalt eines Produkts 
-informationstechnisch zusammengefasst wird (zitat). 
+informationstechnisch zusammengefasst wird \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. 
 Um diese Vielfalt in einer sogenannten Bewertungsoberfläche abzubilden, greift die SAP-Architektur auf 
-drei zentrale Strukturkomponenten zurück (zitat):
+drei zentrale Strukturkomponenten zurück \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}:
 
 \begin{itemize}
     \item \textbf{Merkmale (Characteristics):} Sie definieren die spezifischen Eigenschaften eines Produkts 
@@ -33,17 +36,16 @@ Maximal-Prinzip. Anstatt ein Produkt aus einzelnen Modulen additiv zu einem 100\
 basiert die Architektur auf einem subtraktiven 150\,\%-Modell. Hierfür wird eine 
 \textit{konfigurierbare Maximalstückliste} (Super BOM) eingesetzt. Diese umfasst sämtliche Bauteile und 
 Komponenten, die für jedwede theoretisch mögliche Variante des Produkts jemals benötigt werden könnten 
-(zitat). Während des Konfigurationsprozesses können dieser Stückliste keine neuen 
+\parencite[S. 169]{blumohrAdvancedVariantConfiguration2023}. Während des Konfigurationsprozesses können dieser Stückliste keine neuen 
 Elemente hinzugefügt, sondern lediglich nicht benötigte Komponenten herausgefiltert werden.
 
 Die logische Brücke zwischen der kaufmännischen Konfiguration und der technischen Fertigung bildet das 
 \textit{Beziehungswissen} (Object Dependencies). Metaphorisch gesprochen übersetzt dieses Regelwerk das 
 kundenseitige „Wünschen“ in der Bewertungsoberfläche in das fertigungsseitige „Erhalten“ in Form der ausgedünnten 
-Stückliste (zitat). Konkret wird dies durch Steuerungsmechanismen wie 
+Stückliste \parencite[S. 101]{blumohrAdvancedVariantConfiguration2023}. Konkret wird dies durch Steuerungsmechanismen wie 
 \textit{Auswahlbedingungen} (Selection Conditions) realisiert. Wenn ein Kunde beispielsweise aus einem Angebot von 
 sechs Motoren einen spezifischen Antrieb wählt, determinieren die Auswahlbedingungen des Beziehungswissens, 
-dass die fünf nicht gewählten Motoren aus der finalen Fertigungsstückliste eliminiert werden 
-(zitat). 
+dass die fünf nicht gewählten Motoren aus der finalen Fertigungsstückliste eliminiert werden. 
 
 Die Zusammenhänge dieser fundamentalen Architekturkomponenten – vom konfigurierbaren Materialstamm über die 
 Bewertungsoberfläche bis hin zur Maximalstückliste und dem steuernden Beziehungswissen – sind in Abbildung 
@@ -124,13 +126,9 @@ die in Zusammenarbeit mit dem Fraunhofer-Institut ITWM tief in den SAP-Standard 
 komplexe Produktkonfigurationen erweitert wurde \parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
 Der Einsatz dieser Engine überführt den Konfigurationsprozess mathematisch in ein sogenanntes 
-\textit{Constraint Satisfaction Problem} (CSP). Bei einem CSP geht es aus informatischer Sicht nicht mehr 
-darum, eine Liste von Instruktionen nacheinander abzuarbeiten, um einen Endzustand zu berechnen. 
-Stattdessen wird das gesamte Modell als ein Netzwerk aus Variablen (den SAP-Merkmalen) und den 
-zugehörigen Wertebereichen (den Domänen) definiert. Das Beziehungswissen wird in diesem Paradigma als 
-harte Bedingungen (\textit{Constraints}) formuliert, die festlegen, welche Merkmalskombinationen 
-zulässig sind und welche sich gegenseitig ausschließen. Ziel des CSP-Solvers ist es, eine gültige 
-Belegung für alle Variablen zu finden, bei der kein einziger Constraint verletzt wird. 
+\textit{Constraint Satisfaction Problem} (CSP). Ein CSP wird in der Informatik grundlegend definiert 
+als ein System, das aus „einer Menge von Variablen, einer Menge von Domänen [sowie] einer Menge von 
+Constraints, die zulässige Kombinationen von Werten spezifizieren“ \parencite[eigene Übersetzung nach][S. 180]{russellArtificialIntelligenceModern2010} besteht.
 
 Dieser deklarative Ansatz bringt tiefgreifende Auswirkungen auf die Benutzerführung und die 
 Systemstabilität mit sich. Sobald ein Anwender während der Konfiguration in der Benutzeroberfläche einen 
@@ -317,3 +315,161 @@ Isolation von echten Ausführungsumgebungen für komplexe Architektur-Transforma
 Diese wissenschaftlich dokumentierte Forschungslücke erfordert den Übergang von isolierten Prompts hin 
 zu dynamischen, interaktiven Multi-Agenten-Systemen, die in der Lage sind, Aufgaben modular aufzuteilen 
 und durch kontinuierliche Feedbackschleifen zu validieren.
+
+\section{Multi-Agenten-Systeme(MAS)}
+\subsection{Definition und kognitive Architekturen}
+\label{subsec:definition_und_kognitive_architekturen}
+
+Um die im vorherigen Abschnitt dokumentierten Limitationen monolithischer Sprachmodelle – insbesondere 
+den exponentiellen Leistungsabfall bei langen Logikketten und das Fehlen systemweiter Kontrollmechanismen 
+– informationstechnisch aufzulösen, etabliert sich in der modernen Informatik das Paradigma der 
+\textit{Multi-Agenten-Systeme} (MAS). Die fundamentale Kernidee dieses Ansatzes besteht darin, eine 
+komplexe Gesamtaufgabe nicht einem einzelnen, allumfassenden Prompt zu übergeben, sondern die kognitive 
+Last auf ein Kollektiv spezialisierter, künstlicher Entitäten – sogenannte KI-Agenten – zu verteilen, 
+welche autonom und kollaborativ an der Erreichung eines vordefinierten Endziels arbeiten.
+
+\subsubsection{Der Begriff des LLM-basierten Agenten}
+In der klassischen Informatik wird ein Agent traditionell als eine Entität definiert, die in der Lage 
+ist, ihre Umwelt durch Sensoren wahrzunehmen und auf diese mittels Aktuatoren einzuwirken, um rationale 
+Entscheidungen zu treffen \textcite{russellArtificialIntelligenceModern2010}. Im Kontext moderner generativer KI verschiebt 
+sich dieses Konzept grundlegend: Das primäre „Gehirn“ und die zentrale Rechenmaschine des Agenten ist 
+ein Large Language Model. 
+
+Ein LLM-basierter Agent unterscheidet sich von einem klassischen, rein reaktiven Chatbot durch ein 
+erhöhtes Maß an Autonomie, Intentionalität und Werkzeugnutzung. Technisch wird ein solcher Agent 
+instanziiert, indem ein Basis-Sprachmodell mit einem spezifischen System-Prompt 
+(\textit{Instruction Engineering}) versehen wird, welcher seine Identität, seine Verhaltensregeln und 
+seine Zielsetzung exakt formuliert. Darüber hinaus wird der Agent mit Schnittstellen zu externen 
+Werkzeugen (\textit{Tools}) oder Datenquellen ausgestattet. 
+
+Ein wesentliches Merkmal von Multi-Agenten-Strukturen ist die architektonische Flexibilität ihrer 
+Orchestrierung. Es existiert kein starrer, mathematisch vorgegebener Standard, wie ein solches System 
+strukturiert sein muss. Die Ausgestaltung des Kontrollflusses und der Kommunikationspfade obliegt dem 
+Systemarchitekten. Dabei lassen sich zwei fundamentale Organisationsformen unterscheiden:
+\begin{enumerate}
+    \item \textbf{Statische Orchestrierung:} Der Entwickler definiert im Vorfeld unveränderliche 
+    Kommunikationsketten und deterministische Ablaufpläne (z.\,B. Agent A muss seine Ausgabe zwingend 
+    an Agent B übergeben).
+    \item \textbf{Dynamische Autonomie:} Das Multi-Agenten-System erhält die inhärente Fähigkeit, zur 
+    Laufzeit eigenständig zu entscheiden, ob, wann und welche Sub-Agenten oder Werkzeuge zur Lösung 
+    eines auftretenden Teilproblems aktiviert werden müssen.
+\end{enumerate}
+
+\subsubsection{Die kognitive Kern-Anatomie nach Wang et al.}
+Obgleich die konkrete softwaretechnische Implementierung je nach verwendetem Entwicklungs-Framework 
+variieren kann, hat sich in der wissenschaftlichen Literatur eine universelle, standardisierte kognitive 
+Architektur für autonome Agenten herauskristallisiert. Wie \textcite{wangSurveyLargeLanguage2024} im Rahmen einer 
+umfassenden Systematisierung nachweisen, lässt sich die funktionale Anatomie eines leistungsfähigen 
+LLM-basierten Agenten trennscharf in vier interagierende Kernmodule unterteilen:
+
+\begin{itemize}
+    \item \textbf{Profiling-Modul (Rollen-Spezifität):} Dieses Modul legt fest, welche spezifische 
+    Persona, Expertise und Verhaltensrestriktionen der Agent adaptiert. Durch die Zuweisung einer 
+    dedizierten Rolle (z.\,B. „SAP-AVC-Architekt“) wird der Suchraum des Sprachmodells im 
+    Pre-Training-Wissen fokussiert, was die Relevanz der Ausgaben drastisch erhöht.
+    \item \textbf{Memory-Modul (Gedächtnis-Strukturen):} Das Gedächtnis sichert die zeitliche 
+    Konsistenz des Agenten. Es unterteilt sich in ein Kurzzeitgedächtnis (\textit{Short-term Memory}), 
+    welches den aktuellen Konversationskontext puffert, und ein Langzeitgedächtnis 
+    (\textit{Long-term Memory}), das es dem Agenten erlaubt, historische Informationen, erfolgreich gelöste Aufgaben oder domänenspezifisches Wissen dauerhaft zu persistieren.
+    \item \textbf{Planning-Modul (Aufgaben-Dekonstruktion):} Komplexe Fragestellungen überfordern 
+    die direkte autoregressive Textgenerierung. Das Planungs-Modul befähigt den Agenten, ein globales 
+    Endziel autonom in überschaubare, logisch aufeinander aufbauende Teilaufgaben (\textit{Sub-tasks}) 
+    zu zerlegen und Prioritäten zu setzen.
+    \item \textbf{Action-Modul (Werkzeug-Exekution):} Dieses Modul bildet die Brücke zur Außenwelt. 
+    Es übersetzt die textuellen Intentionen des Sprachmodells in konkrete API-Aufrufe, 
+    Datenbankabfragen oder Code-Ausführungen und führt damit die im Planungs-Schritt definierten 
+    Aufgaben real aus.
+\end{itemize}
+
+\subsubsection{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}
+Innerhalb des für Migrationsprozesse besonders kritischen Planungs- und Aktionsmoduls droht bei rein 
+prozeduralen Prompts die Gefahr einer unkontrollierten Fehlerfortpflanzung. Um eine adaptive und 
+verlässliche Problemlösungskompetenz zu garantieren, bildet das von \textcite{yaoReactSynergizingReasoning2022} eingeführte 
+\textit{ReAct}-Paradigma (\textit{Reasoning and Acting}) das theoretische Fundament moderner 
+Agenten-Kognition.
+
+Das ReAct-Muster bricht die isolierte, statische Natur klassischer Sprachmodelle auf, indem es eine 
+kontinuierliche, interaktive Schleife aus drei sequenziellen Phasen erzwingt:
+
+$$\mbox{Thought (Gedanke)} \longrightarrow \mbox{Action (Handlung)} \longrightarrow \mbox{Observation (Beobachtung)}$$
+
+In der \textit{Thought}-Phase nutzt der Agent das LLM, um den aktuellen Zustand verbal zu analysieren, 
+logische Schlussfolgerungen zu ziehen und eine spezifische Handlungsabsicht zu formulieren. In der 
+darauffolgenden \textit{Action}-Phase wird diese Absicht durch den Aufruf eines externen Werkzeugs – 
+beispielsweise eines Compilers – exekutiert. Die entscheidende Innovation liegt in der 
+\textit{Observation}-Phase: Das reale Feedback der Umgebung (z.\,B. eine syntaktische Fehlermeldung des 
+Compilers) wird abgefangen und als neuer Text-Kontext in das Modell zurückgespeist. 
+
+Das Modell verarbeitet diese Beobachtung in der nächsten \textit{Thought}-Phase, reflektiert den Fehler 
+aktiv und passt seinen nachfolgenden Aktionsplan dynamisch an. Dieser zirkuläre Prozess des 
+\textit{Self-Refinements} verhindert, dass der Agent – wie ein monolithischer Prompt 
+– blind fehlerhafte Code-Strukturen halluziniert oder falsche Annahmen unkorrigiert fortschreibt. Das 
+ReAct-Paradigma ermöglicht somit eine faktenbasierte, empirisch überprüfbare und selbstreparierende 
+Code-Generierung, die für die präzise Transformation restriktiver SAP AVC-Constraint-Netzwerke 
+unerlässlich ist.
+
+\subsection{Kollaborative Agenten-Muster}
+\label{subsec:kollaborative_agenten_muster}
+
+Nachdem im vorangegangenen Abschnitt die kognitive Funktionsweise und Anatomie einzelner KI-Agenten
+definiert wurde, befasst sich dieser Abschnitt mit der Orchestrierung mehrerer Agenten. Das Ziel 
+\textit{kollaborativer Agenten-Muster} ist es, die in Kapitel 
+\ref{subsec:limitationen_monolithischer_ansaetze} beschriebenen Limitationen monolithischer 
+Sprachmodelle – wie den Kontextverlust bei langen Logikketten und das Fehlen systemweiter Validierung 
+– durch arbeitsteilige Architekturen gezielt auszumerzen. In der aktuellen Forschung haben sich 
+hierfür verschiedene methodische Paradigmen etabliert.
+
+\subsubsection{Rollenspezialisierung und Dehalluzination}
+Eine der effektivsten Methoden zur Steigerung der Codequalität ist die Zuweisung harter, voneinander 
+abgegrenzter Expertenrollen (wie beispielsweise Programmierer, Architekt und Tester), die sich in ihrer 
+Zusammenarbeit an bewährten Vorgehensmodellen wie dem Wasserfallprinzip orientieren. Wie 
+\textcite{qianChatdevCommunicativeAgents2024} in ihrem \textit{ChatDev}-Framework demonstrieren, 
+ermöglicht diese Arbeitsteilung eine strukturierte Problemlösung, die monolithischen Ansätzen deutlich 
+überlegen ist. Ein zentrales Konzept zur Fehlervermeidung ist dabei die 
+\textit{Communicative Dehallucination} (kommunikative Dehalluzination): Anstatt bei unklaren 
+Anforderungen fehlende Parameter oder Logiken blind zu erfinden (zu halluzinieren), werden Agenten so 
+instruiert, dass sie proaktiv beim planenden Agenten nachfragen und detailliertere Spezifikationen 
+einfordern, bevor Quellcode generiert wird.
+
+\subsubsection{Inception Prompting und System-Leitplanken}
+Um sicherzustellen, dass Agenten ihre zugewiesenen Rollen strikt beibehalten und zielgerichtet 
+interagieren, bedarf es klarer Leitplanken. \textcite{liCamelCommunicativeAgents2023} führen hierfür im 7
+\textit{CAMEL}-Framework das Konzept des \textit{Inception Promptings} ein. Dabei werden Agenten durch 
+asymmetrische System-Prompts zu Beginn der Konversation in eine feste Rolle gezwungen und mit strikten 
+Verhaltensregeln ausgestattet. Um systemimmanente Gefahren wie das \textit{Role Flipping} 
+(den ungewollten Rollentausch zwischen Instrukteur und Assistent) oder sinnlose 
+Kommunikations-Endlosschleifen zu verhindern, implementiert das System exakte Kommunikationsprotokolle 
+und dedizierte Abbruch-Tokens (\textit{Termination Tokens}).
+
+\subsubsection{Werkzeugnutzung und Code-Ausführung}
+Kollaboration in Multi-Agenten-Systemen beschränkt sich nicht ausschließlich auf den Austausch 
+natürlicher Sprache, sondern umfasst auch die Interaktion mit externen Werkzeugen (\textit{Tool Use}) 
+und Laufzeitumgebungen. Das \textit{AutoGen}-Framework von \textcite{wuAutogenEnablingNextgen2024} 
+etabliert hierfür das Paradigma des \textit{Conversation Programming}, bei dem der Kontrollfluss der 
+Anwendung direkt durch den Agenten-Dialog gesteuert wird. Eine zentrale Rolle nehmen dabei sogenannte 
+Proxy-Agenten ein. Deren einzige Aufgabe ist es, den von generierenden LLM-Agenten geschriebenen 
+Quellcode auszuführen und im Falle von Syntax- oder Laufzeitfehlern die rohen Fehlermeldungen in den 
+Chat zurückzuspiegeln. Dadurch entsteht eine unverzichtbare Brücke zwischen Textgenerierung und 
+empirischer Validierung.
+
+\subsubsection{Iterative Fehlerkorrektur (Self-Refinement)}
+Die zielgerichtete Reaktion auf solche durch Proxy-Agenten aufgeworfenen Fehler erfordert strukturierte 
+Kognitionsmechanismen. \textcite{shinnReflexionLanguageAgents2023} beschreiben in ihrem 
+\textit{Reflexion}-Framework den Prozess der iterativen Fehlerkorrektur durch \textit{Self-Refinement}. 
+Meldet die Ausführungsumgebung einen Fehler, rät das Sprachmodell nicht blind auf eine neue Lösung. 
+Stattdessen nutzt der Agent ein episodisches Gedächtnis, um den aufgetretenen Fehler verbal zu 
+analysieren und zu reflektieren. Durch diesen „semantischen Gradienten“ leitet der Agent eine konkrete 
+Lösungsstrategie aus dem Fehler ab, speichert diese und passt den Code im nächsten iterativen Versuch 
+präzise an.
+
+\subsubsection{Standard Operating Procedures und das Fließband-Paradigma}
+Die Synthese all dieser Muster führt zu hochkomplexen, skalierbaren Multi-Agenten-Systemen, die 
+traditionelle Monolithen deklassieren. Den umfassenden empirischen Beleg hierfür liefert das 
+\textit{MetaGPT}-Framework von \textcite{hongMetaGPTMetaProgramming2024}. Die Architektur simuliert ein 
+softwareentwickelndes Unternehmen als Fließband-System (\textit{Assembly Line Paradigm}), das seine 
+Agenten zur Einhaltung strenger menschlicher Standardarbeitsanweisungen 
+(\textit{Standard Operating Procedures, SOPs}) zwingt. Eine entscheidende Neuerung ist hier der 
+strukturierte Dokumentenaustausch: Anstatt frei miteinander zu chatten, kommunizieren die Agenten über 
+formalisierte Spezifikationen und Design-Dokumente. Die Studie beweist, dass diese strikt orchestrierte 
+Architektur kaskadierende Halluzinationen stoppt und Monolithen in sämtlichen Benchmarks zur 
+Code-Generierung signifikant schlägt.
