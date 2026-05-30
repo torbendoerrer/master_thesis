@@ -16,17 +16,17 @@ Quadrillionen ($10^{24}$) treiben kann, ist die Anlage diskreter Stammdaten für
 Ausprägung in der IT-Praxis unmöglich \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
 
 Als systemtechnische Antwort auf diese kombinatorische Explosion fungiert im SAP-System der sogenannte 
-\textit{konfigurierbare Materialstamm}. 
+\ac{KMAT}. 
 Dieser dient als universaler Platzhalter, unter dem die gesamte Variantenvielfalt eines Produkts 
 informationstechnisch zusammengefasst wird \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. 
 Um diese Vielfalt in einer sogenannten Bewertungsoberfläche abzubilden, greift die SAP-Architektur auf 
 drei zentrale Strukturkomponenten zurück \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}:
 
 \begin{itemize}
-    \item \textbf{Merkmale (Characteristics):} Sie definieren die spezifischen Eigenschaften eines Produkts 
+    \item \textbf{Merkmale:} Sie definieren die spezifischen Eigenschaften eines Produkts 
     (wie beispielsweise die Lackierung oder die Traglast eines Gabelstaplers).
     \item \textbf{Variantenklassen:} Diese dienen der logischen Bündelung der Merkmale und werden direkt dem 
-    konfigurierbaren Materialstamm zugeordnet.
+    \ac{KMAT} zugeordnet.
     \item \textbf{Konfigurationsprofil:} Dieses fungiert als übergeordnetes Steuerungselement, das die Stammdaten 
     zusammenhält und den Konfigurationsprozess maßgeblich regelt.
 \end{itemize}
@@ -34,16 +34,16 @@ drei zentrale Strukturkomponenten zurück \parencite[S. 90 - 96]{blumohrAdvanced
 Ein zentrales Paradigma der SAP-Variantenkonfiguration zur Bewältigung dieser Komplexität ist das sogenannte 
 Maximal-Prinzip. Anstatt ein Produkt aus einzelnen Modulen additiv zu einem 100\,\%-Modell zusammenzusetzen, 
 basiert die Architektur auf einem subtraktiven 150\,\%-Modell. Hierfür wird eine 
-\textit{konfigurierbare Maximalstückliste} (Super BOM) eingesetzt. Diese umfasst sämtliche Bauteile und 
+\ac{Super BOM} eingesetzt. Diese umfasst sämtliche Bauteile und 
 Komponenten, die für jedwede theoretisch mögliche Variante des Produkts jemals benötigt werden könnten 
 \parencite[S. 169]{blumohrAdvancedVariantConfiguration2023}. Während des Konfigurationsprozesses können dieser Stückliste keine neuen 
 Elemente hinzugefügt, sondern lediglich nicht benötigte Komponenten herausgefiltert werden.
 
 Die logische Brücke zwischen der kaufmännischen Konfiguration und der technischen Fertigung bildet das 
-\textit{Beziehungswissen} (Object Dependencies). Metaphorisch gesprochen übersetzt dieses Regelwerk das 
+\textit{Beziehungswissen}. Metaphorisch gesprochen übersetzt dieses Regelwerk das 
 kundenseitige „Wünschen“ in der Bewertungsoberfläche in das fertigungsseitige „Erhalten“ in Form der ausgedünnten 
 Stückliste \parencite[S. 101]{blumohrAdvancedVariantConfiguration2023}. Konkret wird dies durch Steuerungsmechanismen wie 
-\textit{Auswahlbedingungen} (Selection Conditions) realisiert. Wenn ein Kunde beispielsweise aus einem Angebot von 
+\textit{Auswahlbedingungen} realisiert. Wenn ein Kunde beispielsweise aus einem Angebot von 
 sechs Motoren einen spezifischen Antrieb wählt, determinieren die Auswahlbedingungen des Beziehungswissens, 
 dass die fünf nicht gewählten Motoren aus der finalen Fertigungsstückliste eliminiert werden. 
 
@@ -60,88 +60,87 @@ Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, ist z
 in die Evolution der SAP-Systemlandschaften erforderlich. Während das bisherige Kernprodukt 
 \textit{SAP ERP} (oft auch als SAP R/3 bezeichnet) über Jahrzehnte den Standard darstellte, markiert 
 \textit{SAP S/4HANA} eine fundamentale Neuausrichtung der Softwarearchitektur, insbesondere durch die 
-Nutzung der In-Memory-Datenbanktechnologie \parencite[vgl.][S. 28]{blumohrAdvancedVariantConfiguration2023}. 
+Nutzung der In-Memory-Datenbanktechnologie \parencite[S. 28]{blumohrAdvancedVariantConfiguration2023}. 
 In diesem Zuge wurde für die Variantenkonfiguration ein neues technologisches Fundament geschaffen.
 
-Der Begriff \textit{Logistics Variant Configuration} (LO-VC) dient heute primär als Retronym, um die 
-klassische Art der Konfiguration von der neuen \textit{Advanced Variant Configuration} (AVC) abzugrenzen 
-\parencite[vgl.][S. 32]{blumohrAdvancedVariantConfiguration2023}. Obwohl LO-VC in aktuellen S/4HANA-Installationen 
+Der Begriff \ac{LO-VC} dient heute primär als Retronym, um die 
+klassische Art der Konfiguration von der neuen \ac{AVC} abzugrenzen 
+\parencite[S. 32]{blumohrAdvancedVariantConfiguration2023}. Obwohl \ac{LO-VC} in aktuellen S/4HANA-Installationen 
 (On-Premise und Private Cloud) aus Gründen der Abwärtskompatibilität weiterhin verfügbar ist, gilt sie 
 technologisch als veralteter Standard. 
 
-Wie bereits in den Grundlagen erläutert, basiert LO-VC auf einem prozeduralen Paradigma, das historisch 
+\ac{LO-VC} basiert dabei auf einem prozeduralen Paradigma, das historisch 
 bedingt oft durch einen „Learning-by-Doing“-Ansatz in den Unternehmen gewachsen ist. Dies führte dazu, 
 dass Modelle häufig unnötig komplex durch den Einsatz von Prozeduren und Aktionen anstatt 
-leistungsfähigerer Constraints gestaltet wurden \parencite[vgl.][S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu 
-AVC wird in der Literatur daher nicht nur als technisches Upgrade, sondern als strategische Notwendigkeit 
+leistungsfähigerer Constraints gestaltet wurden \parencite[S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu 
+\ac{AVC} wird in der Literatur daher nicht nur als technisches Upgrade, sondern als strategische Notwendigkeit 
 beschrieben, die durch folgende Kernaspekte begründet wird:
 
 \begin{itemize}
-    \item \textbf{Rückkehr zum Standard und Vereinfachung:} AVC stellt den künftigen Standard dar. Die 
+    \item \textbf{Rückkehr zum Standard und Vereinfachung:} \ac{AVC} stellt den künftigen Standard dar. Die 
     Migration bietet Unternehmen die Chance, historisch gewachsene, schwer wartbare „Spaghetti-Logiken“ 
     zu dekonstruieren und durch eine moderne, leichter wiederverwendbare Modellierung zu ersetzen 
-    \parencite[vgl.][S. 57\,f.]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Abbildung moderner Geschäftsmodelle:} Klassische LO-VC-Strukturen sind primär auf den 
+    \parencite[S. 57]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Abbildung moderner Geschäftsmodelle:} Klassische LO-VC Strukturen sind primär auf den 
     reinen Verkauf von Produkten (SD-Kontext) ausgelegt. Moderne Strategien wie das 
     \textit{Solution Bundling} (Kombination aus Produkt, Dienstleistung und Abonnements) lassen sich im 
-    Standard nur über AVC und die damit verknüpften neuen Objektträger wie die \textit{Solution Quote} 
-    abbilden \parencite[vgl.][S. 59]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Technologische Überlegenheit:} AVC nutzt mit \textit{Gecode} eine moderne 
-    Constraint-Solving-Engine, die im Gegensatz zur sequenziellen LO-VC-Logik analytische Prinzipien 
+    Standard nur über \ac{AVC} und die damit verknüpften neuen Objektträger wie die \textit{Solution Quote} 
+    abbilden \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Technologische Überlegenheit:} \ac{AVC} nutzt mit \textit{Gecode} eine moderne 
+    Constraint-Solving-Engine, die im Gegensatz zur sequenziellen \ac{LO-VC}-Logik analytische Prinzipien 
     verfolgt und damit eine deutlich höhere Performance und Flexibilität bietet 
-    \parencite[vgl.][S. 59]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Zukunftsfähigkeit (KI und Analytics):} Innovative Technologien wie 
-    \textit{Artificial Intelligence} (AI) oder \textit{Machine Learning} (ML) sowie moderne 
-    Auswertungsmethoden via \textit{CDS-Views} werden nativ für AVC entwickelt. Eine nachträgliche 
-    Integration in die veraltete LO-VC-Architektur gleicht lediglich einer „Renovierung“, die nie den 
-    Leistungsumfang einer Neuentwicklung erreichen kann \parencite[vgl.][S. 61]{blumohrAdvancedVariantConfiguration2023}.
+    \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
+    \item \textbf{Zukunftsfähigkeit:} Innovative Technologien aus den Bereichen
+    \ac{KI} oder des \ac{ML} sowie moderne 
+    Auswertungsmethoden via \textit{CDS-Views} werden nativ für \ac{AVC} entwickelt. Eine nachträgliche 
+    Integration in die veraltete \ac{LO-VC}-Architektur gleicht lediglich einer „Renovierung“, die nie den 
+    Leistungsumfang einer Neuentwicklung erreichen kann \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
     \item \textbf{Human-Resource-Aspekt:} Angesichts des Fachkräftemangels ist die Arbeit mit moderner 
     Softwarearchitektur ein entscheidender Faktor bei der Gewinnung von Talenten. Die Wartung einer über 
     25 Jahre alten Softwarelösung ist im Vergleich zur Vorreiterrolle in einer intelligenten 
     Fertigungsumgebung auf Basis aktueller Technologie weniger attraktiv für qualifizierten Nachwuchs 
-    \parencite[vgl.][S. 60]{blumohrAdvancedVariantConfiguration2023}.
+    \parencite[S. 60]{blumohrAdvancedVariantConfiguration2023}.
 \end{itemize}
 
 Zusammenfassend lässt sich festhalten, dass der Verbleib in der LO-VC-Welt zwar kurzfristig 
 Transformationsaufwände vermeidet, langfristig jedoch das Risiko erhöht, den Anschluss an technologische 
 Innovationen zu verlieren und den Aufwand für eine spätere Migration durch das wachsende technologische 
-Delta exponentiell zu vergrößern \parencite[vgl.][S. 61]{blumohrAdvancedVariantConfiguration2023}.
+Delta exponentiell zu vergrößern \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
 
-\subsection{Die moderne Architektur (AVC) und das Constraint-Paradigma}
+\subsection{Die moderne Architektur (AVC) und das Constraint Paradigma}
 \label{sec:avc_constraint}
 
 Die Antwort auf die konzeptionellen Schwächen und technischen Limitierungen der klassischen 
-Variantenkonfiguration bildet die Einführung der \textit{Advanced Variant Configuration} (AVC) in SAP 
+Variantenkonfiguration bildet die Einführung der \ac{AVC} in SAP 
 S/4HANA. Um den stetig wachsenden Anforderungen an Performance und Modellierungskomplexität 
 (wie beispielsweise in den \textit{Make-to-Order}- oder \textit{Engineer-to-Order}-Szenarien) gerecht zu 
-werden, vollzieht SAP mit AVC nicht nur ein syntaktisches Update, sondern einen fundamentalen 
-informationstechnischen Paradigmenwechsel unter der Haube der Konfigurations-Engine 
-\parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}.
+werden, vollzieht SAP mit \ac{AVC} nicht nur ein syntaktisches Update, sondern einen fundamentalen 
+informationstechnischen Paradigmenwechsel unter der Haube der Konfigurations-Engine.
 
 Während das bisherige LO-VC-System, wie in Kapitel \ref{sec:lovc_context} beschrieben, auf einer 
-iterativen, imperativen Abarbeitung von Befehlen und Prozeduren basierte, nutzt AVC einen grundlegend 
-deklarativen Lösungsansatz. Das technologische Herzstück der AVC-Architektur bildet ein neu integrierter 
+iterativen, imperativen Abarbeitung von Befehlen und Prozeduren basierte, nutzt \ac{AVC} einen grundlegend 
+deklarativen Lösungsansatz. Das technologische Herzstück der \ac{AVC}-Architektur bildet ein neu integrierter 
 \textit{Constraint Solver} namens \textit{Gecode}, eine ursprünglich quelloffene Softwarebibliothek, 
 die in Zusammenarbeit mit dem Fraunhofer-Institut ITWM tief in den SAP-Standard eingebettet und für 
-komplexe Produktkonfigurationen erweitert wurde \parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}.
+komplexe Produktkonfigurationen erweitert wurde \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
 Der Einsatz dieser Engine überführt den Konfigurationsprozess mathematisch in ein sogenanntes 
-\textit{Constraint Satisfaction Problem} (CSP). Ein CSP wird in der Informatik grundlegend definiert 
+\ac{CSP}. Ein \ac{CSP} wird in der Informatik grundlegend definiert 
 als ein System, das aus „einer Menge von Variablen, einer Menge von Domänen [sowie] einer Menge von 
 Constraints, die zulässige Kombinationen von Werten spezifizieren“ \parencite[eigene Übersetzung nach][S. 180]{russellArtificialIntelligenceModern2010} besteht.
 
 Dieser deklarative Ansatz bringt tiefgreifende Auswirkungen auf die Benutzerführung und die 
 Systemstabilität mit sich. Sobald ein Anwender während der Konfiguration in der Benutzeroberfläche einen 
 Wert für ein bestimmtes Merkmal wählt, schränkt die Gecode-Engine die Domänen (Wertebereiche) aller 
-anderen abhängigen Merkmale in Echtzeit ein \parencite[vgl.][S. 35]{blumohrAdvancedVariantConfiguration2023}. 
+anderen abhängigen Merkmale in Echtzeit ein. 
 Anstatt einen Fehler erst nach der sequenziellen Abarbeitung einer Prozedur auszuwerfen, eliminiert der 
 Solver unmögliche Auswahlmöglichkeiten präventiv aus dem Suchraum. Dies verhindert effektiv die 
-Entstehung inkonsistenter Konfigurationen.
+Entstehung inkonsistenter Konfigurationen \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
 Darüber hinaus bietet AVC erweiterte Simulations- und Analysemöglichkeiten, wie beispielsweise den 
 \textit{Dependency Trace}. Dieser ermöglicht es Konstrukteuren und Modellierern, in einem 
 \textit{Inspector Panel} genau nachzuvollziehen, welches Constraint für die Einschränkung eines 
-bestimmten Merkmals verantwortlich ist \parencite[vgl.][S. 37]{blumohrAdvancedVariantConfiguration2023}. 
+bestimmten Merkmals verantwortlich ist \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}. 
 
 Zusammenfassend markiert AVC durch die Gecode-Engine den Wechsel von der Frage „\textit{Wie} berechne 
 ich die Variante Schritt für Schritt?“ hin zu der Frage „\textit{Welche} globalen Bedingungen müssen für 
@@ -154,8 +153,8 @@ zu transformieren.
 \subsection{Large Language Models für Quellcode}
 \label{subsec:llms_fuer_code}
 
-In den vergangenen Jahren haben Systeme der Künstlichen Intelligenz (KI), insbesondere sogenannte Large 
-Language Models (LLMs), einen rasanten und tiefgreifenden technologischen Aufstieg erlebt. Was als 
+In den vergangenen Jahren haben KI-Systeme, insbesondere sogenannte Large 
+\ac{LLMs}, einen rasanten und tiefgreifenden technologischen Aufstieg erlebt. Was als 
 Werkzeug für rein statistische Textvervollständigungen begann, hat sich zu mächtigen kognitiven 
 Architekturen entwickelt. Diese Modelle dringen zunehmend in den Bereich des Software Engineerings vor 
 und verändern die Art und Weise, wie Software entworfen, analysiert und transformiert wird, grundlegend. 
@@ -165,15 +164,15 @@ zu deren Steuerung erforderlich.
 
 \subsubsection{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}
 Die heutige Generation marktbeherrschender Sprachmodelle basiert fast ausnahmslos auf der wegweisenden 
-Transformer-Architektur, die durch \cite{vaswaniAttentionAllYou2017} eingeführt wurde. Der entscheidende 
+Transformer-Architektur, die durch \textcite{vaswaniAttentionAllYou2017} eingeführt wurde. Der entscheidende 
 informationstechnische Durchbruch des Transformers liegt in der vollständigen Abkehr von früheren 
-rekurrenten neuronalen Netzen (RNNs) oder Long Short-Term Memory-Netzwerken (LSTMs). Während diese 
+rekurrenten neuronalen Netzen oder Long Short-Term Memory-Netzwerken. Während diese 
 älteren Architekturen Eingabesequenzen – wie natürlichen Text oder Quellcode – streng sequenziell, 
 mithin Zeichen für Zeichen oder Zeile für Zeile verarbeiten mussten, bricht der Transformer dieses 
 lineare Paradigma auf.
 
-Dies gelingt durch die Einführung des sogenannten \textit{Self-Attention-Mechanismus} 
-(Selbstaufmerksamkeit). Dieser Mechanismus erlaubt es dem Modell, alle Elemente (Token) einer Sequenz 
+Dies gelingt durch den sogenannten \textit{Self-Attention-Mechanismus}. Dieser Mechanismus erlaubt es dem 
+Modell, alle Elemente (Token) einer Sequenz 
 zeitgleich und vollständig parallel zu verarbeiten. Mathematisch berechnet das Netzwerk für jedes Token 
 innerhalb eines Kontextes einen Gewichtungsfaktor relativ zu allen anderen Token der Sequenz. Dadurch 
 wird bestimmt, wie viel „Aufmerksamkeit“ einem Wort oder Code-Snippet im Verhältnis zum Rest des Textes 

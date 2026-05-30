@@ -5,9 +5,17 @@
 % --- Pakete ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
+\usepackage{microtype}
 \usepackage[title, titletoc]{appendix}
+\usepackage{acronym}
+% 1. Macht die gesamte erste Nennung kursiv
+\renewcommand*{\acffont}[1]{\textit{#1}}
+
+% 2. Hebt das Kursive für die Klammer und die Kurzform wieder auf
+\renewcommand*{\acfsfont}[1]{\textup{#1}}
 
 % Zitierstil (BibLaTeX mit Biber)
 \usepackage[backend=biber, style=apa]{biblatex}
@@ -21,6 +29,9 @@
 \end{titlepage}
 \maketitle
 \tableofcontents
+\newpage
+\input{abkuerzungen} 
+\newpage
 
 \mainmatter
 \include{chapter/01_einleitung}
