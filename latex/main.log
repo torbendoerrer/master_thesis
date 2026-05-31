@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  30 MAY 2026 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  31 MAY 2026 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,14 +687,12 @@ Package acronym Info: Label `acro:CSP' newly defined as it shall be overridden
 although it is yet undefined on input line 128.
  [5]
 Package acronym Info: Label `acro:LLMs' newly defined as it shall be overridden
-although it is yet undefined on input line 157.
- [6] [7] [8] [9]
-Overfull \hbox (0.40448pt too wide) in paragraph at lines 288--293
-\T1/lmr/m/n/12 (-20) scher Groÿ-mo-del-le: Selbst hoch-gra-dig leis-tungs-fä-hi-ge, kom-mer-zi-el-le Flaggschiff-
- []
-
-[10{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [11] [12]
-Overfull \hbox (1.74281pt too wide) detected at line 393
+although it is yet undefined on input line 158.
+ [6] [7]
+Package acronym Info: Label `acro:ICL' newly defined as it shall be overridden
+although it is yet undefined on input line 203.
+ [8] [9] [10{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [11] [12]
+Overfull \hbox (1.74281pt too wide) detected at line 397
 [] [][]\OMS/lmsy/m/n/12 ! [] [][]! []
  []
 
@@ -871,15 +869,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16769 strings out of 467683
- 319900 string characters out of 5414237
- 1319047 words of memory out of 5000000
- 45353 multiletter control sequences out of 15000+600000
- 697479 words of font info for 191 fonts, out of 8000000 for 9000
+ 16776 strings out of 467683
+ 319993 string characters out of 5414237
+ 1319122 words of memory out of 5000000
+ 45360 multiletter control sequences out of 15000+600000
+ 697521 words of font info for 191 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (41 pages, 375833 bytes).
+Output written on main.pdf (41 pages, 376104 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
