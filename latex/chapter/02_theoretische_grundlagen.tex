@@ -326,7 +326,7 @@ und durch kontinuierliche Feedbackschleifen zu validieren.
 Um die im vorherigen Abschnitt dokumentierten Limitationen monolithischer Sprachmodelle – insbesondere 
 den exponentiellen Leistungsabfall bei langen Logikketten und das Fehlen systemweiter Kontrollmechanismen 
 – informationstechnisch aufzulösen, etabliert sich in der modernen Informatik das Paradigma der 
-\textit{Multi-Agenten-Systeme} (MAS). Die fundamentale Kernidee dieses Ansatzes besteht darin, eine 
+\ac{MAS}. Die fundamentale Kernidee dieses Ansatzes besteht darin, eine 
 komplexe Gesamtaufgabe nicht einem einzelnen, allumfassenden Prompt zu übergeben, sondern die kognitive 
 Last auf ein Kollektiv spezialisierter, künstlicher Entitäten – sogenannte KI-Agenten – zu verteilen, 
 welche autonom und kollaborativ an der Erreichung eines vordefinierten Endziels arbeiten.
@@ -334,9 +334,9 @@ welche autonom und kollaborativ an der Erreichung eines vordefinierten Endziels 
 \subsubsection{Der Begriff des LLM-basierten Agenten}
 In der klassischen Informatik wird ein Agent traditionell als eine Entität definiert, die in der Lage 
 ist, ihre Umwelt durch Sensoren wahrzunehmen und auf diese mittels Aktuatoren einzuwirken, um rationale 
-Entscheidungen zu treffen \textcite{russellArtificialIntelligenceModern2010}. Im Kontext moderner generativer KI verschiebt 
+Entscheidungen zu treffen \parencite[S. 36]{russellArtificialIntelligenceModern2010}. Im Kontext moderner generativer KI verschiebt 
 sich dieses Konzept grundlegend: Das primäre „Gehirn“ und die zentrale Rechenmaschine des Agenten ist 
-ein Large Language Model. 
+ein LLM. 
 
 Ein LLM-basierter Agent unterscheidet sich von einem klassischen, rein reaktiven Chatbot durch ein 
 erhöhtes Maß an Autonomie, Intentionalität und Werkzeugnutzung. Technisch wird ein solcher Agent 
@@ -436,7 +436,7 @@ einfordern, bevor Quellcode generiert wird.
 
 \subsubsection{Inception Prompting und System-Leitplanken}
 Um sicherzustellen, dass Agenten ihre zugewiesenen Rollen strikt beibehalten und zielgerichtet 
-interagieren, bedarf es klarer Leitplanken. \textcite{liCamelCommunicativeAgents2023} führen hierfür im 7
+interagieren, bedarf es klarer Leitplanken. \textcite{liCamelCommunicativeAgents2023} führen hierfür im 
 \textit{CAMEL}-Framework das Konzept des \textit{Inception Promptings} ein. Dabei werden Agenten durch 
 asymmetrische System-Prompts zu Beginn der Konversation in eine feste Rolle gezwungen und mit strikten 
 Verhaltensregeln ausgestattet. Um systemimmanente Gefahren wie das \textit{Role Flipping} 
@@ -476,3 +476,66 @@ strukturierte Dokumentenaustausch: Anstatt frei miteinander zu chatten, kommuniz
 formalisierte Spezifikationen und Design-Dokumente. Die Studie beweist, dass diese strikt orchestrierte 
 Architektur kaskadierende Halluzinationen stoppt und Monolithen in sämtlichen Benchmarks zur 
 Code-Generierung signifikant schlägt.
+
+\subsection{Entwicklungs-Frameworks für MAS}
+\label{subsec:entwicklungs_frameworks}
+
+Um die theoretischen Konzepte der kognitiven Anatomie (Kapitel \ref{subsec:definition_und_kognitive_architekturen}) 
+und der kollaborativen Muster (Kapitel \ref{subsec:kollaborative_agenten_muster}) informationstechnisch 
+umzusetzen, greift die moderne Softwareentwicklung auf spezialisierte Agenten-Frameworks zurück. Diese 
+Bibliotheken abstrahieren die grundlegende Komplexität der Modell-Orchestrierung und stellen die softwaretechnische 
+Infrastruktur (wie API-Anbindungen, Kontext-Fenster-Management und Logging) bereit. 
+
+Dass sich primär drei Frameworks etabliert haben, welche den wissenschaftlichen Diskurs sowie die industrielle 
+Praxis maßgeblich prägen, lässt sich durch aktuelle quantitative Forschung belegen. In der ersten großangelegten 
+empirischen Studie zur Evolution von Open-Source-Multi-Agenten-Systemen analysieren \textcite{liuLargescaleStudyDevelopment2025} 
+über 42.000 Commits führender Repositories. Die Autoren weisen anhand von GitHub-Metriken empirisch nach, dass 
+insbesondere \textit{LangChain} (als Basis-Ökosystem), \textit{AutoGen} und \textit{CrewAI} mit zehntausenden 
+Entwickler-Interaktionen den Markt anführen und das rasante Wachstum dieser Technologie seit 2023 treiben. 
+Diese drei dominanten Plattformen unterscheiden sich in ihrer Architekturphilosophie grundlegend:
+
+\begin{itemize}
+    \item \textbf{LangGraph:} Entwickelt als Erweiterung des populären \textit{LangChain}-Ökosystems, 
+    modelliert dieses Framework Multi-Agenten-Systeme als zustandsbehaftete, zyklische Graphen. Jeder Agent 
+    oder jedes Werkzeug repräsentiert einen Knoten (\textit{Node}), während die Kommunikationspfade als Kanten 
+    (\textit{Edges}) definiert werden. Es bietet maximale Flexibilität für komplexe, dynamische Kontrollflüsse, 
+    erfordert jedoch einen sehr hohen manuellen Programmieraufwand bei der Definition der Zustandsübergänge.
+    \item \textbf{AutoGen:} Das von Microsoft entwickelte Framework \parencite{wuAutogenEnablingNextgen2024} 
+    stellt das Paradigma des „Conversation Programming“ in den Mittelpunkt. Agenten sind hier primär als 
+    dialogfähige Entitäten konzipiert, die Aufgaben lösen, indem sie direkt miteinander chatten. AutoGen 
+    zeichnet sich durch die native Integration von \textit{Proxy-Agenten} zur sicheren Code-Ausführung aus, 
+    bietet jedoch weniger strukturelle Leitplanken für streng prozedurale Abläufe.
+    \item \textbf{CrewAI:} Dieses Framework wählt einen rollenbasierten Top-Down-Ansatz und ist architektonisch 
+    stark an das Fließband-Paradigma von MetaGPT angelehnt. Eine Entität (die \textit{Crew}) orchestriert 
+    definierte Agenten, die sequentielle oder hierarchische Aufgaben (\textit{Tasks}) abarbeiten. Es fokussiert 
+    sich auf strikte Rollenverteilungen und Standardarbeitsanweisungen.
+\end{itemize}
+
+\subsubsection{Mapping von Theorie und Framework-Praxis}
+Die Entscheidung für ein solches Framework verschiebt die Aufgaben des Systemarchitekten. Die von 
+\textcite{wangSurveyLargeLanguage2024} definierte kognitive Kern-Anatomie ist in diesen Frameworks in der 
+Regel als abstrahierte Code-Basis (\textit{Out-of-the-Box}) verankert. So wird das Kurz- und Langzeitgedächtnis 
+(\textit{Memory}) oftmals automatisiert über integrierte Vektordatenbanken verwaltet. Auch das entscheidende 
+\textit{ReAct}-Paradigma \parencite{yaoReactSynergizingReasoning2022} – mithin die Schleife aus Denken, 
+Werkzeugnutzung und Beobachtung – läuft als nativer Hintergrundprozess ab, sobald einem Agenten ein Tool 
+zugewiesen wird. 
+
+Allerdings warnt die empirische Studie von \textcite{liuLargescaleStudyDevelopment2025} davor, sich blind 
+auf die Fehlerfreiheit dieser Basisarchitekturen zu verlassen. Die Analyse von fast 5.000 gemeldeten 
+Softwarefehlern zeigt, dass sich die Framework-Entwickler aktuell primär auf neue Features fokussieren, 
+während klassische Bugs und Probleme bei der Agenten-Koordination oder Werkzeugnutzung den Großteil der 
+Systemausfälle in der Praxis verursachen. Die maßgebliche Implementierungsleistung verlagert sich somit 
+zwingend auf die manuelle Domänenspezialisierung. Unabhängig vom gewählten Framework verbleiben zwei 
+Kernaufgaben in der Hand des Entwicklers:
+
+\begin{enumerate}
+    \item \textbf{Systemdesign und Prompt-Engineering:} Das Framework muss mit den abstrakten Konzepten 
+    aus Kapitel \ref{subsec:kollaborative_agenten_muster} „befüllt“ werden. Der Entwickler muss das Profiling 
+    (Rollen und Identitäten), die Standardarbeitsanweisungen (SOPs) sowie die Delegationsregeln hart kodieren, 
+    um kaskadierende Halluzinationen zu verhindern.
+    \item \textbf{Custom Tools (Werkzeug-Entwicklung):} Während das Framework die Logik des 
+    \textit{Tool-Aufrufs} abstrahiert, existieren für proprietäre Domänen – wie die SAP Variantenkonfiguration 
+    – keine vorgefertigten Werkzeuge. Die informationstechnische Brücke zwischen dem Agenten und der 
+    Zielumgebung (beispielsweise ein \textit{Mock-Compiler} zur Syntax-Validierung von Constraint-Netzwerken) 
+    muss vollständig manuell entwickelt und als sichere Ausführungsschnittstelle in das Framework injiziert werden.
+\end{enumerate}

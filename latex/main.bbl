@@ -905,6 +905,74 @@
       \verb https://proceedings.neurips.cc/paper/2023/hash/a3621ee907def47c1b952ade25c67698-Abstract-Conference.html
       \endverb
     \endentry
+    \entry{liuLargescaleStudyDevelopment2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=108c5a254e178dc8435370c0d58d728a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea9d993a89fb3a29307e6dcb61c02365}{%
+           family={Upadhyay},
+           familyi={U\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3e7b72e0113054616a6bd9fe56e40f9}{%
+           family={Chhetri},
+           familyi={C\bibinitperiod},
+           given={Vinaik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75a86ff5dec43b2c8f4a419a10cba097}{%
+           family={Siddique},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7056e7f23698b9dd7b8ddf8bd05f418}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Umar},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8d96b33d572989b5b29188272f214571}
+      \strng{fullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{fullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{bibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorbibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authornamehash}{8d96b33d572989b5b29188272f214571}
+      \strng{authorfullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorfullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2025 {{IEEE International Conference}} on {{Big Data}} ({{BigData}})}
+      \field{title}{A Large-Scale Study on the Development and Issues of Multi-Agent {{AI}} Systems}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{7785\bibrangedash 7792}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+    \endentry
     \entry{matilainenChangeRequirementsProduct2024}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=03d1d78b15ce8ef87066e0dc8499a6e2}{%
@@ -2837,6 +2905,74 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper/2023/hash/a3621ee907def47c1b952ade25c67698-Abstract-Conference.html
+      \endverb
+    \endentry
+    \entry{liuLargescaleStudyDevelopment2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=108c5a254e178dc8435370c0d58d728a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea9d993a89fb3a29307e6dcb61c02365}{%
+           family={Upadhyay},
+           familyi={U\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3e7b72e0113054616a6bd9fe56e40f9}{%
+           family={Chhetri},
+           familyi={C\bibinitperiod},
+           given={Vinaik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75a86ff5dec43b2c8f4a419a10cba097}{%
+           family={Siddique},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7056e7f23698b9dd7b8ddf8bd05f418}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Umar},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8d96b33d572989b5b29188272f214571}
+      \strng{fullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{fullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{bibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorbibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authornamehash}{8d96b33d572989b5b29188272f214571}
+      \strng{authorfullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorfullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2025 {{IEEE International Conference}} on {{Big Data}} ({{BigData}})}
+      \field{title}{A Large-Scale Study on the Development and Issues of Multi-Agent {{AI}} Systems}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{7785\bibrangedash 7792}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
       \endverb
     \endentry
     \entry{matilainenChangeRequirementsProduct2024}{article}{}{}

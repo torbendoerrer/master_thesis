@@ -25,22 +25,24 @@
 \contentsline {subsubsection}{Werkzeugnutzung und Code-Ausführung}{15}{}%
 \contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{15}{}%
 \contentsline {subsubsection}{Standard Operating Procedures und das Fließband-Paradigma}{15}{}%
-\contentsline {chapter}{\numberline {3}Related Work}{17}{}%
-\contentsline {chapter}{\numberline {4}Experteninterview}{21}{}%
-\contentsline {section}{\numberline {4.1}Zielsetzung und Erkenntnisinteresse}{21}{}%
-\contentsline {section}{\numberline {4.2}Methodisches Forschungsdesign}{21}{}%
-\contentsline {section}{\numberline {4.3}Datenerhebung und Auswertung}{23}{}%
-\contentsline {section}{\numberline {4.4}Ergebnisse der Befragung}{24}{}%
-\contentsline {subsection}{\numberline {4.4.1}Kognitive Altlasten und historischer Code}{24}{}%
-\contentsline {subsection}{\numberline {4.4.2}Paradigmenwechsel und syntaktisches Umdenken}{25}{}%
-\contentsline {subsection}{\numberline {4.4.3}Fragmentierung manueller Prozessschritte}{25}{}%
-\contentsline {subsection}{\numberline {4.4.4}Limitierungen bestehender Standard-Tools}{25}{}%
-\contentsline {subsection}{\numberline {4.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{26}{}%
-\contentsline {subsection}{\numberline {4.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{26}{}%
-\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur}{27}{}%
-\contentsline {subsection}{\numberline {4.5.1}Funktionale Anforderungen aus der Expertenperspektive}{27}{}%
-\contentsline {subsection}{\numberline {4.5.2}Architektonische Paradigmen und Beratungsansatz}{27}{}%
-\contentsline {subsection}{\numberline {4.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{28}{}%
-\contentsline {subsection}{\numberline {4.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{28}{}%
-\contentsline {chapter}{Anhang Anhang}{32}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{33}{}%
+\contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{16}{}%
+\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{17}{}%
+\contentsline {chapter}{\numberline {3}Related Work}{18}{}%
+\contentsline {chapter}{\numberline {4}Experteninterview}{22}{}%
+\contentsline {section}{\numberline {4.1}Zielsetzung und Erkenntnisinteresse}{22}{}%
+\contentsline {section}{\numberline {4.2}Methodisches Forschungsdesign}{22}{}%
+\contentsline {section}{\numberline {4.3}Datenerhebung und Auswertung}{24}{}%
+\contentsline {section}{\numberline {4.4}Ergebnisse der Befragung}{25}{}%
+\contentsline {subsection}{\numberline {4.4.1}Kognitive Altlasten und historischer Code}{25}{}%
+\contentsline {subsection}{\numberline {4.4.2}Paradigmenwechsel und syntaktisches Umdenken}{26}{}%
+\contentsline {subsection}{\numberline {4.4.3}Fragmentierung manueller Prozessschritte}{26}{}%
+\contentsline {subsection}{\numberline {4.4.4}Limitierungen bestehender Standard-Tools}{26}{}%
+\contentsline {subsection}{\numberline {4.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{27}{}%
+\contentsline {subsection}{\numberline {4.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{27}{}%
+\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur}{28}{}%
+\contentsline {subsection}{\numberline {4.5.1}Funktionale Anforderungen aus der Expertenperspektive}{28}{}%
+\contentsline {subsection}{\numberline {4.5.2}Architektonische Paradigmen und Beratungsansatz}{28}{}%
+\contentsline {subsection}{\numberline {4.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{29}{}%
+\contentsline {subsection}{\numberline {4.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{29}{}%
+\contentsline {chapter}{Anhang Anhang}{33}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{34}{}%
