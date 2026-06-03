@@ -1,6 +1,11 @@
 % !TeX root = ../main.tex
 \chapter{Theoretische Grundlagen}
 \label{ch:theory}
+Um die Konzeption und Entwicklung eines KI-gestützten Migrationssystems fundiert nachvollziehen zu können, 
+ist ein tiefgreifendes Verständnis der zugrundeliegenden technologischen Domänen unerlässlich. Dieses Kapitel 
+legt das theoretische Fundament der vorliegenden Arbeit, indem es die wesentlichen Konzepte der 
+SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz sowie der Orchestrierung von Multi-Agenten-Systemen 
+systematisch aufarbeitet.
 \section{Domänenspezifische Grundlagen: SAP Variantenkonfiguration}
 \subsection{Einführung in die logische Architektur der Variantenkonfiguration}
 
@@ -492,50 +497,53 @@ empirischen Studie zur Evolution von Open-Source-Multi-Agenten-Systemen analysie
 über 42.000 Commits führender Repositories. Die Autoren weisen anhand von GitHub-Metriken empirisch nach, dass 
 insbesondere \textit{LangChain} (als Basis-Ökosystem), \textit{AutoGen} und \textit{CrewAI} mit zehntausenden 
 Entwickler-Interaktionen den Markt anführen und das rasante Wachstum dieser Technologie seit 2023 treiben. 
-Diese drei dominanten Plattformen unterscheiden sich in ihrer Architekturphilosophie grundlegend:
+Diese drei dominanten Plattformen unterscheiden sich in ihrer Architekturphilosophie wie folgt:
 
 \begin{itemize}
-    \item \textbf{LangGraph:} Entwickelt als Erweiterung des populären \textit{LangChain}-Ökosystems, 
-    modelliert dieses Framework Multi-Agenten-Systeme als zustandsbehaftete, zyklische Graphen. Jeder Agent 
-    oder jedes Werkzeug repräsentiert einen Knoten (\textit{Node}), während die Kommunikationspfade als Kanten 
-    (\textit{Edges}) definiert werden. Es bietet maximale Flexibilität für komplexe, dynamische Kontrollflüsse, 
+    \item \textbf{LangGraph:} Entwickelt als Erweiterung des populären \textit{LangChain}-Ökosystems, modelliert 
+    dieses Framework Multi-Agenten-Systeme als zustandsbehaftete, zyklische Graphen. Jeder Agent oder jedes 
+    Werkzeug repräsentiert einen Knoten (\textit{Node}), während die Kommunikationspfade als Kanten (\textit{Edges}) 
+    definiert werden \parencite{langchain2024}. Es bietet maximale Flexibilität für komplexe, dynamische Kontrollflüsse, 
     erfordert jedoch einen sehr hohen manuellen Programmieraufwand bei der Definition der Zustandsübergänge.
-    \item \textbf{AutoGen:} Das von Microsoft entwickelte Framework \parencite{wuAutogenEnablingNextgen2024} 
-    stellt das Paradigma des „Conversation Programming“ in den Mittelpunkt. Agenten sind hier primär als 
-    dialogfähige Entitäten konzipiert, die Aufgaben lösen, indem sie direkt miteinander chatten. AutoGen 
-    zeichnet sich durch die native Integration von \textit{Proxy-Agenten} zur sicheren Code-Ausführung aus, 
-    bietet jedoch weniger strukturelle Leitplanken für streng prozedurale Abläufe.
-    \item \textbf{CrewAI:} Dieses Framework wählt einen rollenbasierten Top-Down-Ansatz und ist architektonisch 
-    stark an das Fließband-Paradigma von MetaGPT angelehnt. Eine Entität (die \textit{Crew}) orchestriert 
-    definierte Agenten, die sequentielle oder hierarchische Aufgaben (\textit{Tasks}) abarbeiten. Es fokussiert 
-    sich auf strikte Rollenverteilungen und Standardarbeitsanweisungen.
+    \item \textbf{AutoGen:} Das von Microsoft entwickelte Framework stellt das Paradigma des „Conversation Programming“ 
+    in den Mittelpunkt. Agenten sind hier primär als dialogfähige Entitäten 
+    konzipiert, die Aufgaben lösen, indem sie direkt miteinander chatten. AutoGen zeichnet sich laut den Entwicklern 
+    durch die native Integration von \textit{Proxy-Agenten} zur sicheren Code-Ausführung aus, bietet jedoch weniger 
+    strukturelle Leitplanken für streng prozedurale Abläufe \parencite{wuAutogenEnablingNextgen2024}.
+    \item \textbf{CrewAI:} Dieses Framework wählt einen rollenbasierten Top-Down-Ansatz und ist architektonisch stark 
+    an das Fließband-Paradigma von MetaGPT angelehnt. Eine Entität (die \textit{Crew}) orchestriert definierte Agenten, 
+    die als Mitglieder einer Hierarchie agieren und spezifische, sequentielle Aufgaben (\textit{Tasks}) abarbeiten. 
+    Es fokussiert sich auf strikte Rollenverteilungen, Delegation und Standardarbeitsanweisungen \parencite{liuLargescaleStudyDevelopment2025}.
 \end{itemize}
 
 \subsubsection{Mapping von Theorie und Framework-Praxis}
-Die Entscheidung für ein solches Framework verschiebt die Aufgaben des Systemarchitekten. Die von 
-\textcite{wangSurveyLargeLanguage2024} definierte kognitive Kern-Anatomie ist in diesen Frameworks in der 
-Regel als abstrahierte Code-Basis (\textit{Out-of-the-Box}) verankert. So wird das Kurz- und Langzeitgedächtnis 
-(\textit{Memory}) oftmals automatisiert über integrierte Vektordatenbanken verwaltet. Auch das entscheidende 
-\textit{ReAct}-Paradigma \parencite{yaoReactSynergizingReasoning2022} – mithin die Schleife aus Denken, 
-Werkzeugnutzung und Beobachtung – läuft als nativer Hintergrundprozess ab, sobald einem Agenten ein Tool 
-zugewiesen wird. 
+Die Entscheidung für ein solches Framework verschiebt die Aufgaben des Systemarchitekten. Die von \textcite{wangSurveyLargeLanguage2024} 
+definierte kognitive Kern-Anatomie ist in diesen Frameworks in der Regel als abstrahierte Code-Basis (\textit{Out-of-the-Box}) verankert. 
+So wird das Kurz- und Langzeitgedächtnis (\textit{Memory}) oftmals automatisiert über integrierte Vektordatenbanken verwaltet. 
+Auch das entscheidende \textit{ReAct}-Paradigma \parencite{yaoReactSynergizingReasoning2022} – mithin die Schleife aus Denken, 
+Werkzeugnutzung und Beobachtung – läuft als nativer Hintergrundprozess ab, sobald einem Agenten ein Tool zugewiesen wird. 
 
-Allerdings warnt die empirische Studie von \textcite{liuLargescaleStudyDevelopment2025} davor, sich blind 
-auf die Fehlerfreiheit dieser Basisarchitekturen zu verlassen. Die Analyse von fast 5.000 gemeldeten 
-Softwarefehlern zeigt, dass sich die Framework-Entwickler aktuell primär auf neue Features fokussieren, 
-während klassische Bugs und Probleme bei der Agenten-Koordination oder Werkzeugnutzung den Großteil der 
-Systemausfälle in der Praxis verursachen. Die maßgebliche Implementierungsleistung verlagert sich somit 
-zwingend auf die manuelle Domänenspezialisierung. Unabhängig vom gewählten Framework verbleiben zwei 
-Kernaufgaben in der Hand des Entwicklers:
+Obgleich diese Frameworks die informationstechnische Infrastruktur bereitstellen, abstrahieren sie lediglich universelle 
+Prozesse und besitzen keinerlei domänenspezifisches Wissen über proprietäre SAP-Architekturen. Die maßgebliche 
+Implementierungsleistung verlagert sich somit zwingend auf die manuelle Domänenspezialisierung. Unabhängig vom gewählten 
+Framework verbleiben daher zwei Kernaufgaben in der Hand des Entwicklers:
 
 \begin{enumerate}
-    \item \textbf{Systemdesign und Prompt-Engineering:} Das Framework muss mit den abstrakten Konzepten 
-    aus Kapitel \ref{subsec:kollaborative_agenten_muster} „befüllt“ werden. Der Entwickler muss das Profiling 
-    (Rollen und Identitäten), die Standardarbeitsanweisungen (SOPs) sowie die Delegationsregeln hart kodieren, 
-    um kaskadierende Halluzinationen zu verhindern.
-    \item \textbf{Custom Tools (Werkzeug-Entwicklung):} Während das Framework die Logik des 
-    \textit{Tool-Aufrufs} abstrahiert, existieren für proprietäre Domänen – wie die SAP Variantenkonfiguration 
-    – keine vorgefertigten Werkzeuge. Die informationstechnische Brücke zwischen dem Agenten und der 
-    Zielumgebung (beispielsweise ein \textit{Mock-Compiler} zur Syntax-Validierung von Constraint-Netzwerken) 
-    muss vollständig manuell entwickelt und als sichere Ausführungsschnittstelle in das Framework injiziert werden.
+    \item \textbf{Systemdesign und Prompt-Engineering:} Der Entwickler muss evaluieren, welche der in Kapitel 
+    \ref{subsec:kollaborative_agenten_muster} beschriebenen theoretischen Konzepte am besten zur vorliegenden 
+    Problemstellung passen, und das Framework damit „befüllen“. Dies umfasst das harte Kodieren des Profilings 
+    (Rollen und Identitäten), der Standardarbeitsanweisungen (SOPs) sowie der Delegationsregeln.
+    \item \textbf{Custom Tools (Werkzeug-Entwicklung):} Während das Framework die Logik des \textit{Tool-Aufrufs} 
+    an sich abstrahiert, existieren für proprietäre Domänen – wie die SAP Variantenkonfiguration – keine 
+    vorgefertigten Werkzeuge. Die informationstechnische Brücke zwischen dem Agenten und der Zielumgebung 
+    (beispielsweise ein \textit{Mock-Compiler} zur Syntax-Validierung von Constraint-Netzwerken) muss vollständig 
+    manuell entwickelt und als funktionale Schnittstelle in das Framework injiziert werden.
 \end{enumerate}
+
+Mit den in diesem Kapitel erläuterten Konzepten – von den restriktiven Constraint-Netzwerken der SAP-Variantenkonfiguration 
+über die Limitationen monolithischer Sprachmodelle bis hin zu den kollaborativen Architekturmustern moderner Agenten-Frameworks 
+– sind nun alle wesentlichen technologischen Grundlagen für das tiefe Verständnis dieser Arbeit geschaffen. Im methodischen 
+Gesamtkontext der Masterarbeit bildet diese fundierte Literaturanalyse die erste tragende Säule einer methodischen Triangulation. 
+Die hier gewonnenen wissenschaftlichen Erkenntnisse dienen als theoretisches Alibi und Fundament, auf dem die nachfolgenden 
+praktischen und architektonischen Entscheidungen aufbauen, um schließlich die eigens konzipierte Multi-Agenten-Migrationsarchitektur 
+wissenschaftlich fundiert herzuleiten und zu begründen.
