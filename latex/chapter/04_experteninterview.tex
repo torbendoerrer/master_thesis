@@ -1,44 +1,112 @@
 % !TeX root = ../main.tex
-\chapter{Experteninterview}
+\chapter{Auswertung des Experteninterviews}
 \label{ch:experteninterview}
 
-In diesem Kapitel wird die Durchführung und Auswertung der Experteninterviews beschrieben. Die gewonnenen Erkenntnisse dienen als qualitative Basis für die Anforderungen an die spätere Systemumgebung.
+In diesem Kapitel wird die methodische Durchführung und Auswertung des qualitativen Experteninterviews 
+dokumentiert. Die gewonnenen Erkenntnisse dienen innerhalb des gestaltungsorientierten 
+Forschungsdesigns als empirische Brücke zum organisationalen und menschlichen Umfeld 
+(\textit{Environment}). Sie bilden das Fundament zur Festlegung der manuellen Baseline sowie zur 
+Definition der funktionalen Anforderungen an das Multi-Agenten-System.
 
 \section{Zielsetzung und Erkenntnisinteresse}
 \label{sec:zielsetzung}
-Die Relevanz sowie die Kritikalität der Migration von LOVC zu AVC für Unternehmen wurden bereits im vorangehenden Kapitel dargelegt. Für eine KI-gestützte Automatisierung dieses Prozesses mittels eines Multi-Agenten-Systems ist die Kenntnis der theoretischen Differenzen zwischen LOVC und AVC allein unzureichend. Spezifische, historisch gewachsene Problemstellungen in der Entwicklungspraxis lassen sich nicht rein analytisch aus Systemdokumentationen ableiten und weisen oft eine hohe Kontextabhängigkeit auf. Zudem mangelt es an quantitativen Daten bezüglich des zeitlichen Migrationsaufwands, was die Validierung der Relevanz und Notwendigkeit einer Automatisierung erschwert.
 
-Folglich ist die Durchführung von Experteninterviews zur Beantwortung der ersten Forschungsfrage essenziell. Dieses methodische Vorgehen dient der Identifikation impliziter Problemstellungen im msg-Kontext. Daraus werden sowohl quantitative Metriken für die Definition einer menschlichen Baseline und die spätere Evaluation des Modells generiert als auch funktionale Anforderungen an einen KI-basierten Migrationsassistenten abgeleitet.
+Die Relevanz sowie die informationstechnische Kritikalität der Migration von LO-VC zu AVC wurden 
+bereits in Kapitel~\ref{sec:lovc_context} dargelegt. Für die theoriegeleitete 
+Konzeption eines \ac{MAS} ist die bloße Analyse theoretischer Syntaxunterschiede jedoch unzureichend. 
+Spezifische, historisch gewachsene Problemstellungen in der Entwicklungspraxis weisen oft eine hohe 
+Kontextabhängigkeit auf und lassen sich nicht rein analytisch aus Systemdokumentationen ableiten. 
+Zudem mangelt es in der Literatur an quantitativen Daten bezüglich des tatsächlichen manuellen 
+Migrationsaufwands.
 
+Folglich ist die Durchführung eines Experteninterviews zur Beantwortung der Unter-Forschungsfragen 
+zwingend erforderlich. Das primäre Erkenntnisinteresse konzentriert sich auf zwei Dimensionen:
+\begin{itemize}
+    \item \textbf{Quantifizierung der Baseline (FF1):} Erhebung valider zeitlicher Metriken und 
+    prozessualer Schritte der manuellen Migration, um einen empirischen Vergleichsmaßstab für die 
+    spätere Evaluation des Artefakts zu etablieren.
+    \item \textbf{Anforderungsdefinition und Scoping (FF3):} Identifikation impliziter Praxisprobleme, 
+    kognitiver Hürden und typischer Fehlerquellen im msg-Kontext, um daraus spezialisierte agentische 
+    Rollen und funktionale Anforderungen für die Systemarchitektur abzuleiten.
+\end{itemize}
 
 \section{Methodisches Forschungsdesign}
 \label{sec:forschungsdesign}
-Als methodisches Forschungsdesign zur Durchführung der Experteninterviews wird der semi-strukturierte Ansatz gewählt. Aufgrund der hohen Komplexität der Migration von LOVC zu AVC, welche unter anderem durch menschliches Verhalten und undokumentiertes Wissen geprägt ist, bedarf es zur fundierten Durchdringung der Problemstellung neben quantitativen Methoden zwingend qualitativer Forschungsansätze. Diese methodische Notwendigkeit wird durch die einschlägige Grundlagenliteratur gestützt. \parencite{seamanQualitativeMethodsEmpirical1999}
 
-Die Wahl des semi-strukturierten Formats erweist sich hierbei als zielführend. Rein unstrukturierte Interviews gewähren den Befragten oftmals ein Übermaß an Spielraum, sind ressourcenintensiv und bergen das Risiko, dass essenzielle Themenkomplexe unberücksichtigt bleiben. Demgegenüber limitiert ein streng strukturiertes Vorgehen den Raum für unerwartete qualitative Erkenntnisse. \parencite{seamanQualitativeMethodsEmpirical1999}
+Um dem Anspruch forschungsmethodischer Strenge (\textit{Rigor}) gerecht zu werden, ist das 
+Experteninterview als integraler Bestandteil der explorativen Fallstudie nach den Richtlinien von 
+\textcite{runesonGuidelinesConductingReporting2009} gestaltet. Aufgrund der Komplexität der 
+Code-Transformation, die maßgeblich durch undokumentiertes Erfahrungswissen (\textit{Tacit Knowledge}) 
+geprägt ist, bedarf es zur fundierten Durchdringung der Problemstellung eines qualitativen 
+Forschungsansatzes \parencite{seamanQualitativeMethodsEmpirical1999}. 
 
-Da die Zielsetzung der Datenerhebung sowohl die Akquise antizipierter als auch unerwarteter Informationen umfasst, stellt das semi-strukturierte Interview das optimale Instrumentarium dar. Das Erhebungsdesign setzt sich folglich aus einer Kombination offener und spezifischer Fragen zusammen. Diese Konzeption zielt darauf ab, einerseits vorhersehbare Daten zu generieren – wie etwa zeitliche Metriken zur Etablierung einer menschlichen Baseline –, und andererseits unerwartete Erkenntnisse zu gewinnen. Letztere sind beispielsweise für die praxisnahe Anforderungsdefinition an ein KI-basiertes Migrationssystem von hoher Relevanz.
+Als Erhebungsinstrument wird das semi-strukturierte Interview gewählt. Dieses Format kombiniert offene 
+und spezifische Fragen in einem flexiblen Leitfaden. Dadurch wird sichergestellt, dass einerseits 
+antizipierte Daten -- wie die zeitlichen Metriken für die Baseline -- systematisch erfasst werden, 
+während andererseits ausreichend Raum für unvorhergesehene qualitative Erkenntnisse aus der 
+Migrationspraxis bleibt \parencite{seamanQualitativeMethodsEmpirical1999}. Während in 
+sozialwissenschaftlichen Disziplinen oft ein geringes Vorwissen der interviewenden Person gefordert 
+wird, postulieren \textcite{hoveExperiencesConductingSemistructured2005} für den Bereich des Software 
+Engineerings die Notwendigkeit eines tiefgreifenden technischen Vorverständnisses, um fachspezifische 
+Nuancen während des Gesprächs korrekt zu erfassen und zu vertiefen.
 
-Hinsichtlich der Vorbedingungen an die befragende Person sowie an die Durchführung der Interviews gelten spezifische Prämissen. Während in diversen sozialwissenschaftlichen Disziplinen ein geringes Vorwissen der interviewenden Person oft ausreichend ist, postulieren Hove \& Anda (2005) für den Bereich der Softwareentwicklung die Notwendigkeit eines tiefgreifenden technischen Vorverständnisses. Zur Gewährleistung einer lückenlosen und korrekten Datenerfassung ist zudem die vollständige Audioaufzeichnung und anschließende Transkription der Interviews unerlässlich. \parencite{hoveExperiencesConductingSemistructured2005}
+Die Auswertung des Datenmaterials folgt einem systematischen Mixed-Methods-Ansatz, der Methoden der 
+qualitativen und quantitativen Inhaltsanalyse kombiniert. Der Codierungsprozess gliedert sich in 
+Anlehnung an \textcite{mayringQualitativeContentAnalysis2014} in zwei Phasen:
+\begin{enumerate}
+    \item \textbf{Deduktive Kategorienanwendung:} Vorab definierte Codes, die direkt aus den 
+    Forschungsfragen abgeleitet wurden (z.\,B. manuelle Prozessschritte, Zeitaufwand), werden 
+    theoriegeleitet auf das Textmaterial angewendet.
+    \item \textbf{Induktive Kategorienbildung:} Ergänzende Codes für unvorhergesehene praxisnahe 
+    Schmerzpunkte oder spezifische Syntaxprobleme werden iterativ direkt am empirischen Material 
+    entwickelt.
+\end{enumerate}
 
-Die Auswertung des Interviewtranskripts erfolgte durch einen systematischen Mixed-Methods-Ansatz, der Methoden der qualitativen und quantitativen Datenanalyse kombiniert. Um eine lückenlose Beweiskette ('Chain of Evidence') gemäß \textcite{runesonGuidelinesConductingReporting2009} sicherzustellen, gliederte sich der Codierungsprozess in zwei Phasen: Zunächst wurde in Anlehnung an die strukturierende Inhaltsanalyse nach \textcite{mayringQualitativeContentAnalysis2014} eine deduktive Kategorienanwendung durchgeführt. Hierbei wurden im Vorhinein definierte Codes, welche direkt aus den drei Forschungsfragen abgeleitet wurden, auf das Textmaterial angewendet, um dieses theoriegeleitet zu codieren.
+Im Sinne der in Kapitel~\ref{sec:methodisches_vorgehen} beschriebenen Datentriangulation bilden die 
+Ergebnisse dieses Kapitels eine von drei empirischen Säulen. Sie werden im weiteren Verlauf der Arbeit 
+mit den Erkenntnissen der Archivdokumentenanalyse sowie den Ergebnissen des praktischen Selbstversuchs 
+synthetisiert, um die initiale, valide Architekturversion 1 (V1) des \ac{MAS} zu konstruieren. Um 
+hierbei ein zentrales Qualitätsmerkmal qualitativer Fallstudien zu erfüllen, wird über den gesamten 
+Auswertungsprozess -- von der Audioaufzeichnung über das codierte Transkript bis hin zu den daraus 
+resultierenden Field Memos und funktionalen Anforderungen -- eine lückenlose Beweiskette 
+(\textit{Chain of Evidence}) aufrechterhalten \parencite{runesonGuidelinesConductingReporting2009}. 
+Dies garantiert die transparente und wissenschaftlich nachvollziehbare Ableitung jeder späteren 
+agentischen Rolle aus den empirischen Rohdaten.
 
-Um gleichzeitig eine methodische Offenheit für unvorhergesehene praxisnahe Schmerzpunkte bei der Migration zu gewährleisten, wurde dieser Schritt durch eine induktive Kategorienbildung (\textcite{mayringQualitativeContentAnalysis2014}) ergänzt, bei der ergänzende Codes iterativ am empirischen Material entwickelt wurden. (siehe Anhang~\ref{app:codierte_passagen}). Daran anschließend wurden aus den codierten Textstellen Field Memos generiert, welche die Kernaussagen der Befragung zusammenfassen und als Hypothesen für die in Kapitel 3.5. beschriebenen Anforderungen an die Systemarchitektur dienen. \parencite{seamanQualitativeMethodsEmpirical1999}
-
-Ziel dieser Auswertung war eine duale Erkenntnisgewinnung: Einerseits wurden durch gezieltes quantitatives Coding (\textcite{seamanQualitativeMethodsEmpirical1999}) harte Metriken zum zeitlichen und manuellen Aufwand extrahiert, welche als menschliche Baseline für die spätere Modellevaluation des Multi-Agenten-Systems dienen. Andererseits wurden aus den identifizierten kognitiven und prozessualen Hürden funktionale Anforderungen an die zukünftige KI-Architektur abgeleitet. Diese Anforderungen stellen jedoch bewusst noch nicht die finale Systemarchitektur dar. Gemäß dem Prinzip der Methodentriangulation (\textcite{runesonGuidelinesConductingReporting2009}) bilden die Erkenntnisse des Experteninterviews lediglich eine von drei Säulen, welche im weiteren Verlauf der Arbeit mit den Ergebnissen des praktischen Selbstversuchs (Kapitel X) und der theoretischen Grundlagenanalyse (Kapitel Y) synthetisiert werden, um die finale, valide Agenten-Architektur zu konstruieren.
-
-Ein zentrales Qualitätsmerkmal qualitativer Fallstudien im Software Engineering stellt die Aufrechterhaltung einer lückenlosen Beweiskette ("Chain of Evidence") dar. Im Kontext dieser Arbeit impliziert dies die transparente Ableitung der Notwendigkeit jedes einzelnen KI-Agenten aus den Rohdaten. Die methodische Nachvollziehbarkeit wird hierbei über den gesamten Prozess – von der Audioaufzeichnung über das codierte Transkript und die daraus resultierenden Field-Memos (Kernaussagen) bis hin zu den finalen funktionalen Anforderungen an die Systemarchitektur – gewährleistet. \parencite{runesonGuidelinesConductingReporting2009}
-
-
-\section{Datenerhebung und Auswertung}
+\section{Datenerhebung und Auswertungsprozess}
 \label{sec:datenerhebung}
-Das Experteninterview wurde am 17.03.2026 mit einem erfahrenen Product Owner und Softwareentwickler der msg durchgeführt. Die Fachexpertise des Interviewpartners umfasst eine zwölfjährige Tätigkeit als Maschinenbauingenieur sowie eine mehr als sechsjährige Spezialisierung auf dem Gebiet der Variantenkonfiguration. Seit knapp vier Jahren liegt sein Tätigkeitsschwerpunkt auf der Betreuung von Kundenprojekten zur Variantenkonfiguration im msg-Kontext. Die Gesprächsdauer belief sich auf rund 45 Minuten. Die Befragung erfolgte durch den Autor dieser Arbeit mit solidem technischem Vorwissen in den Bereichen LOVC und AVC. Als Erhebungsinstrument diente ein vorab definierter Interviewleitfaden. Dieser umfasste offene Fragen zur Akquise unerwarteter Erkenntnisse sowie spezifische Fragestellungen zum gezielten Informationsgewinn und der Erhebung von quantitativen Metriken. Letztere dienen der Beantwortung der ersten Forschungsfrage sowie der späteren Modellevaluation.
 
-Mit Einverständnis des Experten erfolgte eine vollständige Aufzeichnung sowie automatische Transkription des Gesprächs über die integrierte Funktion von MS Teams. Zur Gewährleistung der Vertraulichkeit wurde das Transkript im Anschluss manuell anonymisiert. Zur Optimierung der Lesbarkeit fand daraufhin eine KI-gestützte Glättung des Textes unter strikter Wahrung der inhaltlichen Integrität statt. Eine finale manuelle Überprüfung des Resultats stellte sicher, dass durch die KI-Bearbeitung keine inhaltlichen Verzerrungen eingeführt wurden.
+Das Experteninterview wurde am 17.03.2026 mit einem erfahrenen Product Owner und Softwareentwickler 
+der \textit{msg systems ag} durchgeführt. Die Fachexpertise des Interviewpartners umfasst eine 
+zwölfjährige Tätigkeit als Maschinenbauingenieur sowie eine mehr als sechsjährige Spezialisierung auf 
+dem Gebiet der SAP-Variantenkonfiguration. Seit knapp vier Jahren liegt sein primärer 
+Projektschwerpunkt auf der Betreuung von Kundenmigrationen von LO-VC nach AVC im msg-Kontext. Das 
+Gespräch wies eine Dauer von rund 45 Minuten auf und wurde vom Autor dieser Arbeit auf Basis des 
+vorab definierten Leitfadens moderiert.
 
-Die anschließende Datenauswertung erfolgte mittels des in Kapitel 3.2 beschriebenen Codierungsverfahrens. Die initiale Codeliste wurde deduktiv aus den drei Kernfragen des Interviewleitfadens abgeleitet. Zur Gewährleistung einer lückenlosen Beweiskette von der Datenerhebung bis zur Systemarchitektur erfolgte eine Gliederung der Codes in drei Hauptkategorien: 1. Erfassung der manuellen Prozessschritte, 2. Quantifizierung des zeitlichen Aufwands und Identifikation von Engpässen sowie 3. systematische Erfassung kognitiver Hürden und typischer menschlicher Fehlerquellen.
+Mit ausdrücklichem Einverständnis des Experten wurde das Gespräch digital aufgezeichnet und über die 
+integrierte Funktionalität von Microsoft Teams automatisch transkribiert. Zur Sicherung der 
+Datenqualität und Wahrung der wissenschaftlichen Integrität durchlief das Rohmaterial im Nachgang 
+einen dreistufigen Aufbereitungsprozess:
+\begin{enumerate}
+    \item \textbf{Anonymisierung:} Manuelle Entfernung aller personenbezogenen und projektspezifischen 
+    Identifikationsmerkmale zur Gewährleistung der Vertraulichkeit.
+    \item \textbf{KI-gestützte Glättung:} Bereinigung des Transkripts von rein sprachlichen 
+    Redundanzen (z.\,B. Füllwörter, Satzabbrüche) mittels generativer KI zur Optimierung der 
+    Lesbarkeit.
+    \item \textbf{Manuelle Verifikation:} Eine vollständige, zeilenweise Überprüfung des geglätteten 
+    Textes durch den Autor, um sicherzustellen, dass durch die Bearbeitung keinerlei inhaltliche oder 
+    technologische Verzerrungen eingeführt wurden.
+\end{enumerate}
 
-Darauf aufbauend wurde das Transkript in einem iterativen Prozess durch induktive Code-Generierung erweitert, um unerwartete Erkenntnisse strukturiert zu erfassen. Den Abschluss des Codierungsprozesses bildete die inhaltliche Gruppierung der Codes zur Extraktion der Kernaussagen. Aus diesen Ergebnissen wurden schließlich belastbare funktionale Anforderungen an das Multi-Agenten-System abgeleitet sowie die zeitlichen Metriken zur Definition der menschlichen Baseline generiert.
+Das finale, geglättete Transkript (siehe Anhang~\ref{app:codierte_passagen}) bildete die 
+Datengrundlage für das in Kapitel~\ref{sec:forschungsdesign} beschriebene Codierungsverfahren. 
+Die deduktive Basis-Codeliste strukturierte das Material zunächst in die Hauptkategorien 
+\textit{Prozessschritte der Migration}, \textit{Zeitaufwand und quantitative Metriken} sowie 
+\textit{kognitive Hürden}. Durch den induktiven Codierdurchlauf konnten zusätzliche, spezifische 
+Hürden -- wie etwa das fehleranfällige manuelle Parsing komplexer SAP-Prozeduren -- als kritische 
+Systemanforderungen extrahiert werden. Die im Folgenden dargestellten Ergebnisse und Memos bilden die 
+aggregierte Synthese dieses empirischen Prozesses.
 
 \section{Ergebnisse der Befragung}
 \label{sec:ergebnisse_interview}

@@ -174,6 +174,40 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html?utm_source=transaction&utm_medium=email&utm_campaign=linkedin_newsletter
       \endverb
     \endentry
+    \entry{langchain2024}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c6b41fd745709d65ec7ab70864b8b466}{%
+           family={Chase},
+           familyi={C\bibinitperiod},
+           given={Harrison},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{fullhash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{fullhashraw}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{bibnamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorbibnamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authornamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorfullhash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorfullhashraw}{c6b41fd745709d65ec7ab70864b8b466}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Langchain}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/langchain-ai/langchain
+      \endverb
+      \verb{url}
+      \verb https://github.com/langchain-ai/langchain
+      \endverb
+    \endentry
     \entry{chenEvaluatingLargeLanguage2021}{online}{}{}
       \name{author}{58}{}{%
         {{un=0,uniquepart=base,hash=fb15a691583ec94aafe0be6e7da4878f}{%
@@ -905,6 +939,74 @@
       \verb https://proceedings.neurips.cc/paper/2023/hash/a3621ee907def47c1b952ade25c67698-Abstract-Conference.html
       \endverb
     \endentry
+    \entry{liuLargescaleStudyDevelopment2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=108c5a254e178dc8435370c0d58d728a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea9d993a89fb3a29307e6dcb61c02365}{%
+           family={Upadhyay},
+           familyi={U\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3e7b72e0113054616a6bd9fe56e40f9}{%
+           family={Chhetri},
+           familyi={C\bibinitperiod},
+           given={Vinaik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75a86ff5dec43b2c8f4a419a10cba097}{%
+           family={Siddique},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7056e7f23698b9dd7b8ddf8bd05f418}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Umar},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8d96b33d572989b5b29188272f214571}
+      \strng{fullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{fullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{bibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorbibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authornamehash}{8d96b33d572989b5b29188272f214571}
+      \strng{authorfullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorfullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2025 {{IEEE International Conference}} on {{Big Data}} ({{BigData}})}
+      \field{title}{A Large-Scale Study on the Development and Issues of Multi-Agent {{AI}} Systems}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{7785\bibrangedash 7792}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+    \endentry
     \entry{matilainenChangeRequirementsProduct2024}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=03d1d78b15ce8ef87066e0dc8499a6e2}{%
@@ -1417,6 +1519,47 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html
+      \endverb
+    \endentry
+    \entry{singhLangChainVsCrewAI2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5462de07514875fb19500d9c48aa282f}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Harsh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \strng{bibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorbibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authornamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{LangChain}} vs {{CrewAI}} vs {{AutoGen}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\XGBEFTP3\Singh - 2025 - LangChain vs CrewAI vs AutoGen.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
       \endverb
     \endentry
     \entry{vaswaniAttentionAllYou2017}{article}{}{}
@@ -2108,6 +2251,40 @@
       \verb https://proceedings.neurips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html?utm_source=transaction&utm_medium=email&utm_campaign=linkedin_newsletter
       \endverb
     \endentry
+    \entry{langchain2024}{software}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c6b41fd745709d65ec7ab70864b8b466}{%
+           family={Chase},
+           familyi={C\bibinitperiod},
+           given={Harrison},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{fullhash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{fullhashraw}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{bibnamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorbibnamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authornamehash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorfullhash}{c6b41fd745709d65ec7ab70864b8b466}
+      \strng{authorfullhashraw}{c6b41fd745709d65ec7ab70864b8b466}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Langchain}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/langchain-ai/langchain
+      \endverb
+      \verb{url}
+      \verb https://github.com/langchain-ai/langchain
+      \endverb
+    \endentry
     \entry{chenEvaluatingLargeLanguage2021}{online}{}{}
       \name{author}{58}{}{%
         {{un=0,uniquepart=base,hash=fb15a691583ec94aafe0be6e7da4878f}{%
@@ -2839,6 +3016,74 @@
       \verb https://proceedings.neurips.cc/paper/2023/hash/a3621ee907def47c1b952ade25c67698-Abstract-Conference.html
       \endverb
     \endentry
+    \entry{liuLargescaleStudyDevelopment2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=108c5a254e178dc8435370c0d58d728a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea9d993a89fb3a29307e6dcb61c02365}{%
+           family={Upadhyay},
+           familyi={U\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3e7b72e0113054616a6bd9fe56e40f9}{%
+           family={Chhetri},
+           familyi={C\bibinitperiod},
+           given={Vinaik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75a86ff5dec43b2c8f4a419a10cba097}{%
+           family={Siddique},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7056e7f23698b9dd7b8ddf8bd05f418}{%
+           family={Farooq},
+           familyi={F\bibinitperiod},
+           given={Umar},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8d96b33d572989b5b29188272f214571}
+      \strng{fullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{fullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{bibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorbibnamehash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authornamehash}{8d96b33d572989b5b29188272f214571}
+      \strng{authorfullhash}{499bbe4594b272bc94aec9afcdafa424}
+      \strng{authorfullhashraw}{499bbe4594b272bc94aec9afcdafa424}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2025 {{IEEE International Conference}} on {{Big Data}} ({{BigData}})}
+      \field{title}{A Large-Scale Study on the Development and Issues of Multi-Agent {{AI}} Systems}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{7785\bibrangedash 7792}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/11402104/
+      \endverb
+    \endentry
     \entry{matilainenChangeRequirementsProduct2024}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=03d1d78b15ce8ef87066e0dc8499a6e2}{%
@@ -3351,6 +3596,47 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html
+      \endverb
+    \endentry
+    \entry{singhLangChainVsCrewAI2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5462de07514875fb19500d9c48aa282f}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Harsh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \strng{bibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorbibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authornamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{LangChain}} vs {{CrewAI}} vs {{AutoGen}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\XGBEFTP3\Singh - 2025 - LangChain vs CrewAI vs AutoGen.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
       \endverb
     \endentry
     \entry{vaswaniAttentionAllYou2017}{article}{}{}

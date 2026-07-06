@@ -1,0 +1,68 @@
+\chapter{Explorative Fallstudie und qualitative Artefaktanalyse}
+\label{ch:explorative_fallstudie}
+
+Nachdem im vorangegangenen Kapitel durch Experteninterviews die qualitativen Schmerzpunkte der industriellen Praxis sowie die 
+quantitative Baseline für den manuellen Migrationsaufwand etabliert wurden, bildet die in diesem Kapitel beschriebene Code-Analyse 
+die dritte und abschließende Säule der methodischen Datentriangulation. Während Interviews das wahrgenommene prozessuale Wissen 
+der Fachexperten abbilden, zielt dieses Kapitel auf die physische informationstechnische Ebene ab: die systematische Durchdringung 
+der rohen LO-VC-Datenstrukturen, um die exakten syntaktischen und semantischen Transformationsregeln für die spätere 
+KI-Architektur zu extrahieren.
+
+\section{Wissenschaftliche Einordnung und Methodik}
+\label{sec:methodik_fallstudie}
+
+Das methodische Vorgehen in diesem Kapitel folgt den etablierten Richtlinien für explorative Fallstudien (\textit{Exploratory Case 
+Studies}) im Software Engineering nach \textcite{runesonGuidelinesConductingReporting2009}, kombiniert mit einer qualitativen Artefaktanalyse. 
+Quellcode und Systemkonfigurationen gelten in der qualitativen Forschung als vollwertige, objektive Artefakte, deren Untersuchung 
+unbewusste oder implizite Handlungsabläufe (sogenanntes \textit{Tacit Knowledge}) offenlegt, die in reinen Interview-Settings oft 
+unerwähnt bleiben \parencite{seamanQualitativeMethodsEmpirical1999}. 
+
+Der manuelle Migrationsprozess wird als Untersuchungsobjekt im realen Kontext der \textit{msg systems ag} betrachtet. Um 
+belastbare Anforderungen für das Multi-Agenten-System in Kapitel 6 abzuleiten, schlüpft der Autor im Rahmen dieser Fallstudie in 
+die Rolle des menschlichen Migrations-Entwicklers. Das Vorgehen gliedert sich in ein striktes, dreistufiges 
+Transformations-Protokoll:
+\begin{enumerate}
+    \item \textbf{Dekonstruktion (Input):} Semantische Analyse des originären, imperativen LO-VC-Codes.
+    \item \textbf{Synthese (Output):} Manuelle Überführung der Logik in die deklarative Ziel-Syntax des \textit{Advanced Variant 
+    Configurator} (AVC) unter Anwendung der aktuellen SAP-Modellierungsrichtlinien.
+    \item \textbf{Pattern Extraction (Regelableitung):} Systematische Dokumentation der angewandten Denkschritte, des genutzten 
+    Vokabulars und der syntaktischen Ersetzungsregeln (\textit{Mapping-Rules}).
+\end{enumerate}
+Durch diese strukturierte Vorgehensweise wird eine lückenlose Beweiskette (\textit{Chain of Evidence}) von der reinen Datenbasis 
+über den menschlichen Kognitionsprozess hin zur formalisierten Prompt-Anweisung für die KI-Agenten sichergestellt.
+
+\section{Datenbasis und Sampling-Strategie}
+\label{sec:sampling_strategie}
+
+Um die externe Validität der Fallstudie zu maximieren und sicherzustellen, dass die extrahierten Übersetzungsregeln der realen 
+industriellen Komplexität standhalten, wird eine gezielte Stichprobe (\textit{Purposive Sampling}) aus realen Kundenprojekten der 
+\textit{msg systems ag} herangezogen. 
+
+Die Auswahl der zu analysierenden Konfigurationsobjekte erfolgt nicht randomisiert, sondern kriteriengeleitet nach dem Prinzip der 
+strukturellen maximalen Varianz \parencite{seamanQualitativeMethodsEmpirical1999}. Die finale Stichprobe umfasst $X$ repräsentative 
+Logik-Artefakte \textit{(Anmerkung: Die genaue Zahl $X$ trägst du später ein)}, die gezielt so ausgewählt wurden, dass sie die 
+gesamte Bandbreite der SAP-Variantenkonfiguration abdecken. Die Sampling-Kriterien verlangen das Vorhandensein folgender 
+Elementtypen innerhalb der Stichprobe:
+\begin{itemize}
+    \item \textbf{Vorbedingungen (Preconditions):} Restriktionen von Merkmalswerten auf lokaler Ebene.
+    \item \textbf{Auswahlbedingungen (Selection Conditions):} Logik zur Steuerung der Stücklistenauflösung.
+    \item \textbf{Beziehungswissen (Procedures):} Imperative, sequenzielle Wertermittlungsverfahren.
+    \item \textbf{Beziehungsnetze (Constraints):} Globale, deklarative Regelwerke ohne feste Ausführungsreihenfolge.
+\end{itemize}
+
+Zusätzlich zu diesen syntaktischen Kriterien wurden bewusst Datensätze in die Stichprobe aufgenommen, die eine hohe Dichte an 
+„kognitiven Altlasten“ (wie ungenutzte Merkmale oder verwaiste Prozeduren) aufweisen. Damit wird sichergestellt, dass die in 
+Kapitel 4.5.1 aus dem Experteninterview geforderte funktionale Anforderung der „semantischen Code-Bereinigung“ auf realer 
+Datengrundlage analysiert und methodisch fundiert in das spätere Systemdesign überführt werden kann.
+
+% -----------------------------------------------------------
+% PLATZHALTER FÜR SPÄTERE UNTERKAPITEL (Sobald die Daten da sind)
+% \section{Durchführung der Artefaktanalyse}
+% \label{sec:durchfuehrung_analyse}
+% \subsection{Analyse der Vorbedingungen}
+% \subsection{Analyse der Constraints und Procedures}
+%
+% \section{Ergebnisse: Ableitung der Transformationsregeln}
+% \label{sec:ergebnisse_transformationsregeln}
+% Hier dokumentierst du später die genauen Regeln (z.B. eq wird zu =, $SELF. ist Pflicht etc.), die du als Input für dein Systemdesign (Kapitel 6) nutzt.
+% -----------------------------------------------------------

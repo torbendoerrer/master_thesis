@@ -1,0 +1,47 @@
+% !TeX root = ../main.tex
+\chapter{Systemdesign und Technologieauswahl}
+\label{sec:architektur}
+\section{Technologieauswahl und Infrastruktur}
+\label{sec:technologieauswahl_und_infrastruktur}
+
+Nachdem im vorangegangenen Abschnitt die logische Zielarchitektur des Multi-Agenten-Systems konzeptionell aus der 
+Anforderungsanalyse hergeleitet wurde, bedarf es einer fundierten informationstechnischen Fundierung der Systemumgebung. Die 
+Auswahl der zugrundeliegenden Frameworks und Plattformen erfolgt hierbei nicht rein pragmatisch, sondern wird durch die strengen 
+Enterprise-Anforderungen der \textit{msg systems ag} (Data Governance, Sicherheit) sowie durch etablierte 
+Software-Engineering-Prinzipien (Wartbarkeit, Zukunftssicherheit) determiniert. Das technische Fundament des Prototyps stützt sich 
+auf drei zentrale Säulen: das Orchestrierungs-Framework (CrewAI), die Cloud-Plattform (SAP BTP) sowie die modellagnostische 
+Schnittstelle (liteLLM).
+
+\subsection{Orchestrierungs-Framework: CrewAI}
+\label{subsec:auswahl_crewai}
+
+Wie die empirischen Untersuchungen von \textcite{liuLargescaleStudyDevelopment2025} belegen, wird der aktuelle Stand der Technik im Bereich der 
+Multi-Agenten-Systeme maßgeblich durch die Frameworks LangGraph, AutoGen und CrewAI definiert. Die Entscheidung zugunsten von 
+\textit{CrewAI} für den vorliegenden Migrations-Prototypen begründet sich aus der spezifischen Natur der Übersetzungsaufgabe 
+(LO-VC nach AVC) sowie den zeitlichen und methodischen Rahmenbedingungen dieser Masterarbeit.
+
+Während \textit{AutoGen} primär auf offene, konversationelle Interaktionen ausgelegt ist und \textit{LangGraph} zwar 
+deterministische Enterprise-Workflows exzellent abbildet, aber einen extrem hohen manuellen Programmieraufwand bei der Definition 
+von Graphen-Zuständen erfordert, implementiert CrewAI nativ einen deklarativen, rollenbasierten Ansatz \parencite{singhLangChainVsCrewAI2025}. 
+Wie die vergleichende Architekturstudie von \textcite{singhLangChainVsCrewAI2025} herausstellt, reduziert CrewAI den Orchestrierungs-Code 
+drastisch, da komplexe Multi-Agenten-Workflows deklarativ anstatt imperativ definiert werden. Dies ermöglicht die branchenweit 
+schnellste Entwicklungszeit (\textit{Time-to-first-Agent}) und prädestiniert das Framework für das \textit{Rapid Prototyping} 
+\parencite{singhLangChainVsCrewAI2025}.
+
+Da im Rahmen dieser Arbeit ein funktionsfähiger \textit{Proof of Concept} (PoC) konstruiert werden muss, ist dieser minimale 
+Konfigurationsaufwand von entscheidendem architektonischem Vorteil. Zudem belegen aktuelle Benchmarks, dass CrewAI durch seine 
+schlanke, sequenzielle Pipeline-Struktur die geringsten Latenzzeiten bei der Agenten-Koordination aufweist \parencite{singhLangChainVsCrewAI2025}. Da die Code-Migration von Constraint-Netzwerken ein hochgradig sequenzieller Prozess ist (1. Analyse, 2. Synthese, 3. Validierung), erzwingt CrewAI architektonisch die Einhaltung genau dieser strikten Standardarbeitsanweisungen (SOPs) und hierarchischen Delegationswege. Diese Restriktion minimiert das Risiko kaskadierender Halluzinationen und sichert die geforderte prozessuale Stabilität bei gleichzeitig höchster Entwicklungsagilität.
+
+\subsection{Enterprise-Infrastruktur: SAP BTP und SAP AI Core}
+\label{subsec:auswahl_sap_btp}
+
+Der Einsatz generativer künstlicher Intelligenz im industriellen Umfeld unterliegt strikten datenschutzrechtlichen und regulatorischen Restriktionen. LO-VC-Modelle enthalten das essenzielle intellektuelle Eigentum (Wissen über Produktstrukturen, Machbarkeiten und kaufmännische Restriktionen) der jeweiligen produzierenden Unternehmen. Die unverschlüsselte Übertragung dieser sensiblen Konfigurationsdaten an öffentliche API-Endpunkte (wie die Standard-OpenAI-API) stellt ein inakzeptables Sicherheitsrisiko dar.
+
+Um die \textit{Enterprise Readiness} des Prototyps zu gewährleisten, wird die Architektur vollständig auf der \textit{SAP Business Technology Platform} (BTP) betrieben. Durch die Nutzung des \textit{SAP AI Core} wird sichergestellt, dass die Datenverarbeitung innerhalb eines geschlossenen, vertrauenswürdigen und DSGVO-konformen SAP-Ökosystems stattfindet. Diese architektonische Entscheidung korreliert zudem mit der \textit{Clean Core}-Strategie der SAP, da der externe KI-Service über standardisierte BTP-Services an das Kernsystem angebunden wird, ohne proprietäre Modifikationen im Backend zu erfordern.
+
+\subsection{Modellagnostische Integration: liteLLM}
+\label{subsec:auswahl_litellm}
+
+Der Bereich der \textit{Large Language Models} zeichnet sich durch extrem kurze Innovationszyklen aus. Die harte informationstechnische Kopplung (Hardcoding) eines Multi-Agenten-Systems an ein spezifisches Sprachmodell oder einen einzelnen Anbieter (Vendor Lock-in) stellt ein signifikantes architektonisches Risiko dar (Anti-Pattern). 
+
+Um dieses Risiko zu eliminieren und die Zukunftssicherheit des Migrations-Tools zu garantieren, wird \textit{liteLLM} als Abstraktionsschicht (Middleware) in das CrewAI-Framework integriert. Diese Bibliothek standardisiert die API-Aufrufe und entkoppelt die Agenten-Logik vollständig vom zugrundeliegenden Sprachmodell. Durch diese modellagnostische Architektur kann der Prototyp zur Laufzeit flexibel auf aktuelle Modell-Generationen (beispielsweise bereitgestellt über den SAP AI Core) zugreifen. Dies ermöglicht eine nahtlose Skalierung der kognitiven Fähigkeiten des Systems, ohne dass Refactoring-Aufwände im Kerncode des Agenten-Netzwerks entstehen.

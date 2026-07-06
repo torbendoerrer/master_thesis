@@ -1,3 +1,101 @@
 % !TeX root = ../main.tex
 \chapter{Einleitung}
-Beispieltext für die Einleitung.
+\label{ch:einleitung}
+
+\section{Motivation und Problemstellung}
+\label{sec:motivation_und_problemstellung}
+
+Im Zuge der digitalen Transformation und der Abkündigung älterer ERP-Generationen stehen produzierende Unternehmen weltweit vor 
+der komplexen Herausforderung, ihre IT-Landschaften auf das moderne System SAP S/4HANA zu migrieren. Ein hochgradig kritischer 
+Teilbereich dieser Transition betrifft die Variantenkonfiguration: Die historisch gewachsene, imperative Logik der klassischen 
+\ac{LO-VC} muss in die moderne, deklarative Syntax der \ac{AVC} überführt werden. 
+
+In der industriellen Praxis – insbesondere im Beratungsumfeld der \textit{msg systems ag} – zeigt sich, dass diese 
+Syntax-Migration einen massiven zeitlichen und finanziellen Flaschenhals darstellt. Da direkte, maschinelle 1:1-Übersetzer 
+aufgrund der grundlegenden Paradigmenwechsel zwischen imperativen und deklarativen Regelwerken fehlen, erfolgt die Überführung 
+oftmals in manueller, extrem fehleranfälliger Fleißarbeit. Erste Versuche der Industrie, diesen Prozess durch moderne generative 
+\ac{KI} zu automatisieren, blieben bislang hinter den Erwartungen zurück. Wie Voruntersuchungen zeigen, 
+scheitern monolithische Single-Prompt-Ansätze (wie die einfache Abfrage über Werkzeuge wie ChatGPT) an der strukturellen 
+Komplexität und den strikten Syntaxvorgaben der SAP-Constraint-Netzwerke. Das Sprachmodell verliert bei langen Logikketten den 
+Kontext und neigt zu nicht-kompilierbaren Halluzinationen. 
+
+Um diesen Flaschenhals informationstechnisch aufzulösen, rückt das Paradigma der \ac{MAS} in den Fokus der angewandten Informatik. 
+Die Hypothese lautet, dass eine Aufteilung von Teilbereichen der komplexen Übersetzungsaufgabe in ein orchestriertes Kollektiv spezialisierter 
+KI-Agenten die Code-Qualität und die Arbeitsgeschwindigkeit bei der Migration drastisch erhöhen kann, sofern die Ergebnisse der \ac{KI} 
+von Entwicklern in einem iterativen, agentischen Workflow validiert und konsolidiert werden.
+
+\section{Zielsetzung und Forschungsfragen}
+\label{sec:zielsetzung_und_forschungsfragen}
+
+Das primäre Ziel dieser Masterarbeit ist die theoriegeleitete Konzeption und praktische Implementierung einer 
+Multi-Agenten-Architektur zur automatisierten Code-Migration von LO-VC nach AVC. In Kooperation mit der \textit{msg systems ag} 
+soll nicht nur die theoretische Eignung von Agenten-Frameworks evaluiert, sondern ein lauffähiger, cloudbasierter Prototyp auf 
+der \textit{SAP Business Technology Platform} (BTP) entwickelt und bewertet werden.
+
+Um dieses Ziel zu erreichen, wird die Arbeit von folgender Hauptforschungsfrage geleitet: 
+\textbf{In welchem Umfang kann ein Multi-Agenten-System die Effizienz und Qualität bei der Migration von imperativer LO-VC-Logik 
+zu deklarativer AVC-Syntax im Vergleich zum manuellen Vorgehen steigern?} 
+
+Zur strukturierten Beantwortung dieser Hauptfrage werden vier dedizierte Unter-Forschungsfragen (FF) definiert:
+\begin{itemize}
+    \item \textbf{FF1 (Baseline):} Welche manuellen Prozessschritte sind bei der Migration zwingend erforderlich und wie hoch ist der zeitliche Aufwand pro Logik-Objekt?
+    \item \textbf{FF2 (Werkzeug-Wahl):} Anhand welcher technischen und konzeptionellen Kriterien lässt sich das optimale Multi-Agenten-Framework (z.\,B. CrewAI vs. AutoGen vs. LangChain) für das Einsatzumfeld der automatisierten Code-Migration identifizieren und rechtfertigen?
+    \item \textbf{FF3 (Architektur):} An welchen Stellen der Migration bietet sich der Einsatz eines \ac{MAS} an und wie lässt sich der herausgearbeitete Scope systematisch in spezialisierte agentische Rollen überführen?
+    \item \textbf{FF4 (Impact):} Welche Einsparung (in Bearbeitungszeit) und welche Qualitätsrate (Syntax-Korrektheit) erzielt der agentische Ansatz im Vergleich zur manuellen Baseline?
+\end{itemize}
+
+\section{Methodisches Vorgehen und Forschungsdesign}
+\label{sec:methodisches_vorgehen}
+
+Um eine valide, praxistaugliche und wissenschaftlich fundierte Multi-Agenten-Architektur für die Migration von LO-VC- nach 
+AVC-Code zu konzipieren, folgt diese Arbeit dem Paradigma des \ac{DSR} nach 
+\textcite{hevnerDesignScienceInformation2004}. Ziel dieses gestaltungsorientierten Forschungsansatzes ist die Konstruktion und 
+Evaluation eines innovativen, zweckmäßigen IT-Artefakts -- in diesem Fall des Modells und der nachfolgenden Instanziierung einer 
+Multi-Agenten-System-Architektur --, um ein komplexes, unstrukturiertes Problem (\textit{Wicked Problem}) in einem realen 
+technologischen Umfeld nachhaltig zu lösen. 
+
+Entsprechend dem IS-Forschungsmethoden-Framework von \textcite{hevnerDesignScienceInformation2004} gliedert sich das 
+Forschungsdesign dieser Arbeit in zwei komplementäre Kernphasen, welche die Balance zwischen praktischer Relevanz 
+(\textit{Relevance}) und methodischer Strenge (\textit{Rigor}) sichern:
+
+\begin{enumerate}
+    \item \textbf{Explorative Phase zur Problem- und Scope-Definition (Umfeld \& Relevanz):} 
+    Den Ausgangspunkt bildet die präzise Erfassung des Problemraums und des \textit{Business Needs} innerhalb des organisationalen 
+    und technologischen Umfelds (\textit{Environment}). Hierzu wird eine explorative Fallstudie nach den Richtlinien von 
+    \textcite{runesonGuidelinesConductingReporting2009} vorgeschaltet. Um Verzerrungen zu minimieren und den konkreten 
+    funktionalen Scope des \ac{MAS} empirisch abzugrenzen, erfolgt eine Datentriangulation aus drei Quellen:
+    \begin{itemize}
+        \item \textit{Archivdokumentenanalyse:} Systematische Untersuchung bestehender SAP-Dokumentationen, Syntaxvorgaben und 
+        Altsystemstrukturen zur Definition der technologischen Rahmenbedingungen.
+        \item \textit{Qualitative Experteninterviews:} Erhebung von implizitem Praxiswissen (\textit{Tacit Knowledge}) von 
+        Domänenexperten bezüglich manueller Migrationsaufwände (Baseline) sowie realer Fallstricke beim Einsatz generativer KI.
+        \item \textit{Selbstversuch:} Durchführung einer eigenen, manuellen Beispielmigration zur Identifikation inhärenter 
+        syntaktischer Transformationsbarrieren im LO-VC-Code.
+    \end{itemize}
+    Die Synthese dieser Erkenntnisse fundiert den Problemraum wissenschaftlich und führt direkt zur Ableitung einer ersten 
+    fundierten Version 1 (V1) der Systemarchitektur.
+
+    \item \textbf{Iterativer DSR-Gestaltungs- und Evaluationszyklus (Konstruktion \& Strenge):}
+    Aufbauend auf der Architekturversion V1 setzt der eigentliche Kernprozess des Design Science Research ein. Im Sinne des von 
+    \textcite{hevnerDesignScienceInformation2004} beschriebenen \textit{Generate/Test Cycle} (Suchprozess) wird das Artefakt im 
+    Zuge der softwaretechnischen Umsetzung schrittweise und iterativ weiterentwickelt (V1 zu V2 bis zur finalen Architektur). 
+    Jede Iteration greift dabei auf theoretische Grundlagen aus der Wissensbasis (\textit{Knowledge Base}) zurück -- wie etwa 
+    etablierte Architekturmuster für Multi-Agenten-Systeme sowie Prinzipien des Compilerbaus --, um die methodische Strenge 
+    (\textit{Rigor}) zu gewährleisten. Abschließend wird das fertige Artefakt einer rigorosen Evaluation 
+    (z.\,B. durch funktionales Testing mit realitätsnahen Migrationsszenarien) unterzogen, um dessen Nützlichkeit 
+    (\textit{Utility}) empirisch nachzuweisen.
+\end{enumerate}
+
+Durch diese methodische Verknüpfung wird sichergestellt, dass die vorgeschlagene MAS-Architektur nicht nur auf strengen 
+wissenschaftlichen Methoden beruht, sondern auch einen messbaren, praktischen Beitrag für die automatisierte Code-Transformation 
+in der industriellen SAP-Praxis leistet.
+
+\section{Abgrenzung der Arbeit}
+\label{sec:abgrenzung}
+
+% TODO: Scope definieren. Hier wird später im Detail aufgeschlüsselt, welche spezifischen LO-VC Elemente (z.B. Constraints, Preconditions, Selection Conditions) der Prototyp transformieren kann und welche Sonderfälle oder komplexe Prozeduren (Procedures) bewusst aus dem Scope dieser Arbeit exkludiert werden.
+
+\section{Aufbau der Arbeit}
+\label{sec:aufbau_der_arbeit}
+
+Die vorliegende Arbeit gliedert sich in sechs aufeinander aufbauende Kapitel. Nach der Einleitung in \textbf{Kapitel 1} schafft \textbf{Kapitel 2} das theoretische Fundament, indem es die Domäne der SAP-Variantenkonfiguration erläutert und die Paradigmen von Multi-Agenten-Systemen nach aktuellem Forschungsstand analysiert. In \textbf{Kapitel 3} erfolgt die Auswertung der Experteninterviews zur Festlegung der manuellen Baseline und der funktionalen Anforderungen. \textbf{Kapitel 4} widmet sich dem praktischen Selbstversuch, in dem die Auswahl des Frameworks, die Rollenspeziﬁkation und die Integration in die SAP BTP dokumentiert werden. \textbf{Kapitel 5} umfasst die Evaluation des entwickelten Prototyps anhand der Forschungsfragen, um die messbaren Mehrwerte und Limitierungen gegenüber der Baseline darzustellen. Die Arbeit schließt in \textbf{Kapitel 6} mit einem Resümee und einem Ausblick auf zukünftige Forschungspotenziale.

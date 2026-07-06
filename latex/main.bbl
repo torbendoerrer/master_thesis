@@ -600,6 +600,73 @@
       \endverb
       \keyw{Computer Science - Machine Learning}
     \endentry
+    \entry{hevnerDesignScienceInformation2004}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e054261c7f1739e1ba1db0a45e385c1b}{%
+           family={Hevner},
+           familyi={H\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5aec260b5b1381edc4b8ff6755f2d543}{%
+           family={March},
+           familyi={M\bibinitperiod},
+           given={Salvatore\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c518c214dc9e77148493e9ea47f505ab}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jinsoo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65565df90d4793da7a2f20e5e1b07345}{%
+           family={Ram},
+           familyi={R\bibinitperiod},
+           given={Sudha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Management Information Systems Research Center, University of Minnesota}%
+      }
+      \strng{namehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{fullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{fullhashraw}{b163bef761d9a2c79a3d232595321775}
+      \strng{bibnamehash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authorbibnamehash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authornamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authorfullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authorfullhashraw}{b163bef761d9a2c79a3d232595321775}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MIS quarterly}
+      \field{number}{1}
+      \field{title}{Design Science in Information Systems Research}
+      \field{urlday}{20}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{75\bibrangedash 106}
+      \range{pages}{32}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\JIR63HPK\Hevner et al. - 2004 - Design science in information systems research.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://misq.umn.edu/misq/article/28/1/75/261
+      \endverb
+      \verb{url}
+      \verb https://misq.umn.edu/misq/article/28/1/75/261
+      \endverb
+    \endentry
     \entry{hongMetaGPTMetaProgramming2024}{article}{}{}
       \name{author}{10}{}{%
         {{un=0,uniquepart=base,hash=58cefe84ca110e5bd39615f1625f9b33}{%
@@ -1519,6 +1586,47 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html
+      \endverb
+    \endentry
+    \entry{singhLangChainVsCrewAI2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5462de07514875fb19500d9c48aa282f}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Harsh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \strng{bibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorbibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authornamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{LangChain}} vs {{CrewAI}} vs {{AutoGen}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\XGBEFTP3\Singh - 2025 - LangChain vs CrewAI vs AutoGen.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
       \endverb
     \endentry
     \entry{vaswaniAttentionAllYou2017}{article}{}{}
@@ -2636,6 +2744,73 @@
       \endverb
       \keyw{Computer Science - Machine Learning}
     \endentry
+    \entry{hevnerDesignScienceInformation2004}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e054261c7f1739e1ba1db0a45e385c1b}{%
+           family={Hevner},
+           familyi={H\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5aec260b5b1381edc4b8ff6755f2d543}{%
+           family={March},
+           familyi={M\bibinitperiod},
+           given={Salvatore\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c518c214dc9e77148493e9ea47f505ab}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Jinsoo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65565df90d4793da7a2f20e5e1b07345}{%
+           family={Ram},
+           familyi={R\bibinitperiod},
+           given={Sudha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Management Information Systems Research Center, University of Minnesota}%
+      }
+      \strng{namehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{fullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{fullhashraw}{b163bef761d9a2c79a3d232595321775}
+      \strng{bibnamehash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authorbibnamehash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authornamehash}{77b3350005135e016e7a83431f326d8f}
+      \strng{authorfullhash}{b163bef761d9a2c79a3d232595321775}
+      \strng{authorfullhashraw}{b163bef761d9a2c79a3d232595321775}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MIS quarterly}
+      \field{number}{1}
+      \field{title}{Design Science in Information Systems Research}
+      \field{urlday}{20}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{28}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{75\bibrangedash 106}
+      \range{pages}{32}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\JIR63HPK\Hevner et al. - 2004 - Design science in information systems research.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://misq.umn.edu/misq/article/28/1/75/261
+      \endverb
+      \verb{url}
+      \verb https://misq.umn.edu/misq/article/28/1/75/261
+      \endverb
+    \endentry
     \entry{hongMetaGPTMetaProgramming2024}{article}{}{}
       \name{author}{10}{}{%
         {{un=0,uniquepart=base,hash=58cefe84ca110e5bd39615f1625f9b33}{%
@@ -3555,6 +3730,47 @@
       \endverb
       \verb{url}
       \verb https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html
+      \endverb
+    \endentry
+    \entry{singhLangChainVsCrewAI2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5462de07514875fb19500d9c48aa282f}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Harsh},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{fullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \strng{bibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorbibnamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authornamehash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhash}{5462de07514875fb19500d9c48aa282f}
+      \strng{authorfullhashraw}{5462de07514875fb19500d9c48aa282f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{LangChain}} vs {{CrewAI}} vs {{AutoGen}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\doerrt\Zotero\storage\XGBEFTP3\Singh - 2025 - LangChain vs CrewAI vs AutoGen.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Harsh-Singh-152/publication/404892932_LangChain_CrewAU_AutoGen_comparative_guide/links/6a06bf782e263f2f07747204/LangChain-CrewAU-AutoGen-comparative-guide.pdf
       \endverb
     \endentry
     \entry{vaswaniAttentionAllYou2017}{article}{}{}
