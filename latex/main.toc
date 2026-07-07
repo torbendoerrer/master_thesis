@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{19}{}%
 \contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{20}{}%
 \contentsline {chapter}{\numberline {3}Related Work}{22}{}%
-\contentsline {chapter}{\numberline {4}Auswertung des Experteninterviews}{26}{}%
+\contentsline {chapter}{\numberline {4}Durchführung und Auswertung des Experteninterviews}{26}{}%
 \contentsline {section}{\numberline {4.1}Zielsetzung und Erkenntnisinteresse}{26}{}%
 \contentsline {section}{\numberline {4.2}Methodisches Forschungsdesign}{27}{}%
 \contentsline {section}{\numberline {4.3}Datenerhebung und Auswertungsprozess}{28}{}%
@@ -44,18 +44,23 @@
 \contentsline {subsection}{\numberline {4.4.4}Limitierungen bestehender Standard-Tools}{30}{}%
 \contentsline {subsection}{\numberline {4.4.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{30}{}%
 \contentsline {subsection}{\numberline {4.4.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{31}{}%
-\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur}{31}{}%
+\contentsline {section}{\numberline {4.5}Implikationen für die Systemarchitektur (Ideales Zielbild)}{31}{}%
 \contentsline {subsection}{\numberline {4.5.1}Funktionale Anforderungen aus der Expertenperspektive}{31}{}%
 \contentsline {subsection}{\numberline {4.5.2}Architektonische Paradigmen und Beratungsansatz}{32}{}%
-\contentsline {subsection}{\numberline {4.5.3}Konzeptionelle Notwendigkeit einer Multi-Agenten-Struktur}{32}{}%
+\contentsline {subsection}{\numberline {4.5.3}Hypothese der Multi-Agenten-Rollen}{32}{}%
 \contentsline {subsection}{\numberline {4.5.4}Quantitative Zielvorgaben für die Systemvalidierung}{33}{}%
-\contentsline {chapter}{\numberline {5}Explorative Fallstudie und qualitative Artefaktanalyse}{34}{}%
-\contentsline {section}{\numberline {5.1}Wissenschaftliche Einordnung und Methodik}{34}{}%
-\contentsline {section}{\numberline {5.2}Datenbasis und Sampling-Strategie}{35}{}%
-\contentsline {chapter}{\numberline {6}Systemdesign und Technologieauswahl}{37}{}%
-\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{37}{}%
-\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{37}{}%
-\contentsline {subsection}{\numberline {6.1.2}Enterprise-Infrastruktur: SAP BTP und SAP AI Core}{38}{}%
-\contentsline {subsection}{\numberline {6.1.3}Modellagnostische Integration: liteLLM}{39}{}%
-\contentsline {chapter}{Anhang Anhang}{44}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{45}{}%
+\contentsline {subsection}{\numberline {4.5.5}Überleitung zum methodischen Realitätsabgleich}{33}{}%
+\contentsline {chapter}{\numberline {5}Durchführung und Auswertung des praktischen Selbstversuchs}{34}{}%
+\contentsline {section}{\numberline {5.1}Technologischer Realitätsabgleich und empirische Scope-Definition}{34}{}%
+\contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{35}{}%
+\contentsline {subsection}{\numberline {5.1.2}Evaluation der architektonischen Paradigmen}{36}{}%
+\contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{36}{}%
+\contentsline {section}{\numberline {5.2}Wissenschaftliche Einordnung und methodisches Analyseprotokoll}{37}{}%
+\contentsline {section}{\numberline {5.3}Datenbasis und Sampling-Strategie}{38}{}%
+\contentsline {chapter}{\numberline {6}Systemdesign und Technologieauswahl}{40}{}%
+\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{40}{}%
+\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{40}{}%
+\contentsline {subsection}{\numberline {6.1.2}Enterprise-Infrastruktur: SAP BTP und SAP AI Core}{41}{}%
+\contentsline {subsection}{\numberline {6.1.3}Modellagnostische Integration: liteLLM}{42}{}%
+\contentsline {chapter}{Anhang Anhang}{47}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{48}{}%

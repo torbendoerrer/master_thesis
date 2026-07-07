@@ -1,68 +1,108 @@
-\chapter{Explorative Fallstudie und qualitative Artefaktanalyse}
+\chapter{Durchführung und Auswertung des praktischen Selbstversuchs}
 \label{ch:explorative_fallstudie}
 
-Nachdem im vorangegangenen Kapitel durch Experteninterviews die qualitativen Schmerzpunkte der industriellen Praxis sowie die 
-quantitative Baseline für den manuellen Migrationsaufwand etabliert wurden, bildet die in diesem Kapitel beschriebene Code-Analyse 
-die dritte und abschließende Säule der methodischen Datentriangulation. Während Interviews das wahrgenommene prozessuale Wissen 
-der Fachexperten abbilden, zielt dieses Kapitel auf die physische informationstechnische Ebene ab: die systematische Durchdringung 
-der rohen LO-VC-Datenstrukturen, um die exakten syntaktischen und semantischen Transformationsregeln für die spätere 
-KI-Architektur zu extrahieren.
+Nachdem im vorangegangenen Kapitel durch das Experteninterview die praxisnahen Schmerzpunkte und die zeitliche Baseline für den 
+manuellen Migrationsaufwand etabliert wurden, bildet die in diesem Kapitel beschriebene manuelle Code-Analyse den zweiten 
+empirischen Baustein der Datentriangulation. Im Kontext des \textit{Design Science Research} Frameworks nach 7
+\textcite{hevnerDesignScienceInformation2004} dient dieser Selbstversuch dazu, das technologische Umfeld (\textit{Environment}) 
+tiefgreifend zu durchdringen. Während Interviews das subjektiv wahrgenommene, prozessuale Wissen der Fachexperten abbilden, 
+fokussiert dieser Selbstversuch die physische informationstechnische Ebene der rohen LO-VC-Datenstrukturen. 
 
-\section{Wissenschaftliche Einordnung und Methodik}
+Das primäre Erkenntnisinteresse dieses Kapitels ist dabei zweidimensional: Neben der Extraktion exakter syntaktischer 
+Transformationsregeln als Prompt-Basis für das Multi-Agenten-System steht die empirische Scope-Definition im Vordergrund. 
+
+\section{Technologischer Realitätsabgleich und empirische Scope-Definition}
+\label{sec:scope_abgrenzung}
+
+Die im vorangegangenen Kapitel dargelegten interviewbasierten Implikationen (vgl. Kapitel~\ref{sec:implikationen}) repräsentieren den maximalen \textit{Business Need} aus Sicht der industriellen Praxis und skizzieren ein theoretisches Idealbild des zukünftigen Systems. Im Sinne des übergeordneten \textit{Design Science Research} Paradigmas nach \textcite{hevner2004design} darf dieses vollumfängliche Anforderungsprofil jedoch nicht unreflektiert als feste Vorgabe für die Artefaktkonstruktion dienen. Vielmehr bedarf es vorab einer fundierten Machbarkeitsprüfung (\textit{Feasibility Check}), um den exakten funktionalen und architektonischen Umfang (\textit{Scope}) des zu entwickelnden Prototyps abzugrenzen.
+
+Dieser Abschnitt fungiert als methodischer Filter zwischen den idealisierten Wünschen der Praxis und der technologischen Realität im Rahmen einer Masterarbeit. Die fünf Kernimplikationen aus Kapitel~\ref{sec:implikationen} werden nachfolgend systematisch evaluiert, um zu bestimmen, welche Aspekte im darauffolgenden praktischen Selbstversuch auf Code-Ebene untersucht und final in die Multi-Agenten-Architektur integriert werden:
+
+\subsection{Evaluation der funktionalen Praxisanforderungen}
+
+\begin{enumerate}
+    \item \textbf{Konsistenzprüfung im Testprozess (Out-of-Scope):} 
+    Der Wunsch nach einer automatisierten Überführung und Validierung historischer Testkonfigurationen stellt in realen SAP-Migrationsprojekten eine erhebliche Entlastung dar. Die softwaretechnische Umsetzung im Rahmen dieses agentischen Proof-of-Concepts wird jedoch als \textit{Out-of-Scope} definiert. Die Migration von Test-Sets erfordert eine tiefe Kopplung an proprietäre und unternehmensspezifische Test-Infrastrukturen sowie unstrukturiertes Domänenwissen über Altsystemzustände. Da diese externe Umgebung im Rahmen des Prototyps nicht standardisiert und isoliert simuliert werden kann, ist eine verlässliche Validierung durch KI-Agenten ohne menschlichen Kontext unmöglich. Die hypothetische Rolle eines dedizierten „Tester-Agenten“ wird für diesen Prototyp somit verworfen.
+    
+    \item \textbf{Semantische Analyse und Code-Bereinigung (In-Scope):} 
+    Die Identifikation von funktional obsoleten Altlasten (wie ungenutzten Merkmalen oder verwaistem Beziehungswissen) im Legacy-Code lässt sich direkt auf syntaktischer Ebene analysieren. Da diese Bereinigung die kognitive Last des Entwicklers senkt, wird sie in den Scope des Systems aufgenommen. Der praktische Selbstversuch wird dazu genutzt, wiederkehrende Muster von „totem Code“ zu identifizieren, um dem späteren System (konkret der Rolle des Analysten-Agenten) entsprechende Heuristiken mitzugeben.
+    
+    \item \textbf{Automatisierte Logik-Transformation (In-Scope -- Kernfokus):} 
+    Die empirische Baseline hat gezeigt, dass die manuelle Umstrukturierung und Neucodierung von Vorbedingungen und Prozeduren rund zwei Drittel des Gesamtaufwands beansprucht. Diese Anforderung bildet den absoluten Kernbereich des zu konstruierenden Artefakts. Der Selbstversuch konzentriert sich maßgeblich auf diesen Flaschenhals, um die komplexen, nicht-trivialen Transformationspfade auf Code-Ebene physisch zu durchdringen und in formale Übersetzungsregeln zu überführen.
+\end{enumerate}
+
+\subsection{Evaluation der architektonischen Paradigmen}
+
+\begin{enumerate}
+    \setcounter{enumii}{3}
+    \item \textbf{Interaktive Assistenz / Consulting-Ansatz (Reduzierter Scope):} 
+    Ein vollumfänglicher, frei textender „Consultant-Agent“, der wie ein menschlicher Berater strategische Design-Entscheidungen diskutiert, übersteigt die Ressourcen und den deterministischen Fokus einer automatisierten Code-Transformation. Um den Praxisbedarf nach Transparenz dennoch zu erfüllen, wird dieser Ansatz auf eine \textit{diagnostische Review-Ebene} reduziert. Das System wird so konzipiert, dass es im Falle von syntaktischen Unschärfen oder nicht eindeutigen Übersetzungen automatische Warnhinweise und Kommentare generiert (\textit{Review-Flags}), anstatt autonome, potenziell fehlerhafte Entscheidungen zu treffen.
+    
+    \item \textbf{Einhaltung von AVC-Modellierungsrichtlinien (In-Scope):} 
+    Die Erzeugung von standardkonformem und syntaktisch fehlerfreiem AVC-Zielcode ist für die Lauffähigkeit des Systems essenziell. Die Ersetzung von obsoleten Elementen (wie klassischen Z-Funktionen) durch native AVC-Standardfunktionen wird als feste methodische Leitplanke in das Systemdesign integriert. Der Selbstversuch dient hierbei als Werkzeug, um die genauen semantischen Äquivalente im AVC-Standard-Repository für den Legacy-Code zu ermitteln.
+\end{enumerate}
+
+\subsection{Synthese des finalen System-Scopes}
+
+Zusammenfassend führt dieser technologische Realitätsabgleich zu einer gezielten Fokussierung des Forschungsdesigns. Für den anschließenden praktischen Selbstversuch (vgl. Kapitel~\ref{sec:methodik_fallstudie} ff.) bedeutet dies, dass die Stichprobenziehung (\textit{Sampling}) und die qualitative Analyse ausschließlich auf die Bereiche der **Code-Bereinigung**, der **Logik-Transformation** (insb. Vorbedingungen und Prozeduren) sowie die Definition von **diagnostischen Warnhinweisen** ausgerichtet werden. 
+
+Für die darauffolgende Artefaktkonstruktion der Multi-Agenten-Architektur (Version 1) wird die ursprüngliche Rollenhypothese somit geschärft: Das System verzichtet auf autonome Test- und vollumfängliche Chatbot-Komponenten und konzentriert sich stattdessen auf ein hocheffizientes, kollaboratives Kernteam, bestehend aus einem spezialisierten **Analysten-Agenten** (Bereinigung und Strukturierung) und einem **Syntaktiker-Agenten** (Code-Transformation und Diagnostik).
+
+\section{Wissenschaftliche Einordnung und methodisches Analyseprotokoll}
 \label{sec:methodik_fallstudie}
 
-Das methodische Vorgehen in diesem Kapitel folgt den etablierten Richtlinien für explorative Fallstudien (\textit{Exploratory Case 
-Studies}) im Software Engineering nach \textcite{runesonGuidelinesConductingReporting2009}, kombiniert mit einer qualitativen Artefaktanalyse. 
-Quellcode und Systemkonfigurationen gelten in der qualitativen Forschung als vollwertige, objektive Artefakte, deren Untersuchung 
-unbewusste oder implizite Handlungsabläufe (sogenanntes \textit{Tacit Knowledge}) offenlegt, die in reinen Interview-Settings oft 
-unerwähnt bleiben \parencite{seamanQualitativeMethodsEmpirical1999}. 
+Das methodische Vorgehen folgt den Richtlinien für explorative Fallstudien (\textit{Exploratory Case Studies}) im Software 
+Engineering nach \textcite{runesonGuidelinesConductingReporting2009}, kombiniert mit einer qualitativen Artefaktanalyse nach 
+\textcite{seamanQualitativeMethodsEmpirical1999}. In der empirischen Softwaretechnik gelten Quellcode und Systemkonfigurationen 
+als vollwertige, objektive Dokumente. Die qualitative Analyse dieser Artefakte ist notwendig, um unbewusstes Handeln und 
+implizites Erfahrungswissen (\textit{Tacit Knowledge}) von Entwicklern offenzulegen, welches in reinen Befragungen oft ungenannt 
+bleibt \parencite{seamanQualitativeMethodsEmpirical1999}. 
 
-Der manuelle Migrationsprozess wird als Untersuchungsobjekt im realen Kontext der \textit{msg systems ag} betrachtet. Um 
-belastbare Anforderungen für das Multi-Agenten-System in Kapitel 6 abzuleiten, schlüpft der Autor im Rahmen dieser Fallstudie in 
-die Rolle des menschlichen Migrations-Entwicklers. Das Vorgehen gliedert sich in ein striktes, dreistufiges 
-Transformations-Protokoll:
+Der manuelle Migrationsprozess wird hierbei als Untersuchungsobjekt im realen Kontext der \textit{msg systems ag} betrachtet, 
+wobei der Autor die Rolle des transformierenden Entwicklers einnimmt. Um den Vorwurf einer unsystematischen Vorgehensweise 
+auszuschließen, folgt die Analyse einem strukturierten, protokollbasierten Datenreduktions- und Codierungsverfahren in Anlehnung 
+an die von \textcite{seamanQualitativeMethodsEmpirical1999} postulierten Techniken zur qualitativen Strukturierung von 
+Software-Artefakten. Dieses Protokoll gliedert sich in drei aufeinander aufbauende Phasen:
+
 \begin{enumerate}
-    \item \textbf{Dekonstruktion (Input):} Semantische Analyse des originären, imperativen LO-VC-Codes.
-    \item \textbf{Synthese (Output):} Manuelle Überführung der Logik in die deklarative Ziel-Syntax des \textit{Advanced Variant 
-    Configurator} (AVC) unter Anwendung der aktuellen SAP-Modellierungsrichtlinien.
-    \item \textbf{Pattern Extraction (Regelableitung):} Systematische Dokumentation der angewandten Denkschritte, des genutzten 
-    Vokabulars und der syntaktischen Ersetzungsregeln (\textit{Mapping-Rules}).
+    \item \textbf{Strukturelle Dekonstruktion (Input-Analyse):} Das systematische Sichten und Aufschlüsseln des originären, 
+    imperativen LO-VC-Codes. Die Logikbausteine werden theoriegeleitet isoliert und im Sinne des qualitativen Codings nach 
+    \textcite{seamanQualitativeMethodsEmpirical1999} nach ihrer logischen Funktion (z.\,B. Wertezuweisung, Bedingungsprüfung, 
+    Tabellenaufruf) kategorisiert.
+    \item \textbf{Systematische Synthese (Target-Mapping):} Die manuelle, regelkonforme Überführung der isolierten Fachlogik in 
+    die deklarative Ziel-Syntax der \textit{Advanced Variant Configuration} (AVC) unter strikter Einhaltung der aktuellen 
+    SAP-Modellierungsrichtlinien.
+    \item \textbf{Muster-Extraktion, Scoping und induktive Erweiterung:} Die vergleichende Gegenüberstellung von Input und Output 
+    zur Identifikation wiederkehrender Transformationsmuster (\textit{Mapping-Rules}). Kritischer Bestandteil dieser Phase ist die 
+    qualitative Bewertung jedes Musters auf seine Automatisierbarkeit hin. Gleichzeitig bleibt das Verfahren gemäß den Prinzipien 
+    von \textcite{runesonGuidelinesConductingReporting2009} offen für \textit{induktive Erkenntnisse} -- also das ungeplante 
+    Entdecken neuer syntaktischer Komplexitäten oder Abhängigkeiten während des Migrationsaktes, die im Experteninterview noch 
+    nicht identifiziert wurden und den Scope des \ac{MAS} maßgeblich beeinflussen.
 \end{enumerate}
-Durch diese strukturierte Vorgehensweise wird eine lückenlose Beweiskette (\textit{Chain of Evidence}) von der reinen Datenbasis 
-über den menschlichen Kognitionsprozess hin zur formalisierten Prompt-Anweisung für die KI-Agenten sichergestellt.
+
+Durch dieses protokollierte Vorgehen wird eine lückenlose Beweiskette (\textit{Chain of Evidence}) etabliert: Von der empirischen 
+Identifikation realer Code-Altlasten über die methodische Abgrenzung des System-Scopes bis hin zur Formulierung valider, 
+praxistauglicher Verhaltensregeln für die spätere informationstechnische Konstruktion des Artefakts.
 
 \section{Datenbasis und Sampling-Strategie}
 \label{sec:sampling_strategie}
 
-Um die externe Validität der Fallstudie zu maximieren und sicherzustellen, dass die extrahierten Übersetzungsregeln der realen 
-industriellen Komplexität standhalten, wird eine gezielte Stichprobe (\textit{Purposive Sampling}) aus realen Kundenprojekten der 
-\textit{msg systems ag} herangezogen. 
+Um sicherzustellen, dass die extrahierten Übersetzungsregeln und der definierte Scope der realen industriellen Komplexität standhalten, bedarf es einer gezielten Stichprobenziehung (\textit{Purposive Sampling}) aus realen, anonymisierten Kundenprojekten der \textit{msg systems ag} \parencite{seaman1999qualitative}. 
 
-Die Auswahl der zu analysierenden Konfigurationsobjekte erfolgt nicht randomisiert, sondern kriteriengeleitet nach dem Prinzip der 
-strukturellen maximalen Varianz \parencite{seamanQualitativeMethodsEmpirical1999}. Die finale Stichprobe umfasst $X$ repräsentative 
-Logik-Artefakte \textit{(Anmerkung: Die genaue Zahl $X$ trägst du später ein)}, die gezielt so ausgewählt wurden, dass sie die 
-gesamte Bandbreite der SAP-Variantenkonfiguration abdecken. Die Sampling-Kriterien verlangen das Vorhandensein folgender 
-Elementtypen innerhalb der Stichprobe:
+Anstatt Datensätze rein zufällig auszuwählen, erfolgt eine kriteriengeleitete Auswahl nach dem Prinzip der maximalen strukturellen Varianz. Dadurch wird gewährleistet, dass das Spektrum der SAP-Variantenkonfiguration in seiner Breite abgedeckt wird und auch technologische Randfälle (\textit{Edge Cases}) in die qualitative Scope-Betrachtung einfließen. Die finale Stichprobe umfasst $X$ Logik-Artefakte \textit{(Anmerkung: Zahl später eintragen)}, deren Auswahl durch das gezielte Vorhandensein folgender kritischer Elementtypen begründet ist:
 \begin{itemize}
-    \item \textbf{Vorbedingungen (Preconditions):} Restriktionen von Merkmalswerten auf lokaler Ebene.
-    \item \textbf{Auswahlbedingungen (Selection Conditions):} Logik zur Steuerung der Stücklistenauflösung.
-    \item \textbf{Beziehungswissen (Procedures):} Imperative, sequenzielle Wertermittlungsverfahren.
-    \item \textbf{Beziehungsnetze (Constraints):} Globale, deklarative Regelwerke ohne feste Ausführungsreihenfolge.
+    \item \textbf{Vorbedingungen (Preconditions):} Die im Experteninterview (Kapitel~\ref{ch:experteninterview}) als 
+    Hauptflaschenhals identifizierte Transformation lokaler Bedingungen in globale Restriktionen, um die Grenzen einer 
+    automatisierten Überführung auszuloten.
+    \item \textbf{Beziehungswissen (Procedures):} Imperative, sequenzielle Wertermittlungsverfahren, bei denen im Zuge des 
+    Selbstversuchs induktiv geprüft werden soll, ab welchem Komplexitätsgrad (z.\,B. bei tief geschachtelten Verschachtelungen) 
+    eine automatisierte Agenten-Transformation nicht mehr zielführend ist.
+    \item \textbf{Altlasten und syntaktische Sonderfälle:} Bewusst integrierte Datensätze mit historisch gewachsenen 
+    Modellierungsbesonderheiten (wie verwaisten Merkmalen), um die Selektionsfähigkeit des zukünftigen Systems bezüglich 
+    notwendiger Code-Bereinigungen empirisch zu untersuchen.
 \end{itemize}
 
-Zusätzlich zu diesen syntaktischen Kriterien wurden bewusst Datensätze in die Stichprobe aufgenommen, die eine hohe Dichte an 
-„kognitiven Altlasten“ (wie ungenutzte Merkmale oder verwaiste Prozeduren) aufweisen. Damit wird sichergestellt, dass die in 
-Kapitel 4.5.1 aus dem Experteninterview geforderte funktionale Anforderung der „semantischen Code-Bereinigung“ auf realer 
-Datengrundlage analysiert und methodisch fundiert in das spätere Systemdesign überführt werden kann.
-
-% -----------------------------------------------------------
-% PLATZHALTER FÜR SPÄTERE UNTERKAPITEL (Sobald die Daten da sind)
-% \section{Durchführung der Artefaktanalyse}
-% \label{sec:durchfuehrung_analyse}
-% \subsection{Analyse der Vorbedingungen}
-% \subsection{Analyse der Constraints und Procedures}
-%
-% \section{Ergebnisse: Ableitung der Transformationsregeln}
-% \label{sec:ergebnisse_transformationsregeln}
-% Hier dokumentierst du später die genauen Regeln (z.B. eq wird zu =, $SELF. ist Pflicht etc.), die du als Input für dein Systemdesign (Kapitel 6) nutzt.
-% -----------------------------------------------------------
+Diese Sampling-Strategie garantiert, dass die funktionale Anforderungsdefinition des \ac{MAS} nicht auf theoretischen 
+Idealbedingungen beruht, sondern die reale Systemkomplexität der msg-Kundenprojekte reflektiert. Die im folgenden Abschnitt 
+dargestellten Ergebnisse und die daraus abgeleiteten Scope-Entscheidungen bilden das direkte inhaltliche Fundament für das 
+Rollen- und Systemdesign in Kapitel~\ref{ch:architektur}.
