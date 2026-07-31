@@ -1,0 +1,440 @@
+[
+  {
+    "zielmerkmal": "K40_BRM",
+    "decision": "TABLE",
+    "bedingungs_spalten": [
+      "K40_FG_AF"
+    ],
+    "zeilen_daten": [
+      [
+        "3",
+        "1"
+      ],
+      [
+        "1",
+        "2"
+      ]
+    ],
+    "if_constraints_text": "Sub-Clustering: Homogene Spalten-Signatur erkannt.",
+    "original_code_mapping": [
+      {
+        "wert": "1",
+        "logik": "(K40_fg_af = '3') AND (True) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "2",
+        "logik": "(K40_fg_af = '1')"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_KO_1",
+    "decision": "TABLE",
+    "bedingungs_spalten": [
+      "K40_ABL",
+      "K40_FG_AF"
+    ],
+    "zeilen_daten": [
+      [
+        "0",
+        "1,2",
+        "04"
+      ],
+      [
+        "0",
+        "1,2",
+        "01"
+      ],
+      [
+        "0",
+        "1,2",
+        "02"
+      ],
+      [
+        "0",
+        "1,2",
+        "03"
+      ]
+    ],
+    "if_constraints_text": "Sub-Clustering: Homogene Spalten-Signatur erkannt.",
+    "original_code_mapping": [
+      {
+        "wert": "04",
+        "logik": "(True) AND (K40_fg_af in ('1','2')) AND (K40_abl = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "01",
+        "logik": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+      },
+      {
+        "wert": "02",
+        "logik": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+      },
+      {
+        "wert": "03",
+        "logik": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_KO_2",
+    "decision": "TABLE",
+    "bedingungs_spalten": [
+      "K40_FG_AF",
+      "K40_TS"
+    ],
+    "zeilen_daten": [
+      [
+        "3,4",
+        "0,1",
+        "06"
+      ],
+      [
+        "3,4",
+        "0,1",
+        "05"
+      ],
+      [
+        "3,4",
+        "0,1",
+        "07"
+      ]
+    ],
+    "if_constraints_text": "Sub-Clustering: Homogene Spalten-Signatur erkannt.",
+    "original_code_mapping": [
+      {
+        "wert": "06",
+        "logik": "(True) AND (K40_fg_af in ('3','4') and K40_ts in ('0','1')) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "05",
+        "logik": "(K40_fg_af in ('3','4') and K40_ts in ('0','1'))"
+      },
+      {
+        "wert": "07",
+        "logik": "(K40_fg_af in ('3','4') and K40_ts in ('0','1'))"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_KO_STANDALONE",
+    "decision": "NO_TABLE",
+    "bedingungs_spalten": [],
+    "zeilen_daten": [],
+    "if_constraints_text": "Sub-Clustering: Asymmetrische oder komplexe Ausrei\u00dfer -> Standalone.",
+    "original_code_mapping": [
+      {
+        "wert": "09",
+        "logik": "(True) AND (K40_fg_af = '1' and K40_brm = '0' and K40_ts [UNCLASSIFIED_ne] '1' and (K40_pl in('[UNCLASSIFIED_d1]','[UNCLASSIFIED_d2]') or K40_pl in ('[UNCLASSIFIED_H1]','[UNCLASSIFIED_H3]'))) AND (K40_abl = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "10",
+        "logik": "(True) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "08",
+        "logik": "((K40_fg_af = '3') or K40_fg_af = '4' and K40_brm = '0' and K40_ts [UNCLASSIFIED_ne] '1')"
+      },
+      {
+        "wert": "99",
+        "logik": "(K40_pl in ('[UNCLASSIFIED_d1]','[UNCLASSIFIED_h1]','[UNCLASSIFIED_h2]'))"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_ROD",
+    "decision": "NO_TABLE",
+    "bedingungs_spalten": [],
+    "zeilen_daten": [],
+    "if_constraints_text": "Sub-Clustering: Asymmetrische oder komplexe Ausrei\u00dfer -> Standalone.",
+    "original_code_mapping": [
+      {
+        "wert": "200",
+        "logik": "(K40_fst = '0' and K40_brm = '0' and K40_abl = '0' and K40_fg_af in('1','2')and K40_ko_af in('0','1','2','4') and K40_dsb = '0' and [UNCLASSIFIED_T32_BRM] = '0' or K40_fst = '0' and K40_brm = '0' and K40_abl = '0' and K40_fg_af in ('3','4') and K40_ko_af in ('2','3') and K40_dsb = '0' and [UNCLASSIFIED_T32_BRM] = '0')"
+      },
+      {
+        "wert": "125",
+        "logik": "(True) AND (K40_fst = '1' and K40_brm = '0' and K40_fg_af in ('1','2') and K40_pl in ('[UNCLASSIFIED_d2]','[UNCLASSIFIED_h3]')) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_RO_AF",
+    "decision": "NO_TABLE",
+    "bedingungs_spalten": [],
+    "zeilen_daten": [],
+    "if_constraints_text": "Sub-Clustering: Asymmetrische oder komplexe Ausrei\u00dfer -> Standalone.",
+    "original_code_mapping": [
+      {
+        "wert": "02",
+        "logik": "(True) AND (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and [UNCLASSIFIED_T32_BRM] = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "12",
+        "logik": "(True) AND ((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0')) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "17",
+        "logik": "(True) AND (K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and [UNCLASSIFIED_T32_BRM] = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "18",
+        "logik": "(True) AND (K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and [UNCLASSIFIED_T32_BRM] = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "19",
+        "logik": "(True) AND (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD = '200' and [UNCLASSIFIED_T32_BRM] = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "27",
+        "logik": "(True) AND ((K40_rod = '160' and K40_FG_AF [UNCLASSIFIED_ne] '2')) AND (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and K40_ROD = '200' and [UNCLASSIFIED_T32_BRM] = '0') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "01",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160')"
+      },
+      {
+        "wert": "03",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160')"
+      },
+      {
+        "wert": "04",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160')"
+      },
+      {
+        "wert": "05",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160')"
+      },
+      {
+        "wert": "06",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160') AND ((K40_rod = '160' and K40_FG_AF [UNCLASSIFIED_ne] '2'))"
+      },
+      {
+        "wert": "31",
+        "logik": "(K40_rod in ('160','200') and K40_fst [UNCLASSIFIED_ne] '1' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]') AND (K40_rod = '160') AND ((K40_rod = '160' and K40_FG_AF [UNCLASSIFIED_ne] '2'))"
+      },
+      {
+        "wert": "28",
+        "logik": "(K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and [UNCLASSIFIED_T32_BRM] = '0')"
+      },
+      {
+        "wert": "20",
+        "logik": "(K40_brm = '2' and K40_5r = '[UNCLASSIFIED_n]' and [UNCLASSIFIED_t32_brm] = '1')"
+      },
+      {
+        "wert": "10",
+        "logik": "(K40_brm = '1' and [UNCLASSIFIED_T32_BRM] > '1')"
+      },
+      {
+        "wert": "24",
+        "logik": "((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0')) AND (K40_rod = '160')"
+      },
+      {
+        "wert": "25",
+        "logik": "((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0'))"
+      },
+      {
+        "wert": "26",
+        "logik": "((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0'))"
+      },
+      {
+        "wert": "09",
+        "logik": "(K40_brm = '2' and K40_5r = '[UNCLASSIFIED_j]' and [UNCLASSIFIED_T32_BRM] = '1')"
+      },
+      {
+        "wert": "11",
+        "logik": "(K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0')"
+      },
+      {
+        "wert": "29",
+        "logik": "((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and K40_ROD = '200') or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and K40_ROD = '200' and [UNCLASSIFIED_T32_BRM] = '0'))"
+      },
+      {
+        "wert": "30",
+        "logik": "(K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_n]' and K40_ROD in ('160','200') and [UNCLASSIFIED_T32_BRM] = '0')"
+      },
+      {
+        "wert": "32",
+        "logik": "((K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and K40_ROD = '200') or (K40_fst = '0' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]' and K40_ROD = '200' and [UNCLASSIFIED_T32_BRM] = '0'))"
+      },
+      {
+        "wert": "23",
+        "logik": "(True) AND (K40_fst = '1' and K40_rod = '160' and K40_5r = '[UNCLASSIFIED_n]') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "21",
+        "logik": "(K40_fst = '1' and K40_rod = '160' and K40_brm = '0' and K40_5r = '[UNCLASSIFIED_j]')"
+      },
+      {
+        "wert": "22",
+        "logik": "(K40_fst = '1' and K40_rod = '125')"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "K40_PS",
+    "decision": "NO_TABLE",
+    "bedingungs_spalten": [],
+    "zeilen_daten": [],
+    "if_constraints_text": "Sub-Clustering: Asymmetrische oder komplexe Ausrei\u00dfer -> Standalone.",
+    "original_code_mapping": [
+      {
+        "wert": "PS03",
+        "logik": "(True) AND (K40_rod < '200' and K40_fg_af < '3' and (K40_schp = '04' or K40_schp = '06') and K40_ko [UNCLASSIFIED_ne] '09') /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "PW04",
+        "logik": "(K40_rod < '200' and K40_fg_af < '3' and (K40_schp = '04' or K40_schp = '06') and K40_ko [UNCLASSIFIED_ne] '09') AND (K40_fg_af < '0') AND (K40_abl = '0')"
+      },
+      {
+        "wert": "PS12",
+        "logik": "(K40_abl = '0') AND (K40_ko [UNCLASSIFIED_ne] '09')"
+      },
+      {
+        "wert": "PS13",
+        "logik": "(K40_abl = '0') AND (K40_ko [UNCLASSIFIED_ne] '09')"
+      },
+      {
+        "wert": "PS06",
+        "logik": "(K40_ko [UNCLASSIFIED_ne] '09')"
+      },
+      {
+        "wert": "PW08",
+        "logik": "(K40_abl = '0')"
+      }
+    ]
+  },
+  {
+    "zielmerkmal": "PS",
+    "decision": "NO_TABLE",
+    "bedingungs_spalten": [],
+    "zeilen_daten": [],
+    "if_constraints_text": "Sub-Clustering: Asymmetrische oder komplexe Ausrei\u00dfer -> Standalone.",
+    "original_code_mapping": [
+      {
+        "wert": "PS03",
+        "logik": "(True) AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_kk] [UNCLASSIFIED_ne] '[UNCLASSIFIED_ka]' or [UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 90) AND ([UNCLASSIFIED_kk] [UNCLASSIFIED_ne] '[UNCLASSIFIED_ka]' or [UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 99) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35) AND ($[UNCLASSIFIED_self].me = '1') AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "PS04",
+        "logik": "(True) AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_kk] [UNCLASSIFIED_ne] '[UNCLASSIFIED_ka]' or [UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 90) AND ([UNCLASSIFIED_kk] [UNCLASSIFIED_ne] '[UNCLASSIFIED_ka]' or [UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 99) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35) AND ($[UNCLASSIFIED_self].me = '1') AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "PS12",
+        "logik": "(True) AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) /* GHOST-LOGIC: Enth\u00e4lt unklassifizierte oder Dummy-Bedingungen */"
+      },
+      {
+        "wert": "PS01",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35)"
+      },
+      {
+        "wert": "PS02",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35)"
+      },
+      {
+        "wert": "PW01",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc])"
+      },
+      {
+        "wert": "PW02",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]'))"
+      },
+      {
+        "wert": "PW04",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35) AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_d22]) AND ([UNCLASSIFIED_UG_VI_ELX] [UNCLASSIFIED_ne] '60' or [UNCLASSIFIED_BS] [UNCLASSIFIED_ne] '07')"
+      },
+      {
+        "wert": "PW07",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_specified] [UNCLASSIFIED_vo]) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35) AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_UG_VI_ELX] [UNCLASSIFIED_ne] '60' or [UNCLASSIFIED_BS] [UNCLASSIFIED_ne] '07') AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_light])"
+      },
+      {
+        "wert": "PW03",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 35 and [UNCLASSIFIED_vo] [UNCLASSIFIED_ne] 85 and [UNCLASSIFIED_bs] [UNCLASSIFIED_ne] '09' and [UNCLASSIFIED_bs] [UNCLASSIFIED_ne] '10')"
+      },
+      {
+        "wert": "PS19",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vl] in ('[UNCLASSIFIED_aldi] [UNCLASSIFIED_n]','[UNCLASSIFIED_aldi] [UNCLASSIFIED_s]','[UNCLASSIFIED_aldi]')or [UNCLASSIFIED_specified] [UNCLASSIFIED_sonder]) AND ([UNCLASSIFIED_Vo] = 185 and [UNCLASSIFIED_gm_dr] in ('234','236','331','332'))"
+      },
+      {
+        "wert": "PS20",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_vl] in ('[UNCLASSIFIED_aldi] [UNCLASSIFIED_n]','[UNCLASSIFIED_aldi] [UNCLASSIFIED_s]','[UNCLASSIFIED_aldi]')or [UNCLASSIFIED_specified] [UNCLASSIFIED_sonder]) AND ([UNCLASSIFIED_vo] = 185 and [UNCLASSIFIED_UG_VI_ELX] = '40' or [UNCLASSIFIED_Vo] = 185 and [UNCLASSIFIED_gm_dr] in ('234','236','331','332'))"
+      },
+      {
+        "wert": "PS21",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_mod] in ('[UNCLASSIFIED_drc]')and [UNCLASSIFIED_vo] in (75,101,130,155) or [UNCLASSIFIED_mod] = '[UNCLASSIFIED_ela]' and [UNCLASSIFIED_vo] = 101)"
+      },
+      {
+        "wert": "PS22",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgscan]')) AND ([UNCLASSIFIED_mod] = '[UNCLASSIFIED_ela]' and [UNCLASSIFIED_vo] in (155,248))"
+      },
+      {
+        "wert": "PW06",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_promobox]','[UNCLASSIFIED_promobox2]','[UNCLASSIFIED_pbplus]', '[UNCLASSIFIED_pbgrip]','[UNCLASSIFIED_pbgripc]','[UNCLASSIFIED_pblidl]','[UNCLASSIFIED_pblidlc]', '[UNCLASSIFIED_pbe2t]','[UNCLASSIFIED_evogrip]','[UNCLASSIFIED_evogripc]','[UNCLASSIFIED_pbscan]'))"
+      },
+      {
+        "wert": "PS18",
+        "logik": "([UNCLASSIFIED_specified] [UNCLASSIFIED_vo]) AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_light]) AND ([UNCLASSIFIED_mod] in ('[UNCLASSIFIED_el]','[UNCLASSIFIED_dr]') and [UNCLASSIFIED_vo] in (180,212) and [UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]','[UNCLASSIFIED_standard]','[UNCLASSIFIED_wgc]') or [UNCLASSIFIED_gm_r] in ('1','2','3','4','5') and [UNCLASSIFIED_mod] [UNCLASSIFIED_ne] '[UNCLASSIFIED_el]' and [UNCLASSIFIED_mod] [UNCLASSIFIED_ne] '[UNCLASSIFIED_dr]' and [UNCLASSIFIED_vo] = 150 and [UNCLASSIFIED_r_gri_art] in ('[UNCLASSIFIED_werbe]','[UNCLASSIFIED_standard]') or [UNCLASSIFIED_t24] = '[UNCLASSIFIED_t24]' and [UNCLASSIFIED_vo] = 50 and [UNCLASSIFIED_t24_gr] in ('1','2','4'))"
+      },
+      {
+        "wert": "PW05",
+        "logik": "(gp in ('4','5') and [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_werbe] [UNCLASSIFIED_SA]') AND (not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_wgc]' or [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_wgcs]' or [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_wgcrfid]') AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_promo]', '[UNCLASSIFIED_sa] [UNCLASSIFIED_promo]'))"
+      },
+      {
+        "wert": "PS05",
+        "logik": "([UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_promogri]' and [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_promogr2]' and [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne]'[UNCLASSIFIED_sa] [UNCLASSIFIED_promo]' and [UNCLASSIFIED_gri_art] [UNCLASSIFIED_ne] '[UNCLASSIFIED_pgplus]') AND ([UNCLASSIFIED_UG_VI_ELX] [UNCLASSIFIED_ne] '60' or [UNCLASSIFIED_BS] [UNCLASSIFIED_ne] '07')"
+      },
+      {
+        "wert": "PS13",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]','[UNCLASSIFIED_promo]', '[UNCLASSIFIED_wgc]')) AND ([UNCLASSIFIED_UG_VI_ELX] [UNCLASSIFIED_ne] '60' or [UNCLASSIFIED_BS] [UNCLASSIFIED_ne] '07')"
+      },
+      {
+        "wert": "PS08",
+        "logik": "(not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_specified] [UNCLASSIFIED_r_ps] or [UNCLASSIFIED_specified] [UNCLASSIFIED_sp5_ps] or [UNCLASSIFIED_specified] [UNCLASSIFIED_sp_ps])"
+      },
+      {
+        "wert": "PS07",
+        "logik": "(not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_specified] [UNCLASSIFIED_t50_ps] or [UNCLASSIFIED_specified] [UNCLASSIFIED_sp5_ps] or [UNCLASSIFIED_specified] [UNCLASSIFIED_sp_ps])"
+      },
+      {
+        "wert": "PS14",
+        "logik": "(not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]') and [UNCLASSIFIED_vo] in (155,185)and [UNCLASSIFIED_vl] in ('[UNCLASSIFIED_schweden]') and [UNCLASSIFIED_mod] in ('[UNCLASSIFIED_drc]') or [UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]','[UNCLASSIFIED_wgc]')and [UNCLASSIFIED_vo] in (150,180,212,240,275) and [UNCLASSIFIED_vl] in ('[UNCLASSIFIED_schweden]') and [UNCLASSIFIED_mod] in ('[UNCLASSIFIED_EL]','[UNCLASSIFIED_elp]','[UNCLASSIFIED_DR]') or [UNCLASSIFIED_vo] = 55 or [UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]') and [UNCLASSIFIED_vo] in (70) and [UNCLASSIFIED_vl] in ('[UNCLASSIFIED_schweden]') and [UNCLASSIFIED_gm_light] in ('1','2','5','7','8') or [UNCLASSIFIED_vo] = 70 and [UNCLASSIFIED_gm_light] in ('1','2','7','8'))"
+      },
+      {
+        "wert": "PS15",
+        "logik": "(not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_cc]) AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_standard]','[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_wgc]') and [UNCLASSIFIED_vo] in ( 136,150,180,185,212,240,275) and [UNCLASSIFIED_vl] in ('[UNCLASSIFIED_schweden]') and [UNCLASSIFIED_mod] in ('[UNCLASSIFIED_EL]') or [UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_wgc]') and [UNCLASSIFIED_vo] in ( 136,185,212 ) and [UNCLASSIFIED_vl] in ('[UNCLASSIFIED_schweden]') and [UNCLASSIFIED_mod] in ('[UNCLASSIFIED_dr]','[UNCLASSIFIED_drc]') or [UNCLASSIFIED_vo] = 70 or [UNCLASSIFIED_vo] = 100)"
+      },
+      {
+        "wert": "PSHA",
+        "logik": "(([UNCLASSIFIED_vo] > 275 and not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_d22]) or [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_r] or [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_quicks])"
+      },
+      {
+        "wert": "PS06",
+        "logik": "([UNCLASSIFIED_UG_VI_ELX] [UNCLASSIFIED_ne] '60' or [UNCLASSIFIED_BS] [UNCLASSIFIED_ne] '07') AND ([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_werbe]', '[UNCLASSIFIED_standard]', '[UNCLASSIFIED_wgc]'))"
+      },
+      {
+        "wert": "RONI",
+        "logik": "(not [UNCLASSIFIED_specified] [UNCLASSIFIED_gm_light]) AND ([UNCLASSIFIED_T24_GR] [UNCLASSIFIED_ne] '3' and [UNCLASSIFIED_T24_GR] [UNCLASSIFIED_ne] '4'and [UNCLASSIFIED_T24_GR] [UNCLASSIFIED_ne] '5')"
+      },
+      {
+        "wert": "PW08",
+        "logik": "([UNCLASSIFIED_M200_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_M300_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_M400_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_M350_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_M500_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_t25_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_t25_brm_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_t26_ps] = '[UNCLASSIFIED_pw08]' and K40_ps = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_t40_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_t50_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_sedo_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_kid_ps] = '[UNCLASSIFIED_pw08]' and [UNCLASSIFIED_vo] < 22)"
+      },
+      {
+        "wert": "PW09",
+        "logik": "([UNCLASSIFIED_gri_art] = '[UNCLASSIFIED_wgcs]')"
+      },
+      {
+        "wert": "PS16",
+        "logik": "([UNCLASSIFIED_specified] [UNCLASSIFIED_r_ps] or [UNCLASSIFIED_specified] [UNCLASSIFIED_kid_ps])"
+      },
+      {
+        "wert": "PS17",
+        "logik": "([UNCLASSIFIED_mod] in ('[UNCLASSIFIED_el]') and [UNCLASSIFIED_vo] in (212,275))"
+      },
+      {
+        "wert": "PW10",
+        "logik": "([UNCLASSIFIED_gri_art] in ('[UNCLASSIFIED_evogrip]','[UNCLASSIFIED_evogripc]','[UNCLASSIFIED_evogriph]'))"
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "clusters": {
+    "K40_FG_AF": [
+      {
+        "zielmerkmal": "K40_BRM",
+        "decision": "TABLE",
+        "bedingungs_spalten": [
+          "K40_fg_af"
+        ],
+        "zeilen_daten": [
+          [
+            "3",
+            "1"
+          ],
+          [
+            "1",
+            "2"
+          ]
+        ],
+        "if_constraints_text": ""
+      }
+    ],
+    "K40_5R, K40_BRM, K40_FST, K40_ROD": [
+      {
+        "zielmerkmal": "K40_RO_AF",
+        "decision": "TABLE",
+        "bedingungs_spalten": [
+          "K40_fst",
+          "K40_brm",
+          "K40_5r",
+          "K40_ROD"
+        ],
+        "zeilen_daten": [
+          [
+            "0",
+            "0",
+            "j",
+            "160",
+            "02"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "12"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "24"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "25"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "26"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "11"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "160",
+            "30"
+          ],
+          [
+            "0",
+            "0",
+            "n",
+            "200",
+            "19"
+          ],
+          [
+            "0",
+            "0",
+            "j",
+            "200",
+            "29"
+          ]
+        ],
+        "if_constraints_text": ""
+      }
+    ]
+  },
+  "standalone": [
+    {
+      "zielmerkmal": "K40_KO",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "Die Bedingungen f\u00fcr K40_KO sind sehr unterschiedlich. Mehrfach sind mehr als zwei Merkmale involviert und/oder komplexe logische Bedingungen mit Vergleichsoperatoren oder Ausschl\u00fcssen gegeben. Speziell Werte wie '99' und '10' zeigen keine Einheitlichkeit bez\u00fcglich der Konditionen, da nur ein einzelnes Merkmal betroffen ist oder ein GHOST-LOGIC Kommentar ('specified dummy') implementiert ist, der auf ung\u00fcltige Logik hinweist. Daher macht die Erstellung einer einheitlichen Tabelle keinen Sinn."
+    },
+    {
+      "zielmerkmal": "K40_ROD",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "Die Bedingungen f\u00fcr den Wert '200' enthalten eine GHOST-LOGIC, was darauf hinweist, dass dieser Wert ung\u00fcltig ist. Da die beiden Werte von unterschiedlichen Sets an abh\u00e4ngigen Merkmalen abh\u00e4ngen und es keine homogene Mehrdimensionalit\u00e4t gibt, wird keine Tabelle konstruiert."
+    },
+    {
+      "zielmerkmal": "K40_PS",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "Die Abh\u00e4ngigkeiten f\u00fcr das Merkmal K40_PS sind prim\u00e4r durch Vergleichs- und Ausschlussoperatoren eingeschr\u00e4nkt (z.B. K40_rod < '200', K40_ko ne '09'). Objekte PW04 und PS06 besitzen keine festen mehrdimensionale Zuweisung oder einheitliche Spaltenbedingung, um eine homogene Tabelle zu rechtfertigen. Die 'GHOST-LOGIC' mit K40_fg_af < '0' in PW04 macht diesen Wert ung\u00fcltig/false."
+    },
+    {
+      "zielmerkmal": "PS",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "Die Abh\u00e4ngigkeiten f\u00fcr das Merkmal PS sind stark vereinfacht und enthalten 'GHOST-LOGIC', die darauf hindeutet, dass einige Werte ung\u00fcltig sind oder die Bedingungen prim\u00e4r durch Vergleichsoperatoren und Ausschl\u00fcsse definiert wurden. Da keine klar definierten, mehrdimensionalen Tabellenbedingungen existieren, wird keine Tabelle erstellt."
+    }
+  ]
+}

@@ -1,22 +1,22 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[112] biber-MSWIN64:342> INFO - === 
-[166] Biber.pm:421> INFO - Reading 'main.bcf'
-[344] Biber.pm:1002> INFO - Found 29 citekeys in bib section 0
-[367] Biber.pm:4487> INFO - Processing section 0
-[384] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[456] bibtex.pm:1713> INFO - LaTeX decoding ...
-[502] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[825] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[826] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[826] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
-[826] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[932] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[932] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[932] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
-[932] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[986] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1142] bbl.pm:779> INFO - Output to main.bbl
-[1143] Biber.pm:132> WARN - I didn't find a database entry for 'hevner2004design' (section 0)
-[1143] Biber.pm:132> WARN - I didn't find a database entry for 'seaman1999qualitative' (section 0)
-[1143] Biber.pm:134> INFO - WARNINGS: 2
+[124] biber-MSWIN64:342> INFO - === 
+[175] Biber.pm:421> INFO - Reading 'main.bcf'
+[309] Biber.pm:1002> INFO - Found 28 citekeys in bib section 0
+[332] Biber.pm:4487> INFO - Processing section 0
+[348] Biber.pm:4678> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[413] bibtex.pm:1713> INFO - LaTeX decoding ...
+[464] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[745] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[745] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[745] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[745] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[818] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[819] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[819] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[819] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[859] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[977] bbl.pm:779> INFO - Output to main.bbl
+[978] Biber.pm:132> WARN - I didn't find a database entry for 'hevner2004design' (section 0)
+[978] Biber.pm:132> WARN - I didn't find a database entry for 'seaman1999qualitative' (section 0)
+[978] Biber.pm:134> INFO - WARNINGS: 2

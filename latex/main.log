@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  7 JUL 2026 13:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  29 JUL 2026 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,9 +826,6 @@ Overfull \hbox (144.30539pt too wide) has occurred while \output is active
 
 LaTeX Warning: Citation 'seaman1999qualitative' on page 38 undefined on input line 90.
 
-
-LaTeX Warning: Reference `ch:architektur' on page 38 undefined on input line 108.
-
 )
 Overfull \hbox (144.30539pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 5.  DURCHF�HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 38
@@ -849,16 +846,25 @@ Kapitel 6.
 
 
 
-] [41]) [42]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 46.
- (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+] [41]
+Overfull \hbox (1.83545pt too wide) in paragraph at lines 42--42
+[]\T1/lmr/bx/n/14.4 (-20) Zyklus 1: Li-mi-tie-run-gen rein LLM-basierter Struk-
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 45.
+(C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43
+ [42]
+Overfull \hbox (30.4451pt too wide) in paragraph at lines 56--56
+[]\T1/lmr/bx/n/14.4 (-20) Zyklus 3: Le-xi-ka-li-sche Re-si-li-enz durch das Placeholder-
+ []
+
+[43]) [44] [45
 
 
 
@@ -868,16 +874,16 @@ Overfull \hbox (14.2671pt too wide) in paragraph at lines 47--47
 \T1/lmr/m/n/12 (-20) iclr . cc / paper _ ^^\les / paper / 2024 / hash / edac78c3e300629acfe6cbe9ca88fb84 -[]
  []
 
-[44] [45] [46]
+[46] [47] [48]
 \openout2 = `chapter/anhang.aux'.
 
- (chapter/anhang.tex [47
+ (chapter/anhang.tex [49
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=174, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=180, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf  used on input line 18.
@@ -888,7 +894,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengefü
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=176, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=182, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
@@ -897,7 +903,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[48
+[50
 
 ]
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
@@ -912,12 +918,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
- [49
+ [51
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=191, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=198, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
@@ -929,44 +935,44 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[50
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=196, page=3, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[51
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=202, page=4, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [52
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=203, page=3, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[53
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=208, page=4, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[54
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]) (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/anhang.aux))
  ***********
@@ -982,17 +988,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16933 strings out of 467683
- 324383 string characters out of 5414237
- 1325447 words of memory out of 5000000
- 45463 multiletter control sequences out of 15000+600000
- 699685 words of font info for 211 fonts, out of 8000000 for 9000
+ 16930 strings out of 467683
+ 324208 string characters out of 5414237
+ 1325462 words of memory out of 5000000
+ 45456 multiletter control sequences out of 15000+600000
+ 699879 words of font info for 213 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (56 pages, 423513 bytes).
+Output written on main.pdf (58 pages, 437999 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
+ 262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  37407 words of extra memory for PDF output out of 42996 (max. 10000000)
 

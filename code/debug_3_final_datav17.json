@@ -1,0 +1,105 @@
+{
+  "K40_BRM": {
+    "herleitung": "Der Bauplan gibt eine Tabelle mit einer Bedingungsspalte 'K40_FG_AF' vor. Die Zeilen-Daten zeigen keine Konflikte, da jede Vorbedingung einen eindeutigen Zielwert hat. Daher kann eine Tabelle verwendet werden.",
+    "tabelle_kopf": [
+      "K40_FG_AF",
+      "K40_BRM"
+    ],
+    "tabelle_zeilen": [
+      [
+        "3",
+        "1"
+      ],
+      [
+        "1",
+        "2"
+      ]
+    ],
+    "avc_code": "TABLE VC_TAB_NAME ( pc.K40_FG_AF = pc.K40_FG_AF )"
+  },
+  "K40_KO_1": {
+    "herleitung": "Der Bauplan zeigt eine Tabelle mit identischen Vorbedingungen f\u00fcr unterschiedliche Zielwerte. Die Bedingungsspalten sind 'K40_ABL' und 'K40_FG_AF'. Alle Zeilen haben die gleiche Bedingung 'K40_ABL = 0' und 'K40_FG_AF IN ('1', '2')'. Da die Vorbedingungen identisch sind, m\u00fcssen wir die Zielwerte mit einem IN-Operator im AVC-Code zusammenfassen.",
+    "tabelle_kopf": [
+      "K40_ABL",
+      "K40_FG_AF"
+    ],
+    "tabelle_zeilen": [
+      [
+        "0",
+        "1,2",
+        "04"
+      ],
+      [
+        "0",
+        "1,2",
+        "01"
+      ],
+      [
+        "0",
+        "1,2",
+        "02"
+      ],
+      [
+        "0",
+        "1,2",
+        "03"
+      ]
+    ],
+    "avc_code": "pc.K40_KO_1 IN ('04', '01', '02', '03') IF pc.K40_ABL = '0' AND pc.K40_FG_AF IN ('1', '2')."
+  },
+  "K40_KO_2": {
+    "herleitung": "Die Tabelle hat mehrere Zeilen mit identischen Vorbedingungen (K40_FG_AF = '3,4' und K40_TS = '0,1'), aber unterschiedliche Zielwerte. Laut Regel 2 muss dies durch einen IN-Operator im AVC-Code gel\u00f6st werden.",
+    "tabelle_kopf": [
+      "K40_FG_AF",
+      "K40_TS"
+    ],
+    "tabelle_zeilen": [
+      [
+        "3,4",
+        "0,1",
+        "06"
+      ],
+      [
+        "3,4",
+        "0,1",
+        "05"
+      ],
+      [
+        "3,4",
+        "0,1",
+        "07"
+      ]
+    ],
+    "avc_code": "pc.K40_KO_2 IN ('06', '05', '07') IF pc.K40_FG_AF = '3,4' AND pc.K40_TS = '0,1'."
+  },
+  "K40_KO_STANDALONE": {
+    "herleitung": "Da der Bauplan als 'NO_TABLE' gekennzeichnet ist, m\u00fcssen wir f\u00fcr jede Logik aus 'original_code_mapping' ein separates IF-Statement erstellen. Die Logik wird direkt aus dem Mapping \u00fcbernommen und in AVC Syntax \u00fcbersetzt.",
+    "tabelle_kopf": [],
+    "tabelle_zeilen": [],
+    "avc_code": "pc.K40_KO_STANDALONE = '09' IF (TRUE) AND (pc.K40_fg_af = '1' AND pc.K40_brm = '0' AND pc.K40_ts <> '1' AND (pc.K40_pl IN ('d1','d2') OR pc.K40_pl IN ('H1','H3'))) AND (pc.K40_abl = '0').\npc.K40_KO_STANDALONE = '10' IF (TRUE).\npc.K40_KO_STANDALONE = '08' IF ((pc.K40_fg_af = '3') OR pc.K40_fg_af = '4' AND pc.K40_brm = '0' AND pc.K40_ts <> '1').\npc.K40_KO_STANDALONE = '99' IF (pc.K40_pl IN ('d1','h1','h2'))."
+  },
+  "K40_ROD": {
+    "herleitung": "Da der Bauplan den Entscheidungstyp 'NO_TABLE' hat, m\u00fcssen wir f\u00fcr jede Logik im 'original_code_mapping' ein separates IF-Statement erstellen. Die Logik wird direkt aus dem Mapping \u00fcbernommen und in AVC-Syntax \u00fcbersetzt.",
+    "tabelle_kopf": [],
+    "tabelle_zeilen": [],
+    "avc_code": "pc.K40_ROD = '200' IF (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_abl = '0' AND pc.K40_fg_af IN ('1','2') AND pc.K40_ko_af IN ('0','1','2','4') AND pc.K40_dsb = '0' AND pc.UNCLASSIFIED_T32_BRM = '0') OR (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_abl = '0' AND pc.K40_fg_af IN ('3','4') AND pc.K40_ko_af IN ('2','3') AND pc.K40_dsb = '0' AND pc.UNCLASSIFIED_T32_BRM = '0').\n\npc.K40_ROD = '125' IF (SPECIFIED(pc.K40_fst) AND pc.K40_fst = '1' AND pc.K40_brm = '0' AND pc.K40_fg_af IN ('1','2') AND pc.K40_pl IN ('d2','h3'))."
+  },
+  "K40_RO_AF": {
+    "herleitung": "Da der Bauplan den Entscheidungstyp 'NO_TABLE' hat, m\u00fcssen alle Bedingungen aus 'original_code_mapping' in einzelne IF-Statements \u00fcbersetzt werden. Die Bedingungen enthalten unklassifizierte oder Dummy-Bedingungen, die als 'GHOST-LOGIC' markiert sind. Diese werden ignoriert, da sie nicht in der AVC-Syntax verwendet werden k\u00f6nnen. Alle Merkmale erhalten das Pr\u00e4fix 'pc.' und die logischen Operatoren werden in Gro\u00dfbuchstaben geschrieben.",
+    "tabelle_kopf": [],
+    "tabelle_zeilen": [],
+    "avc_code": "pc.K40_RO_AF = '02' IF pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'j'.\npc.K40_RO_AF = '12' IF (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD IN ('160','200')).\npc.K40_RO_AF IN ('17', '18') IF pc.K40_rod > '160' AND pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n'.\npc.K40_RO_AF = '19' IF pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD = '200'.\npc.K40_RO_AF = '27' IF pc.K40_rod = '160' AND pc.K40_FG_AF <> '2' AND pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'j' AND pc.K40_ROD = '200'.\npc.K40_RO_AF IN ('01', '03', '04', '05') IF pc.K40_rod IN ('160','200') AND pc.K40_fst <> '1' AND pc.K40_brm = '0' AND pc.K40_5r = 'j' AND pc.K40_rod = '160'.\npc.K40_RO_AF IN ('06', '31') IF pc.K40_rod IN ('160','200') AND pc.K40_fst <> '1' AND pc.K40_brm = '0' AND pc.K40_5r = 'j' AND pc.K40_rod = '160' AND pc.K40_FG_AF <> '2'.\npc.K40_RO_AF = '28' IF pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'j'.\npc.K40_RO_AF = '20' IF pc.K40_brm = '2' AND pc.K40_5r = 'n'.\npc.K40_RO_AF = '10' IF pc.K40_brm = '1'.\npc.K40_RO_AF = '24' IF (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD IN ('160','200')) AND pc.K40_rod = '160'.\npc.K40_RO_AF IN ('25', '26') IF (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD IN ('160','200')).\npc.K40_RO_AF = '09' IF pc.K40_brm = '2' AND pc.K40_5r = 'j'.\npc.K40_RO_AF = '11' IF pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD IN ('160','200').\npc.K40_RO_AF IN ('29', '32') IF (pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'j' AND pc.K40_ROD = '200').\npc.K40_RO_AF = '30' IF pc.K40_fst = '0' AND pc.K40_brm = '0' AND pc.K40_5r = 'n' AND pc.K40_ROD IN ('160','200').\npc.K40_RO_AF = '23' IF pc.K40_fst = '1' AND pc.K40_rod = '160' AND pc.K40_5r = 'n'.\npc.K40_RO_AF = '21' IF pc.K40_fst = '1' AND pc.K40_rod = '160' AND pc.K40_brm = '0' AND pc.K40_5r = 'j'.\npc.K40_RO_AF = '22' IF pc.K40_fst = '1' AND pc.K40_rod = '125'."
+  },
+  "K40_PS": {
+    "herleitung": "Da der Bauplan den Entscheidungstyp 'NO_TABLE' hat, m\u00fcssen wir f\u00fcr jede Logik im 'original_code_mapping' ein separates IF-Statement erstellen. Die Logik wird direkt aus dem Mapping \u00fcbernommen und in AVC Syntax \u00fcbersetzt.",
+    "tabelle_kopf": [],
+    "tabelle_zeilen": [],
+    "avc_code": "pc.K40_PS = 'PS03' IF (TRUE) AND (pc.K40_rod < '200' AND pc.K40_fg_af < '3' AND (pc.K40_schp = '04' OR pc.K40_schp = '06') AND pc.K40_ko <> '09').\npc.K40_PS = 'PW04' IF (pc.K40_rod < '200' AND pc.K40_fg_af < '3' AND (pc.K40_schp = '04' OR pc.K40_schp = '06') AND pc.K40_ko <> '09') AND (pc.K40_fg_af < '0') AND (pc.K40_abl = '0').\npc.K40_PS = 'PS12' IF (pc.K40_abl = '0') AND (pc.K40_ko <> '09').\npc.K40_PS = 'PS13' IF (pc.K40_abl = '0') AND (pc.K40_ko <> '09').\npc.K40_PS = 'PS06' IF (pc.K40_ko <> '09').\npc.K40_PS = 'PW08' IF (pc.K40_abl = '0')."
+  },
+  "PS": {
+    "herleitung": "Da der Bauplan den Entscheidungstyp 'NO_TABLE' hat, m\u00fcssen alle Bedingungen aus 'original_code_mapping' in separate IF-Statements \u00fcbersetzt werden. Konflikte werden durch den IN-Operator gel\u00f6st, wenn mehrere Werte f\u00fcr dieselben Bedingungen existieren.",
+    "tabelle_kopf": [],
+    "tabelle_zeilen": [],
+    "avc_code": "pc.PS IN ('PS03', 'PS04') IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND pc.UNCLASSIFIED_kk <> 'ka' OR pc.UNCLASSIFIED_vo <> 90 AND pc.UNCLASSIFIED_kk <> 'ka' OR pc.UNCLASSIFIED_vo <> 99 AND pc.UNCLASSIFIED_vo <> 35 AND pc.me = '1' AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc).\n\npc.PS = 'PS12' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc).\n\npc.PS IN ('PS01', 'PS02') IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND pc.UNCLASSIFIED_vo <> 35.\n\npc.PS = 'PW01' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc).\n\npc.PS = 'PW02' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan').\n\npc.PS = 'PW04' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND pc.UNCLASSIFIED_vo <> 35 AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_d22) AND (pc.UNCLASSIFIED_UG_VI_ELX <> '60' OR pc.UNCLASSIFIED_BS <> '07').\n\npc.PS = 'PW07' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND SPECIFIED(pc.UNCLASSIFIED_vo) AND pc.UNCLASSIFIED_vo <> 35 AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (pc.UNCLASSIFIED_UG_VI_ELX <> '60' OR pc.UNCLASSIFIED_BS <> '07') AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_light).\n\npc.PS = 'PW03' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND pc.UNCLASSIFIED_vo <> 35 AND pc.UNCLASSIFIED_vo <> 85 AND pc.UNCLASSIFIED_bs <> '09' AND pc.UNCLASSIFIED_bs <> '10'.\n\npc.PS = 'PS19' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND (pc.UNCLASSIFIED_vl IN ('aldi n', 'aldi s', 'aldi') OR SPECIFIED(pc.UNCLASSIFIED_sonder)) AND pc.UNCLASSIFIED_Vo = 185 AND pc.UNCLASSIFIED_gm_dr IN ('234', '236', '331', '332').\n\npc.PS = 'PS20' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND (pc.UNCLASSIFIED_vl IN ('aldi n', 'aldi s', 'aldi') OR SPECIFIED(pc.UNCLASSIFIED_sonder)) AND (pc.UNCLASSIFIED_vo = 185 AND pc.UNCLASSIFIED_UG_VI_ELX = '40' OR pc.UNCLASSIFIED_Vo = 185 AND pc.UNCLASSIFIED_gm_dr IN ('234', '236', '331', '332')).\n\npc.PS = 'PS21' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND (pc.UNCLASSIFIED_mod IN ('drc') AND pc.UNCLASSIFIED_vo IN (75, 101, 130, 155) OR pc.UNCLASSIFIED_mod = 'ela' AND pc.UNCLASSIFIED_vo = 101).\n\npc.PS = 'PS22' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgscan') AND pc.UNCLASSIFIED_mod = 'ela' AND pc.UNCLASSIFIED_vo IN (155, 248).\n\npc.PS = 'PW06' IF pc.UNCLASSIFIED_gri_art IN ('promobox', 'promobox2', 'pbplus', 'pbgrip', 'pbgripc', 'pblidl', 'pblidlc', 'pbe2t', 'evogrip', 'evogripc', 'pbscan').\n\npc.PS = 'PS18' IF SPECIFIED(pc.UNCLASSIFIED_vo) AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_light) AND (pc.UNCLASSIFIED_mod IN ('el', 'dr') AND pc.UNCLASSIFIED_vo IN (180, 212) AND pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgc') OR pc.UNCLASSIFIED_gm_r IN ('1', '2', '3', '4', '5') AND pc.UNCLASSIFIED_mod <> 'el' AND pc.UNCLASSIFIED_mod <> 'dr' AND pc.UNCLASSIFIED_vo = 150 AND pc.UNCLASSIFIED_r_gri_art IN ('werbe', 'standard') OR pc.UNCLASSIFIED_t24 = 't24' AND pc.UNCLASSIFIED_vo = 50 AND pc.UNCLASSIFIED_t24_gr IN ('1', '2', '4')).\n\npc.PS = 'PW05' IF gp IN ('4', '5') AND pc.UNCLASSIFIED_gri_art <> 'werbe SA' AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (pc.UNCLASSIFIED_gri_art <> 'wgc' OR pc.UNCLASSIFIED_gri_art <> 'wgcs' OR pc.UNCLASSIFIED_gri_art <> 'wgcrfid') AND pc.UNCLASSIFIED_gri_art IN ('promo', 'sa promo').\n\npc.PS = 'PS05' IF pc.UNCLASSIFIED_gri_art <> 'promogri' AND pc.UNCLASSIFIED_gri_art <> 'promogr2' AND pc.UNCLASSIFIED_gri_art <> 'sa promo' AND pc.UNCLASSIFIED_gri_art <> 'pgplus' AND (pc.UNCLASSIFIED_UG_VI_ELX <> '60' OR pc.UNCLASSIFIED_BS <> '07').\n\npc.PS = 'PS13' IF pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'promo', 'wgc') AND (pc.UNCLASSIFIED_UG_VI_ELX <> '60' OR pc.UNCLASSIFIED_BS <> '07').\n\npc.PS = 'PS08' IF NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (SPECIFIED(pc.UNCLASSIFIED_r_ps) OR SPECIFIED(pc.UNCLASSIFIED_sp5_ps) OR SPECIFIED(pc.UNCLASSIFIED_sp_ps)).\n\npc.PS = 'PS07' IF NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (SPECIFIED(pc.UNCLASSIFIED_t50_ps) OR SPECIFIED(pc.UNCLASSIFIED_sp5_ps) OR SPECIFIED(pc.UNCLASSIFIED_sp_ps)).\n\npc.PS = 'PS14' IF NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (pc.UNCLASSIFIED_gri_art IN ('werbe') AND pc.UNCLASSIFIED_vo IN (155, 185) AND pc.UNCLASSIFIED_vl IN ('schweden') AND pc.UNCLASSIFIED_mod IN ('drc') OR pc.UNCLASSIFIED_gri_art IN ('werbe', 'wgc') AND pc.UNCLASSIFIED_vo IN (150, 180, 212, 240, 275) AND pc.UNCLASSIFIED_vl IN ('schweden') AND pc.UNCLASSIFIED_mod IN ('EL', 'elp', 'DR') OR pc.UNCLASSIFIED_vo = 55 OR pc.UNCLASSIFIED_gri_art IN ('werbe') AND pc.UNCLASSIFIED_vo IN (70) AND pc.UNCLASSIFIED_vl IN ('schweden') AND pc.UNCLASSIFIED_gm_light IN ('1', '2', '5', '7', '8') OR pc.UNCLASSIFIED_vo = 70 AND pc.UNCLASSIFIED_gm_light IN ('1', '2', '7', '8')).\n\npc.PS = 'PS15' IF NOT SPECIFIED(pc.UNCLASSIFIED_gm_cc) AND (pc.UNCLASSIFIED_gri_art IN ('standard', 'werbe', 'wgc') AND pc.UNCLASSIFIED_vo IN (136, 150, 180, 185, 212, 240, 275) AND pc.UNCLASSIFIED_vl IN ('schweden') AND pc.UNCLASSIFIED_mod IN ('EL') OR pc.UNCLASSIFIED_gri_art IN ('werbe', 'wgc') AND pc.UNCLASSIFIED_vo IN (136, 185, 212) AND pc.UNCLASSIFIED_vl IN ('schweden') AND pc.UNCLASSIFIED_mod IN ('dr', 'drc') OR pc.UNCLASSIFIED_vo = 70 OR pc.UNCLASSIFIED_vo = 100).\n\npc.PS = 'PSHA' IF (pc.UNCLASSIFIED_vo > 275 AND NOT SPECIFIED(pc.UNCLASSIFIED_gm_d22) OR SPECIFIED(pc.UNCLASSIFIED_gm_r) OR SPECIFIED(pc.UNCLASSIFIED_gm_quicks)).\n\npc.PS = 'PS06' IF (pc.UNCLASSIFIED_UG_VI_ELX <> '60' OR pc.UNCLASSIFIED_BS <> '07') AND pc.UNCLASSIFIED_gri_art IN ('werbe', 'standard', 'wgc').\n\npc.PS = 'RONI' IF NOT SPECIFIED(pc.UNCLASSIFIED_gm_light) AND (pc.UNCLASSIFIED_T24_GR <> '3' AND pc.UNCLASSIFIED_T24_GR <> '4' AND pc.UNCLASSIFIED_T24_GR <> '5').\n\npc.PS = 'PW08' IF pc.UNCLASSIFIED_M200_ps = 'pw08' AND pc.UNCLASSIFIED_M300_ps = 'pw08' AND pc.UNCLASSIFIED_M400_ps = 'pw08' AND pc.UNCLASSIFIED_M350_ps = 'pw08' AND pc.UNCLASSIFIED_M500_ps = 'pw08' AND pc.UNCLASSIFIED_t25_ps = 'pw08' AND pc.UNCLASSIFIED_t25_brm_ps = 'pw08' AND pc.UNCLASSIFIED_t26_ps = 'pw08' AND pc.K40_ps = 'pw08' AND pc.UNCLASSIFIED_t40_ps = 'pw08' AND pc.UNCLASSIFIED_t50_ps = 'pw08' AND pc.UNCLASSIFIED_sedo_ps = 'pw08' AND pc.UNCLASSIFIED_kid_ps = 'pw08' AND pc.UNCLASSIFIED_vo < 22.\n\npc.PS = 'PW09' IF pc.UNCLASSIFIED_gri_art = 'wgcs'.\n\npc.PS = 'PS16' IF SPECIFIED(pc.UNCLASSIFIED_r_ps) OR SPECIFIED(pc.UNCLASSIFIED_kid_ps).\n\npc.PS = 'PS17' IF pc.UNCLASSIFIED_mod IN ('el') AND pc.UNCLASSIFIED_vo IN (212, 275).\n\npc.PS = 'PW10' IF pc.UNCLASSIFIED_gri_art IN ('evogrip', 'evogripc', 'evogriph')."
+  }
+}

@@ -9,3 +9,8 @@ sources/pdftotext
 sources
 
 material
+
+code/venv
+
+code/__pycache__
+

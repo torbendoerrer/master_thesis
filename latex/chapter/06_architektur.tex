@@ -1,36 +1,22 @@
 % !TeX root = ../main.tex
-\chapter{Systemdesign und Technologieauswahl}
-\label{sec:architektur}
+\chapter{Systemdesign und Prototypenentwicklung}
+\label{ch:architektur}
+
+Nachdem im vorangegangenen Abschnitt die logische Zielarchitektur des Multi-Agenten-Systems konzeptionell aus der Anforderungsanalyse hergeleitet wurde, dokumentiert dieses Kapitel die informationstechnische Umsetzung des Prototyps. Die Entwicklung gliedert sich hierbei in zwei fundamentale Phasen: Zunächst wird die statische Technologieauswahl und Infrastruktur begründet, um die branchenspezifischen Enterprise-Anforderungen abzusichern. Darauf aufbauend wird im Sinne des \textit{Design Science Research} (DSR) die iterative, evolutionäre Entwicklung der Systemarchitektur dokumentiert, welche durch kontinuierliche Evaluierungszyklen zur finalen neuro-symbolischen Pipeline führte.
+
 \section{Technologieauswahl und Infrastruktur}
 \label{sec:technologieauswahl_und_infrastruktur}
 
-Nachdem im vorangegangenen Abschnitt die logische Zielarchitektur des Multi-Agenten-Systems konzeptionell aus der 
-Anforderungsanalyse hergeleitet wurde, bedarf es einer fundierten informationstechnischen Fundierung der Systemumgebung. Die 
-Auswahl der zugrundeliegenden Frameworks und Plattformen erfolgt hierbei nicht rein pragmatisch, sondern wird durch die strengen 
-Enterprise-Anforderungen der \textit{msg systems ag} (Data Governance, Sicherheit) sowie durch etablierte 
-Software-Engineering-Prinzipien (Wartbarkeit, Zukunftssicherheit) determiniert. Das technische Fundament des Prototyps stützt sich 
-auf drei zentrale Säulen: das Orchestrierungs-Framework (CrewAI), die Cloud-Plattform (SAP BTP) sowie die modellagnostische 
-Schnittstelle (liteLLM).
+Die Auswahl der zugrundeliegenden Frameworks und Plattformen erfolgt hierbei nicht rein pragmatisch, sondern wird durch die strengen Enterprise-Anforderungen der \textit{msg systems ag} (Data Governance, Sicherheit) sowie durch etablierte Software-Engineering-Prinzipien (Wartbarkeit, Zukunftssicherheit) determiniert. Das technische Fundament des Prototyps stützt sich auf drei zentrale Säulen: das Orchestrierungs-Framework (CrewAI), die Cloud-Plattform (SAP BTP) sowie die modellagnostische Schnittstelle (liteLLM).
 
 \subsection{Orchestrierungs-Framework: CrewAI}
 \label{subsec:auswahl_crewai}
 
-Wie die empirischen Untersuchungen von \textcite{liuLargescaleStudyDevelopment2025} belegen, wird der aktuelle Stand der Technik im Bereich der 
-Multi-Agenten-Systeme maßgeblich durch die Frameworks LangGraph, AutoGen und CrewAI definiert. Die Entscheidung zugunsten von 
-\textit{CrewAI} für den vorliegenden Migrations-Prototypen begründet sich aus der spezifischen Natur der Übersetzungsaufgabe 
-(LO-VC nach AVC) sowie den zeitlichen und methodischen Rahmenbedingungen dieser Masterarbeit.
+Wie die empirischen Untersuchungen von Liu et al. (2025) belegen, wird der aktuelle Stand der Technik im Bereich der Multi-Agenten-Systeme maßgeblich durch die Frameworks LangGraph, AutoGen und CrewAI definiert. Die Entscheidung zugunsten von \textit{CrewAI} für den vorliegenden Migrations-Prototypen begründet sich aus der spezifischen Natur der Übersetzungsaufgabe (LO-VC nach AVC) sowie den zeitlichen und methodischen Rahmenbedingungen dieser Masterarbeit.
 
-Während \textit{AutoGen} primär auf offene, konversationelle Interaktionen ausgelegt ist und \textit{LangGraph} zwar 
-deterministische Enterprise-Workflows exzellent abbildet, aber einen extrem hohen manuellen Programmieraufwand bei der Definition 
-von Graphen-Zuständen erfordert, implementiert CrewAI nativ einen deklarativen, rollenbasierten Ansatz \parencite{singhLangChainVsCrewAI2025}. 
-Wie die vergleichende Architekturstudie von \textcite{singhLangChainVsCrewAI2025} herausstellt, reduziert CrewAI den Orchestrierungs-Code 
-drastisch, da komplexe Multi-Agenten-Workflows deklarativ anstatt imperativ definiert werden. Dies ermöglicht die branchenweit 
-schnellste Entwicklungszeit (\textit{Time-to-first-Agent}) und prädestiniert das Framework für das \textit{Rapid Prototyping} 
-\parencite{singhLangChainVsCrewAI2025}.
+Während \textit{AutoGen} primär auf offene, konversationelle Interaktionen ausgelegt ist und \textit{LangGraph} zwar deterministische Enterprise-Workflows exzellent abbildet, aber einen extrem hohen manuellen Programmieraufwand bei der Definition von Graphen-Zuständen erfordert, implementiert CrewAI nativ einen deklarativen, rollenbasierten Ansatz (Singh, 2025). Wie die vergleichende Architekturstudie von Singh (2025) herausstellt, reduziert CrewAI den Orchestrierungs-Code drastisch, da komplexe Multi-Agenten-Workflows deklarativ anstatt imperativ definiert werden. Dies ermöglicht die branchenweit schnellste Entwicklungszeit (\textit{Time-to-first-Agent}) und prädestiniert das Framework für das \textit{Rapid Prototyping} (Singh, 2025).
 
-Da im Rahmen dieser Arbeit ein funktionsfähiger \textit{Proof of Concept} (PoC) konstruiert werden muss, ist dieser minimale 
-Konfigurationsaufwand von entscheidendem architektonischem Vorteil. Zudem belegen aktuelle Benchmarks, dass CrewAI durch seine 
-schlanke, sequenzielle Pipeline-Struktur die geringsten Latenzzeiten bei der Agenten-Koordination aufweist \parencite{singhLangChainVsCrewAI2025}. Da die Code-Migration von Constraint-Netzwerken ein hochgradig sequenzieller Prozess ist (1. Analyse, 2. Synthese, 3. Validierung), erzwingt CrewAI architektonisch die Einhaltung genau dieser strikten Standardarbeitsanweisungen (SOPs) und hierarchischen Delegationswege. Diese Restriktion minimiert das Risiko kaskadierender Halluzinationen und sichert die geforderte prozessuale Stabilität bei gleichzeitig höchster Entwicklungsagilität.
+Da im Rahmen dieser Arbeit ein funktionsfähiger \textit{Proof of Concept} (PoC) konstruiert werden muss, ist dieser minimale Konfigurationsaufwand von entscheidendem architektonischem Vorteil. Zudem belegen aktuelle Benchmarks, dass CrewAI durch seine schlanke, sequenzielle Pipeline-Struktur die geringsten Latenzzeiten bei der Agenten-Koordination aufweist (Singh, 2025). Da die Code-Migration von Constraint-Netzwerken ein hochgradig sequenzieller Prozess ist (1. Analyse, 2. Synthese, 3. Validierung), erzwingt CrewAI architektonisch die Einhaltung genau dieser strikten Standardarbeitsanweisungen (SOPs) und hierarchischen Delegationswege. Diese Restriktion minimiert das Risiko kaskadierender Halluzinationen und sichert die geforderte prozessuale Stabilität bei gleichzeitig höchster Entwicklungsagilität.
 
 \subsection{Enterprise-Infrastruktur: SAP BTP und SAP AI Core}
 \label{subsec:auswahl_sap_btp}
@@ -45,3 +31,33 @@ Um die \textit{Enterprise Readiness} des Prototyps zu gewährleisten, wird die A
 Der Bereich der \textit{Large Language Models} zeichnet sich durch extrem kurze Innovationszyklen aus. Die harte informationstechnische Kopplung (Hardcoding) eines Multi-Agenten-Systems an ein spezifisches Sprachmodell oder einen einzelnen Anbieter (Vendor Lock-in) stellt ein signifikantes architektonisches Risiko dar (Anti-Pattern). 
 
 Um dieses Risiko zu eliminieren und die Zukunftssicherheit des Migrations-Tools zu garantieren, wird \textit{liteLLM} als Abstraktionsschicht (Middleware) in das CrewAI-Framework integriert. Diese Bibliothek standardisiert die API-Aufrufe und entkoppelt die Agenten-Logik vollständig vom zugrundeliegenden Sprachmodell. Durch diese modellagnostische Architektur kann der Prototyp zur Laufzeit flexibel auf aktuelle Modell-Generationen (beispielsweise bereitgestellt über den SAP AI Core) zugreifen. Dies ermöglicht eine nahtlose Skalierung der kognitiven Fähigkeiten des Systems, ohne dass Refactoring-Aufwände im Kerncode des Agenten-Netzwerks entstehen.
+
+\section{Iterative Entwicklung des Prototyps (Design Science Research)}
+\label{sec:iterative_entwicklung}
+
+Gemäß dem Paradigma des \textit{Design Science Research} nach Hevner et al. erfolgte die funktionale Konstruktion des Multi-Agenten-Systems auf Basis der gewählten Technologien nicht als linearer Prozess, sondern in iterativen \textit{Build-and-Evaluate}-Zyklen. Ausgangspunkt (V1-Architektur) war die Hypothese, dass ein spezialisiertes Sprachmodell, welches über die Prompt-Ebene mit SAP-AVC-Syntaxregeln instruiert wird, in der Lage sei, die JSON-repräsentierten Abhängigkeiten des LO-VC autonom in Variantentabellen zu abstrahieren. 
+
+Die folgenden Abschnitte dokumentieren die evolutionäre Weiterentwicklung der Systemarchitektur, getrieben durch die Identifikation logischer und struktureller Limitierungen in den jeweiligen Evaluierungsphasen, bis hin zur finalen Zielarchitektur.
+
+\subsection{Zyklus 1: Limitierungen rein LLM-basierter Strukturgenerierung}
+\label{subsec:zyklus_1_llm_limitierungen}
+
+Im ersten Prototyping-Zyklus wurde der unstrukturierte JSON-Output (Abstrakter Syntaxbaum) des LO-VC-Modells direkt an das Agenten-Netzwerk (CrewAI) übergeben. Der zuständige Agent erhielt den Auftrag, selbstständig Muster in den logischen Bedingungen zu erkennen (z.B. \texttt{K40\_FG\_AF = '1'}) und diese in eine tabellarische Matrix zu überführen.
+
+Die Evaluierung dieses Ansatzes offenbarte fundamentale konzeptionelle Schwächen generativer KI im Kontext deterministischer Datenstrukturen. Das LLM neigte stark zu strukturellen Halluzinationen: Bei asymmetrischen Bedingungen erzwang das Modell symmetrische Matrizen, indem es nicht-existente Spalten erfand oder Leerwerte injizierte. Diese stochastische Natur des LLMs verletzte die strikten Logikvorgaben der SAP-Variantentabellen. Die Erkenntnis aus Zyklus 1 determinierte den Architekturwechsel: Die abstrakte Extraktion von Tabellenstrukturen darf nicht probabilistisch erfolgen.
+
+\subsection{Zyklus 2: Der neuro-symbolische Pivot und heuristisches Sub-Clustering}
+\label{subsec:zyklus_2_neuro_symbolisch}
+
+Zur Behebung der Halluzinationsproblematik wurde die Architektur in Zyklus 2 zu einem \textit{neuro-symbolischen} System umgebaut. Die Aufgabenverteilung wurde separiert: Ein deterministisches Python-Modul (symbolische KI) übernimmt das strukturelle Parsen und Clustern der Tabellen, während das LLM (neuronale KI) ausschließlich für die syntaktische Transformation der vorstrukturierten Baupläne in SAP-AVC-Code zuständig ist.
+
+Hierfür wurde ein heuristischer \textit{Sub-Clustering-Algorithmus} in Python implementiert. Dieser Algorithmus bereinigt die LO-VC-Historie (das Neutralisieren obsoleter \texttt{dummy}-Merkmale) und aggregiert Werte mit identischer Spalten-Signatur zu Sub-Tabellen. Logiken mit komplexen Operatoren (\texttt{<, >, OR}) werden deterministisch isoliert (Standalone). Dieser Zwischenschritt transformierte den unstrukturierten LO-VC-Code in strikt formatierte, fehlerfreie JSON-Baupläne.
+
+\subsection{Zyklus 3: Lexikalische Resilienz durch das Placeholder-Pattern}
+\label{subsec:zyklus_3_platzhalter}
+
+Die Evaluierung des Sub-Clusterings zeigte eine hohe Erfolgsquote bei der Tabellenbildung, deckte jedoch eine kritische Schwachstelle in der textuellen Vorverarbeitung (Preprocessing) auf. Der Algorithmus, der unklassifizierte Merkmale mit einem \texttt{[UNCLASSIFIED]}-Tag markieren sollte, agierte kontextblind und zerstörte valide SAP-Konstrukte (z.B. Operatoren wie \texttt{ne} oder Systemvariablen wie \texttt{\$self}). Zudem scheiterte das stringbasierte Parsing an asymmetrischen Klammersetzungen (sog. \textit{Dangling Brackets}), die durch das Zerteilen von verschachtelten Bedingungen entstanden.
+
+Zur Lösung wurde in Zyklus 3 das aus dem Compilerbau stammende \textit{Placeholder-Pattern} (Schutzschild-Muster) integriert, um Strings und Systemvariablen temporär zu maskieren, sowie die Regex-Logik fehlertolerant gestaltet. Parallel dazu wurden letzte Autonomie-Tendenzen der Agenten (z.B. das Überschreiben der Tabellenentscheidung oder das Erfinden falscher Zielmerkmalsnamen) durch striktes Prompt-Alignment unterbunden. 
+
+Das Resultat dieser Iterationen ist die finale, zweistufige Pipeline: Eine deterministische Vorverarbeitung extrahiert fehlerfrei die Tabellenstrukturen, während das spezialisierte CrewAI-Netzwerk diese Baupläne zuverlässig in syntaktisch validen SAP S/4HANA AVC-Code synthetisiert.

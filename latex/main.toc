@@ -57,10 +57,14 @@
 \contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{36}{}%
 \contentsline {section}{\numberline {5.2}Wissenschaftliche Einordnung und methodisches Analyseprotokoll}{37}{}%
 \contentsline {section}{\numberline {5.3}Datenbasis und Sampling-Strategie}{38}{}%
-\contentsline {chapter}{\numberline {6}Systemdesign und Technologieauswahl}{40}{}%
+\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{40}{}%
 \contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{40}{}%
 \contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{40}{}%
 \contentsline {subsection}{\numberline {6.1.2}Enterprise-Infrastruktur: SAP BTP und SAP AI Core}{41}{}%
 \contentsline {subsection}{\numberline {6.1.3}Modellagnostische Integration: liteLLM}{42}{}%
-\contentsline {chapter}{Anhang Anhang}{47}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{48}{}%
+\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{42}{}%
+\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen rein LLM-basierter Strukturgenerierung}{43}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Der neuro-symbolische Pivot und heuristisches Sub-Clustering}{43}{}%
+\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Lexikalische Resilienz durch das Placeholder-Pattern}{43}{}%
+\contentsline {chapter}{Anhang Anhang}{49}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{50}{}%

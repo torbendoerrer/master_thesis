@@ -1,0 +1,1163 @@
+{
+    "material": "KMAT1_PRECONDITIONS",
+    "classes": [
+        {
+            "type": "300",
+            "name": "CLASS1",
+            "description": null,
+            "characteristics": [
+                {
+                    "name": "K40_BRM",
+                    "description": "K40_BRM",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "1",
+                            "description": "1",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0003",
+                                    "syntax": "K40_fg_af = '3'"
+                                },
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "2",
+                            "description": "2",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0004",
+                                    "syntax": "K40_fg_af = '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "0",
+                            "description": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "K40_KO",
+                    "description": "K40_KO",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "04",
+                            "description": "04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "06",
+                            "description": "06",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "09",
+                            "description": "09",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0011",
+                                    "syntax": "K40_fg_af = '1' and K40_brm = '0' and K40_ts ne '1' and                 \n*K40_pl_af = 'd' and K40_pl in ('d1','d2')                              \n(K40_pl in('d1','d2') or K40_pl in ('H1','H3'))"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "10",
+                            "description": "10",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "01",
+                            "description": "01",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "02",
+                            "description": "02",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "03",
+                            "description": "03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "05",
+                            "description": "05",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "07",
+                            "description": "07",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "08",
+                            "description": "08",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0010",
+                                    "syntax": "(K40_fg_af = '3') or                                                    \nK40_fg_af = '4' and                                                     \nK40_brm = '0' and K40_ts ne '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "99",
+                            "description": "99",
+                            "dependency": [
+                                {
+                                    "precondition": "0000003046",
+                                    "syntax": "*K40_fg_af in ('1','2','3','4') and                                     \nK40_pl in ('d1','h1','h2')                                              \n*K40_fg_af in ('1','2','3','4') and                                     \n*K40_pl in ('d2','h3') and K40_fst = '0'"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "K40_ROD",
+                    "description": "K40_ROD",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "125",
+                            "description": "125",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0013",
+                                    "syntax": "K40_fst = '1' and K40_brm = '0' and K40_fg_af in ('1','2') and          \nK40_pl in ('d2','h3')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "200",
+                            "description": "200",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0014",
+                                    "syntax": "*   V_TW0014                                                            \nK40_fst = '0' and K40_brm = '0' and K40_abl = '0' and                   \nK40_fg_af in('1','2')and K40_ko_af in('0','1','2','4') and              \nK40_dsb = '0' and T32_BRM = '0' or                                      \nK40_fst = '0' and K40_brm = '0' and K40_abl = '0' and                   \nK40_fg_af in ('3','4') and K40_ko_af in ('2','3')                       \nand K40_dsb = '0' and                                                   \nT32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "160",
+                            "description": "160"
+                        }
+                    ]
+                },
+                {
+                    "name": "K40_RO_AF",
+                    "description": "K40_RO_AF",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "02",
+                            "description": "02",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0016",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "12",
+                            "description": "12",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0040",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200')) or                                        \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200') and T32_BRM = '0')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "17",
+                            "description": "17",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0017",
+                                    "syntax": "K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'    \nand T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "23",
+                            "description": "23",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0041",
+                                    "syntax": "K40_fst = '1' and K40_rod = '160' and K40_5r = 'n'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "18",
+                            "description": "18",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0017",
+                                    "syntax": "K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'    \nand T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "19",
+                            "description": "19",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "0000009938",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                        \nand K40_ROD = '200' and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "27",
+                            "description": "27",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0304",
+                                    "syntax": "(K40_rod = '160' and K40_FG_AF ne '2')                                  \n*K40_rod = '160' and K40_FG_AF ne '3')"
+                                },
+                                {
+                                    "precondition": "0000010433",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'j'                        \nand K40_ROD = '200' and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "01",
+                            "description": "01",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "03",
+                            "description": "03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "04",
+                            "description": "04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "05",
+                            "description": "05",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "06",
+                            "description": "06",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                },
+                                {
+                                    "precondition": "V_TW0304",
+                                    "syntax": "(K40_rod = '160' and K40_FG_AF ne '2')                                  \n*K40_rod = '160' and K40_FG_AF ne '3')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "31",
+                            "description": "31",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0015",
+                                    "syntax": "K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0'           \nand K40_5r = 'j'"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                },
+                                {
+                                    "precondition": "V_TW0304",
+                                    "syntax": "(K40_rod = '160' and K40_FG_AF ne '2')                                  \n*K40_rod = '160' and K40_FG_AF ne '3')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "28",
+                            "description": "28",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0016",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "20",
+                            "description": "20",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0018",
+                                    "syntax": "K40_brm = '2' and K40_5r = 'n' and t32_brm = '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "10",
+                            "description": "10",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0019",
+                                    "syntax": "K40_brm = '1' and T32_BRM > '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "21",
+                            "description": "21",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0020",
+                                    "syntax": "K40_fst = '1' and K40_rod = '160' and K40_brm = '0' and K40_5r = 'j'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "22",
+                            "description": "22",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0021",
+                                    "syntax": "K40_fst = '1' and K40_rod = '125'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "24",
+                            "description": "24",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0040",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200')) or                                        \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200') and T32_BRM = '0')"
+                                },
+                                {
+                                    "precondition": "V_TW0223",
+                                    "syntax": "K40_rod = '160'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "25",
+                            "description": "25",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0040",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200')) or                                        \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200') and T32_BRM = '0')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "26",
+                            "description": "26",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0040",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200')) or                                        \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                       \nand K40_ROD in ('160','200') and T32_BRM = '0')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "09",
+                            "description": "09",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0053",
+                                    "syntax": "K40_brm = '2' and K40_5r = 'j' and T32_BRM = '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "11",
+                            "description": "11",
+                            "dependency": [
+                                {
+                                    "precondition": "0000009939",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                        \nand K40_ROD in ('160','200') and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "29",
+                            "description": "29",
+                            "dependency": [
+                                {
+                                    "precondition": "0000012389",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'j'                       \nand K40_ROD = '200') or                                                 \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'j'                       \nand K40_ROD = '200' and T32_BRM = '0')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "30",
+                            "description": "30",
+                            "dependency": [
+                                {
+                                    "precondition": "0000014422",
+                                    "syntax": "K40_fst = '0' and K40_brm = '0' and K40_5r = 'n'                        \nand K40_ROD in ('160','200') and T32_BRM = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "32",
+                            "description": "32",
+                            "dependency": [
+                                {
+                                    "precondition": "0000025769",
+                                    "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'j'                       \nand K40_ROD = '200') or                                                 \n(K40_fst = '0' and K40_brm = '0' and K40_5r = 'j'                       \nand K40_ROD = '200' and T32_BRM = '0')"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "K40_PS",
+                    "description": "K40_PS",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "PS03",
+                            "description": "PS03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0024",
+                                    "syntax": "K40_rod < '200' and K40_fg_af < '3' and                                 \n(K40_schp = '04' or K40_schp = '06') and K40_ko ne '09'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW04",
+                            "description": "PW04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0024",
+                                    "syntax": "K40_rod < '200' and K40_fg_af < '3' and                                 \n(K40_schp = '04' or K40_schp = '06') and K40_ko ne '09'"
+                                },
+                                {
+                                    "precondition": "V_TW0241",
+                                    "syntax": "K40_fg_af < '0'"
+                                },
+                                {
+                                    "precondition": "V_TW0313",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS12",
+                            "description": "PS12",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0313",
+                                    "syntax": "K40_abl = '0'"
+                                },
+                                {
+                                    "precondition": "0000010204",
+                                    "syntax": "K40_ko ne '09'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS13",
+                            "description": "PS13",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0313",
+                                    "syntax": "K40_abl = '0'"
+                                },
+                                {
+                                    "precondition": "0000010284",
+                                    "syntax": "K40_ko ne '09'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS06",
+                            "description": "PS06",
+                            "dependency": [
+                                {
+                                    "precondition": "0000010203",
+                                    "syntax": "K40_ko ne '09'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW08",
+                            "description": "PW08",
+                            "dependency": [
+                                {
+                                    "precondition": "0000017271",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PSHA",
+                            "description": "PSHA"
+                        },
+                        {
+                            "code": "PS05",
+                            "description": "PS05"
+                        }
+                    ]
+                },
+                {
+                    "name": "PS",
+                    "description": "PS",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "PS03",
+                            "description": "PS03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0285",
+                                    "syntax": "kk ne 'ka' or vo ne 90"
+                                },
+                                {
+                                    "precondition": "V_EKW0286",
+                                    "syntax": "kk ne 'ka' or vo ne 99"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                },
+                                {
+                                    "precondition": "A_EKW0222",
+                                    "syntax": "$self.me = '1'"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS04",
+                            "description": "PS04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0285",
+                                    "syntax": "kk ne 'ka' or vo ne 90"
+                                },
+                                {
+                                    "precondition": "V_EKW0286",
+                                    "syntax": "kk ne 'ka' or vo ne 99"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                },
+                                {
+                                    "precondition": "A_EKW0222",
+                                    "syntax": "$self.me = '1'"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS12",
+                            "description": "PS12",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS01",
+                            "description": "PS01",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS02",
+                            "description": "PS02",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW01",
+                            "description": "PW01",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW02",
+                            "description": "PW02",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW04",
+                            "description": "PW04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                },
+                                {
+                                    "precondition": "V_EKW0332",
+                                    "syntax": "not specified gm_d22"
+                                },
+                                {
+                                    "precondition": "V_EKW0480",
+                                    "syntax": "* Ablage Babysafe nicht möglich bei Schlüsselbox auf Griffrohr ELX248B  \n  UG_VI_ELX ne '60' or BS ne '07'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW07",
+                            "description": "PW07",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0262",
+                                    "syntax": "specified vo"
+                                },
+                                {
+                                    "precondition": "V_EKW0290",
+                                    "syntax": "vo ne 35"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "V_EKW0480",
+                                    "syntax": "* Ablage Babysafe nicht möglich bei Schlüsselbox auf Griffrohr ELX248B  \n  UG_VI_ELX ne '60' or BS ne '07'"
+                                },
+                                {
+                                    "precondition": "V_EKW0512",
+                                    "syntax": "not specified gm_light"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW03",
+                            "description": "PW03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "0000007822",
+                                    "syntax": "vo ne 35 and vo ne 85 and bs ne '09' and bs ne '10'                     \n* Schlüssel lässt sich wg. Babyschale bei Starbox nicht einstecken!"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS19",
+                            "description": "PS19",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW_ALDI",
+                                    "syntax": "vl in ('aldi n','aldi s','aldi')or specified sonder                     \n* bei Korbeckschutzprofil:                                              \n* Konfiguriererauswahl- prüfen ob Lagerbestände da bzw. Anfrage         \n* über H. Nägele evtl. lange Lieferzeit beachten!"
+                                },
+                                {
+                                    "precondition": "0000027214",
+                                    "syntax": "Vo = 185 and gm_dr in ('234','236','331','332')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS20",
+                            "description": "PS20",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW_ALDI",
+                                    "syntax": "vl in ('aldi n','aldi s','aldi')or specified sonder                     \n* bei Korbeckschutzprofil:                                              \n* Konfiguriererauswahl- prüfen ob Lagerbestände da bzw. Anfrage         \n* über H. Nägele evtl. lange Lieferzeit beachten!"
+                                },
+                                {
+                                    "precondition": "0000027440",
+                                    "syntax": "vo = 185 and UG_VI_ELX = '40' or                                        \nVo = 185 and gm_dr in ('234','236','331','332')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS21",
+                            "description": "PS21",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW0504",
+                                    "syntax": "mod in ('drc')and vo in (75,101,130,155)                                \nor                                                                      \nmod = 'ela' and vo = 101"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS22",
+                            "description": "PS22",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0024",
+                                    "syntax": "gri_art in ('werbe', 'standard','wgscan')"
+                                },
+                                {
+                                    "precondition": "V_EKW_PS22",
+                                    "syntax": "mod = 'ela' and vo in (155,248)"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW06",
+                            "description": "PW06",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0025",
+                                    "syntax": "gri_art in                                                              \n('promobox','promobox2','pbplus', 'pbgrip','pbgripc','pblidl','pblidlc',\n'pbe2t','evogrip','evogripc','pbscan')                                  \n*and mod ne 'city2'                                                     \n* or T24_gr = '5'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS18",
+                            "description": "PS18",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0262",
+                                    "syntax": "specified vo"
+                                },
+                                {
+                                    "precondition": "V_EKW0512",
+                                    "syntax": "not specified gm_light"
+                                },
+                                {
+                                    "precondition": "V_EKW0503",
+                                    "syntax": "*Einkaufswagen EL/DR und Volumen 180/212                                \n*und Griffart Werbe/Standard/Werbegriff Comfort                         \nmod in ('el','dr') and vo in (180,212)                                  \nand gri_art in ('werbe','standard','wgc')                               \n                                                                        \nor                                                                      \n                                                                        \n*Rollstuhlfahrerwagen                                                   \n*und Griffart Werbe/Standard                                            \ngm_r in ('1','2','3','4','5')                                           \nand mod ne 'el' and mod ne 'dr'                                         \nand vo = 150                                                            \nand r_gri_art in ('werbe','standard')                                   \n                                                                        \nor                                                                      \n                                                                        \n*Transportwagen T24                                                     \n*und Griffart Griffrohr/Werbe/Werbegriff Comfort                        \nt24 = 't24'                                                             \nand vo = 50                                                             \nand t24_gr in ('1','2','4')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW05",
+                            "description": "PW05",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0276",
+                                    "syntax": "gp in ('4','5') and gri_art ne 'werbe SA'"
+                                },
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "V_EKW0448",
+                                    "syntax": " gri_art ne 'wgc' or gri_art ne 'wgcs' or gri_art ne 'wgcrfid'"
+                                },
+                                {
+                                    "precondition": "V_EKW0481",
+                                    "syntax": "gri_art in ('promo', 'sa promo')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS05",
+                            "description": "PS05",
+                            "dependency": [
+                                {
+                                    "precondition": "0000004431",
+                                    "syntax": "gri_art ne 'promogri' and gri_art ne 'promogr2' and gri_art ne'sa promo'\nand gri_art ne 'pgplus'"
+                                },
+                                {
+                                    "precondition": "V_EKW0480",
+                                    "syntax": "* Ablage Babysafe nicht möglich bei Schlüsselbox auf Griffrohr ELX248B  \n  UG_VI_ELX ne '60' or BS ne '07'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS13",
+                            "description": "PS13",
+                            "dependency": [
+                                {
+                                    "precondition": "0000005695",
+                                    "syntax": "gri_art in ('werbe', 'standard','promo', 'wgc')"
+                                },
+                                {
+                                    "precondition": "V_EKW0480",
+                                    "syntax": "* Ablage Babysafe nicht möglich bei Schlüsselbox auf Griffrohr ELX248B  \n  UG_VI_ELX ne '60' or BS ne '07'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS08",
+                            "description": "PS08",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "0000006975",
+                                    "syntax": "specified r_ps or specified sp5_ps or specified sp_ps"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS07",
+                            "description": "PS07",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "0000009318",
+                                    "syntax": "specified t50_ps or specified sp5_ps or specified sp_ps"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS14",
+                            "description": "PS14",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "0000014832",
+                                    "syntax": "gri_art in ('werbe') and vo in (155,185)and vl in ('schweden')          \nand mod in ('drc') or                                                   \ngri_art in ('werbe','wgc')and vo in (150,180,212,240,275)               \nand vl in ('schweden') and mod in ('EL','elp','DR') or                  \nvo = 55 or                                                              \ngri_art in ('werbe') and vo in (70) and vl in ('schweden')              \nand gm_light in ('1','2','5','7','8') or                                \nvo = 70 and gm_light in ('1','2','7','8')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS15",
+                            "description": "PS15",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0441",
+                                    "syntax": "not specified gm_cc"
+                                },
+                                {
+                                    "precondition": "0000015440",
+                                    "syntax": "gri_art in ('standard','werbe', 'wgc')                                  \nand vo in ( 136,150,180,185,212,240,275)                                \nand vl in ('schweden')                                                  \nand mod in ('EL')                                                       \nor gri_art in ('werbe', 'wgc') and vo in ( 136,185,212 )                \nand vl in ('schweden')                                                  \nand mod in ('dr','drc')                                                 \nor vo = 70                                                              \nor vo = 100"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PSHA",
+                            "description": "PSHA",
+                            "dependency": [
+                                {
+                                    "precondition": "0000006625",
+                                    "syntax": "(vo > 275 and not specified gm_d22) or specified gm_r or specified      \ngm_quicks"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS06",
+                            "description": "PS06",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0480",
+                                    "syntax": "* Ablage Babysafe nicht möglich bei Schlüsselbox auf Griffrohr ELX248B  \n  UG_VI_ELX ne '60' or BS ne '07'"
+                                },
+                                {
+                                    "precondition": "0000015916",
+                                    "syntax": "gri_art in ('werbe', 'standard', 'wgc')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "RONI",
+                            "description": "RONI",
+                            "dependency": [
+                                {
+                                    "precondition": "V_EKW0512",
+                                    "syntax": "not specified gm_light"
+                                },
+                                {
+                                    "precondition": "0000016947",
+                                    "syntax": "*gri_art in ('werbe', 'standard', 'wgc') and                            \n*mod = 'el' and vo in (180,212,240)                                     \n*or mod = 'elp' and vo in (212,140) or                                  \n*mod = 'dr' and vo in (150,180,212)                                     \n                                                                        \n* war nur in Frankreich auswählbar ausgeblendet 19.03.24 Hankal         \n* vorher V_nicht Werk 1000 nur noch beim T24 möglich                    \n                                                                        \nT24_GR ne '3' and T24_GR ne '4'and T24_GR ne '5'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW08",
+                            "description": "PW08",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0301",
+                                    "syntax": "M200_ps = 'pw08' and M300_ps = 'pw08' and M400_ps = 'pw08' and          \nM350_ps = 'pw08' and M500_ps = 'pw08' and t25_ps = 'pw08' and           \nt25_brm_ps = 'pw08' and t26_ps = 'pw08' and K40_ps = 'pw08' and         \nt40_ps = 'pw08' and t50_ps = 'pw08' and sedo_ps = 'pw08' and            \nkid_ps = 'pw08' and vo < 22"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW09",
+                            "description": "PW09",
+                            "dependency": [
+                                {
+                                    "precondition": "0000015462",
+                                    "syntax": "*vo = 101 and mod = 'drc' or vo = 150 and mod = 'ela' or                \n*vo = 185 and mod = 'el'                                                \ngri_art = 'wgcs'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS16",
+                            "description": "PS16",
+                            "dependency": [
+                                {
+                                    "precondition": "0000022757",
+                                    "syntax": "specified r_ps or                                                       \nspecified kid_ps"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PS17",
+                            "description": "PS17",
+                            "dependency": [
+                                {
+                                    "precondition": "0000025496",
+                                    "syntax": "* Klasse Smartloc_S eingebaut in                                        \nmod in ('el') and vo in (212,275)"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "PW10",
+                            "description": "PW10",
+                            "dependency": [
+                                {
+                                    "precondition": "0000027641",
+                                    "syntax": "gri_art in ('evogrip','evogripc','evogriph')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "0000",
+                            "description": "0000"
+                        }
+                    ]
+                }
+            
+            ]
+        }
+    ]
+}

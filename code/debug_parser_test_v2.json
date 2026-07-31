@@ -1,0 +1,834 @@
+{
+  "material": "KMAT1_PRECONDITIONS",
+  "classes": [
+    {
+      "type": "300",
+      "name": "CLASS1",
+      "description": null,
+      "characteristics": [
+        {
+          "name": "K40_BRM",
+          "description": "K40_BRM",
+          "type": "char",
+          "values": [
+            {
+              "code": "1",
+              "description": "1",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af = '3') AND (specified dummy)"
+                }
+              ]
+            },
+            {
+              "code": "2",
+              "description": "2",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af = '1')"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "K40_KO",
+          "description": "K40_KO",
+          "type": "char",
+          "values": [
+            {
+              "code": "04",
+              "description": "04",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "06",
+              "description": "06",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fg_af in ('3','4') and K40_ts in ('0','1'))"
+                }
+              ]
+            },
+            {
+              "code": "09",
+              "description": "09",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fg_af = '1' and K40_brm = '0' and K40_ts ne '1' and (K40_pl in('d1','d2') or K40_pl in ('H1','H3'))) AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "10",
+              "description": "10",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy)"
+                }
+              ]
+            },
+            {
+              "code": "01",
+              "description": "01",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "02",
+              "description": "02",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "03",
+              "description": "03",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af in ('1','2')) AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "05",
+              "description": "05",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af in ('3','4') and K40_ts in ('0','1'))"
+                }
+              ]
+            },
+            {
+              "code": "07",
+              "description": "07",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fg_af in ('3','4') and K40_ts in ('0','1'))"
+                }
+              ]
+            },
+            {
+              "code": "08",
+              "description": "08",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fg_af = '3') or K40_fg_af = '4' and K40_brm = '0' and K40_ts ne '1')"
+                }
+              ]
+            },
+            {
+              "code": "99",
+              "description": "99",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "( K40_pl in ('d1','h1','h2')"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "K40_ROD",
+          "description": "K40_ROD",
+          "type": "char",
+          "values": [
+            {
+              "code": "125",
+              "description": "125",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fst = '1' and K40_brm = '0' and K40_fg_af in ('1','2') and K40_pl in ('d2','h3'))"
+                }
+              ]
+            },
+            {
+              "code": "200",
+              "description": "200",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "( K40_fst = '0' and K40_brm = '0' and K40_abl = '0' and C3and K40_ko_af in('0','1','2','4') and K40_dsb = '0' and True or K40_fst = '0' and K40_brm = '0' and K40_abl = '0' and K40_fg_af in ('3','4') and K40_ko_af in ('2','3') and K40_dsb = '0' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE | [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "K40_RO_AF",
+          "description": "K40_RO_AF",
+          "type": "char",
+          "values": [
+            {
+              "code": "02",
+              "description": "02",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "12",
+              "description": "12",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND ((K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "17",
+              "description": "17",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "23",
+              "description": "23",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fst = '1' and K40_rod = '160' and K40_5r = 'n')"
+                }
+              ]
+            },
+            {
+              "code": "18",
+              "description": "18",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_rod > '160' and K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "19",
+              "description": "19",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD = '200' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "27",
+              "description": "27",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND ((K40_rod = '160' and K40_FG_AF ne '2') and K40_ROD = '200' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "01",
+              "description": "01",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160')"
+                }
+              ]
+            },
+            {
+              "code": "03",
+              "description": "03",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160')"
+                }
+              ]
+            },
+            {
+              "code": "04",
+              "description": "04",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160')"
+                }
+              ]
+            },
+            {
+              "code": "05",
+              "description": "05",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160')"
+                }
+              ]
+            },
+            {
+              "code": "06",
+              "description": "06",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160') AND ((K40_rod = '160' and K40_FG_AF ne '2')"
+                }
+              ]
+            },
+            {
+              "code": "31",
+              "description": "31",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod in ('160','200') and K40_fst ne '1' and K40_brm = '0' and K40_5r = 'j') AND (K40_rod = '160') AND ((K40_rod = '160' and K40_FG_AF ne '2')"
+                }
+              ]
+            },
+            {
+              "code": "28",
+              "description": "28",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "20",
+              "description": "20",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_brm = '2' and K40_5r = 'n' and True) /* GHOST-LOGIC: [UNCLASSIFIED_t32_brm] = '1' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "10",
+              "description": "10",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_brm = '1' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] > '1' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "21",
+              "description": "21",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fst = '1' and K40_rod = '160' and K40_brm = '0' and K40_5r = 'j')"
+                }
+              ]
+            },
+            {
+              "code": "22",
+              "description": "22",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fst = '1' and K40_rod = '125')"
+                }
+              ]
+            },
+            {
+              "code": "24",
+              "description": "24",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True)) AND (K40_rod = '160') /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "25",
+              "description": "25",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "26",
+              "description": "26",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200')) or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "09",
+              "description": "09",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_brm = '2' and K40_5r = 'j' and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '1' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "11",
+              "description": "11",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "29",
+              "description": "29",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and K40_ROD = '200') or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and K40_ROD = '200' and True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "30",
+              "description": "30",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_fst = '0' and K40_brm = '0' and K40_5r = 'n' and K40_ROD in ('160','200') and True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "32",
+              "description": "32",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "((K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and K40_ROD = '200') or (K40_fst = '0' and K40_brm = '0' and K40_5r = 'j' and K40_ROD = '200' and True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "K40_PS",
+          "description": "K40_PS",
+          "type": "char",
+          "values": [
+            {
+              "code": "PS03",
+              "description": "PS03",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (K40_rod < '200' and K40_fg_af < '3' and (K40_schp = '04' or K40_schp = '06') and K40_ko ne '09')"
+                }
+              ]
+            },
+            {
+              "code": "PW04",
+              "description": "PW04",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_rod < '200' and K40_fg_af < '3' and (K40_schp = '04' or K40_schp = '06') and K40_ko ne '09') AND (K40_fg_af < '0') AND (K40_abl = '0')"
+                }
+              ]
+            },
+            {
+              "code": "PS12",
+              "description": "PS12",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_abl = '0') AND (K40_ko ne '09')"
+                }
+              ]
+            },
+            {
+              "code": "PS13",
+              "description": "PS13",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_abl = '0') AND (K40_ko ne '09')"
+                }
+              ]
+            },
+            {
+              "code": "PS06",
+              "description": "PS06",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_ko ne '09')"
+                }
+              ]
+            },
+            {
+              "code": "PW08",
+              "description": "PW08",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(K40_abl = '0')"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PS",
+          "description": "PS",
+          "type": "char",
+          "values": [
+            {
+              "code": "PS03",
+              "description": "PS03",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (True) AND (True or [UNCLASSIFIED_vo] ne 90) AND (True or [UNCLASSIFIED_vo] ne 99) AND ([UNCLASSIFIED_vo] ne 35) AND ($[UNCLASSIFIED_self].me = '1') AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | not specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS04",
+              "description": "PS04",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (True) AND (True or [UNCLASSIFIED_vo] ne 90) AND (True or [UNCLASSIFIED_vo] ne 99) AND ([UNCLASSIFIED_vo] ne 35) AND ($[UNCLASSIFIED_self].me = '1') AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | not specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS12",
+              "description": "PS12",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(specified dummy) AND (True) AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | not specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS01",
+              "description": "PS01",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ([UNCLASSIFIED_vo] ne 35) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS02",
+              "description": "PS02",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ([UNCLASSIFIED_vo] ne 35) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW01",
+              "description": "PW01",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | not specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW02",
+              "description": "PW02",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW04",
+              "description": "PW04",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ([UNCLASSIFIED_vo] ne 35) AND (True) AND ( True or True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | not specified [UNCLASSIFIED_gm_d22] -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW07",
+              "description": "PW07",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (False) AND ([UNCLASSIFIED_vo] ne 35) AND (True) AND ( True or True) AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | specified [UNCLASSIFIED_vo] -> FALSE | not specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE | not specified [UNCLASSIFIED_gm_light] -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW03",
+              "description": "PW03",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ([UNCLASSIFIED_vo] ne 35 and [UNCLASSIFIED_vo] ne 85 and True and True /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_bs] ne '09' -> TRUE | [UNCLASSIFIED_bs] ne '10' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS19",
+              "description": "PS19",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (C1or False /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vl] in ('aldi n','aldi s','aldi') -> TRUE | specified [UNCLASSIFIED_sonder] -> FALSE */"
+                }
+              ]
+            },
+            {
+              "code": "PS20",
+              "description": "PS20",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (C1or False [UNCLASSIFIED_Vo] = 185 and True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vl] in ('aldi n','aldi s','aldi') -> TRUE | specified [UNCLASSIFIED_sonder] -> FALSE | [UNCLASSIFIED_gm_dr] in ('234','236','331','332') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS21",
+              "description": "PS21",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (C1and True or True and [UNCLASSIFIED_vo] = 101) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_mod] in ('drc') -> TRUE | [UNCLASSIFIED_vo] in (75,101,130,155) -> TRUE | [UNCLASSIFIED_mod] = 'ela' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS22",
+              "description": "PS22",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (True and True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_mod] = 'ela' -> TRUE | [UNCLASSIFIED_vo] in (155,248) -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW06",
+              "description": "PW06",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('promobox','promobox2','pbplus', 'pbgrip','pbgripc','pblidl','pblidlc', 'pbe2t','evogrip','evogripc','pbscan') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS18",
+              "description": "PS18",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(False) AND (True) AND ( True and True and True or True and True and True and [UNCLASSIFIED_vo] = 150 and True or True and [UNCLASSIFIED_vo] = 50 and True) /* GHOST-LOGIC: specified [UNCLASSIFIED_vo] -> FALSE | not specified [UNCLASSIFIED_gm_light] -> TRUE | [UNCLASSIFIED_mod] in ('el','dr') -> TRUE | [UNCLASSIFIED_vo] in (180,212) -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe','standard','wgc') -> TRUE | [UNCLASSIFIED_gm_r] in ('1','2','3','4','5') -> TRUE | [UNCLASSIFIED_mod] ne 'el' -> TRUE | [UNCLASSIFIED_mod] ne 'dr' -> TRUE | [UNCLASSIFIED_r_gri_art] in ('werbe','standard') -> TRUE | [UNCLASSIFIED_t24] = 't24' -> TRUE | [UNCLASSIFIED_t24_gr] in ('1','2','4') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW05",
+              "description": "PW05",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(gp in ('4','5') and True) AND (True) AND (True or True or True) AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] ne 'werbe SA' -> TRUE | not specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgc' -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgcs' -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgcrfid' -> TRUE | [UNCLASSIFIED_gri_art] in ('promo', 'sa promo') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS05",
+              "description": "PS05",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True and True and True and True) AND ( True or True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] ne 'promogri' -> TRUE | [UNCLASSIFIED_gri_art] ne 'promogr2' -> TRUE | [UNCLASSIFIED_gri_art] ne'sa promo' -> TRUE | [UNCLASSIFIED_gri_art] ne 'pgplus' -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS13",
+              "description": "PS13",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ( True or True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','promo', 'wgc') -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS08",
+              "description": "PS08",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (False or False or False) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_cc] -> TRUE | specified [UNCLASSIFIED_r_ps] -> FALSE | specified [UNCLASSIFIED_sp5_ps] -> FALSE | specified [UNCLASSIFIED_sp_ps] -> FALSE */"
+                }
+              ]
+            },
+            {
+              "code": "PS07",
+              "description": "PS07",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (False or False or False) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_cc] -> TRUE | specified [UNCLASSIFIED_t50_ps] -> FALSE | specified [UNCLASSIFIED_sp5_ps] -> FALSE | specified [UNCLASSIFIED_sp_ps] -> FALSE */"
+                }
+              ]
+            },
+            {
+              "code": "PS14",
+              "description": "PS14",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (True and C2and True and True or C5and True and True and True or [UNCLASSIFIED_vo] = 55 or True and True and True and True or [UNCLASSIFIED_vo] = 70 and True) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe') -> TRUE | [UNCLASSIFIED_vo] in (155,185) -> TRUE | [UNCLASSIFIED_vl] in ('schweden') -> TRUE | [UNCLASSIFIED_mod] in ('drc') -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe','wgc') -> TRUE | [UNCLASSIFIED_vo] in (150,180,212,240,275) -> TRUE | [UNCLASSIFIED_vl] in ('schweden') -> TRUE | [UNCLASSIFIED_mod] in ('EL','elp','DR') -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe') -> TRUE | [UNCLASSIFIED_vo] in (70) -> TRUE | [UNCLASSIFIED_vl] in ('schweden') -> TRUE | [UNCLASSIFIED_gm_light] in ('1','2','5','7','8') -> TRUE | [UNCLASSIFIED_gm_light] in ('1','2','7','8') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS15",
+              "description": "PS15",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND (True and True and True and True or True and True and True and True or [UNCLASSIFIED_vo] = 70 or [UNCLASSIFIED_vo] = 100) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_gri_art] in ('standard','werbe', 'wgc') -> TRUE | [UNCLASSIFIED_vo] in ( 136,150,180,185,212,240,275) -> TRUE | [UNCLASSIFIED_vl] in ('schweden') -> TRUE | [UNCLASSIFIED_mod] in ('EL') -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe', 'wgc') -> TRUE | [UNCLASSIFIED_vo] in ( 136,185,212 ) -> TRUE | [UNCLASSIFIED_vl] in ('schweden') -> TRUE | [UNCLASSIFIED_mod] in ('dr','drc') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PSHA",
+              "description": "PSHA",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(([UNCLASSIFIED_vo] > 275 and True) or False or False) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_d22] -> TRUE | specified [UNCLASSIFIED_gm_r] -> FALSE | specified [UNCLASSIFIED_gm_quicks] -> FALSE */"
+                }
+              ]
+            },
+            {
+              "code": "PS06",
+              "description": "PS06",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "( True or True) AND (True) /* GHOST-LOGIC: [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE | [UNCLASSIFIED_gri_art] in ('werbe', 'standard', 'wgc') -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "RONI",
+              "description": "RONI",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) AND ( True and C2and True) /* GHOST-LOGIC: not specified [UNCLASSIFIED_gm_light] -> TRUE | [UNCLASSIFIED_T24_GR] ne '3' -> TRUE | [UNCLASSIFIED_T24_GR] ne '4' -> TRUE | [UNCLASSIFIED_T24_GR] ne '5' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW08",
+              "description": "PW08",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True and True and True and True and True and True and True and True and K40_ps = 'pw08' and True and True and True and True and [UNCLASSIFIED_vo] < 22) /* GHOST-LOGIC: [UNCLASSIFIED_M200_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M300_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M400_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M350_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M500_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t25_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t25_brm_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t26_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t40_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t50_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_sedo_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_kid_ps] = 'pw08' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW09",
+              "description": "PW09",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] = 'wgcs' -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PS16",
+              "description": "PS16",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(False or False) /* GHOST-LOGIC: specified [UNCLASSIFIED_r_ps] -> FALSE | specified [UNCLASSIFIED_kid_ps] -> FALSE */"
+                }
+              ]
+            },
+            {
+              "code": "PS17",
+              "description": "PS17",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "( True and True) /* GHOST-LOGIC: [UNCLASSIFIED_mod] in ('el') -> TRUE | [UNCLASSIFIED_vo] in (212,275) -> TRUE */"
+                }
+              ]
+            },
+            {
+              "code": "PW10",
+              "description": "PW10",
+              "dependency": [
+                {
+                  "precondition": "OPTIMIZED_AST",
+                  "syntax": "(True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('evogrip','evogripc','evogriph') -> TRUE */"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

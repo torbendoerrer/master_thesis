@@ -1,0 +1,656 @@
+{
+  "clusters": {
+    "DUMMY, K40_FG_AF": [
+      {
+        "zielmerkmal": "K40_BRM",
+        "decision": "TABLE",
+        "bedingungs_spalten": [
+          "K40_fg_af",
+          "Dummy"
+        ],
+        "zeilen_daten": [
+          [
+            "3",
+            "specified dummy",
+            "1"
+          ],
+          [
+            "1",
+            "",
+            "2"
+          ]
+        ],
+        "if_constraints_text": "",
+        "original_code_mapping": [
+          {
+            "wert": "1",
+            "logik": "(K40_fg_af = '3')  AND  (specified dummy)"
+          },
+          {
+            "wert": "2",
+            "logik": "(K40_fg_af = '1')"
+          }
+        ]
+      }
+    ],
+    "K40_ABL, K40_BRM, K40_DSB, K40_FG_AF, K40_FST, K40_KO_AF, K40_PL": [
+      {
+        "zielmerkmal": "K40_ROD",
+        "decision": "TABLE",
+        "bedingungs_spalten": [
+          "K40_fst",
+          "K40_brm",
+          "K40_fg_af",
+          "K40_pl",
+          "K40_abl",
+          "K40_ko_af",
+          "K40_dsb"
+        ],
+        "zeilen_daten": [
+          [
+            "1",
+            "0",
+            "1",
+            "d2",
+            "",
+            "",
+            "",
+            "125"
+          ],
+          [
+            "1",
+            "0",
+            "2",
+            "d2",
+            "",
+            "",
+            "",
+            "125"
+          ],
+          [
+            "1",
+            "0",
+            "1",
+            "h3",
+            "",
+            "",
+            "",
+            "125"
+          ],
+          [
+            "1",
+            "0",
+            "2",
+            "h3",
+            "",
+            "",
+            "",
+            "125"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "",
+            "0",
+            "0",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "",
+            "0",
+            "1",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "",
+            "0",
+            "2",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "",
+            "0",
+            "4",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "2",
+            "",
+            "0",
+            "0",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "2",
+            "",
+            "0",
+            "1",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "2",
+            "",
+            "0",
+            "2",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "2",
+            "",
+            "0",
+            "4",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "3",
+            "",
+            "0",
+            "2",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "3",
+            "",
+            "0",
+            "3",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "4",
+            "",
+            "0",
+            "2",
+            "0",
+            "200"
+          ],
+          [
+            "0",
+            "0",
+            "4",
+            "",
+            "0",
+            "3",
+            "0",
+            "200"
+          ]
+        ],
+        "if_constraints_text": "",
+        "original_code_mapping": [
+          {
+            "wert": "125",
+            "logik": "(specified dummy)  AND  (K40_fst = '1'  AND  K40_brm = '0'  AND  K40_fg_af in ('1','2')  AND  K40_pl in ('d2','h3'))"
+          },
+          {
+            "wert": "200",
+            "logik": "( K40_fst = '0'  AND  K40_brm = '0'  AND  K40_abl = '0'  AND  K40_fg_af in('1','2') AND  K40_ko_af in('0','1','2','4')  AND  K40_dsb = '0'  AND  True  OR  K40_fst = '0'  AND  K40_brm = '0'  AND  K40_abl = '0'  AND  K40_fg_af in ('3','4')  AND  K40_ko_af in ('2','3')  AND  K40_dsb = '0'  AND  True)"
+          }
+        ]
+      }
+    ],
+    "SPALTE1, SPALTE2": [
+      {
+        "zielmerkmal": "PS",
+        "decision": "TABLE",
+        "bedingungs_spalten": [
+          "Spalte1",
+          "Spalte2"
+        ],
+        "zeilen_daten": [
+          [
+            "Wert1",
+            "Wert2",
+            "PS03"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS04"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS12"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS01"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS02"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW01"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW02"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW04"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW07"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW03"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS19"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS20"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS21"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS22"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW06"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS18"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW05"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS05"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS13"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS08"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS07"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS14"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS15"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PSHA"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS06"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "RONI"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW08"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW09"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS16"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PS17"
+          ],
+          [
+            "Wert1",
+            "Wert2",
+            "PW10"
+          ]
+        ],
+        "if_constraints_text": "",
+        "original_code_mapping": [
+          {
+            "wert": "PS03",
+            "logik": "(specified dummy)  AND  (True)  AND  (True  OR  True)  AND  (True  OR  True)  AND  (True)  AND  ([UNCLASSIFIED_self].me = '1')  AND  ( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_vo] ne 90 -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_vo] ne 99 -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+          },
+          {
+            "wert": "PS04",
+            "logik": "(specified dummy)  AND  (True)  AND  (True  OR  True)  AND  (True  OR  True)  AND  (True)  AND  ([UNCLASSIFIED_self].me = '1')  AND  ( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_vo] ne 90 -> TRUE | [UNCLASSIFIED_kk] ne 'ka' -> TRUE | [UNCLASSIFIED_vo] ne 99 -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+          },
+          {
+            "wert": "PS12",
+            "logik": "(specified dummy)  AND  (True)  AND  ( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+          },
+          {
+            "wert": "PS01",
+            "logik": "(True)  AND  (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE */"
+          },
+          {
+            "wert": "PS02",
+            "logik": "(True)  AND  (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE */"
+          },
+          {
+            "wert": "PW01",
+            "logik": "(True)  AND  ( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE */"
+          },
+          {
+            "wert": "PW02",
+            "logik": "(True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE */"
+          },
+          {
+            "wert": "PW04",
+            "logik": "(True)  AND  (True)  AND  ( True)  AND  ( True  OR  True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE | not  specified [UNCLASSIFIED_gm_d22] -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE */"
+          },
+          {
+            "wert": "PW07",
+            "logik": "(True)  AND  (False)  AND  (True)  AND  ( True)  AND  ( True  OR  True)  AND  ( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | specified [UNCLASSIFIED_vo] -> FALSE | [UNCLASSIFIED_vo] ne 35 -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_UG_VI_ELX] ne '60' -> TRUE | [UNCLASSIFIED_BS] ne '07' -> TRUE | not  specified [UNCLASSIFIED_gm_light] -> TRUE */"
+          },
+          {
+            "wert": "PW03",
+            "logik": "(True)  AND  (True  AND  True  AND  True  AND  True /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('werbe', 'standard','wgscan') -> TRUE | [UNCLASSIFIED_vo] ne 35 -> TRUE | [UNCLASSIFIED_vo] ne 85 -> TRUE | [UNCLASSIFIED_bs] ne '09' -> TRUE | [UNCLASSIFIED_bs] ne '10' -> TRUE */"
+          },
+          {
+            "wert": "PW06",
+            "logik": "(True /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('promobox','promobox2','pbplus', 'pbgrip','pbgripc','pblidl','pblidlc', 'pbe2t','evogrip','evogripc','pbscan') -> TRUE */"
+          },
+          {
+            "wert": "PW05",
+            "logik": "(gp in ('4','5')  AND  True)  AND  ( True)  AND  (True  OR  True  OR  True)  AND  (True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] ne 'werbe SA' -> TRUE | not  specified [UNCLASSIFIED_gm_cc] -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgc' -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgcs' -> TRUE | [UNCLASSIFIED_gri_art] ne 'wgcrfid' -> TRUE | [UNCLASSIFIED_gri_art] in ('promo', 'sa promo') -> TRUE */"
+          },
+          {
+            "wert": "PW08",
+            "logik": "(True  AND  True  AND  True  AND  True  AND  True  AND  True  AND  True  AND  True  AND  K40_ps = 'pw08'  AND  True  AND  True  AND  True  AND  True  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_M200_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M300_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M400_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M350_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_M500_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t25_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t25_brm_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t26_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t40_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_t50_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_sedo_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_kid_ps] = 'pw08' -> TRUE | [UNCLASSIFIED_vo] < 22 -> TRUE */"
+          },
+          {
+            "wert": "PW09",
+            "logik": "( True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] = 'wgcs' -> TRUE */"
+          },
+          {
+            "wert": "PW10",
+            "logik": "(True) /* GHOST-LOGIC: [UNCLASSIFIED_gri_art] in ('evogrip','evogripc','evogriph') -> TRUE */"
+          }
+        ]
+      }
+    ]
+  },
+  "standalone": [
+    {
+      "zielmerkmal": "K40_KO",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "",
+      "original_code_mapping": [
+        {
+          "wert": "04",
+          "logik": "(specified dummy)  AND  (K40_fg_af in ('1','2'))  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "06",
+          "logik": "(specified dummy)  AND  (K40_fg_af in ('3','4')  AND  K40_ts in ('0','1'))"
+        },
+        {
+          "wert": "09",
+          "logik": "(specified dummy)  AND  (K40_fg_af = '1'  AND  K40_brm = '0'  AND  K40_ts ne '1'  AND  (K40_pl in('d1','d2')  OR  K40_pl in ('H1','H3')))  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "10",
+          "logik": "(specified dummy)"
+        },
+        {
+          "wert": "01",
+          "logik": "(K40_fg_af in ('1','2'))  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "02",
+          "logik": "(K40_fg_af in ('1','2'))  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "03",
+          "logik": "(K40_fg_af in ('1','2'))  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "05",
+          "logik": "(K40_fg_af in ('3','4')  AND  K40_ts in ('0','1'))"
+        },
+        {
+          "wert": "07",
+          "logik": "(K40_fg_af in ('3','4')  AND  K40_ts in ('0','1'))"
+        },
+        {
+          "wert": "08",
+          "logik": "((K40_fg_af = '3')  OR  K40_fg_af = '4'  AND  K40_brm = '0'  AND  K40_ts ne '1')"
+        },
+        {
+          "wert": "99",
+          "logik": "( K40_pl in ('d1','h1','h2')"
+        }
+      ]
+    },
+    {
+      "zielmerkmal": "K40_RO_AF",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "",
+      "original_code_mapping": [
+        {
+          "wert": "02",
+          "logik": "(specified dummy)  AND  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "12",
+          "logik": "(specified dummy)  AND  ((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200'))  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "17",
+          "logik": "(specified dummy)  AND  (K40_rod > '160'  AND  K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "23",
+          "logik": "(specified dummy)  AND  (K40_fst = '1'  AND  K40_rod = '160'  AND  K40_5r = 'n')"
+        },
+        {
+          "wert": "18",
+          "logik": "(specified dummy)  AND  (K40_rod > '160'  AND  K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "19",
+          "logik": "(specified dummy)  AND  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD = '200'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "27",
+          "logik": "(specified dummy)  AND  ((K40_rod = '160'  AND  K40_FG_AF ne '2')  AND  K40_ROD = '200'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "01",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')"
+        },
+        {
+          "wert": "03",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')"
+        },
+        {
+          "wert": "04",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')"
+        },
+        {
+          "wert": "05",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')"
+        },
+        {
+          "wert": "06",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')  AND  ((K40_rod = '160'  AND  K40_FG_AF ne '2')"
+        },
+        {
+          "wert": "31",
+          "logik": "(K40_rod in ('160','200')  AND  K40_fst ne '1'  AND  K40_brm = '0'  AND  K40_5r = 'j')  AND  (K40_rod = '160')  AND  ((K40_rod = '160'  AND  K40_FG_AF ne '2')"
+        },
+        {
+          "wert": "28",
+          "logik": "(K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "20",
+          "logik": "(K40_brm = '2'  AND  K40_5r = 'n'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_t32_brm] = '1' -> TRUE */"
+        },
+        {
+          "wert": "10",
+          "logik": "(K40_brm = '1'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] > '1' -> TRUE */"
+        },
+        {
+          "wert": "21",
+          "logik": "(K40_fst = '1'  AND  K40_rod = '160'  AND  K40_brm = '0'  AND  K40_5r = 'j')"
+        },
+        {
+          "wert": "22",
+          "logik": "(K40_fst = '1'  AND  K40_rod = '125')"
+        },
+        {
+          "wert": "24",
+          "logik": "((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200'))  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True))  AND  (K40_rod = '160') /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "25",
+          "logik": "((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200'))  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "26",
+          "logik": "((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200'))  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "09",
+          "logik": "(K40_brm = '2'  AND  K40_5r = 'j'  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '1' -> TRUE */"
+        },
+        {
+          "wert": "11",
+          "logik": "(K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "29",
+          "logik": "((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  K40_ROD = '200')  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  K40_ROD = '200'  AND  True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "30",
+          "logik": "(K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'n'  AND  K40_ROD in ('160','200')  AND  True) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        },
+        {
+          "wert": "32",
+          "logik": "((K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  K40_ROD = '200')  OR  (K40_fst = '0'  AND  K40_brm = '0'  AND  K40_5r = 'j'  AND  K40_ROD = '200'  AND  True)) /* GHOST-LOGIC: [UNCLASSIFIED_T32_BRM] = '0' -> TRUE */"
+        }
+      ]
+    },
+    {
+      "zielmerkmal": "K40_PS",
+      "decision": "NO_TABLE",
+      "bedingungs_spalten": [],
+      "zeilen_daten": [],
+      "if_constraints_text": "Die vorliegenden Werte haben unterschiedliche logische Vorbedingungen, die keine klare Struktur f\u00fcr eine homogene Tabelle erm\u00f6glichen. Einige Werte haben gemeinsame Bedingungen, andere jedoch deutlich unterschiedliche Bedingungen, was eine konsistente Tabellenstruktur verhindert.",
+      "original_code_mapping": [
+        {
+          "wert": "PS03",
+          "logik": "(specified dummy)  AND  (K40_rod < '200'  AND  K40_fg_af < '3'  AND  (K40_schp = '04'  OR  K40_schp = '06')  AND  K40_ko ne '09')"
+        },
+        {
+          "wert": "PW04",
+          "logik": "(K40_rod < '200'  AND  K40_fg_af < '3'  AND  (K40_schp = '04'  OR  K40_schp = '06')  AND  K40_ko ne '09')  AND  (K40_fg_af < '0')  AND  (K40_abl = '0')"
+        },
+        {
+          "wert": "PS12",
+          "logik": "(K40_abl = '0')  AND  (K40_ko ne '09')"
+        },
+        {
+          "wert": "PS13",
+          "logik": "(K40_abl = '0')  AND  (K40_ko ne '09')"
+        },
+        {
+          "wert": "PS06",
+          "logik": "(K40_ko ne '09')"
+        },
+        {
+          "wert": "PW08",
+          "logik": "(K40_abl = '0')"
+        }
+      ]
+    }
+  ]
+}
