@@ -1,20 +1,14 @@
 \chapter{Durchführung und Auswertung des praktischen Selbstversuchs}
 \label{ch:explorative_fallstudie}
 
-Nachdem im vorangegangenen Kapitel durch das Experteninterview die praxisnahen Schmerzpunkte und die zeitliche Baseline für den 
-manuellen Migrationsaufwand etabliert wurden, bildet die in diesem Kapitel beschriebene manuelle Code-Analyse den zweiten 
-empirischen Baustein der Datentriangulation. Im Kontext des \textit{Design Science Research} Frameworks nach 7
-\textcite{hevnerDesignScienceInformation2004} dient dieser Selbstversuch dazu, das technologische Umfeld (\textit{Environment}) 
-tiefgreifend zu durchdringen. Während Interviews das subjektiv wahrgenommene, prozessuale Wissen der Fachexperten abbilden, 
-fokussiert dieser Selbstversuch die physische informationstechnische Ebene der rohen LO-VC-Datenstrukturen. 
+Nachdem im vorangegangenen Kapitel durch das Experteninterview die praxisnahen Schmerzpunkte und die zeitliche Baseline für den manuellen Migrationsaufwand etabliert wurden, bildet die in diesem Kapitel beschriebene Machbarkeitsanalyse (Feasibility Check) kombiniert mit einer manuellen Code-Analyse den zweiten empirischen Baustein der Datentriangulation. Im Kontext des Design Science Research Frameworks nach \textcite{hevnerDesignScienceInformation2004} dient dieser Schritt dazu, das technologische Umfeld (Environment) tiefgreifend zu durchdringen. Während Interviews das subjektiv wahrgenommene, prozessuale Wissen der Fachexperten abbilden, fokussiert diese Phase die physische informationstechnische Ebene der rohen LO-VC-Datenstrukturen.
 
-Das primäre Erkenntnisinteresse dieses Kapitels ist dabei zweidimensional: Neben der Extraktion exakter syntaktischer 
-Transformationsregeln als Prompt-Basis für das Multi-Agenten-System steht die empirische Scope-Definition im Vordergrund. 
+Das primäre Erkenntnisinteresse dieses Kapitels ist dabei zweidimensional: Zunächst erfolgt eine empirische Scope-Definition (Machbarkeitsanalyse), um die theoretischen Anforderungen aus der Praxis auf ihre technologische Automatisierbarkeit im Rahmen dieser Arbeit zu prüfen. Im direkten Anschluss erfolgt der praktische Selbstversuch zur Extraktion exakter syntaktischer Transformationsregeln, welche die kognitive Blaupause für das Multi-Agenten-System bilden.
 
 \section{Technologischer Realitätsabgleich und empirische Scope-Definition}
 \label{sec:scope_abgrenzung}
 
-Die im vorangegangenen Kapitel dargelegten interviewbasierten Implikationen (vgl. Kapitel~\ref{sec:implikationen}) repräsentieren den maximalen \textit{Business Need} aus Sicht der industriellen Praxis und skizzieren ein theoretisches Idealbild des zukünftigen Systems. Im Sinne des übergeordneten \textit{Design Science Research} Paradigmas nach \textcite{hevner2004design} darf dieses vollumfängliche Anforderungsprofil jedoch nicht unreflektiert als feste Vorgabe für die Artefaktkonstruktion dienen. Vielmehr bedarf es vorab einer fundierten Machbarkeitsprüfung (\textit{Feasibility Check}), um den exakten funktionalen und architektonischen Umfang (\textit{Scope}) des zu entwickelnden Prototyps abzugrenzen.
+Die im vorangegangenen Kapitel dargelegten interviewbasierten Implikationen (vgl. Kapitel~\ref{sec:implikationen}) repräsentieren den maximalen \textit{Business Need} aus Sicht der industriellen Praxis und skizzieren ein theoretisches Idealbild des zukünftigen Systems. Im Sinne des übergeordneten \textit{Design Science Research} Paradigmas nach \textcite{hevnerDesignScienceInformation2004} darf dieses vollumfängliche Anforderungsprofil jedoch nicht unreflektiert als feste Vorgabe für die Artefaktkonstruktion dienen. Vielmehr bedarf es vorab einer fundierten Machbarkeitsprüfung (\textit{Feasibility Check}), um den exakten funktionalen und architektonischen Umfang (\textit{Scope}) des zu entwickelnden Prototyps abzugrenzen.
 
 Dieser Abschnitt fungiert als methodischer Filter zwischen den idealisierten Wünschen der Praxis und der technologischen Realität im Rahmen einer Masterarbeit. Die fünf Kernimplikationen aus Kapitel~\ref{sec:implikationen} werden nachfolgend systematisch evaluiert, um zu bestimmen, welche Aspekte im darauffolgenden praktischen Selbstversuch auf Code-Ebene untersucht und final in die Multi-Agenten-Architektur integriert werden:
 
@@ -87,22 +81,20 @@ praxistauglicher Verhaltensregeln für die spätere informationstechnische Konst
 \section{Datenbasis und Sampling-Strategie}
 \label{sec:sampling_strategie}
 
-Um sicherzustellen, dass die extrahierten Übersetzungsregeln und der definierte Scope der realen industriellen Komplexität standhalten, bedarf es einer gezielten Stichprobenziehung (\textit{Purposive Sampling}) aus realen, anonymisierten Kundenprojekten der \textit{msg systems ag} \parencite{seaman1999qualitative}. 
+Um die abgeleiteten Anforderungen physisch auf Code-Ebene zu evaluieren, bedarf es einer repräsentativen Datengrundlage. 
+Aufgrund von strikten Restriktionen beim Datenzugriff, dem Schutz von Geschäftsgeheimnissen sowie der begrenzten 
+Verfügbarkeit extrahierbarer Altdaten im Unternehmenskontext der msg systems ag, wird in dieser Arbeit auf das 
+Verfahren der Gelegenheitsstichprobe (Convenience Sampling) zurückgegriffen 
+\parencite{seamanQualitativeMethodsEmpirical1999}.
 
-Anstatt Datensätze rein zufällig auszuwählen, erfolgt eine kriteriengeleitete Auswahl nach dem Prinzip der maximalen strukturellen Varianz. Dadurch wird gewährleistet, dass das Spektrum der SAP-Variantenkonfiguration in seiner Breite abgedeckt wird und auch technologische Randfälle (\textit{Edge Cases}) in die qualitative Scope-Betrachtung einfließen. Die finale Stichprobe umfasst $X$ Logik-Artefakte \textit{(Anmerkung: Zahl später eintragen)}, deren Auswahl durch das gezielte Vorhandensein folgender kritischer Elementtypen begründet ist:
-\begin{itemize}
-    \item \textbf{Vorbedingungen (Preconditions):} Die im Experteninterview (Kapitel~\ref{ch:experteninterview}) als 
-    Hauptflaschenhals identifizierte Transformation lokaler Bedingungen in globale Restriktionen, um die Grenzen einer 
-    automatisierten Überführung auszuloten.
-    \item \textbf{Beziehungswissen (Procedures):} Imperative, sequenzielle Wertermittlungsverfahren, bei denen im Zuge des 
-    Selbstversuchs induktiv geprüft werden soll, ab welchem Komplexitätsgrad (z.\,B. bei tief geschachtelten Verschachtelungen) 
-    eine automatisierte Agenten-Transformation nicht mehr zielführend ist.
-    \item \textbf{Altlasten und syntaktische Sonderfälle:} Bewusst integrierte Datensätze mit historisch gewachsenen 
-    Modellierungsbesonderheiten (wie verwaisten Merkmalen), um die Selektionsfähigkeit des zukünftigen Systems bezüglich 
-    notwendiger Code-Bereinigungen empirisch zu untersuchen.
-\end{itemize}
+Als Basis diente ein isoliertes, reales Kundenprojekt, welches die typische strukturelle Komplexität der 
+industriellen Variantenkonfiguration aufweist. Aus diesem Projekt wurden zufällig fünf unterschiedliche Merkmale und 
+deren zugehöriges, historisch gewachsenes Beziehungswissen (Vorbedingungen, Prozeduren) extrahiert. Diese Methodik 
+verzichtet bewusst auf eine künstliche Selektion von Extremfällen (Maximum Variation Sampling), sondern bildet 
+stattdessen den "alltäglichen" Entwickleralltag ab. Diese Basis stellt sicher, dass die identifizierten kognitiven 
+Hürden und die daraus abgeleiteten Systemregeln nicht auf theoretischen Ausnahmefällen, sondern auf der realen, 
+durchschnittlichen Systemkomplexität von msg-Kundenprojekten beruhen.
 
-Diese Sampling-Strategie garantiert, dass die funktionale Anforderungsdefinition des \ac{MAS} nicht auf theoretischen 
-Idealbedingungen beruht, sondern die reale Systemkomplexität der msg-Kundenprojekte reflektiert. Die im folgenden Abschnitt 
-dargestellten Ergebnisse und die daraus abgeleiteten Scope-Entscheidungen bilden das direkte inhaltliche Fundament für das 
-Rollen- und Systemdesign in Kapitel~\ref{ch:architektur}.
+\section{Ergebnisse des Selbstversuchs: Ableitung der kognitiven Architektur}
+\label{sec:ergebnisse_selbstversuch}
+Die detaillierte Protokollierung der manuellen Migration für alle fünf untersuchten Logik-Artefakte – inklusive des rohen LO-VC-Input-Codes, der kognitiven Zwischenschritte sowie des finalen AVC-Zielcodes – befindet sich aus Gründen der Lesbarkeit im Anhang \ref{app:migrationsprotokolle}. Im folgenden Abschnitt werden die aus dieser Fallstudie extrahierten zentralen Erkenntnisse und die daraus abgeleiteten systematischen Handlungsregeln für die Multi-Agenten-Architektur synthetisiert.

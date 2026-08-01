@@ -57,6 +57,7 @@
 \contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{36}{}%
 \contentsline {section}{\numberline {5.2}Wissenschaftliche Einordnung und methodisches Analyseprotokoll}{37}{}%
 \contentsline {section}{\numberline {5.3}Datenbasis und Sampling-Strategie}{38}{}%
+\contentsline {section}{\numberline {5.4}Ergebnisse des Selbstversuchs: Ableitung der kognitiven Architektur}{38}{}%
 \contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{40}{}%
 \contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{40}{}%
 \contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{40}{}%

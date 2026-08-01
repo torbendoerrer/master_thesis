@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  29 JUL 2026 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  1 AUG 2026 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -592,22 +592,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                hevner2004design
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                seaman1999qualitative
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (main.bbl)
 Package biblatex Info: Reference section=0 on input line 24.
 Package biblatex Info: Reference segment=0 on input line 24.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 30.
@@ -791,12 +776,6 @@ Overfull \hbox (86.21347pt too wide) has occurred while \output is active
 
  (chapter/05_fallstudie.tex
 Kapitel 5.
-
-LaTeX Warning: Citation 'hevner2004design' on page 34 undefined on input line 17.
-
-
-LaTeX Warning: Citation '' on page 34 undefined on input line 17.
-
 [34
 
 
@@ -808,7 +787,7 @@ Overfull \hbox (144.30539pt too wide) has occurred while \output is active
  []
 
 [35]
-Overfull \hbox (4.39941pt too wide) in paragraph at lines 49--50
+Overfull \hbox (4.39941pt too wide) in paragraph at lines 43--44
 []\T1/lmr/m/n/12 (-20) Für die dar-auf-fol-gen-de Ar-te-fakt-kon-struk-ti-on der Multi-Agenten-Architektur
  []
 
@@ -824,7 +803,7 @@ Overfull \hbox (144.30539pt too wide) has occurred while \output is active
 
 [37]
 
-LaTeX Warning: Citation 'seaman1999qualitative' on page 38 undefined on input line 90.
+LaTeX Warning: Reference `app:migrationsprotokolle' on page 38 undefined on input line 100.
 
 )
 Overfull \hbox (144.30539pt too wide) has occurred while \output is active
@@ -988,15 +967,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16930 strings out of 467683
- 324208 string characters out of 5414237
- 1325462 words of memory out of 5000000
- 45456 multiletter control sequences out of 15000+600000
- 699879 words of font info for 213 fonts, out of 8000000 for 9000
+ 16935 strings out of 467683
+ 324302 string characters out of 5414237
+ 1325422 words of memory out of 5000000
+ 45459 multiletter control sequences out of 15000+600000
+ 700008 words of font info for 214 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (58 pages, 437999 bytes).
+Output written on main.pdf (58 pages, 437164 bytes).
 PDF statistics:
  262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
