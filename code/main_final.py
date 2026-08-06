@@ -2,8 +2,8 @@ import json
 from crewai import Task, Crew, Process
 
 # Saubere, versionslose Imports
-from utils import extract_json_from_output, create_excel_dashboard, extract_known_canon, heavy_preprocessing, create_heuristic_table_plan
-from agents import global_joiner, synthesizer, avc_validator
+from utils_final import extract_json_from_output, create_excel_dashboard, extract_known_canon, heavy_preprocessing, create_heuristic_table_plan
+from agents_final import global_joiner, synthesizer, avc_validator
 # Importiere die neuen Prompts
 from prompts import JOINER_PROMPT, SYNTHESIZER_PROMPT, SYNTHESIZER_EXPECTED_OUTPUT, VALIDATOR_PROMPT, VALIDATOR_EXPECTED_OUTPUT
 
@@ -193,8 +193,8 @@ def process_lovc_json(full_model_file, test_slice_file, output_file):
 
 
 if __name__ == "__main__":
-    FULL_MODEL_JSON = "Beispiel1_Vorbedingungen_full.json" 
-    TEST_SLICE_JSON = "Beispiel1_Vorbedingungen.json" 
-    OUTPUT_EXCEL = "MAS_Entwickler_Dashboard_Final.xlsx"
+    FULL_MODEL_JSON = "eval5.json" 
+    TEST_SLICE_JSON = "eval5.json" 
+    OUTPUT_EXCEL = "MAS_Entwickler_Dashboard_Eval5.xlsx"
     
     process_lovc_json(FULL_MODEL_JSON, TEST_SLICE_JSON, OUTPUT_EXCEL)
