@@ -58,14 +58,14 @@
 \contentsline {section}{\numberline {5.2}Wissenschaftliche Einordnung und methodisches Analyseprotokoll}{37}{}%
 \contentsline {section}{\numberline {5.3}Datenbasis und Sampling-Strategie}{38}{}%
 \contentsline {section}{\numberline {5.4}Ergebnisse des Selbstversuchs: Ableitung der kognitiven Architektur}{38}{}%
-\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{40}{}%
-\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{40}{}%
-\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{40}{}%
-\contentsline {subsection}{\numberline {6.1.2}Enterprise-Infrastruktur: SAP BTP und SAP AI Core}{41}{}%
-\contentsline {subsection}{\numberline {6.1.3}Modellagnostische Integration: liteLLM}{42}{}%
-\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{42}{}%
-\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen rein LLM-basierter Strukturgenerierung}{43}{}%
-\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Der neuro-symbolische Pivot und heuristisches Sub-Clustering}{43}{}%
-\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Lexikalische Resilienz durch das Placeholder-Pattern}{43}{}%
-\contentsline {chapter}{Anhang Anhang}{49}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{50}{}%
+\contentsline {subsection}{\numberline {5.4.1}Ableitung der V1-Architektur und System-Prompts}{40}{}%
+\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{42}{}%
+\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{42}{}%
+\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{42}{}%
+\contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{43}{}%
+\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{44}{}%
+\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen rein LLM-basierter Strukturgenerierung}{44}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Der neuro-symbolische Pivot und heuristisches Sub-Clustering}{45}{}%
+\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Lexikalische Resilienz durch das Placeholder-Pattern}{45}{}%
+\contentsline {chapter}{Anhang Anhang}{50}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{51}{}%

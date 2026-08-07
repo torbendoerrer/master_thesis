@@ -1,0 +1,123 @@
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_BRM
+   ========================================== */
+TABLE K40_BRM {\n    K40_BRM char;\n    K40_fg_af char;\n    V_TW0003 bool;\n    V_TW0004 bool;\n}\n\nRESTRICT K40_BRM {\n    CASE WHEN ($self.K40_fg_af = \"3\" AND $self.V_TW0003 = true) THEN \"1\"\n    CASE WHEN ($self.K40_fg_af = \"1\" AND $self.V_TW0004 = true) THEN \"2\"\n    ELSE \"0\"\n}
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_KO
+   ========================================== */
+```avc
+TABLE K40_KO
+
+RESTRICT
+(
+  $self.code IN ('01', '02', '03') AND
+  $self.precondition = 'V_TW0008' AND $self.K40_fg_af IN ('1', '2') AND
+  $self.precondition = 'V_TW0569' AND $self.K40_abl = '0'
+)
+OR
+(
+  $self.code IN ('05', '07') AND
+  $self.precondition = 'V_TW0009' AND $self.K40_fg_af IN ('3', '4') AND $self.K40_ts IN ('0', '1')
+)
+OR
+(
+  $self.code = '08' AND
+  $self.precondition = 'V_TW0010' AND ($self.K40_fg_af = '3' OR $self.K40_fg_af = '4' AND $self.K40_brm = '0' AND $self.K40_ts != '1')
+)
+OR
+(
+  $self.code = '99' AND
+  $self.precondition = '0000003046' AND $self.K40_fg_af IN ('1', '2', '3', '4') AND $self.K40_pl IN ('d1', 'h1', 'h2') AND $self.K40_pl IN ('d2', 'h3') AND $self.K40_fst = '0'
+)
+```
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_ROD
+   ========================================== */
+TABLE K40_ROD
+  DESCRIPTION "K40_ROD"
+  TYPE CHAR
+  VALUES
+  (
+    "200" DESCRIPTION "200"
+    /* Constraints for code "200" with preconditions */
+    RESTRICT WHEN
+      ($self.K40_fst = "0" AND $self.K40_brm = "0" AND $self.K40_abl = "0" AND 
+       $self.K40_fg_af IN("1","2") AND $self.K40_ko_af IN("0","1","2","4") AND 
+       $self.K40_dsb = "0" AND $self.T32_BRM = "0")
+    OR
+      ($self.K40_fst = "0" AND $self.K40_brm = "0" AND $self.K40_abl = "0" AND
+       $self.K40_fg_af IN("3","4") AND $self.K40_ko_af IN("2","3") AND 
+       $self.K40_dsb = "0" AND $self.T32_BRM = "0"),
+    "160" DESCRIPTION "160"
+    /* Standalone for code "160" */
+  )
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_RO_AF
+   ========================================== */
+```
+TABLE K40_RO_AF
+FIELDS Code char(2), Description varchar(X), Preconditions text, Syntax text;
+
+RESTRICT
+$self.Code IN ('01', '03', '04', '05', '31'):
+    $self.Preconditions = ['V_TW0015', 'V_TW0223'],
+    $self.Syntax = "K40_rod IN ('160','200') and K40_fst != '1' and K40_brm == '0' and K40_5r == 'j' and K40_rod == '160'";
+
+RESTRICT
+$self.Code IN ('06', '31'):
+    $self.Preconditions = ['V_TW0015', 'V_TW0223', 'V_TW0304'],
+    $self.Syntax = "K40_rod IN ('160','200') and K40_fst != '1' and K40_brm == '0' and K40_5r == 'j' and K40_rod == '160' and (K40_rod == '160' and K40_FG_AF != '2' and K40_FG_AF != '3')";
+
+RESTRICT
+$self.Code IN ('24', '25', '26'):
+    $self.Preconditions = ['V_TW0040'],
+    $self.Syntax = "(K40_fst == '0' and K40_brm == '0' and K40_5r == 'n' and K40_ROD IN ('160','200')) or (K40_fst == '0' and K40_brm == '0' and K40_5r == 'n' and K40_ROD IN ('160','200') and T32_BRM == '0')";
+
+RESTRICT
+$self.Code IN ('29', '32'):
+    $self.Preconditions = ['0000012389', '0000025769'],
+    $self.Syntax = "(K40_fst == '0' and K40_brm == '0' and K40_5r == 'j' and K40_ROD == '200') or (K40_fst == '0' and K40_brm == '0' and K40_5r == 'j' and K40_ROD == '200' and T32_BRM == '0')";
+```
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_PS
+   ========================================== */
+```
+TABLE K40_PS
+COLUMNS
+code: char
+description: char
+V_TW0024: boolean
+V_TW0241: boolean
+V_TW0313: boolean
+condition_0000010204: boolean
+condition_0000010284: boolean
+condition_0000010203: boolean
+condition_0000017271: boolean
+
+RESTRICT
+(
+  code == 'PW04' AND $self.V_TW0024 AND (K40_rod < '200' AND K40_fg_af < '3' AND (K40_schp = '04' OR K40_schp = '06') AND K40_ko != '09' )
+) OR (
+  code == 'PW04' AND $self.V_TW0241 AND K40_fg_af < '0'
+) OR (
+  code IN('PW04', 'PS12', 'PS13') AND $self.V_TW0313 AND K40_abl = '0'
+) OR (
+  code IN('PS12', 'PS13') AND $self.condition_0000010204 AND K40_ko != '09'
+) OR (
+  code == 'PS13' AND $self.condition_0000010284 AND K40_ko != '09'
+) OR (
+  code == 'PS06' AND $self.condition_0000010203 AND K40_ko != '09'
+) OR (
+  code == 'PW08' AND $self.condition_0000017271 AND K40_abl = '0'
+)
+```
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: PS
+   ========================================== */
+TABLE PS (code, description, V_EKW0024, V_EKW0290, V_EKW0441, V_EKW0480, V_EKW0512, gri_art, vo, mod, vl, gm_light, gm_cc, gm_d22, gm_r, gm_quicks, t24_gr, T24_GR, UG_VI_ELX, BS, r_ps, sp_ps, sp5_ps, t50_ps, kid_ps, M200_ps, M300_ps, M400_ps, M350_ps, M500_ps, t25_ps, t25_brm_ps, t26_ps, K40_ps, t40_ps, sedo_ps, T25_GR) RESTRICT ($self.gri_art IN ['werbe', 'standard','wgscan'] AND $self.vo != 35) OR ($self.gm_cc IS NULL OR $self.gm_cc IS NOT IN ['specified']) OR ($self.UG_VI_ELX != '60' OR $self.BS != '07') OR ($self.vl IN ['aldi n','aldi s','aldi'] OR $self.sonder == 'specified') OR ($self.r_ps IS NOT NULL OR $self.sp5_ps IS NOT NULL OR $self.sp_ps IS NOT NULL)

@@ -97,4 +97,49 @@ durchschnittlichen Systemkomplexität von msg-Kundenprojekten beruhen.
 
 \section{Ergebnisse des Selbstversuchs: Ableitung der kognitiven Architektur}
 \label{sec:ergebnisse_selbstversuch}
+
 Die detaillierte Protokollierung der manuellen Migration für alle fünf untersuchten Logik-Artefakte – inklusive des rohen LO-VC-Input-Codes, der kognitiven Zwischenschritte sowie des finalen AVC-Zielcodes – befindet sich aus Gründen der Lesbarkeit im Anhang \ref{app:migrationsprotokolle}. Im folgenden Abschnitt werden die aus dieser Fallstudie extrahierten zentralen Erkenntnisse und die daraus abgeleiteten systematischen Handlungsregeln für die Multi-Agenten-Architektur synthetisiert.
+
+Die qualitative Auswertung des manuellen Migrationsprotokolls zeigt deutlich, dass eine erfolgreiche Transformation von LO-VC nach AVC weit über das einfache Ersetzen von Syntax-Token hinausgeht. Die protokollierten Hürden verdeutlichen, dass während der Migration unbewusst ein dreistufiges kognitives Modell durchlaufen wird. Eine simple 1:1-Übersetzung würde die moderne Gecode-Engine des AVC ineffizient nutzen oder zu fehlerhaftem Code führen. Aus den fünf untersuchten Artefakten lassen sich folgende zentrale kognitive Phasen ableiten, die als direkte Blaupause für das zu entwickelnde IT-Artefakt dienen:
+
+\begin{enumerate}
+    \item \textbf{Strukturelle und semantische Bereinigung (Die Analysten-Perspektive)}\\
+    Bevor der eigentliche Code transformiert wird, muss der historische Kontext bereinigt werden. In den Artefakten zeigte sich wiederholt, dass historisch gewachsene Modelle oft projektspezifische Anti-Patterns und verwaiste Abhängigkeiten enthalten, die funktionslosen (\glqq toten\grqq{}) Code markieren. Zudem war der Legacy-Code stark durch alte Entwicklerkommentare (mit \texttt{*} markiert) oder logische Redundanzen fragmentiert. Der erste notwendige Schritt ist folglich die rigorose Filterung dieser obsoleten Elemente, um die Datengrundlage für die nachfolgende Logik-Transformation zu bereinigen und die Fehleranfälligkeit zu senken.
+
+    \item \textbf{Architektonische Design-Entscheidungen (Die Architekten-Perspektive)}\\
+    Nach der Bereinigung der Rohdaten muss über die strukturelle Zielform entschieden werden. Die Fallstudie belegt, dass dies der komplexeste Schritt ist:
+    \begin{itemize}
+        \item Teilen sich diverse Einzelwerte exakt dieselben Vorbedingungen, ist es architektonisch ineffizient, diese in redundante Einzelanweisungen zu übersetzen. Stattdessen müssen diese Muster erkannt und zu performanten Variantentabellen geclustert (aggregiert) werden.
+        \item Sind Variantentabellen aufgrund komplexer Ungleichungen nicht optimal, müssen alternative Bündelungen (etwa durch den \texttt{IN}-Operator) als Bauplan entworfen werden.
+        \item Gleichzeitig muss das System erkennen, welche Strukturblöcke gänzlich obsolet sind, da AVC beispielsweise den alten \texttt{INFERENCES}-Block in Constraints nicht mehr unterstützt.
+    \end{itemize}
+
+    \item \textbf{Syntaktische Synthese (Die Entwickler-Perspektive)}\\
+    Erst nach der Erstellung dieses logischen Bauplans erfolgt das eigentliche Programmieren unter strikter Einhaltung der rigiden AVC-Syntaxregeln. Hierzu gehört das formale Schreiben der Restriktionen, das Auflösen veralteter Blockstrukturen durch direkte Pfadreferenzierungen mittels \texttt{\$self.} oder \texttt{\$root.} sowie das rigorose Ersetzen veralteter relationaler Operatoren (z.\,B.\ \texttt{ne} durch \texttt{<>} oder \texttt{eq} durch \texttt{=}).
+\end{enumerate}
+
+
+\subsection{Ableitung der V1-Architektur und System-Prompts}
+
+Um diese menschliche kognitive Leistung maschinell nachzubilden, scheidet ein monolithischer LLM-Ansatz (Single-Prompting) aus. Ein einzelnes Sprachmodell wäre mit der gleichzeitigen Ausführung von Bereinigung, Architekturentscheidung und Syntax-Formatierung überfordert. Stattdessen diktieren die empirischen Ergebnisse dieses Selbstversuchs eine arbeitsteilige Multi-Agenten-Architektur.
+
+Das im anschließenden Kapitel 6 konzipierte System wird exakt nach diesem dreistufigen Vorbild aufgebaut und umfasst ein kollaboratives Kernteam aus drei KI-Agenten, gestützt durch ein deterministisches Validierungswerkzeug. Aus der manuellen Fallstudie lassen sich hierfür folgende initiale Rollendefinitionen und Handlungsregeln (Prompts) für den Prototyp extrahieren:
+
+\begin{description}
+    \item[Rolle 1: LO-VC Data Analyst \& Cleaner] \hfill \\
+    \textbf{Ziel:} Bereinigung der rohen JSON-Eingabedaten.\\
+    \textbf{Handlungsregel:} Analysiere komplexe Vorbedingungen, identifiziere und ignoriere Werte, die historisch gewachsenen toten Code (Anti-Patterns) enthalten. Extrahiere für die verbleibenden, gültigen Werte eine saubere Liste der steuernden Merkmale und entferne alte Code-Kommentare.
+
+    \item[Rolle 2: AVC Table Architect] \hfill \\
+    \textbf{Ziel:} Entwurf eines logischen Bauplans basierend auf den bereinigten Daten.\\
+    \textbf{Handlungsregel:} Entscheide, welche Merkmale die Spalten einer potenziellen Tabelle bilden. Identifiziere exakt identische Vorbedingungen und instruiere den nachfolgenden Agenten, diese effizient zu aggregieren (z.\,B.\ mittels \texttt{IN()}-Operator oder Variantentabellen).
+
+    \item[Rolle 3: AVC Syntax Coder (Synthesizer)] \hfill \\
+    \textbf{Ziel:} Übersetzung des Bauplans in fehlerfreie, strikte AVC-Syntax.\\
+    \textbf{Handlungsregel:} Schreibe den finalen Code (\texttt{TABLE}-Aufrufe und \texttt{RESTRICT}-Constraints). Nutze zwingend korrekte Objektreferenzen (z.\,B.\ \texttt{\$self.}) und übersetze alte Operatoren (z.\,B.\ \texttt{eq}, \texttt{ne}) in den aktuellen Standard.
+
+    \item[Tool-Integration:] \hfill \\
+    Übergib das Ergebnis zwingend an einen deterministischen Syntax-\,\&\,Format-Validator, der den Code programmatisch auf verbotene LO-VC-Relikte prüft und bei Fehlern eine Korrekturschleife erzwingt.
+\end{description}
+
+Diese empirisch hergeleitete Agenten-Konstellation bildet das logische Fundament für die softwaretechnische Implementierung des Design Science Artefakts.

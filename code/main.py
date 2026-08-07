@@ -14,7 +14,7 @@ if "OPENAI_API_KEY" in os.environ:
     del os.environ["OPENAI_API_KEY"]
 
 # Native CrewAI LLM Klasse (SAP AI Core)
-sap_llm = LLM(model="sap/gpt-4o-mini")
+sap_llm = LLM(model="sap/gpt-4o")
 
 # ==========================================
 # 2. DAS TOOL (VALIDATOR)
@@ -173,6 +173,6 @@ def process_lovc_json(input_file, output_file):
 if __name__ == "__main__":
     # Passe hier die Dateinamen an deine lokalen Dateien an
     INPUT_JSON = "Beispiel1_Vorbedingungen.json"
-    OUTPUT_FILE = "MAS_Output_AVC_Constraints.txt"
+    OUTPUT_FILE = "MAS_Output_AVC_Constraints_Third_Run.txt"
     
     process_lovc_json(INPUT_JSON, OUTPUT_FILE)

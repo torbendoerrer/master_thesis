@@ -81,7 +81,7 @@ def process_lovc_json(input_file, output_file):
 if __name__ == "__main__":
     # Stelle sicher, dass diese Dateien im selben Ordner liegen
     INPUT_JSON = "Beispiel1_Vorbedingungen.json"
-    OUTPUT_FILE = "MAS_Entwickler_Dashboard.xlsx"
+    OUTPUT_FILE = "MAS_Entwickler_Dashboardv4_third_run.xlsx"
     
     print("Starte Multi-Agenten-System Pipeline...")
     process_lovc_json(INPUT_JSON, OUTPUT_FILE)

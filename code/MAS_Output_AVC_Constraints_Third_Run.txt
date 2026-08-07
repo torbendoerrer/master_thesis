@@ -1,0 +1,213 @@
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_BRM
+   ========================================== */
+TABLE K40_BRM AS (
+  COLUMNS (
+    K40_BRM_Code CHAR,
+    K40_BRM_Description CHAR,
+    Precondition CHAR,
+    K40_fg_af_Value CHAR
+  )
+);
+
+CONSTRAINT (
+  RESTRICT (
+    $self.K40_BRM_Code = '1' AND $self.V_TW0003 AND $self.K40_fg_af = '3'
+  ) OR (
+    $self.K40_BRM_Code = '2' AND $self.V_TW0004 AND $self.K40_fg_af = '1'
+  ) OR (
+    $self.K40_BRM_Code = '0'
+  )
+);
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_KO
+   ========================================== */
+TABLE K40_KO
+    char($self.K40_KO_code),
+    char($self.K40_KO_description),
+    char($self.K40_fg_af),
+    char($self.K40_ts),
+    char($self.K40_abl),
+    char($self.K40_brm),
+    char($self.K40_pl_af),
+    char($self.K40_pl),
+    char($self.K40_fst),
+    char($self.Precondition)
+
+RESTRICT (V_TW0008)
+    IN($self.K40_KO_code, '01', '02', '03'):
+    $self.K40_fg_af IN ('1','2') AND $self.K40_abl = '0',
+
+RESTRICT (V_TW0009)
+    IN($self.K40_KO_code, '05', '07'):
+    $self.K40_fg_af IN ('3','4') AND $self.K40_ts IN ('0','1'),
+
+RESTRICT (V_TW0010)
+    $self.K40_KO_code = '08':
+    ($self.K40_fg_af = '3' OR $self.K40_fg_af = '4') AND
+    $self.K40_brm = '0' AND $self.K40_ts != '1',
+
+RESTRICT (V_TW0011)
+    $self.K40_KO_code = '09':
+    $self.K40_fg_af = '1' AND $self.K40_brm = '0' AND $self.K40_ts != '1' AND
+    $self.K40_pl_af = 'd' AND $self.K40_pl IN ('d1','d2','H1','H3') AND $self.K40_abl = '0',
+
+RESTRICT (0000003046)
+    $self.K40_KO_code = '99':
+    $self.K40_fg_af IN ('1','2','3','4') AND $self.K40_pl IN ('d1','h1','h2') AND
+    $self.K40_pl IN ('d2','h3') AND $self.K40_fst = '0'
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_ROD
+   ========================================== */
+TABLE K40_ROD
+RESTRICT ($self.K40_fst = '0' AND $self.K40_brm = '0' AND $self.K40_abl = '0' AND $self.K40_fg_af IN ('1', '2') AND $self.K40_ko_af IN ('0', '1', '2', '4') AND $self.K40_dsb = '0' AND $self.T32_BRM = '0') OR ($self.K40_fst = '0' AND $self.K40_brm = '0' AND $self.K40_abl = '0' AND $self.K40_fg_af IN ('3', '4') AND $self.K40_ko_af IN ('2', '3') AND $self.K40_dsb = '0' AND $self.T32_BRM = '0') SET '200';
+RESTRICT '160';
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_RO_AF
+   ========================================== */
+TABLE K40_RO_AF {
+  CODE {
+    $self.description
+  }
+  RESTRICT ($self.description = '12') {
+    $root.V_TW0040 and (
+      ($root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'n' && $root.K40_ROD in ['160','200']) ||
+      ($root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'n' && $root.K40_ROD in ['160','200'] && $root.T32_BRM == '0')
+    )
+  }
+  RESTRICT ($self.description = '23') {
+    $root.V_TW0041 and $root.K40_fst == '1' && $root.K40_ROD == '160' && $root.K40_5r == 'n'
+  }
+  RESTRICT ($self.description = '19') {
+    $root.0000009938 and $root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'n' &&
+    $root.K40_ROD == '200' && $root.T32_BRM == '0'
+  }
+  RESTRICT ($self.description = '27') {
+    $root.V_TW0304 and (
+      ($root.K40_ROD == '160' && $root.K40_FG_AF != '2') ||
+      ($root.K40_ROD == '160' && $root.K40_FG_AF != '3')
+    )
+  }
+  RESTRICT ($self.description = '01', '03', '04', '05', '06', '31') {
+    $root.V_TW0015 and $root.K40_ROD in ['160','200'] && $root.K40_fst != '1' && $root.K40_brm == '0'
+    && $root.K40_5r == 'j'
+    $root.V_TW0223 and $root.K40_ROD == '160'
+  }
+  RESTRICT ($self.description = '28') {
+    $root.V_TW0016 and $root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'j' && $root.T32_BRM == '0'
+  }
+  RESTRICT ($self.description = '20') {
+    $root.V_TW0018 and $root.K40_brm == '2' && $root.K40_5r == 'n' && $root.T32_BRM == '1'
+  }
+  RESTRICT ($self.description = '10') {
+    $root.V_TW0019 and $root.K40_brm == '1' && $root.T32_BRM > '1'
+  }
+  RESTRICT ($self.description = '21') {
+    $root.V_TW0020 and $root.K40_fst == '1' && $root.K40_ROD == '160' && $root.K40_brm == '0' && $root.K40_5r == 'j'
+  }
+  RESTRICT ($self.description = '22') {
+    $root.V_TW0021 and $root.K40_fst == '1' && $root.K40_ROD == '125'
+  }
+  RESTRICT ($self.description = '24', '25', '26') {
+    $root.V_TW0040 and (
+      ($root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'n' && $root.K40_ROD in ['160','200']) ||
+      ($root.K40_fst == '0' && $root.K40_brm == '0' && $root.K40_5r == 'n' && $root.K40_ROD in ['160','200'] && $root.T32_BRM == '0')
+    )
+    $root.V_TW0223 and $root.K40_ROD == '160'
+  }
+}
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_PS
+   ========================================== */
+TABLE $self.K40_PS (
+  Code CHAR,
+  Description CHAR,
+  Precondition CHAR,
+  Syntax CHAR
+)
+
+RESTRICT (
+  WHERE $self.Precondition IN ('V_TW0313', '0000017271') AND $self.K40_abl = '0',
+  WHERE $self.Precondition IN ('0000010204', '0000010284', '0000010203', 'V_TW0024') AND $self.K40_ko != '09',
+  WHERE $self.Precondition = 'V_TW0024' AND $self.K40_rod < '200' AND $self.K40_fg_af < '3' AND ($self.K40_schp = '04' OR $self.K40_schp = '06') AND $self.K40_ko != '09'
+)
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: PS
+   ========================================== */
+TABLE PS
+ description = "PS"
+ type = 'char'
+ VALUES
+  (
+    "PS01":
+    description = "PS01"
+    RESTRICT
+      IF $self.gri_art IN ["werbe", "standard", "wgscan"] AND $self.vo != 35
+  ),
+    "PS02":
+    description = "PS02"
+    RESTRICT
+      IF $self.gri_art IN ["werbe", "standard", "wgscan"] AND $self.vo != 35
+  ),
+    "PS03":
+    description = "PS03"
+    RESTRICT
+     IF $self.gri_art IN ["werbe", "standard", "wgscan"] AND $self.vo !IN [35, 85] AND $self.bs !IN ["09", "10"]
+  ),
+    "PS05":
+    description = "PS05"
+    RESTRICT
+     IF $self.gri_art !IN ["promogri", "promogr2", "sa promo", "pgplus"] AND ($self.UG_VI_ELX != "60" OR $self.BS != "07")
+  ),
+    "PS06":
+    description = "PS06"
+    RESTRICT
+     IF $self.gri_art IN ["werbe", "standard", "wgc"] AND ($self.UG_VI_ELX != "60" OR $self.BS != "07")
+  ),
+    "PS13":
+    description = "PS13"
+    RESTRICT
+     IF $self.gri_art IN ["werbe", "standard", "promo", "wgc"] AND ($self.UG_VI_ELX != "60" OR $self.BS != "07")
+  ),
+    "PS08":
+    description = "PS08"
+    RESTRICT
+     IF NOT $self.gm_cc IS SPECIFIED AND ($self.r_ps IS SPECIFIED OR $self.sp5_ps IS SPECIFIED OR $self.sp_ps IS SPECIFIED)
+  ),
+    "PS07":
+    description = "PS07"
+    RESTRICT
+     IF NOT $self.gm_cc IS SPECIFIED AND ($self.t50_ps IS SPECIFIED OR $self.sp5_ps IS SPECIFIED OR $self.sp_ps IS SPECIFIED)
+  ),
+    "PS14":
+    description = "PS14"
+    RESTRICT
+     IF NOT $self.gm_cc IS SPECIFIED AND (($self.gri_art IN ["werbe"] AND $self.vo IN [155, 185] AND $self.vl IN ["schweden"] AND $self.mod IN ["drc"]) OR ($self.gri_art IN ["werbe", "wgc"] AND $self.vo IN [150, 180, 212, 240, 275] AND $self.vl IN ["schweden"] AND $self.mod IN ["EL", "elp", "DR"]) OR $self.vo = 55 OR ($self.gri_art IN ["werbe"] AND $self.vo = 70 AND $self.vl = "schweden" AND $self.gm_light IN ["1", "2", "5", "7", "8"]) OR $self.vo = 70 AND $self.gm_light IN ["1", "2", "7", "8"])
+  ),
+    "PS15":
+    description = "PS15"
+    RESTRICT
+     IF NOT $self.gm_cc IS SPECIFIED AND (($self.gri_art IN ["standard", "werbe", "wgc"] AND $self.vo IN [136, 150, 180, 185, 212, 240, 275] AND $self.vl IN ["schweden"] AND $self.mod = "EL") OR ($self.gri_art IN ["werbe", "wgc"] AND $self.vo IN [136, 185, 212] AND $self.vl IN ["schweden"] AND $self.mod IN ["dr", "drc"]) OR $self.vo = 70 OR $self.vo = 100)
+  ),
+    "PSHA":
+    description = "PSHA"
+    RESTRICT
+     IF $self.vo > 275 AND NOT $self.gm_d22 IS SPECIFIED OR $self.gm_r IS SPECIFIED OR $self.gm_quicks IS SPECIFIED
+  ),
+    "PS16":
+    description = "PS16"
+    RESTRICT
+     IF $self.r_ps IS SPECIFIED OR $self.kid_ps IS SPECIFIED
+  ),
+    "PS17":
+    description = "PS17"
+    RESTRICT
+     IF $self.mod = "el" AND $self.vo IN [212, 275]
+  )
+ )

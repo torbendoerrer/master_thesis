@@ -5,7 +5,7 @@ from crewai import Task, Crew, Process
 from utilsv10 import extract_json_from_output, create_excel_dashboard, extract_known_canon, preprocess_characteristic_json
 from agentsv10 import analyst, architect, synthesizer
 
-def process_lovc_json(input_file, output_file, debug_file="debug_preprocessedv10.json"):
+def process_lovc_json(input_file, output_file, debug_file="debug_preprocessedv10_third_run.json"):
     print(f"\n📂 Lade JSON-Datei: {input_file}")
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
@@ -101,7 +101,7 @@ def process_lovc_json(input_file, output_file, debug_file="debug_preprocessedv10
 
 if __name__ == "__main__":
     INPUT_JSON = "Beispiel1_Vorbedingungen.json"
-    OUTPUT_FILE = "MAS_Entwickler_Dashboardv10.xlsx"
+    OUTPUT_FILE = "MAS_Entwickler_Dashboardv10_third_run.xlsx"
     
     print("Starte hybride Multi-Agenten-System Pipeline...")
     process_lovc_json(INPUT_JSON, OUTPUT_FILE)

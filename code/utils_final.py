@@ -37,27 +37,6 @@ def _remove_sap_comments(text: str) -> str:
     
     return text.strip()
 
-def map_standard_functions(syntax: str) -> str:
-    """Übersetzt alte LO-VC Standardfunktionen in die neue AVC Syntax."""
-    mapping_rules = {
-        r'SAP_VF_NUM_TO_CHAR': 'to_string',
-        r'SAP_VF_CHAR_TO_NUM': 'to_int', 
-        r'SAP_VF_COUNT_VALUES': 'no_of_assigned_vals',
-        r'SAP_VF_LENGTH': 'length',
-        r'SAP_VF_SUBSTRING': 'substring',
-        r'SAP_VF_RIGHT': 'suffix'
-    }
-    transformed = syntax
-    for old_func, new_func in mapping_rules.items():
-        transformed = re.sub(old_func, new_func, transformed, flags=re.IGNORECASE)
-    return transformed
-
-def inject_exit_if_not_specified(syntax: str, characteristic: str) -> str:
-    """Ergänzt einen synthetischen Guard ('exit if not specified')."""
-    guard = f",\nexit if not $self.{characteristic} specified"
-    return f"{syntax.rstrip()}{guard}"
-
-
 # ==========================================
 # BESTEHENDE FUNKTIONEN (AUFGEWERTET)
 # ==========================================

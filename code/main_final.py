@@ -193,8 +193,8 @@ def process_lovc_json(full_model_file, test_slice_file, output_file):
 
 
 if __name__ == "__main__":
-    FULL_MODEL_JSON = "eval5.json" 
-    TEST_SLICE_JSON = "eval5.json" 
-    OUTPUT_EXCEL = "MAS_Entwickler_Dashboard_Eval5.xlsx"
+    FULL_MODEL_JSON = "Beispiel1_Vorbedingungen_full.json" 
+    TEST_SLICE_JSON = "Beispiel1_Vorbedingungen.json" 
+    OUTPUT_EXCEL = "MAS_Entwickler_Dashboard_final_third_run.xlsx"
     
     process_lovc_json(FULL_MODEL_JSON, TEST_SLICE_JSON, OUTPUT_EXCEL)

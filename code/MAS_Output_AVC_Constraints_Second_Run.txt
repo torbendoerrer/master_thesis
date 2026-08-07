@@ -1,0 +1,133 @@
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_BRM
+   ========================================== */
+TABLE K40_BRM {
+  K40_BRM_Code   : char,
+  K40_BRM_Description : char,
+  K40_fg_af : char
+}
+
+RESTRICT {
+  WHEN K40_BRM_Code = "1" THEN $self.K40_fg_af = "3",
+  WHEN K40_BRM_Code = "2" THEN $self.K40_fg_af = "1"
+}
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_KO
+   ========================================== */
+TABLE K40_KO AS
+    CONSTRAINT VALID_VALUES
+    (Code STRING, Description STRING)
+    RESTRICT ($self.Code IN ('01', '02', '03', '04')) WHERE ($self.K40_fg_af IN ('1','2') AND $self.K40_abl = '0'), 
+    RESTRICT ($self.Code IN ('05', '07')) WHERE ($self.K40_fg_af IN ('3','4') AND $self.K40_ts IN ('0','1')),
+    RESTRICT ($self.Code = '08') WHERE (($self.K40_fg_af = '3') OR ($self.K40_fg_af = '4' AND $self.K40_brm = '0' AND $self.K40_ts != '1')),
+    RESTRICT ($self.Code = '09') WHERE ($self.K40_fg_af = '1' AND $self.K40_brm = '0' AND $self.K40_ts != '1' AND $self.K40_pl_af = 'd' AND $self.K40_pl IN ('d1','d2')),
+    RESTRICT ($self.Code = '99') WHERE ($self.K40_fg_af IN ('1','2','3','4') AND ($self.K40_pl IN ('d1','h1','h2') OR ($self.K40_pl IN ('d2','h3') AND $self.K40_fst = '0')));
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_ROD
+   ========================================== */
+```
+TABLE $self.K40_ROD {
+    $self.K40_fst,
+    $self.K40_brm,
+    $self.K40_abl,
+    $self.K40_fg_af,
+    $self.K40_ko_af,
+    $self.K40_dsb,
+    $self.T32_BRM
+};
+
+RESTRICT $self.K40_ROD {
+    $self.K40_ROD == '200' AND
+    (
+        ($self.K40_fst == '0' AND $self.K40_brm == '0' AND $self.K40_abl == '0' AND $self.K40_fg_af in ('1', '2') AND $self.K40_ko_af in ('0', '1', '2', '4') AND $self.K40_dsb == '0' AND $self.T32_BRM == '0')
+        OR
+        ($self.K40_fst == '0' AND $self.K40_brm == '0' AND $self.K40_abl == '0' AND $self.K40_fg_af in ('3', '4') AND $self.K40_ko_af in ('2', '3') AND $self.K40_dsb == '0' AND $self.T32_BRM == '0')
+    )
+};
+```
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_RO_AF
+   ========================================== */
+TABLE K40_RO_AF
+CHARACTERISTICS
+    Code AS char,
+    Description AS char
+DEPENDENCIES
+    V_TW0015_Dependency AS logical,
+    V_TW0223_Dependency AS logical,
+    V_TW0304_Dependency AS logical,
+    V_TW0053_Dependency AS logical,
+    V_TW0019_Dependency AS logical,
+    0000009939_Dependency AS logical,
+    V_TW0018_Dependency AS logical,
+    V_TW0020_Dependency AS logical,
+    V_TW0021_Dependency AS logical,
+    V_TW0040_Dependency AS logical,
+    V_TW0016_Dependency AS logical,
+    0000012389_Dependency AS logical,
+    0000014422_Dependency AS logical,
+    0000025769_Dependency AS logical
+CONSTRAINTS
+    RESTRICT ON $self.Code IN ('01', '03', '04', '05', '31') WHEN $self.V_TW0015_Dependency AND $self.V_TW0223_Dependency
+    RESTRICT ON $self.Code IN ('06', '31') WHEN ($self.V_TW0015_Dependency AND $self.V_TW0223_Dependency AND $self.V_TW0304_Dependency)
+    RESTRICT ON $self.Code = '09' WHEN $self.V_TW0053_Dependency
+    RESTRICT ON $self.Code = '10' WHEN $self.V_TW0019_Dependency
+    RESTRICT ON $self.Code = '11' WHEN $self.0000009939_Dependency
+    RESTRICT ON $self.Code = '20' WHEN $self.V_TW0018_Dependency
+    RESTRICT ON $self.Code = '21' WHEN $self.V_TW0020_Dependency
+    RESTRICT ON $self.Code = '22' WHEN $self.V_TW0021_Dependency
+    RESTRICT ON $self.Code = '24' WHEN $self.V_TW0040_Dependency
+    RESTRICT ON $self.Code = '25' WHEN $self.V_TW0040_Dependency
+    RESTRICT ON $self.Code = '26' WHEN $self.V_TW0040_Dependency
+    RESTRICT ON $self.Code = '28' WHEN $self.V_TW0016_Dependency
+    RESTRICT ON $self.Code = '29' WHEN $self.0000012389_Dependency
+    RESTRICT ON $self.Code = '30' WHEN $self.0000014422_Dependency
+    RESTRICT ON $self.Code = '32' WHEN $self.0000025769_Dependency
+END TABLE
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_PS
+   ========================================== */
+```
+TABLE K40_PS
+DESCRIPTION: "K40_PS"
+
+COLUMNS:
+  code: CHAR,
+  description: CHAR,
+  K40_rod: CHAR,
+  K40_fg_af: CHAR,
+  K40_schp: CHAR,
+  K40_ko: CHAR,
+  K40_abl: CHAR
+
+RESTRICT:
+  WHERE $self.K40_abl = '0' AND $self.code IN ('PW04', 'PS12', 'PS13', 'PW08'),
+  WHERE $self.K40_ko != '09' AND $self.code IN ('PW04', 'PS12', 'PS13', 'PS06'),
+  WHERE $self.K40_rod < '200' AND $self.K40_fg_af < '3' AND $self.K40_schp IN ('04', '06') AND $self.code = 'PW04'
+```
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: PS
+   ========================================== */
+```
+TABLE AVC_PS_Table {
+    $self.Code IN ('PS01', 'PS02', 'PW01', 'PW02', 'PW04', 'PW07', 'PW03', 'PS19', 'PS20', 'PS21', 'PS22', 'PW06', 'PS18', 'PW05', 
+                   'PS05', 'PS13', 'PS08', 'PS07', 'PS14', 'PS15', 'PSHA', 'PS06', 'RONI', 'PW08', 'PW09', 'PS16', 'PS17', 'PW10', '0000')
+    $self.Description IN ('PS01', 'PS02', 'PW01', 'PW02', 'PW04', 'PW07', 'PW03', 'PS19', 'PS20', 'PS21', 'PS22', 'PW06', 'PS18', 
+                          'PW05', 'PS05', 'PS13', 'PS08', 'PS07', 'PS14', 'PS15', 'PSHA', 'PS06', 'RONI', 'PW08', 'PW09', 'PS16', 
+                          'PS17', 'PW10', '0000')
+}
+
+RESTRICT {
+    WHEN $self.Dependency_Precondition IN ('V_EKW0024', '0000007822') THEN ($self.Dependency_Syntax = 'gri_art IN (werbe, standard, wgscan)' AND 'vo < 35' AND 'vo < 85' AND 'bs < 09' AND 'bs < 10')
+    WHEN $self.Dependency_Precondition = 'V_EKW0290' THEN ($self.Dependency_Syntax = 'vo < 35')
+    WHEN $self.Dependency_Precondition = 'V_EKW0441' THEN ($self.Dependency_Syntax = 'NOT specified gm_cc')
+    WHEN $self.Dependency_Precondition = '0000015916' THEN ($self.Dependency_Syntax = 'gri_art IN (werbe, standard, wgc)')
+    -- Additional constraints based on the provided dependencies and preconditions...
+}
+```
