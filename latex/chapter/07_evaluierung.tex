@@ -1,0 +1,35 @@
+% !TeX root = ../main.tex
+\chapter{Qualitative Evaluation des Artefakts}
+\label{sec:qualitative_evaluation}
+
+\section{Methodisches Setup und Durchführung}
+\label{subsec:methodisches_setup}
+% Inhalt: Kurzer Recap, wie evaluiert wurde. Erwähnung der 5 ausgewählten Projekte/Dashboards (n=5 für theoretische Sättigung).
+% Fokus: Erklärung des Think-Aloud-Verfahrens mit dem msg-Experten und dessen Ziel (Erfassung des impliziten "Tacit Knowledge").
+
+\section{Ergebnisse der Experten-Evaluation}
+\label{subsec:ergebnisse_evaluation}
+
+\subsection{Nachvollziehbarkeit (Explainability \& Traceability)}
+\label{subsubsec:eval_nachvollziehbarkeit}
+% Positiv: Die Grundidee des Dashboards und die Trennung von Herleitung und Code.
+% Kritik: Die Herleitung bei komplexen NO_TABLE-Entscheidungen war oft noch zu oberflächlich. Das System muss genauer pro Wert argumentieren.
+
+\subsection{Semantische Äquivalenz und Logik (Struktur \& Architektur)}
+\label{subsubsec:eval_semantik_logik}
+% Positiv: Das korrekte, automatische Erkennen von unklassifizierten Merkmalen (hoher inhaltlicher Mehrwert).
+% Kritik / Missing Features: Das völlige Fehlen des Wildcard-Konzepts (Platzhalter), das Ignorieren von Werten ohne Vorbedingung (die immer gültig sein müssten) und das Erzeugen redundanter (deckungsgleicher) Tabellen.
+
+\subsection{Syntaktische Korrektheit (AVC-Compliance)}
+\label{subsubsec:eval_syntaktische_korrektheit}
+% Positiv: Grundsätzlicher Aufbau der Tabellen-Matrizen (Zeilen/Spalten passten oft).
+% Kritik: Hard-Fails bei der Syntax wie z. B. NOT SPECIFIED (in AVC nicht erlaubt) und fehlende Präfixe.
+
+\section{Praxistauglichkeit und Business Value}
+\label{subsec:praxistauglichkeit_business_value}
+% Inhalt: Beantwortung der Abschlussfrage. 
+% Fazit: In der exakten V1-Form spart das Tool aufgrund der manuellen Nacharbeit bei Wildcards noch keine Zeit. Bei Implementierung des Wildcard-Konzepts und dem konsequenten Löschen unklassifizierter Merkmale aus den Tabellen besitzt es jedoch ein enormes Potenzial zur Beschleunigung der Migration.
+
+\section{Limitierungen und Ableitung für zukünftige Entwicklungen (Future Work)}
+\label{subsec:limitierungen_future_work}
+% Inhalt: Was kann der Prototyp prinzipiell (noch) nicht abbilden? (z. B. komplexe Teilmengen-Erkennung, die eigentlich einen SAT-Solver erfordern würde). Übergang zum Abschluss der Arbeit.

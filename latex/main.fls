@@ -160,6 +160,9 @@ INPUT chapter\05_fallstudie.aux
 INPUT .\chapter\06_architektur.aux
 INPUT .\chapter\06_architektur.aux
 INPUT chapter\06_architektur.aux
+INPUT .\chapter\07_evaluierung.aux
+INPUT .\chapter\07_evaluierung.aux
+INPUT chapter\07_evaluierung.aux
 INPUT .\chapter\anhang.aux
 INPUT .\chapter\anhang.aux
 INPUT chapter\anhang.aux
@@ -309,6 +312,12 @@ OUTPUT chapter\06_architektur.aux
 INPUT .\chapter\06_architektur.tex
 INPUT .\chapter\06_architektur.tex
 INPUT chapter\06_architektur.tex
+INPUT .\chapter\07_evaluierung.tex
+INPUT .\chapter\07_evaluierung.tex
+OUTPUT chapter\07_evaluierung.aux
+INPUT .\chapter\07_evaluierung.tex
+INPUT .\chapter\07_evaluierung.tex
+INPUT chapter\07_evaluierung.tex
 INPUT .\chapter\anhang.tex
 INPUT .\chapter\anhang.tex
 OUTPUT chapter\anhang.aux
@@ -363,6 +372,9 @@ INPUT chapter\05_fallstudie.aux
 INPUT .\chapter\06_architektur.aux
 INPUT .\chapter\06_architektur.aux
 INPUT chapter\06_architektur.aux
+INPUT .\chapter\07_evaluierung.aux
+INPUT .\chapter\07_evaluierung.aux
+INPUT chapter\07_evaluierung.aux
 INPUT .\chapter\anhang.aux
 INPUT .\chapter\anhang.aux
 INPUT chapter\anhang.aux
