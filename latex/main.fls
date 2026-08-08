@@ -250,8 +250,8 @@ INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.t
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-OUTPUT main.toc
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmro12.tfm
+OUTPUT main.toc
 INPUT .\abkuerzungen.tex
 INPUT .\abkuerzungen.tex
 INPUT .\abkuerzungen.tex

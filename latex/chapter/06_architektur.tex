@@ -29,28 +29,69 @@ Um dies zu verhindern, wird die Python-Bibliothek \textit{liteLLM} genutzt und i
 \section{Iterative Entwicklung des Prototyps (Design Science Research)}
 \label{sec:iterative_entwicklung}
 
-Gemäß dem \textit{Design Science Research}-Ansatz nach Hevner et al. wurde das Multi-Agenten-System in iterativen Entwicklungs- und Testzyklen (\textit{Build-and-Evaluate}) umgesetzt. Die erste Version des Prototyps (V1-Architektur) basierte auf der Annahme, dass ein Sprachmodell durch gezielte Prompts mit SAP-AVC-Regeln in der Lage ist, die im JSON-Format vorliegenden LO-VC-Daten selbstständig in Variantentabellen zu übersetzen.
+Gemäß dem \textit{Design Science Research}-Ansatz nach Hevner et al. wurde das Multi-Agenten-System in iterativen Entwicklungs- und Testzyklen (\textit{Build-and-Evaluate}) umgesetzt. Um die Ergebnisse objektiv vergleichen zu können, wurde in der gesamten Prototyping-Phase eine konstante Datenbasis verwendet. Diese bestand aus fünf Beispielsmerkmalen inklusive ihrer Ausprägungen und Vorbedingungen, die aus einem realen Kundenprojekt extrahiert wurden.
 
-Die folgenden Abschnitte dokumentieren die schrittweise Weiterentwicklung dieser Systemarchitektur. In jeder Evaluierungsphase wurden bestehende Fehler und technische Limitierungen des vorherigen Entwurfs analysiert und behoben, bis die finale Architektur des Prototyps feststand.
-\subsection{Zyklus 1: Limitierungen rein LLM-basierter Strukturgenerierung}
+Die folgenden Abschnitte dokumentieren die schrittweise Weiterentwicklung der Systemarchitektur. In jeder Phase wurden bestehende Fehler und technische Limitierungen analysiert und behoben, bis die finale Architektur feststand.
+
+\subsection{Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}
 \label{subsec:zyklus_1_llm_limitierungen}
 
-Im ersten Prototyping-Zyklus wurde der unstrukturierte JSON-Output (Abstrakter Syntaxbaum) des LO-VC-Modells direkt an das Agenten-Netzwerk (CrewAI) übergeben. Der zuständige Agent erhielt den Auftrag, selbstständig Muster in den logischen Bedingungen zu erkennen (z.B. \texttt{K40\_FG\_AF = '1'}) und diese in eine tabellarische Matrix zu überführen.
+Die erste Version des Prototyps (V1-Architektur) basierte auf der Annahme, dass ein Netzwerk aus drei KI-Agenten (Analyst, Architekt, Synthesizer) die JSON-Daten schrittweise verarbeiten kann. Der Prozess lief sequenziell pro Merkmal ab: Das System erhielt ein standardisiertes JSON-Dokument mit allen Merkmalen, Werten und Vorbedingungen. Die Agenten sollten die Daten nacheinander bearbeiten und am Ende ein strukturiertes Zielformat ausgeben. Dieses Ergebnis sollte entweder aus einfachem AVC-Code bestehen (falls das System entscheidet, keine Tabelle zu generieren) oder aus einem Tabellenvorschlag inklusive des zugehörigen AVC-Aufrufs.
 
-Die Evaluierung dieses Ansatzes offenbarte fundamentale konzeptionelle Schwächen generativer KI im Kontext deterministischer Datenstrukturen. Das LLM neigte stark zu strukturellen Halluzinationen: Bei asymmetrischen Bedingungen erzwang das Modell symmetrische Matrizen, indem es nicht-existente Spalten erfand oder Leerwerte injizierte. Diese stochastische Natur des LLMs verletzte die strikten Logikvorgaben der SAP-Variantentabellen. Die Erkenntnis aus Zyklus 1 determinierte den Architekturwechsel: Die abstrakte Extraktion von Tabellenstrukturen darf nicht probabilistisch erfolgen.
+Die ersten Tests mit dieser grundlegenden Architektur zeigten jedoch deutliche Schwächen:
 
-\subsection{Zyklus 2: Der neuro-symbolische Pivot und heuristisches Sub-Clustering}
-\label{subsec:zyklus_2_neuro_symbolisch}
+\begin{itemize}
+    \item \textbf{Mangelnde Reproduzierbarkeit:} Das System lieferte keine deterministischen Ergebnisse. Bei drei Durchläufen mit exakt derselben Datenbasis generierten die Agenten drei unterschiedliche Ausgaben.
+    \item \textbf{Fehlendes Domänenwissen:} Einem \textit{Large Language Model} (LLM) lediglich per System-Prompt die Rolle eines SAP-AVC-Entwicklers zuzuweisen, reichte nicht aus. Das Modell kannte die spezifische Syntax nicht ausreichend, verlor schnell den fachlichen Kontext und nutzte falsche Bezeichnungen für Merkmale und Werte.
+    \item \textbf{Probleme bei der Tabellenbildung:} Die Hauptaufgabe – zu bewerten, wann eine Variantentabelle sinnvoll ist und wann nicht – überforderte das System. Besonders in Fällen, in denen innerhalb eines Merkmals nur bestimmte Werte für eine Tabelle geeignet waren und andere isoliert behandelt werden mussten, konnte das LLM keine korrekten und konsistenten Entscheidungen treffen.
+\end{itemize}
 
-Zur Behebung der Halluzinationsproblematik wurde die Architektur in Zyklus 2 zu einem \textit{neuro-symbolischen} System umgebaut. Die Aufgabenverteilung wurde separiert: Ein deterministisches Python-Modul (symbolische KI) übernimmt das strukturelle Parsen und Clustern der Tabellen, während das LLM (neuronale KI) ausschließlich für die syntaktische Transformation der vorstrukturierten Baupläne in SAP-AVC-Code zuständig ist.
+\subsection{Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}
+\label{subsec:zyklus_2_refaktorierung_halluzinationen}
 
-Hierfür wurde ein heuristischer \textit{Sub-Clustering-Algorithmus} in Python implementiert. Dieser Algorithmus bereinigt die LO-VC-Historie (das Neutralisieren obsoleter \texttt{dummy}-Merkmale) und aggregiert Werte mit identischer Spalten-Signatur zu Sub-Tabellen. Logiken mit komplexen Operatoren (\texttt{<, >, OR}) werden deterministisch isoliert (Standalone). Dieser Zwischenschritt transformierte den unstrukturierten LO-VC-Code in strikt formatierte, fehlerfreie JSON-Baupläne.
+Um den identifizierten Schwächen aus dem ersten Zyklus zu begegnen, wurden in der zweite Iteration mehrere methodische und strukturelle Anpassungen am Prototyp vorgenommen. Zunächst wurde der Quellcode in verschiedene Module (\texttt{main.py}, \texttt{agents.py}, \texttt{utils.py}) aufgeteilt, um die Übersichtlichkeit und Wartbarkeit der Anwendung zu verbessern. Zudem wurden die Aufgabenbeschreibungen (Prompts) der einzelnen Agenten inhaltlich deutlich geschärft. 
 
-\subsection{Zyklus 3: Lexikalische Resilienz durch das Placeholder-Pattern}
-\label{subsec:zyklus_3_platzhalter}
+Um das im ersten Durchlauf fehlende Syntaxwissen auszugleichen, wurde ein separates Wissensdokument angelegt, das dem Synthesizer-Agenten als Referenz für gültigen AVC-Code dienen sollte. Zur besseren Überprüfbarkeit der generierten Ergebnisse wurde außerdem eine Hilfsfunktion in die \texttt{utils.py} integriert. Diese formatiert den Text-Output des \textit{Large Language Models} so um, dass nach jedem Durchlauf automatisch ein strukturiertes Excel-Dashboard erstellt wird.
 
-Die Evaluierung des Sub-Clusterings zeigte eine hohe Erfolgsquote bei der Tabellenbildung, deckte jedoch eine kritische Schwachstelle in der textuellen Vorverarbeitung (Preprocessing) auf. Der Algorithmus, der unklassifizierte Merkmale mit einem \texttt{[UNCLASSIFIED]}-Tag markieren sollte, agierte kontextblind und zerstörte valide SAP-Konstrukte (z.B. Operatoren wie \texttt{ne} oder Systemvariablen wie \texttt{\$self}). Zudem scheiterte das stringbasierte Parsing an asymmetrischen Klammersetzungen (sog. \textit{Dangling Brackets}), die durch das Zerteilen von verschachtelten Bedingungen entstanden.
+Die Evaluierung dieses angepassten Systems zeigte zunächst einen organisatorischen Erfolg: Die Aufbereitung der Ergebnisse im Excel-Dashboard funktionierte zuverlässig und erleichterte die manuelle Code-Prüfung erheblich. Bei der inhaltlichen Logikgenerierung traten jedoch neue Probleme auf:
 
-Zur Lösung wurde in Zyklus 3 das aus dem Compilerbau stammende \textit{Placeholder-Pattern} (Schutzschild-Muster) integriert, um Strings und Systemvariablen temporär zu maskieren, sowie die Regex-Logik fehlertolerant gestaltet. Parallel dazu wurden letzte Autonomie-Tendenzen der Agenten (z.B. das Überschreiben der Tabellenentscheidung oder das Erfinden falscher Zielmerkmalsnamen) durch striktes Prompt-Alignment unterbunden. 
+\begin{itemize}
+    \item \textbf{Anhaltende Stochastik:} Trotz der geschärften Prompts blieb das System unzuverlässig. Drei identische Durchläufe produzierten weiterhin drei unterschiedliche Ergebnisse.
+    \item \textbf{Übergenerierung und Halluzinationen:} Das System verstand nun zwar grundsätzlich den Auftrag, zwischen Variantentabellen und isolierten \textit{IF}-Bedingungen (Standalone) zu unterscheiden. Allerdings zeigte das LLM die Tendenz, zwanghaft für jedes Merkmal riesige Tabellen generieren zu wollen, in die alle Werte gequetscht wurden. Dabei verlor das Modell den Bezug zum JSON-Input: Es erfand Spaltennamen (teilweise aus einfachen Syntax-Fragmenten), halluzinierte nicht-existente Tabelleneinträge und behalf sich mit Platzhaltern, um die fehlerhaften Tabellenstrukturen künstlich aufrechtzuerhalten.
+    \item \textbf{Problem des festverdrahteten Domänenwissens:} Ein konzeptioneller Fehler zeigte sich beim Umgang mit spezifischen Kundendaten. Das Herausfiltern des Wertes \glqq specified dummy\grqq{} (ein kundenindividueller Workaround für obsoleten Code) war in dieser Phase noch fest im System-Prompt des Agenten einprogrammiert (Hardcoding).
+\end{itemize}
 
-Das Resultat dieser Iterationen ist die finale, zweistufige Pipeline: Eine deterministische Vorverarbeitung extrahiert fehlerfrei die Tabellenstrukturen, während das spezialisierte CrewAI-Netzwerk diese Baupläne zuverlässig in syntaktisch validen SAP S/4HANA AVC-Code synthetisiert.
+Um die mangelnde Flexibilität beim Domänenwissen sofort zu adressieren, wurde noch innerhalb dieses Zyklus ein externes Konfigurationsdokument eingeführt. Der Entwickler kann hier projektbezogene Sonderregeln dynamisch hinterlegen, wodurch das Kernsystem domänenunabhängig wird. Begleitend wurden die System-Prompts der Agenten sowie das Dokument für die AVC-Syntax weiter detailliert, in der Hoffnung, die Präzision der Tabellengenerierung zu erhöhen.
+
+Die erneute Prüfung dieser spezifischen Anpassungen brachte jedoch keine signifikante Verbesserung. Die Ergebnisse blieben bei mehrfacher Ausführung weiterhin inkonsistent, waren fachlich fehlerhaft und von den beschriebenen strukturellen Halluzinationen geprägt. 
+
+Die abschließende Erkenntnis aus Zyklus 2 zeigte unmissverständlich: Ein Sprachmodell ist selbst mit ausgelagertem Domänenwissen, externen Hilfsdokumenten und maximal geschärften Rollen nicht in der Lage, deterministische Datenstrukturen (wie Tabellen) konsistent und fehlerfrei aus einem JSON zu extrahieren.
+
+\subsection{Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}
+\label{subsec:zyklus_3_regelbasiert}
+
+Die Tests zeigten, dass die architektonische Entscheidungsfindung (Tabelle vs. Einzelbedingung) für das Sprachmodell zu komplex war. Um die Aufgabe zu vereinfachen, musste geklärt werden, ob es für die Erstellung von Variantentabellen klare, deterministische Regeln gibt. Die Rücksprache mit einem Fachexperten bestätigte dies: Eine Tabelle ist in der industriellen Praxis nur dann sinnvoll, wenn direkte Gleichsetzungsbedingungen vorliegen (z.\,B. \texttt{Merkmal\_A = '1'}). Bei Ungleichungen (z.\,B. \texttt{<>}) verbietet sich eine Tabelle. Zudem lohnt sich der Aufbau einer Tabelle meist erst, wenn mehr als zwei Merkmale involviert sind, um eine Fragmentierung in viele Kleinsttabellen zu vermeiden.
+
+Ein zweiter wichtiger Punkt aus dem Experteninterview betraf den Umgang mit der \texttt{specified}-Syntax. Diese prüft, ob ein Merkmal im Material überhaupt bewertet wurde. Der Kunde nutzte dies als Workaround, um obsoleten Code (Dummy-Werte) zu blockieren, da diese Dummy-Merkmale im Material nie klassifiziert waren. Um dieses harte Domänenwissen nicht mehr im Agenten-Prompt festschreiben zu müssen, wurde ein vorgeschaltetes Python-Skript entwickelt. Dieses Skript liest zunächst das gesamte JSON-Dokument ein und erstellt eine vollständige Liste aller im Material existierenden Merkmale. Mit dieser Liste kann das System im Vorfeld deterministisch prüfen, ob ein Ausdruck wie \texttt{specified(Merkmal\_X)} wahr oder falsch ist, und den entsprechenden Code-Block automatisch verarbeiten oder ignorieren. 
+
+Zur besseren Fehleranalyse wurden ab dieser Phase zudem dedizierte Debugging-Dateien generiert, um die Zwischenergebnisse der Vorverarbeitung gezielt prüfen zu können, ohne immer den finalen Code abwarten zu müssen. Eines dieser Zwischenergebnisse war das gezielte Markieren von unklassifizierten Merkmalen durch den Python-Filter, um dem Agenten die syntaktische Verarbeitung zu erleichtern.
+
+Die Evaluierung dieses Zyklus zeigte spürbare Verbesserungen: Die Ergebnisse wirkten weniger zufällig, und die Trennung zwischen Tabellenvorschlägen und \textit{IF}-Bedingungen funktionierte teilweise. Dennoch traten bei mehrfachen Durchläufen weiterhin Halluzinationen und Inkonsistenzen auf. Zudem zeigte sich eine neue strukturelle Herausforderung: Das System erzeugte redundante Tabellen. Teilweise waren neu generierte Tabellen exakte Duplikate, teilweise handelte es sich um logische Teiltabellen (Sub-Tabellen), die inhaltlich bereits durch größere Tabellen abgedeckt waren.
+
+\subsection{Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}
+\label{subsec:zyklus_4_neuro_symbolisch}
+
+Aufgrund der begrenzten Bearbeitungszeit der Masterarbeit mussten in Bezug auf diese Tabellen-Redundanzen und die Syntax-Prüfung klare Grenzen für den Funktionsumfang (Scope) des Prototyps gezogen werden:
+
+\begin{itemize}
+    \item \textbf{Tabellen-Redundanzen:} Das Erkennen und Eliminieren von logischen Teiltabellen erfordert komplexe mathematische Berechnungen (z.\,B. durch einen SAT-Solver). Da dies zeitlich nicht umsetzbar war, verbleibt dieses Problem in der \textit{Future Work}. Umgesetzt wurde lediglich ein Modul, das exakt identische Tabellen zusammenführt (Join). Obwohl auch dies deterministisch über Python lösbar wäre, wurde es aus Zeitgründen als Agenten-Aufgabe im System belassen.
+    \item \textbf{Syntax-Validierung:} Eine fehlerfreie syntaktische Prüfung von AVC-Code erfordert idealerweise einen \textit{Abstract Syntax Tree} (AST) Parser. Auch dies wurde in die \textit{Future Work} verschoben. Die Validierung der häufigsten Fehler (z.\,B. fehlende \texttt{\$self}-Präfixe) übernimmt im finalen Prototyp stattdessen ein dedizierter KI-Agent mit rudimentären Prüfregeln.
+\end{itemize}
+
+Die weitreichendste Änderung in diesem finalen Zyklus war die massive Ausweitung der deterministischen Vorverarbeitung (Preprocessing). Es wurde ein umfassendes Python-Skript integriert, das den Agenten den Großteil der kognitiven Arbeit abnimmt:
+Es arbeitet auf einer Kopie der Rohdaten, löscht leere Werte ohne Vorbedingungen und bereinigt alte Kommentare. Es verknüpft mehrere Vorbedingungen logisch mit \texttt{AND}, korrigiert fehlerhafte Altlogik (\glqq Ghost Logic\grqq{}), markiert unklassifizierte Merkmale und fällt vor allem die strikte, deterministische Entscheidung, ob und wie viele Tabellen für ein Merkmal gebaut werden. Zuletzt wurde eine Hilfsfunktion implementiert, die sicherstellt, dass aus der Agenten-Antwort ausschließlich reines JSON extrahiert wird, um Programmabstürze durch unnötigen Begleittext (z.\,B. \glqq Hier ist das Ergebnis:\grqq{}) zu verhindern.
+
+\textbf{Ergebnis und architektonisches Fazit:} \\
+Durch diese Anpassungen entwickelte sich die Architektur von einer reinen KI-Pipeline zu einem \textit{neuro-symbolischen} System. Die Künstliche Intelligenz wurde schrittweise aus der logischen Entscheidungsfindung verdrängt. Dem LLM verbleibt im finalen Prototyp lediglich die Aufgabe, den vorbereiteten Bauplan in AVC-Code zusammenzusetzen und grundlegend zu validieren. 
+
+Die Ergebnisse waren im letzten Testlauf reproduzierbar; das System lieferte bei drei Durchläufen dreimal exakt dasselbe Resultat. Die zentrale Erkenntnis dieser iterativen Entwicklung ist, dass der Problemraum der Code-Migration stark deterministisch ist. Der Einsatz von generativer KI erweist sich für die strukturelle Analyse als ineffizient und ist bei vollständiger Umsetzung mathematischer Solver (wie AST-Parser und SAT-Solver) für diesen Teilprozess weitestgehend obsolet.
