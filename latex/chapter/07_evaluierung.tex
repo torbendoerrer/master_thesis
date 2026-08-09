@@ -4,9 +4,19 @@
 
 \section{Methodisches Setup und Durchführung}
 \label{subsec:methodisches_setup}
-% Inhalt: Kurzer Recap, wie evaluiert wurde. Erwähnung der 5 ausgewählten Projekte/Dashboards (n=5 für theoretische Sättigung).
-% Fokus: Erklärung des Think-Aloud-Verfahrens mit dem msg-Experten und dessen Ziel (Erfassung des impliziten "Tacit Knowledge").
 
+Da innerhalb der Bearbeitungszeit kein Zugriff auf bereits vollständig manuell migrierte Kundenprojekte (\textit{Ground Truth}) bestand, war eine rein quantitative Messung (z.\,B. Fehlerquoten) nicht durchführbar. Um den Prototyp stattdessen fundiert zu evaluieren, wurde das Forschungsdesign als qualitative Fallstudie gemäß den etablierten Richtlinien für das Software Engineering nach Runeson und Höst strukturiert \parencite{runesonGuidelinesConductingReporting2009}. Das Vorgehen definiert sich durch folgende Kernkriterien:
+
+\textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} \\
+Das Ziel der Fallstudie ist die qualitative Überprüfung der vom Prototyp getroffenen Architekturentscheidungen und des generierten Codes. Um das System gezielt auf seine Praxistauglichkeit zu testen, wurden drei zentrale Fragestellungen definiert: (1) Sind die Herleitungen der Agenten für einen menschlichen Entwickler nachvollziehbar? (2) Bleibt die fachliche Logik (Semantik) erhalten? (3) Ist der generierte SAP-AVC-Code syntaktisch valide? 
+
+\textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} \\
+Der untersuchte \glqq Fall\grqq{} ist die Analyse des System-Outputs durch einen Fachexperten der \textit{msg systems ag}. Als Datengrundlage (Selektionsstrategie) dienten fünf hochkomplexe Materialmerkmale samt ihrer Vorbedingungen aus einem realen Kundenprojekt, die vorab durch das Agentensystem in fünf Excel-Dashboards transformiert wurden. Die Wahl von genau fünf Stichproben begründet sich durch das qualitative Prinzip der Datensättigung, welches in der Fallstudienforschung als Abbruchkriterium (\textit{Stopping Criterion}) dient \parencite{runesonGuidelinesConductingReporting2009}. Da die Systemarchitektur deterministischen Mustern folgt, wiederholen sich grundlegende Fehler ab einer gewissen Menge. Die fünf Dashboards reichten aus, um die zentralen Verhaltens- und Fehlermuster der KI vollständig offenzulegen; weitere Testfälle hätten keinen fundamental neuen Erkenntnisgewinn mehr geliefert.
+
+\textbf{Datenerhebungsmethode (Methods):} \\
+Die Datenerhebung erfolgte in einer 60-minütigen Sitzung und kombinierte zwei Methoden. Zunächst wurde das \textit{Think-Aloud}-Verfahren (Methode des lauten Denkens) angewendet \parencite{seamanQualitativeMethodsEmpirical1999}. Der Experte verglich die fünf ursprünglichen JSON-Daten völlig frei mit den generierten Dashboards und sprach seine Fehleranalysen und Gedanken laut aus. Ziel war es, das Vorgehen nicht durch vorgegebene Fragen einzuengen, sondern völlig offen für unerwartete Erkenntnisse und das implizite Fachwissen (\textit{Tacit Knowledge}) des Entwicklers zu sein. Der Autor verhielt sich hierbei als rein neutraler Beobachter. 
+
+Im direkten Anschluss an diese offene Phase wurde ein semi-strukturiertes Interview geführt \parencite{runesonGuidelinesConductingReporting2009}. Anhand eines kurzen Leitfadens wurden die zuvor definierten Kernfragestellungen (Nachvollziehbarkeit, Semantik, Syntax, Praxistauglichkeit) gezielt abgefragt, um die freien Beobachtungen des Experten strukturiert zusammenzufassen. Das vollständige Transkript dieser Sitzung (siehe Anhang) bildet die Datengrundlage für die folgende Auswertung.
 \section{Ergebnisse der Experten-Evaluation}
 \label{subsec:ergebnisse_evaluation}
 
