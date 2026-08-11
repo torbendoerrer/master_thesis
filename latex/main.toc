@@ -70,11 +70,15 @@
 \contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{48}{}%
 \contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{50}{}%
 \contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{50}{}%
-\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{51}{}%
-\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{51}{}%
-\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{51}{}%
-\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{51}{}%
-\contentsline {section}{\numberline {7.3}Praxistauglichkeit und Business Value}{51}{}%
-\contentsline {section}{\numberline {7.4}Limitierungen und Ableitung für zukünftige Entwicklungen (Future Work)}{51}{}%
-\contentsline {chapter}{Anhang Anhang}{56}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{57}{}%
+\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{52}{}%
+\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{52}{}%
+\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{53}{}%
+\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{54}{}%
+\contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{55}{}%
+\contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{56}{}%
+\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{58}{}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{58}{}%
+\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{58}{}%
+\contentsline {section}{\numberline {8.3}Zukünftige Entwicklungen (Future Work)}{58}{}%
+\contentsline {chapter}{Anhang Anhang}{63}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{64}{}%

@@ -163,6 +163,9 @@ INPUT chapter\06_architektur.aux
 INPUT .\chapter\07_evaluierung.aux
 INPUT .\chapter\07_evaluierung.aux
 INPUT chapter\07_evaluierung.aux
+INPUT .\chapter\08_fazit.aux
+INPUT .\chapter\08_fazit.aux
+INPUT chapter\08_fazit.aux
 INPUT .\chapter\anhang.aux
 INPUT .\chapter\anhang.aux
 INPUT chapter\anhang.aux
@@ -318,6 +321,12 @@ OUTPUT chapter\07_evaluierung.aux
 INPUT .\chapter\07_evaluierung.tex
 INPUT .\chapter\07_evaluierung.tex
 INPUT chapter\07_evaluierung.tex
+INPUT .\chapter\08_fazit.tex
+INPUT .\chapter\08_fazit.tex
+OUTPUT chapter\08_fazit.aux
+INPUT .\chapter\08_fazit.tex
+INPUT .\chapter\08_fazit.tex
+INPUT chapter\08_fazit.tex
 INPUT .\chapter\anhang.tex
 INPUT .\chapter\anhang.tex
 OUTPUT chapter\anhang.aux
@@ -375,6 +384,9 @@ INPUT chapter\06_architektur.aux
 INPUT .\chapter\07_evaluierung.aux
 INPUT .\chapter\07_evaluierung.aux
 INPUT chapter\07_evaluierung.aux
+INPUT .\chapter\08_fazit.aux
+INPUT .\chapter\08_fazit.aux
+INPUT chapter\08_fazit.aux
 INPUT .\chapter\anhang.aux
 INPUT .\chapter\anhang.aux
 INPUT chapter\anhang.aux
