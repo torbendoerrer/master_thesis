@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  16 AUG 2026 14:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  16 AUG 2026 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,12 +664,12 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 Package acronym Info: Label `acro:DSR' newly defined as it shall be overridden
 although it is yet undefined on input line 34.
- [3] [4]
+ [3]
 Overfull \hbox (7.43684pt too wide) in paragraph at lines 76--77
 []\T1/lmr/m/n/12 (-20) Dokumentiert
  []
 
-) [5]
+[4]) [5]
 \openout2 = `chapter/02_theoretische_grundlagen.aux'.
 
  (chapter/02_theoretische_grundlagen.tex
@@ -1028,7 +1028,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (78 pages, 498274 bytes).
+Output written on main.pdf (78 pages, 498089 bytes).
 PDF statistics:
  326 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
