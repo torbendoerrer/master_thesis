@@ -3,17 +3,94 @@
 
 \section{Zusammenfassung der Arbeit}
 \label{subsec:zusammenfassung}
-% Inhalt: Ein kurzer, prägnanter Rückblick auf die Ausgangslage. Was war das initiale Problem? (Zeit- und fehlerintensive manuelle Migration von SAP LO-VC nach AVC).
-% Lösungsansatz: Kurze Zusammenfassung der Methodik (Entwicklung eines neuro-symbolischen Agentensystems auf Basis von LLMs).
-% Kernergebnisse: Zusammenfassung der Evaluierungsergebnisse. Betonung der Stärken (hervorragende Extraktion von Logik und unklassifizierten Merkmalen) sowie der aktuellen Schwächen in der Tabellenarchitektur.
+Die vorliegende Masterarbeit befasste sich mit der hochaktuellen und komplexen Herausforderung produzierender Unternehmen, historisch gewachsene Produktmodelle der SAP-Variantenkonfiguration von der imperativen LO-VC-Logik in die moderne, deklarative Advanced Variant Configuration (AVC) zu migrieren [cite: 1]. Da direkte, regelbasierte 1:1-Übersetzer an dem fundamentalen Paradigmenwechsel der Systeme scheitern und monolithische LLM-Ansätze aufgrund der algorithmischen Komplexität zu Halluzinationen neigen, wurde die Konzeption eines Multi-Agenten-Systems (MAS) als innovativer Lösungsansatz gewählt [cite: 1].
+
+Unter Anwendung des methodischen Paradigmas des Design Science Research (DSR) wurde zunächst durch Experteninterviews und einen praktischen Selbstversuch die technologische sowie organisationale Problemstellung durchdrungen [cite: 1]. Dies ermöglichte die Extraktion eines dreistufigen kognitiven Modells (Bereinigung, Architektur-Entwurf, Synthese), welches als Blaupause für das IT-Artefakt diente [cite: 1]. Die anschließende Prototypenentwicklung mit dem Framework CrewAI auf dem SAP AI Core zeigte in iterativen Zyklen, dass rein agentenbasierte Architekturen bei deterministischen Tabellenstrukturen an ihre Grenzen stoßen [cite: 1]. Infolgedessen wurde das System zu einer neuro-symbolischen Architektur weiterentwickelt, bei der deterministische Python-Skripte die komplexe Vorverarbeitung übernehmen und das Sprachmodell gezielt für die Synthese des AVC-Codes eingesetzt wird [cite: 1]. Die abschließende qualitative Evaluation mit einem Fachexperten bestätigte das immense Potenzial des Systems, deckte jedoch auch noch bestehende architektonische Schwächen auf, die einen sofortigen, vollautonomen Produktiveinsatz aktuell noch verhindern [cite: 1].
+
+% \section{Beantwortung der Forschungsfragen}
+% \label{subsec:beantwortung_rqs}
+% Die im Rahmen der Einleitung definierten Forschungsfragen lassen sich basierend auf den empirischen und praktischen Ergebnissen dieser Arbeit wie folgt beantworten:
+
+% \begin{itemize}
+%     \item \textbf{FF1 (Baseline \& Problemraum):} Welche manuellen Prozessschritte und kognitiven Hürden prägen den aktuellen Migrationsprozess und wie hoch ist der zeitliche Aufwand (Baseline)?
+%     \begin{itemize}
+%         \item Die manuelle Migration eines mittleren Modells nimmt in der industriellen Praxis etwa drei bis vier Personentage in Anspruch [cite: 1].
+%         \item Als massivster Flaschenhals wurde dabei die Transformation der Vorbedingungswelt identifiziert, die rund zwei Drittel des Gesamtaufwands ausmacht [cite: 1].
+%         \item Neben dem reinen Übersetzungsaufwand besteht die primäre kognitive Hürde in der strukturellen und semantischen Bereinigung historischer Altlasten (ca. 40\,\% des Aufwands), was die Notwendigkeit einer vorgeschalteten Analyseeinheit verdeutlicht [cite: 1].
+%     \end{itemize}
+    
+%     \item \textbf{FF2 (Kognitive Blaupause):} Wie lassen sich die intellektuellen Übersetzungsleistungen eines menschlichen Entwicklers dekonstruieren, um daraus ein rollenbasiertes kognitives Modell (Blaupause) für KI-Agenten abzuleiten?
+%     \begin{itemize}
+%         \item Durch den praktischen Selbstversuch konnte der Übersetzungsprozess erfolgreich in drei sequenzielle Denkphasen dekonstruiert werden [cite: 1].
+%         \item Das extrahierte Modell besteht aus: 1. der semantischen Bereinigung von totem Code (Analysten-Perspektive), 2. der architektonischen Restrukturierung von Vorbedingungen in Variantentabellen (Architekten-Perspektive) und 3. der strikten formellen Codierung (Entwickler-Perspektive) [cite: 1]. 
+%         \item Dieses Modell diente als direktes Fundament für die anfängliche Rollendefinition innerhalb des CrewAI-Frameworks [cite: 1].
+%     \end{itemize}
+    
+%     \item \textbf{FF3 (Architektur \& Neuro-Symbolik):} Welche technologischen Limitierungen weisen rein generative (LLM-basierte) Agenten bei der Transformation in deterministische SAP-Strukturen auf und wie lassen sich diese durch eine hybride, neuro-symbolische Architektur auflösen?
+%     \begin{itemize}
+%         \item Die DSR-Zyklen zeigten eindeutig, dass rein LLM-basierte Architekturen bei der Generierung deterministischer Variantentabellen an ihre algorithmischen Grenzen stoßen [cite: 1]. Sie neigen zu Inkonsistenzen, halluzinieren unlogische Tabellenstrukturen und scheitern am zuverlässigen Abgleich von Schnittmengen [cite: 1].
+%         \item Die Lösung bestand in der Abkehr von einem reinen KI-Ansatz hin zu einer neuro-symbolischen Architektur [cite: 1]. Dabei wurden die komplexen Vorarbeiten (Analyst, Architekt) durch harte, deterministische Python-Algorithmen abgelöst, während die generative KI ausschließlich auf die exakte Synthese des bereinigten Codes fokussiert wurde [cite: 1].
+%     \end{itemize}
+    
+%     \item \textbf{FF4 (Evaluation \& Business Value):} Welchen qualitativen Mehrwert (Explainability, semantische Korrektheit) liefert das entwickelte Artefakt im Vergleich zur manuellen Baseline und wo liegen die verbleibenden Limitierungen für einen vollautonomen Praxiseinsatz?
+%     \begin{itemize}
+%         \item Das Artefakt liefert bereits in Version 1 einen massiven qualitativen Mehrwert (Business Value), da es unklassifizierte Merkmale und historischen toten Code vollautomatisch und fehlerfrei identifiziert, was die kognitive Last der Entwickler drastisch senkt [cite: 1].
+%         \item Eine direkte Zeitersparnis ist aktuell noch nicht messbar, da architektonische Limitierungen (insbesondere das Fehlen von Wildcards zum Auffüllen von Tabellen sowie redundante Schnittmengen) manuelle Nacharbeiten am Zielcode zwingend erforderlich machen [cite: 1].
+%     \end{itemize}
+% \end{itemize}
 
 \section{Beantwortung der Forschungsfragen}
 \label{subsec:beantwortung_rqs}
-% Inhalt: Systematische Beantwortung der in Kapitel 1 aufgestellten Forschungsfragen (Research Questions).
-% Struktur: Jede RQ (z. B. RQ1, RQ2, etc.) wird idealerweise kurz wiederholt und in 1-2 kompakten Sätzen basierend auf den gewonnenen Erkenntnissen der Arbeit präzise beantwortet.
+
+Die im Rahmen der Einleitung definierten Forschungsfragen lassen sich basierend auf den empirischen und praktischen Ergebnissen dieser Arbeit wie folgt beantworten:
+
+\textbf{Beantwortung der Hauptforschungsfrage:}\\
+\textit{Inwiefern lässt sich die semantische und syntaktische Migration von historischer LO-VC-Logik zu deklarativer AVC-Syntax durch eine Multi-Agenten-Architektur automatisieren, und wo liegen die systemischen Grenzen dieses Ansatzes?}
+
+Die Automatisierung der Migration durch eine reine Multi-Agenten-Architektur ist in der Praxis nur partiell umsetzbar und erfordert zwingend eine methodische Weiterentwicklung hin zu einem neuro-symbolischen System [cite: 5]. Während Sprachmodelle (LLMs) eine enorme Stärke bei der semantischen Analyse von historischem Code und der fehlerfreien Identifikation von kognitiven Altlasten aufweisen, liegen ihre systemischen Grenzen in der probabilistischen Verarbeitung von deterministischen SAP-Constraint-Netzwerken [cite: 5]. Der KI-basierte Ansatz scheitert insbesondere an der konsistenten Erzeugung fehlerfreier Variantentabellen, dem korrekten Umgang mit Schnittmengen und der Validierung formaler Syntax [cite: 5]. Erst durch die gezielte Auslagerung mathematisch-logischer Vorverarbeitungsschritte an deterministische Python-Skripte kann das Potenzial der generativen KI für die finale Code-Synthese praxistauglich und sicher genutzt werden [cite: 5].
+
+Zur detaillierten Aufschlüsselung werden die vier Unter-Forschungsfragen wie folgt beantwortet:
+
+\begin{itemize}
+    \item \textbf{FF1 (Problemraum \& Baseline):} Welche prozessualen und kognitiven Hürden prägen die manuelle Migration historischer SAP-Modelle in die neue Zielarchitektur, und wie lässt sich die daraus resultierende Baseline zeitlich abschätzen?
+    \begin{itemize}
+        \item Die manuelle Migration eines durchschnittlichen Konfigurationsmodells nimmt in der industriellen Praxis laut Expertenschätzung etwa drei bis vier Personentage in Anspruch.
+        \item Zur zeitlichen Einordnung der Baseline muss zwischen zwei Szenarien unterschieden werden: Bei einem kompletten Neuaufbau (Greenfield-Ansatz) verteilt sich der Aufwand auf etwa 20\% für die Merkmalswelt, 40\% für die vorbereitende Analyse und Bereinigung von historischem "`totem Code"' sowie 40\% für die eigentliche syntaktische Umsetzung.
+        \item Da ein Greenfield-Ansatz maschinell nicht abgebildet werden kann, fokussiert sich der Prototyp auf die \textit{direkte Migration}. In diesem Szenario bildet die prozessuale Transformation der Vorbedingungswelt in deklarative Constraints den absoluten Flaschenhals, welcher rund 66\% (zwei Drittel) des Gesamtaufwands ausmacht und somit die relevante zeitliche Zielgröße für das entwickelte Automatisierungswerkzeug definiert.
+    \end{itemize}
+
+    \item \textbf{FF2 (Kognitive Modellierung):} Wie lassen sich die manuellen Übersetzungsschritte eines menschlichen Entwicklers methodisch dekonstruieren, um daraus ein geeignetes Rollen- und Aufgabendesign für ein Multi-Agenten-System abzuleiten?
+    \begin{itemize}
+        \item Durch einen empirischen Selbstversuch auf Code-Ebene konnte der Übersetzungsprozess erfolgreich in ein dreistufiges, kognitives Phasenmodell dekonstruiert werden [cite: 5].
+        \item Diese Phasen umfassen: 1. die semantische Bereinigung von Altlasten, 2. die architektonische Entscheidung über Tabellenstrukturen und 3. die finale syntaktische Codierung [cite: 5].
+        \item Dieses sequenzielle Denkmodell diente als direkte Blaupause für das initiale Rollendesign (Analyst, Architekt, Synthesizer) und die Aufgaben-Delegation innerhalb des CrewAI-Frameworks [cite: 5].
+    \end{itemize}
+
+    \item \textbf{FF3 (Architekturentwurf \& Limitierungen):} Welche technologischen Herausforderungen ergeben sich beim Einsatz generativer KI-Agenten für komplexe Code-Transformationen, und wie muss die Systemarchitektur iterativ gestaltet werden, um deterministische Zielstrukturen (wie Variantentabellen) zuverlässig zu erzeugen?
+    \begin{itemize}
+        \item Die iterative DSR-Entwicklung deckte auf, dass rein generative Agenten bei der Erstellung von Variantentabellen stark halluzinieren, unlogische Spalten erfinden und an der redundanzfreien Definition von Schnittmengen scheitern [cite: 5].
+        \item Um deterministische Zielstrukturen zuverlässig zu generieren, musste die Systemarchitektur im vierten Iterationszyklus fundamental zu einem neuro-symbolischen Ansatz umgebaut werden [cite: 5].
+        \item Komplexe Strukturierungsentscheidungen (Analysten- und Architekten-Perspektive) wurden in deterministische Python-Algorithmen ausgelagert, sodass sich die KI ausschließlich auf die exakte Übersetzung der vorbereiteten Logik fokussieren kann [cite: 5].
+    \end{itemize}
+
+    \item \textbf{FF4 (Evaluation \& Mehrwert):} Welches funktionale Potential und qualitativen Mehrwert liefert das entwickelte Architektur-Artefakt im direkten Vergleich zur manuellen Baseline, und welche funktionalen Grenzen bestehen für einen vollautonomen Praxiseinsatz??
+    \begin{itemize}
+        \item Eine direkte, quantitative Zeitersparnis ist durch den aktuellen Prototyp noch nicht messbar, da architektonische Limitierungen (insb. fehlende Wildcard-Logik) noch manuelle Nacharbeiten am Zielcode erforderlich machen.
+        \item Das System liefert jedoch bereits einen messbaren qualitativen Mehrwert (Business Value): Die automatisierte Identifikation unklassifizierter Merkmale und „toter“ Logikbausteine entlastet den Entwickler von rein administrativen Analysetätigkeiten, die in der Praxis oft unterschätzt werden.
+        \item Die Evaluation verdeutlicht, dass die zukünftige Architektur eine hybride Rollenverteilung verfolgen muss: Während deterministische Algorithmen (Python-Skripte/Parser) die strukturelle Transformation (Tabellenbau) übernehmen sollten, dient die KI primär als „beratendes Werkzeug“ auf der „höheren Flugebene“ (gemäß Empfehlung des Fachexperten, vgl. Anhang, S. 74), um Design-Entscheidungen zu validieren und Modell-Optimierungen aufzuzeigen.
+        \end{itemize}
+\end{itemize}
+
 
 \section{Zukünftige Entwicklungen (Future Work)}
 \label{subsec:future_work}
-% Inhalt: Ausblick auf die notwendigen nächsten Schritte zur Weiterentwicklung des Artefakts.
-% Kurzfristige technische Optimierungen: Integration des Wildcard-Konzepts (Platzhalter), konsequentes Löschen unklassifizierter Merkmale aus den Tabellendefinitionen und Verschärfung der syntaktischen Prompt-Restriktionen (z. B. Vermeidung von NOT SPECIFIED).
-% Langfristige methodische Weiterentwicklung: Ausblick auf eine quantitative Evaluierung der kommenden Version (V2). Notwendigkeit einer "Ground Truth" (ein bereits manuell migriertes Projekt) zur Messung der exakten prozentualen Zeitersparnis und Fehlerquote unter realen Produktionsbedingungen.
+Um den Prototyp von einem Proof-of-Concept zu einem produktiv einsetzbaren Werkzeug in der SAP-Migrationsberatung weiterzuentwickeln, bedarf es zukünftig gezielter informationstechnischer Erweiterungen. Aus der qualitativen Evaluation und den iterativen Entwicklungszyklen lassen sich drei primäre Handlungsfelder für zukünftige Forschungs- und Entwicklungsarbeiten ableiten:
+
+\begin{itemize}
+    \item \textbf{Integration eines Abstract Syntax Tree (AST) Parsers:} Die reine textbasierte Syntax-Prüfung durch ein LLM hat sich als unzureichend erwiesen [cite: 1]. Zukünftige Iterationen sollten einen echten AST-Parser integrieren, um den generierten Constraint-Code deterministisch auf formale AVC-Regelbrüche (wie die fehlerhafte Nutzung des Begriffs "NOT SPECIFIED") zu validieren [cite: 1].
+    \item \textbf{Implementierung von SAT-Solvern:} Das Kernproblem der redundanten und logisch überlappenden Tabellen konnte durch Sprachmodelle nicht verlässlich gelöst werden [cite: 1]. Die Anbindung eines mathematischen SAT-Solvers an die neuro-symbolische Pipeline könnte künftig deterministisch garantieren, dass nur logisch disjunkte und redundanzfreie Tabellenkonstrukte an das SAP-System übergeben werden [cite: 1].
+    \item \textbf{Erweiterung um ein holistisches Wildcard-Konzept:} Wie die Experten-Evaluation aufzeigte, scheitert der Code aktuell am Umgang mit bedingungslosen Werten [cite: 1]. Das System muss zwingend dahingehend weiterentwickelt werden, dass leere Parameter-Zellen in Variantentabellen systematisch mit Platzhaltern (Wildcards) aufgefüllt werden, um korrekte Schnittmengen zu gewährleisten [cite: 1].
+\end{itemize}
+
+\section{Schlusswort}
+Die vorliegende Arbeit verdeutlicht eindrucksvoll die Potenziale, aber auch die Limitationen generativer Künstlicher Intelligenz im hochspezialisierten Software Engineering [cite: 1]. Die automatisierte Systemmigration von imperativen zu deklarativen Architekturen ist kein rein linguistisches Übersetzungsproblem, sondern erfordert ein tiefes algorithmisches und logisches Verständnis [cite: 1]. Der entwickelte neuro-symbolische Ansatz beweist, dass die Zukunft komplexer Code-Transformationen nicht in monolithischen KI-Modellen liegt, sondern in der intelligenten Orchestrierung von Large Language Models mit harten, deterministischen Algorithmen [cite: 1]. Wenn die identifizierten Schwachstellen im Bereich der Syntax-Validierung und Tabellenbildung in zukünftigen Iterationen behoben werden, bietet das konzipierte System das Fundament, um einen der ressourcenintensivsten Flaschenhälse der industriellen S/4HANA-Transformation nachhaltig zu automatisieren [cite: 1].
