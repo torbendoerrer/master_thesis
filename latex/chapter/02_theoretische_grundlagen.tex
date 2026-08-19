@@ -1,548 +1,192 @@
 % !TeX root = ../main.tex
 \chapter{Theoretische Grundlagen}
 \label{ch:theory}
-Um die Konzeption und Entwicklung eines KI-gestützten Migrationssystems fundiert nachvollziehen zu können, 
-ist ein tiefgreifendes Verständnis der zugrundeliegenden technologischen Domänen unerlässlich. Dieses Kapitel 
-legt das theoretische Fundament der vorliegenden Arbeit, indem es die wesentlichen Konzepte der 
-SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz sowie der Orchestrierung von Multi-Agenten-Systemen 
-systematisch aufarbeitet.
+Um die Entwicklung eines KI-gestützten Migrationssystems gut nachvollziehen zu können, müssen zunächst die zugrundeliegenden Technologien verstanden werden. Dieses Kapitel bildet das theoretische Fundament der Arbeit. Es erklärt die wichtigsten Konzepte der SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz (KI) und der Orchestrierung von Multi-Agenten-Systemen.
+
 \section{Domänenspezifische Grundlagen: SAP Variantenkonfiguration}
 \subsection{Einführung in die logische Architektur der Variantenkonfiguration}
 
-In der modernen Fertigungsindustrie erfordert die Abbildung kundenindividueller Produkte hochflexible 
-Systemstrukturen. Die grundlegende informationstechnische Idee der Variantenkonfiguration besteht darin, 
-ein konfigurierbares Produkt – wie beispielsweise einen Personenkraftwagen – nicht als unzählige, 
-separat gepflegte Endprodukte anzulegen, sondern als ein zentrales Grundmodell, das durch diverse 
-Ausprägungen (wie Lackierung, Motorisierung oder Bereifung) spezifiziert wird. Diese Ausprägungen sind 
-durch ein logisches Regelwerk miteinander verknüpft, um technische und kaufmännische Restriktionen 
-abzubilden. Da die Kombination aller möglichen Merkmalsausprägungen die Anzahl der finalen Varianten 
-schnell in die Millionen oder, in extremen Fällen der Anlagenfertigung, bis in den Bereich von 
-Quadrillionen ($10^{24}$) treiben kann, ist die Anlage diskreter Stammdaten für jede einzelne physische 
-Ausprägung in der IT-Praxis unmöglich \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
+Die moderne Fertigungsindustrie braucht flexible IT-Systeme, um kundenindividuelle Produkte abzubilden. Die Idee der Variantenkonfiguration ist es, ein anpassbares Produkt (wie ein Auto) nicht als unzählige separate Endprodukte anzulegen. Stattdessen gibt es ein zentrales Grundmodell, das durch verschiedene Merkmale (wie Lackierung, Motor oder Reifen) genauer bestimmt wird. Ein logisches Regelwerk verknüpft diese Merkmale und beachtet dabei technische und kaufmännische Einschränkungen. Weil die Kombination aller Merkmale schnell zu Millionen oder gar Quadrillionen ($10^{24}$) Varianten führen kann, ist es in der Praxis unmöglich, für jede Ausprägung eigene Stammdaten anzulegen \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
 
-Als systemtechnische Antwort auf diese kombinatorische Explosion fungiert im SAP-System der sogenannte 
-\ac{KMAT}. 
-Dieser dient als universaler Platzhalter, unter dem die gesamte Variantenvielfalt eines Produkts 
-informationstechnisch zusammengefasst wird \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. 
-Um diese Vielfalt in einer sogenannten Bewertungsoberfläche abzubilden, greift die SAP-Architektur auf 
-drei zentrale Strukturkomponenten zurück \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}:
+Um diese Variantenvielfalt im SAP-System zu bewältigen, gibt es den sogenannten \ac{KMAT}. Er dient als Platzhalter, der alle Varianten eines Produkts bündelt \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. Damit Nutzer das Produkt konfigurieren können, nutzt SAP drei zentrale Bausteine \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}:
 
 \begin{itemize}
-    \item \textbf{Merkmale:} Sie definieren die spezifischen Eigenschaften eines Produkts 
-    (wie beispielsweise die Lackierung oder die Traglast eines Gabelstaplers).
-    \item \textbf{Variantenklassen:} Diese dienen der logischen Bündelung der Merkmale und werden direkt dem 
-    \ac{KMAT} zugeordnet.
-    \item \textbf{Konfigurationsprofil:} Dieses fungiert als übergeordnetes Steuerungselement, das die Stammdaten 
-    zusammenhält und den Konfigurationsprozess maßgeblich regelt.
+\item \textbf{Merkmale:} Sie definieren die Eigenschaften eines Produkts (z.,B. die Lackierung oder Traglast).
+\item \textbf{Variantenklassen:} Sie bündeln die Merkmale und sind direkt dem \ac{KMAT} zugeordnet.
+\item \textbf{Konfigurationsprofil:} Es steuert den Konfigurationsprozess und hält die Stammdaten zusammen.
 \end{itemize}
 
-Ein zentrales Paradigma der SAP-Variantenkonfiguration zur Bewältigung dieser Komplexität ist das sogenannte 
-Maximal-Prinzip. Anstatt ein Produkt aus einzelnen Modulen additiv zu einem 100\,\%-Modell zusammenzusetzen, 
-basiert die Architektur auf einem subtraktiven 150\,\%-Modell. Hierfür wird eine 
-\ac{Super BOM} eingesetzt. Diese umfasst sämtliche Bauteile und 
-Komponenten, die für jedwede theoretisch mögliche Variante des Produkts jemals benötigt werden könnten 
-\parencite[S. 169]{blumohrAdvancedVariantConfiguration2023}. Während des Konfigurationsprozesses können dieser Stückliste keine neuen 
-Elemente hinzugefügt, sondern lediglich nicht benötigte Komponenten herausgefiltert werden.
+Ein wichtiges Konzept, um diese Komplexität zu meistern, ist das Maximal-Prinzip. Statt ein Produkt Bauteil für Bauteil zusammenzusetzen (ein additives 100 \%-Modell), nutzt SAP ein subtraktives 150 \%-Modell. Die Basis dafür ist die \ac{Super BOM}. Diese Stückliste enthält alle Bauteile, die für jede noch so seltene Variante des Produkts gebraucht werden könnten \parencite[S. 169]{blumohrAdvancedVariantConfiguration2023}. Bei der Konfiguration kommen keine neuen Teile dazu – es werden lediglich die nicht benötigten Bauteile herausgefiltert.
 
-Die logische Brücke zwischen der kaufmännischen Konfiguration und der technischen Fertigung bildet das 
-\textit{Beziehungswissen}. Metaphorisch gesprochen übersetzt dieses Regelwerk das 
-kundenseitige „Wünschen“ in der Bewertungsoberfläche in das fertigungsseitige „Erhalten“ in Form der ausgedünnten 
-Stückliste \parencite[S. 101]{blumohrAdvancedVariantConfiguration2023}. Konkret wird dies durch Steuerungsmechanismen wie 
-\textit{Auswahlbedingungen} realisiert. Wenn ein Kunde beispielsweise aus einem Angebot von 
-sechs Motoren einen spezifischen Antrieb wählt, determinieren die Auswahlbedingungen des Beziehungswissens, 
-dass die fünf nicht gewählten Motoren aus der finalen Fertigungsstückliste eliminiert werden. 
+Das \textit{Beziehungswissen} verbindet die kaufmännische Konfiguration mit der technischen Fertigung. Es übersetzt den Kundenwunsch in eine konkrete Fertigungsstückliste \parencite[S. 101]{blumohrAdvancedVariantConfiguration2023}. Gesteuert wird das beispielsweise durch \textit{Auswahlbedingungen}. Wählt ein Kunde aus sechs möglichen Motoren einen aus, sorgen die Auswahlbedingungen dafür, dass die restlichen fünf Motoren aus der fertigen Stückliste gestrichen werden.
 
-Die Zusammenhänge dieser fundamentalen Architekturkomponenten – vom konfigurierbaren Materialstamm über die 
-Bewertungsoberfläche bis hin zur Maximalstückliste und dem steuernden Beziehungswissen – sind in Abbildung 
-\ref{fig:variantenkonfig} schematisch zusammengefasst.
-
+Abbildung \ref{fig:variantenkonfig} zeigt diese Zusammenhänge vom konfigurierbaren Materialstamm über das Beziehungswissen bis zur fertigen Stückliste im Überblick.
 
 \subsection{Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}
 \label{sec:lovc_context}
 
-Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, ist zunächst eine Einordnung 
-in die Evolution der SAP-Systemlandschaften erforderlich. Während das bisherige Kernprodukt 
-\textit{SAP ERP} (oft auch als SAP R/3 bezeichnet) über Jahrzehnte den Standard darstellte, markiert 
-\textit{SAP S/4HANA} eine fundamentale Neuausrichtung der Softwarearchitektur, insbesondere durch die 
-Nutzung der In-Memory-Datenbanktechnologie \parencite[S. 28]{blumohrAdvancedVariantConfiguration2023}. 
-In diesem Zuge wurde für die Variantenkonfiguration ein neues technologisches Fundament geschaffen.
+Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, muss man sich die Evolution der SAP-Systeme ansehen. Während \textit{SAP ERP} (SAP R/3) lange der Standard war, brachte \textit{SAP S/4HANA} durch die In-Memory-Datenbanktechnologie einen grundlegenden Wechsel \parencite[S. 28]{blumohrAdvancedVariantConfiguration2023}. Dadurch wurde auch die Variantenkonfiguration auf ein neues Fundament gestellt.
 
-Der Begriff \ac{LO-VC} dient heute primär als Retronym, um die 
-klassische Art der Konfiguration von der neuen \ac{AVC} abzugrenzen 
-\parencite[S. 32]{blumohrAdvancedVariantConfiguration2023}. Obwohl \ac{LO-VC} in aktuellen S/4HANA-Installationen 
-(On-Premise und Private Cloud) aus Gründen der Abwärtskompatibilität weiterhin verfügbar ist, gilt sie 
-technologisch als veralteter Standard. 
+Der Begriff \ac{LO-VC} wird heute meist genutzt, um die klassische Konfiguration von der neuen \ac{AVC} zu unterscheiden \parencite[S. 32]{blumohrAdvancedVariantConfiguration2023}. Auch wenn \ac{LO-VC} in aktuellen S/4HANA-Systemen zur Rückwärtskompatibilität noch verfügbar ist, gilt die Technik als veraltet.
 
-\ac{LO-VC} basiert dabei auf einem prozeduralen Paradigma, das historisch 
-bedingt oft durch einen „Learning-by-Doing“-Ansatz in den Unternehmen gewachsen ist. Dies führte dazu, 
-dass Modelle häufig unnötig komplex durch den Einsatz von Prozeduren und Aktionen anstatt 
-leistungsfähigerer Constraints gestaltet wurden \parencite[S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu 
-\ac{AVC} wird in der Literatur daher nicht nur als technisches Upgrade, sondern als strategische Notwendigkeit 
-beschrieben, die durch folgende Kernaspekte begründet wird:
+\ac{LO-VC} arbeitet mit prozeduraler Logik. Weil diese in vielen Unternehmen über Jahre hinweg durch Ausprobieren ("Learning-by-Doing") gewachsen ist, sind die Modelle oft unnötig komplex \parencite[S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu \ac{AVC} ist daher nicht nur ein technisches Update, sondern aus folgenden Gründen eine strategische Notwendigkeit:
 
 \begin{itemize}
-    \item \textbf{Rückkehr zum Standard und Vereinfachung:} \ac{AVC} stellt den künftigen Standard dar. Die 
-    Migration bietet Unternehmen die Chance, historisch gewachsene, schwer wartbare „Spaghetti-Logiken“ 
-    zu dekonstruieren und durch eine moderne, leichter wiederverwendbare Modellierung zu ersetzen 
-    \parencite[S. 57]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Abbildung moderner Geschäftsmodelle:} Klassische LO-VC Strukturen sind primär auf den 
-    reinen Verkauf von Produkten (SD-Kontext) ausgelegt. Moderne Strategien wie das 
-    \textit{Solution Bundling} (Kombination aus Produkt, Dienstleistung und Abonnements) lassen sich im 
-    Standard nur über \ac{AVC} und die damit verknüpften neuen Objektträger wie die \textit{Solution Quote} 
-    abbilden \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Technologische Überlegenheit:} \ac{AVC} nutzt mit \textit{Gecode} eine moderne 
-    Constraint-Solving-Engine, die im Gegensatz zur sequenziellen \ac{LO-VC}-Logik analytische Prinzipien 
-    verfolgt und damit eine deutlich höhere Performance und Flexibilität bietet 
-    \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Zukunftsfähigkeit:} Innovative Technologien aus den Bereichen
-    \ac{KI} oder des \ac{ML} sowie moderne 
-    Auswertungsmethoden via \textit{CDS-Views} werden nativ für \ac{AVC} entwickelt. Eine nachträgliche 
-    Integration in die veraltete \ac{LO-VC}-Architektur gleicht lediglich einer „Renovierung“, die nie den 
-    Leistungsumfang einer Neuentwicklung erreichen kann \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
-    \item \textbf{Human-Resource-Aspekt:} Angesichts des Fachkräftemangels ist die Arbeit mit moderner 
-    Softwarearchitektur ein entscheidender Faktor bei der Gewinnung von Talenten. Die Wartung einer über 
-    25 Jahre alten Softwarelösung ist im Vergleich zur Vorreiterrolle in einer intelligenten 
-    Fertigungsumgebung auf Basis aktueller Technologie weniger attraktiv für qualifizierten Nachwuchs 
-    \parencite[S. 60]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Vereinfachung:} \ac{AVC} ist der neue Standard. Die Migration bietet die Chance, historisch gewachsene und schwer wartbare Logiken ("Spaghetti-Code") aufzuräumen \parencite[S. 57]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Neue Geschäftsmodelle:} \ac{LO-VC} ist primär auf den reinen Produktverkauf ausgelegt. Moderne Ansätze wie \textit{Solution Bundling} (die Kombination aus Produkt, Service und Abo) lassen sich im Standard nur mit \ac{AVC} abbilden \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Bessere Technologie:} \ac{AVC} nutzt mit \textit{Gecode} einen modernen Constraint-Solver. Im Gegensatz zur schrittweisen \ac{LO-VC}-Logik arbeitet dieser analytisch, was Leistung und Flexibilität deutlich erhöht \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Zukunftssicherheit:} Neue Technologien wie \ac{KI} oder \ac{ML} werden nur noch für \ac{AVC} entwickelt. Eine nachträgliche Integration in \ac{LO-VC} wäre zu aufwändig und unzureichend \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Attraktivität für Fachkräfte:} Die Arbeit mit über 25 Jahre alter Software ist für junge Talente wenig reizvoll. Moderne Architekturen helfen dabei, Fachkräfte zu gewinnen \parencite[S. 60]{blumohrAdvancedVariantConfiguration2023}.
 \end{itemize}
 
-Zusammenfassend lässt sich festhalten, dass der Verbleib in der LO-VC-Welt zwar kurzfristig 
-Transformationsaufwände vermeidet, langfristig jedoch das Risiko erhöht, den Anschluss an technologische 
-Innovationen zu verlieren und den Aufwand für eine spätere Migration durch das wachsende technologische 
-Delta exponentiell zu vergrößern \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
+Zusammenfassend lässt sich sagen: Wer bei LO-VC bleibt, spart zwar kurzfristig den Aufwand für eine Migration. Langfristig steigt jedoch das Risiko, technologisch den Anschluss zu verlieren und die spätere Umstellung noch teurer zu machen \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
 
 \subsection{Die moderne Architektur (AVC) und das Constraint Paradigma}
 \label{sec:avc_constraint}
 
-Die Antwort auf die konzeptionellen Schwächen und technischen Limitierungen der klassischen 
-Variantenkonfiguration bildet die Einführung der \ac{AVC} in SAP 
-S/4HANA. Um den stetig wachsenden Anforderungen an Performance und Modellierungskomplexität 
-(wie beispielsweise in den \textit{Make-to-Order}- oder \textit{Engineer-to-Order}-Szenarien) gerecht zu 
-werden, vollzieht SAP mit \ac{AVC} nicht nur ein syntaktisches Update, sondern einen fundamentalen 
-informationstechnischen Paradigmenwechsel unter der Haube der Konfigurations-Engine.
+Die Antwort auf die Schwächen der klassischen Variantenkonfiguration ist die \ac{AVC} in SAP S/4HANA. Um den wachsenden Anforderungen an Leistung und komplexe Modelle (wie bei Einzelfertigungen) gerecht zu werden, hat SAP nicht nur die Oberfläche modernisiert, sondern die zugrundeliegende Rechenlogik komplett ausgetauscht.
 
-Während das bisherige LO-VC-System, wie in Kapitel \ref{sec:lovc_context} beschrieben, auf einer 
-iterativen, imperativen Abarbeitung von Befehlen und Prozeduren basierte, nutzt \ac{AVC} einen grundlegend 
-deklarativen Lösungsansatz. Das technologische Herzstück der \ac{AVC}-Architektur bildet ein neu integrierter 
-\textit{Constraint Solver} namens \textit{Gecode}, eine ursprünglich quelloffene Softwarebibliothek, 
-die in Zusammenarbeit mit dem Fraunhofer-Institut ITWM tief in den SAP-Standard eingebettet und für 
-komplexe Produktkonfigurationen erweitert wurde \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
+Während LO-VC (wie in Kapitel \ref{sec:lovc_context} beschrieben) Regeln Schritt für Schritt abarbeitet, nutzt \ac{AVC} einen deklarativen Ansatz. Das Herzstück der \ac{AVC} ist der \textit{Constraint Solver} namens \textit{Gecode}. Diese quelloffene Softwarebibliothek wurde zusammen mit dem Fraunhofer ITWM tief in SAP integriert und für Produktkonfigurationen optimiert \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
-Der Einsatz dieser Engine überführt den Konfigurationsprozess mathematisch in ein sogenanntes 
-\ac{CSP}. Ein \ac{CSP} wird in der Informatik grundlegend definiert 
-als ein System, das aus „einer Menge von Variablen, einer Menge von Domänen [sowie] einer Menge von 
-Constraints, die zulässige Kombinationen von Werten spezifizieren“ \parencite[eigene Übersetzung nach][S. 180]{russellArtificialIntelligenceModern2010} besteht.
+Durch diese Engine wird die Konfiguration zu einem mathematischen \ac{CSP}. In der Informatik ist ein \ac{CSP} ein System aus Variablen, Wertebereichen (Domänen) und Bedingungen (Constraints), die festlegen, welche Kombinationen zulässig sind \parencite[eigene Übersetzung nach][S. 180]{russellArtificialIntelligenceModern2010}.
 
-Dieser deklarative Ansatz bringt tiefgreifende Auswirkungen auf die Benutzerführung und die 
-Systemstabilität mit sich. Sobald ein Anwender während der Konfiguration in der Benutzeroberfläche einen 
-Wert für ein bestimmtes Merkmal wählt, schränkt die Gecode-Engine die Domänen (Wertebereiche) aller 
-anderen abhängigen Merkmale in Echtzeit ein. 
-Anstatt einen Fehler erst nach der sequenziellen Abarbeitung einer Prozedur auszuwerfen, eliminiert der 
-Solver unmögliche Auswahlmöglichkeiten präventiv aus dem Suchraum. Dies verhindert effektiv die 
-Entstehung inkonsistenter Konfigurationen \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
+Dieser Wechsel hat große Auswirkungen für die Nutzer: Sobald jemand in der Konfiguration einen Wert wählt, schränkt die Gecode-Engine in Echtzeit die Auswahlmöglichkeiten aller anderen abhängigen Merkmale ein. Statt also einen Fehler erst am Ende einer Berechnung auszugeben, blendet das System unmögliche Optionen im Vorfeld aus. Das verhindert fehlerhafte Konfigurationen \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
-Darüber hinaus bietet AVC erweiterte Simulations- und Analysemöglichkeiten, wie beispielsweise den 
-\textit{Dependency Trace}. Dieser ermöglicht es Konstrukteuren und Modellierern, in einem 
-\textit{Inspector Panel} genau nachzuvollziehen, welches Constraint für die Einschränkung eines 
-bestimmten Merkmals verantwortlich ist \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}. 
+Außerdem bietet AVC bessere Analysewerkzeuge wie den \textit{Dependency Trace}. Damit können Entwickler genau sehen, welche Regel dafür gesorgt hat, dass ein bestimmtes Merkmal eingeschränkt wurde \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}.
 
-Zusammenfassend markiert AVC durch die Gecode-Engine den Wechsel von der Frage „\textit{Wie} berechne 
-ich die Variante Schritt für Schritt?“ hin zu der Frage „\textit{Welche} globalen Bedingungen müssen für 
-ein gültiges Endprodukt erfüllt sein?“. Genau dieser Paradigmenwechsel vom Imperativen zum Deklarativen 
-stellt Unternehmen bei der Systemmigration vor die immense Herausforderung, historisch gewachsene, 
-prozedurale Altlasten semantisch zu dekonstruieren und in das neue, netzwerkbasierte Constraint-Paradigma 
-zu transformieren.
+Kurz gesagt ändert AVC die Herangehensweise: Statt zu fragen „\textit{Wie} berechne ich die Variante Schritt für Schritt?“, fragt das System „\textit{Welche} Bedingungen müssen für das Endprodukt erfüllt sein?“. Dieser Wechsel von einer schrittweisen zu einer netzwerkbasierten Logik ist die größte Hürde für Unternehmen, wenn sie alte Modelle in das neue System übertragen wollen.
 
 \section{Generative künstliche Intelligenz im Software Engineering}
 \subsection{Large Language Models für Quellcode}
 \label{subsec:llms_fuer_code}
 
-In den vergangenen Jahren haben KI-Systeme, insbesondere aus dem Bereich der generativen Künstlichen 
-Intelligenz, einen rasanten und tiefgreifenden technologischen Aufstieg erlebt. Im 
-Zentrum dieser Entwicklung stehen sogenannte \ac{LLMs}. Fundamental betrachtet 
-handelt es sich dabei um tiefe künstliche neuronale Netze, die auf massiven Textkorpora trainiert 
-wurden, um das statistisch wahrscheinlichste nächste Zeichen (Token) in einer Sequenz vorherzusagen. 
-Was als Werkzeug für rein statistische Textvervollständigungen begann, hat sich durch enorme Skalierung 
-zu mächtigen kognitiven Architekturen entwickelt. Diese Modelle dringen zunehmend in den Bereich des 
-Software Engineerings vor und verändern die Art und Weise, wie Software entworfen, analysiert und 
-transformiert wird, grundlegend. Um das Potenzial dieser Technologie für automatisierte Migrationsprozesse 
-zu verstehen, ist ein grundlegendes Verständnis der zugrundeliegenden mathematisch-technischen Prinzipien 
-sowie der Methoden zu deren Steuerung erforderlich.
+In den letzten Jahren haben KI-Systeme enorme Fortschritte gemacht. Im Zentrum stehen dabei \ac{LLMs}. Das sind große neuronale Netze, die mit riesigen Textmengen trainiert wurden, um das wahrscheinlichste nächste Zeichen in einem Text vorherzusagen. Was als einfaches Werkzeug zur Textvervollständigung begann, hat sich zu leistungsstarken Systemen entwickelt, die auch im Software Engineering eingesetzt werden. Um diese Modelle für die automatisierte Code-Migration nutzen zu können, muss man verstehen, wie sie funktionieren und wie man sie steuert.
 
 \subsubsection{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}
-Die heutige Generation marktbeherrschender Sprachmodelle basiert fast ausnahmslos auf der wegweisenden 
-Transformer-Architektur, die durch \textcite{vaswaniAttentionAllYou2017} eingeführt wurde. Der entscheidende 
-informationstechnische Durchbruch des Transformers liegt in der Abkehr von früheren Modellen wie
-rekurrenten neuronalen Netzen oder Faltungsnetzen. Während diese 
-älteren Architekturen Eingabesequenzen – wie natürlichen Text oder Quellcode – streng sequenziell, 
-mithin Zeichen für Zeichen oder Zeile für Zeile verarbeiten mussten, bricht der Transformer dieses 
-lineare Paradigma auf.
+Die meisten heutigen Sprachmodelle basieren auf der Transformer-Architektur, die von \textcite{vaswaniAttentionAllYou2017} vorgestellt wurde. Der große Durchbruch dieser Architektur ist, dass Texte oder Quellcode nicht mehr strikt nacheinander (Wort für Wort) verarbeitet werden müssen, wie es bei älteren Modellen der Fall war.
 
-Dies gelingt durch den sogenannten \textit{Self-Attention-Mechanismus}. Dieser Mechanismus erlaubt es dem 
-Modell, alle Elemente (Token) einer Sequenz 
-zeitgleich und vollständig parallel zu verarbeiten. Mathematisch berechnet das Netzwerk für jedes Token 
-innerhalb eines Kontextes einen Gewichtungsfaktor relativ zu allen anderen Token der Sequenz. Dadurch 
-wird bestimmt, wie viel „Aufmerksamkeit“ einem Wort oder Code-Snippet im Verhältnis zum Rest des Textes 
-beigemessen werden muss. 
+Der sogenannte \textit{Self-Attention-Mechanismus} ermöglicht es, alle Wörter eines Textes gleichzeitig zu verarbeiten. Das Modell berechnet für jedes Wort, wie wichtig es im Verhältnis zu allen anderen Wörtern ist.
 
-Im Kontext des Software Engineerings löst diese Architektur das fundamentale Problem weitreichender 
-Abhängigkeiten (\textit{Long-Range Dependencies}). Wenn beispielsweise eine Variable am Anfang einer 
-umfangreichen Code-Datei deklariert und hunderte Zeilen später in einer komplexen logischen Bedingung 
-aufgerufen wird, verkürzt der Transformer den informationellen Pfad im Netzwerk auf eine konstante Länge. 
-Der Self-Attention-Mechanismus berechnet die direkte strukturelle Verknüpfung zwischen Deklaration und 
-Aufruf unabhängig von ihrer physischen Distanz im Dokument. Quellcode wird somit nicht als linearer Text, 
-sondern als ein Netz simultan interagierender logischer Einheiten interpretiert.
+Für das Programmieren ist das besonders nützlich, weil es das Problem der weitreichenden Abhängigkeiten löst. Wenn eine Variable ganz oben im Code definiert und hunderte Zeilen später genutzt wird, erkennt das Modell diese Verbindung sofort – unabhängig davon, wie weit die beiden Stellen auseinanderliegen. Der Quellcode wird vom Modell also als ein Netz zusammenhängender Logikbausteine verstanden.
 
 \subsubsection{In-Context Learning und Few-Shot Prompting}
-Die Fähigkeit, tiefe semantische Strukturen zu erfassen, wirft die Frage auf, wie diese Modelle ohne 
-immensen Rechenaufwand für spezifische, proprietäre Aufgabensteuerungen eingesetzt werden können. 
-Historisch erforderte die Anpassung eines neuronalen Netzes an eine neue Domäne ein ressourcenintensives 
-\textit{Fine-Tuning}, bei dem die internen Gewichte des Modells durch überwachtes Lernen angepasst 
-wurden. Moderne LLMs weisen jedoch ab einer kritischen Skalierungsgröße sogenannte emergente Fähigkeiten 
-auf, die dieses Paradigma verschieben.
+Früher musste man neuronale Netze für neue Aufgaben aufwändig nachtrainieren (\textit{Fine-Tuning}). Moderne LLMs sind jedoch ab einer gewissen Größe so leistungsstark, dass das oft nicht mehr nötig ist.
 
-Wie durch \textcite{brownLanguageModelsAre2020} nachgewiesen wurde, verhalten sich ausreichend große Sprachmodelle 
-weitgehend aufgabenunabhängig (\textit{task-agnostisch}). Anstatt die Modellparameter dauerhaft zu 
-modifizieren, findet das Lernen direkt zur Laufzeit innerhalb des Eingabefensters statt – ein Konzept, 
-das als \ac{ICL} bezeichnet wird. Das Modell nutzt sein im Pre-Training 
-erworbenes, generalistisches Strukturwissen, um eine neue Aufgabe fließend und unmittelbar aus den im 
-Prompt gegebenen Mustern abzuleiten.
+\textcite{brownLanguageModelsAre2020} zeigten, dass große Modelle Aufgaben direkt durch die Eingabe (den Prompt) erlernen können. Das nennt man \ac{ICL}. Das Modell nutzt sein allgemeines Wissen, um eine neue Aufgabe anhand der Beschreibung im Prompt zu lösen.
 
-Eine der mächtigsten Methoden des \ac{ICL} ist das \textit{Few-Shot Prompting}. Hierbei 
-werden dem Modell im Eingabetext neben der eigentlichen Instruktion einige wenige konkrete 
-Demonstrationen (Musterbeispiele) übergeben, die eine Eingabe und die dazugehörige korrekte Zielausgabe 
-abbilden. Ohne dass ein einziges Gradientenupdate im neuronalen Netz stattfindet, adaptiert das LLM die 
-logische Analogie zwischen den Beispielen und wendet diese auf die neue, ungesehene 
-Zielaufgabe an. Für komplexe Domänen bietet dies den Vorteil, dass Modelle flexibel und agil gesteuert 
-werden können, solange der Prompt die notwendigen logischen Leitplanken bereitstellt.
+Eine sehr effektive Methode dafür ist das \textit{Few-Shot Prompting}. Dabei gibt man dem Modell neben der eigentlichen Aufgabe ein paar konkrete Lösungsbeispiele mit. Das Modell erkennt die Logik in den Beispielen und wendet sie auf das neue Problem an, ohne dass sein zugrundeliegendes Netzwerk umprogrammiert werden muss.
 
 \subsubsection{Das Paradoxon der Code-Übersetzung}
-Für den konkreten Einsatz generativer KI im Software Engineering liefert die umfassende Systematisierung 
-von \textcite{zhengSurveyLargeLanguage2023} eine wesentliche differenzierende Erkenntnis bezüglich der Modellauswahl. 
-Entgegen der intuitiven Annahme, dass für Programmieraufgaben spezialisierte Modelle stets vorzuziehen 
-sind, zeigt sich in empirischen Studien ein zweigeteiltes Bild.
+Wenn es darum geht, welches Modell man für Software-Projekte nutzt, liefert \textcite{zhengSurveyLargeLanguage2023} eine wichtige Erkenntnis: Es gibt nicht das eine perfekte Modell für alles.
 
-Auf der einen Seite existieren hochspezialisierte, verhältnismäßig kleine Sprachmodelle 
-(\textit{Code LLMs}), die exklusiv auf riesigen Quellcode-Korpora trainiert wurden. Beim Agieren auf 
-einer „grünen Wiese“ – mithin bei der isolierten Generierung von Standardfunktionen oder der 
-automatisierten Erstellung von Unit-Tests – übertreffen diese dedizierten Code-Modelle die gigantischen, 
-allgemeinsprachlichen Modelle oft deutlich. Sie weisen eine hohe syntaktische Präzision auf und sind in 
-ihrer Ausführung hochgradig effizient.
+Einerseits gibt es kleinere, auf Programmierung spezialisierte Modelle (\textit{Code LLMs}). Wenn es darum geht, neuen Code zu schreiben oder Standardaufgaben (wie Unit-Tests) zu lösen, sind diese Modelle oft besser und effizienter als riesige Universalmodelle.
 
-Auf der anderen Seite verkehrt sich dieses Leistungsverhältnis ins Gegenteil, sobald die Aufgabe in den 
-Bereich der Code-Übersetzung (\textit{Code Translation}) fällt. Bei der Migration bestehender 
-Logik von einer Quellsprache oder einem Paradigma in eine andere Zielarchitektur dominieren führende, 
-generalistische Großmodelle (wie beispielsweise GPT-4) die spezialisierten Code-Modelle signifikant. 
+Geht es jedoch darum, bestehenden Code in eine andere Sprache oder Logik zu übersetzen (\textit{Code Translation}), sind die großen, allgemeinen Modelle (wie GPT-4) im Vorteil.
 
-Die wissenschaftliche Begründung hierfür lässt sich aus der Natur der Problemstellung ableiten: Eine Software-Migration 
-ist kein rein syntaktisches Substitutionsproblem, bei dem lediglich Schlüsselwörter ausgetauscht werden. 
-Es handelt sich vielmehr um ein komplexes Abstraktions- und Logikproblem. Das Modell muss den 
-semantischen Kern, die implizite Absicht und die vernetzten Bedingungen des Altsystems vollständig 
-durchdringen, diese in eine sprachunabhängige logische Repräsentation abstrahieren und anschließend 
-unter den restriktiven Bedingungen des Zielparadigmas neu formulieren. Für derart vielschichtige 
-logische Schlussfolgerungen (\textit{Reasoning}) ist das breite Weltwissen und die schiere kognitive 
-Kapazität der großen, generalistischen Modelle unabdingbar, während rein syntaxfokussierte Code-Modelle 
-an den abstrakten Paradigmenwechseln scheitern.
+Der Grund dafür liegt in der Aufgabe selbst: Code-Migration ist mehr als nur das Austauschen von Befehlen. Das Modell muss die Absicht und die Logik des alten Codes verstehen, das Konzept abstrahieren und es in die Regeln der neuen Sprache übersetzen. Für diese anspruchsvolle Denkleistung (\textit{Reasoning}) brauchen die Modelle ein breites Wissen und hohe Kapazität. Reine Code-Modelle scheitern oft an diesem nötigen Paradigmenwechsel.
 
 \subsection{Limitationen monolithischer Ansätze}
 \label{subsec:limitationen_monolithischer_ansaetze}
 
-Obgleich die im vorherigen Abschnitt beschriebenen Fähigkeiten moderner Großmodelle zur semantischen 
-Erfassung und Übersetzung von Quellcode beachtlich sind, stößt der praktische Einsatz in industriellen 
-Software-Engineering-Projekten an fundamentale Grenzen. In der Praxis und der aktuellen Forschung werden 
-Ansätze, bei denen eine komplexe Aufgabe in einer einzigen Interaktionsschleife – mithin über einen 
-einzelnen, isolierten Eingabeaufforderungs-Befehl (\textit{Single-Prompt} oder 
-\textit{One-Shot}-Verfahren) – gelöst werden soll, als \textit{monolithische Ansätze} bezeichnet. 
-Um die Notwendigkeit fortgeschrittener, verteilter Architekturen zu begründen, müssen die 
-systemimmanenten Schwachstellen dieser monolithischen Herangehensweise auf zwei Ebenen analysiert 
-werden: der algorithmischen Komplexität der Logikketten und der strukturellen Komplexität systemweiter 
-Abhängigkeiten.
+Auch wenn Sprachmodelle Code gut verstehen und übersetzen können, stößt ihr Einsatz in echten Projekten an Grenzen. Besonders problematisch wird es, wenn man versucht, komplexe Aufgaben mit einer einzigen Eingabeanweisung in einem Rutsch zu lösen. Solche isolierten Versuche nennt man \textit{monolithische Ansätze}. Warum diese in der Praxis oft scheitern, lässt sich auf zwei Ursachen zurückführen: die Komplexität der Logik und die Abhängigkeiten im Gesamtsystem.
 
 \subsubsection{Die Komplexitätsfalle und das probabilistische Paradigma}
-Die primäre algorithmische Limitierung monolithischer Prompts bei logisch anspruchsvollen Aufgaben 
-wurde bereits frühzeitig durch OpenAI im Rahmen der Vorstellung des Codex-Modells empirisch dokumentiert. 
-Wie \textcite{chenEvaluatingLargeLanguage2021} nachweisen, sind LLMs hervorragend in der Lage, isolierte, in sich 
-geschlossene Programmieraufgaben zu lösen, sofern die Spezifikation klar umrissen ist. 
+Dass LLMs bei langen Logikketten schwächeln, zeigte bereits OpenAI bei der Vorstellung ihres Codex-Modells. \textcite{chenEvaluatingLargeLanguage2021} bewiesen, dass Modelle isolierte Aufgaben gut lösen können.
 
-Das Leistungsvermögen bricht jedoch mathematisch nachweisbar ein, sobald eine Spezifikation lange 
-Ketten sequenzieller oder verschachtelter Operationen verlangt (\textit{Chaining-Problem}). Die Autoren 
-zeigen, dass die Erfolgsquote des Modells mit zunehmender Anzahl logisch verknüpfter Bausteine 
-innerhalb der Anforderung exponentiell abfällt \parencite{chenEvaluatingLargeLanguage2021}. Für die Migration historisch 
-gewachsener SAP-Regelwerke (wie dem klassischen \textit{Variant Configuration}-Modell LOVC) ist diese 
-Erkenntnis von kritischer Bedeutung: Solche Altsysteme bestehen typischerweise aus hochgradig 
-verschachtelten, prozeduralen Abhängigkeiten und logischen Verzweigungen. Ein monolithischer Prompt 
-zwingt das Modell, diese gesamte kognitive Last simultan zu verarbeiten und den Zielcode in einem 
-einzigen autoregressiven Durchlauf fehlerfrei zu generieren. Dies überschreitet die inhärenten 
-Fähigkeiten zur logischen Vorausschau des Modells, da es Token für Token auf Basis von 
-Wahrscheinlichkeiten generiert, ohne eine echte logische Tiefenprüfung vorzunehmen.
+Die Leistung bricht jedoch drastisch ein, wenn eine Aufgabe viele aneinandergereihte Arbeitsschritte erfordert. Die Autoren zeigten, dass die Fehlerquote stark ansteigt, je mehr Logikschritte verknüpft werden. Für die Migration alter SAP-Modelle ist das ein großes Problem: Diese bestehen oft aus stark verschachtelten Regeln. Zwingt man ein Modell, diese Struktur auf einmal zu übersetzen, überfordert das seine kognitiven Fähigkeiten. Es generiert den Code rein wahrscheinlichkeitsbasiert, ohne die Logik im Hintergrund tiefgreifend zu prüfen.
 
-Darüber hinaus beleuchtet das Paper eine fundamentale Schwäche des probabilistischen Charakters von 
-Sprachmodellen. Die in diesem Paper vorgestellte Metrik $pass@1$ – welche die Wahrscheinlichkeit beschreibt, dass ein einzelner 
-generierter Code-Entwurf funktional korrekt ist – ist bei komplexen Aufgabenstellungen extrem gering. 
-Erst durch das wiederholte Generieren unabhängiger Stichproben ($pass@k$) und eine anschließende 
-externe Verifizierung steigt die Erfolgsquote signifikant an \parencite{chenEvaluatingLargeLanguage2021}. Ein 
-monolithischer Ansatz bietet jedoch keinerlei inhärente Mechanismen für ein solches iteratives 
-\textit{Sampling} oder eine automatisierte Qualitätskontrolle, wodurch fehlerhafte Syntax oder logische 
-Fehlschlüsse unkorrigiert in das Zielergebnis einfließen.
+Das Paper beschreibt zudem, dass die Wahrscheinlichkeit für einen direkten Treffer im ersten Versuch (Metrik $pass@1$) bei komplexen Aufgaben sehr gering ist. Erst wenn das Modell mehrere Lösungswege generiert und diese geprüft werden, steigt die Erfolgsquote \parencite{chenEvaluatingLargeLanguage2021}. Ein monolithischer Ansatz bietet jedoch keinen Mechanismus für solche Prüfschleifen.
 
 \subsubsection{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}
-Während die Arbeit von \textcite{chenEvaluatingLargeLanguage2021} die Schwächen auf Ebene einzelner Funktionen aufzeigt, skaliert der 
-aktuellere \textit{SWE-bench}-Benchmark von \textcite{jimenezSwebenchCanLanguage2024} diese Analyse auf das Niveau 
-realer, industrieller Software-Repositories. Im Rahmen dieses Frameworks wurden führende Sprachmodelle 
-mit echten, komplexen Problemstellungen aus großen Open-Source-Projekten konfrontiert, bei denen 
-Änderungen nicht isoliert, sondern über Systemgrenzen hinweg durchgeführt werden mussten.
+Während das Problem bei einzelnen Funktionen liegt, untersuchten \textcite{jimenezSwebenchCanLanguage2024} mit dem \textit{SWE-bench}-Benchmark reale Software-Projekte, bei denen Änderungen systemweite Folgen haben.
 
-Die Ergebnisse dieses Benchmarks offenbaren ein klares Defizit monolithischer Großmodelle: Selbst 
-hochgradig leistungsfähige, kommerzielle State-of-the-Art-Modelle wie GPT-4 oder die Claude Modellfamilie
-(Anthropic) waren im 
-monolithischen \textit{Single-Prompt}-Setting überfordert und konnten weit unter $5\%$ der realen 
-Software-Probleme erfolgreich lösen \parencite{jimenezSwebenchCanLanguage2024}. Die Autoren identifizieren zwei 
-Hauptursachen für dieses Scheitern:
+Das Ergebnis: Auch Top-Modelle wie GPT-4 oder Claude scheiterten im monolithischen Ansatz und konnten nicht einmal $5\%$ der Probleme lösen \parencite{jimenezSwebenchCanLanguage2024}. Die Gründe dafür sind:
 
 \begin{enumerate}
-    \item \textbf{Mangelndes Verständnis globaler Abhängigkeiten:} Monolithische LLMs scheitern an der 
-    Identifikation von \textit{Cross-File-Dependencies}. Sie sind zwar in der Lage, den lokal 
-    übergebenen Code-Kontext zu modifizieren, überblicken jedoch nicht, welche Auswirkungen diese 
-    Modifikation auf andere, im Kontext nicht enthaltene Klassen, Schnittstellen oder Datenstrukturen 
-    des Gesamtsystems hat. Bei einer SAP AVC-Migration, die auf einem global vernetzten, deklarativen 
-    \textit{Constraint}-Netzwerk basiert, führt dieser blinde Fleck unweigerlich zu fatalen 
-    Inkonsistenzen im Gesamtsystem.
-    \item \textbf{Fehlen einer interaktiven Ausführungsumgebung:} Ein monolithischer Prompt agiert als 
-    reine Text-zu-Text-Transformation in einer isolierten Umgebung (Black-Box). Dem Modell fehlt 
-    jeglicher Zugriff auf einen Compiler, einen Interpreter oder Testprotokolle. In der realen 
-    Softwareentwicklung ist die fehlerfreie Code-Erstellung jedoch ein hochgradig interaktiver, 
-    iterativer Prozess. Ohne die Möglichkeit, den generierten Code testweise auszuführen und das daraus 
-    resultierende Compiler-Feedback dynamisch zu interpretieren, ist das Modell gezwungen, die 
-    syntaktische Korrektheit blind zu erraten.
+\item \textbf{Fehlender Überblick:} Die Modelle ändern zwar den vorgegebenen Code-Schnipsel, erkennen aber nicht, wie sich das auf andere Dateien oder Schnittstellen im Hintergrund auswirkt. Bei der vernetzten SAP AVC-Architektur führt das unweigerlich zu Systemfehlern.
+\item \textbf{Fehlendes Feedback:} Ein monolithischer Ansatz ist blind. Das Modell schreibt Text, kann den Code aber nicht testen. In der Realität ist Programmieren ein iterativer Prozess aus Schreiben und Testen. Ohne Zugriff auf einen Compiler muss das Modell raten, ob sein Code funktioniert.
 \end{enumerate}
 
-Zusammenfassend lässt sich konstatieren, dass monolithische KI-Ansätze aufgrund der exponentiellen 
-Fehleranfälligkeit bei langen Logikketten, des Mangels an systemweiter Kontextverarbeitung und der 
-Isolation von echten Ausführungsumgebungen für komplexe Architektur-Transformationen ungeeignet sind. 
-Diese wissenschaftlich dokumentierte Forschungslücke erfordert den Übergang von isolierten Prompts hin 
-zu dynamischen, interaktiven Multi-Agenten-Systemen, die in der Lage sind, Aufgaben modular aufzuteilen 
-und durch kontinuierliche Feedbackschleifen zu validieren.
+Zusammenfassend sind einfache KI-Prompts für komplexe Architektur-Migrationen ungeeignet. Um diese Aufgaben zu bewältigen, braucht es Multi-Agenten-Systeme, die Aufgaben aufteilen, Code testen und sich selbst korrigieren können.
 
-\section{Multi-Agenten-Systeme(MAS)}
+\section{Multi-Agenten-Systeme (MAS)}
 \subsection{Definition und kognitive Architekturen}
 \label{subsec:definition_und_kognitive_architekturen}
 
-Um die im vorherigen Abschnitt dokumentierten Limitationen monolithischer Sprachmodelle – insbesondere 
-den exponentiellen Leistungsabfall bei langen Logikketten und das Fehlen systemweiter Kontrollmechanismen 
-– informationstechnisch aufzulösen, etabliert sich in der modernen Informatik das Paradigma der 
-\ac{MAS}. Die fundamentale Kernidee dieses Ansatzes besteht darin, eine 
-komplexe Gesamtaufgabe nicht einem einzelnen, allumfassenden Prompt zu übergeben, sondern die kognitive 
-Last auf ein Kollektiv spezialisierter, künstlicher Entitäten – sogenannte KI-Agenten – zu verteilen, 
-welche autonom und kollaborativ an der Erreichung eines vordefinierten Endziels arbeiten.
+Um die eben beschriebenen Schwächen einzelner Sprachmodelle auszugleichen, setzt die Informatik zunehmend auf \ac{MAS}. Die Idee ist simpel: Statt eine schwere Aufgabe in einen einzigen Prompt zu packen, verteilt man sie auf mehrere spezialisierte KI-Agenten, die zusammen auf ein Ziel hinarbeiten.
 
 \subsubsection{Der Begriff des LLM-basierten Agenten}
-In der klassischen Informatik wird ein Agent traditionell als eine Entität definiert, die in der Lage 
-ist, ihre Umwelt durch Sensoren wahrzunehmen und auf diese mittels Aktuatoren einzuwirken, um rationale 
-Entscheidungen zu treffen \parencite[S. 36]{russellArtificialIntelligenceModern2010}. Im Kontext moderner generativer KI verschiebt 
-sich dieses Konzept grundlegend: Das primäre „Gehirn“ und die zentrale Rechenmaschine des Agenten ist 
-ein LLM. 
+Klassisch wird ein Agent als System definiert, das seine Umwelt wahrnimmt und darauf reagiert \parencite[S. 36]{russellArtificialIntelligenceModern2010}. Bei generativer KI dient das Sprachmodell (LLM) als "Gehirn" des Agenten.
 
-Ein LLM-basierter Agent unterscheidet sich von einem klassischen, rein reaktiven Chatbot durch ein 
-erhöhtes Maß an Autonomie, Intentionalität und Werkzeugnutzung. Technisch wird ein solcher Agent 
-instanziiert, indem ein Basis-Sprachmodell mit einem spezifischen System-Prompt 
-(\textit{Instruction Engineering}) versehen wird, welcher seine Identität, seine Verhaltensregeln und 
-seine Zielsetzung exakt formuliert. Darüber hinaus wird der Agent mit Schnittstellen zu externen 
-Werkzeugen (\textit{Tools}) oder Datenquellen ausgestattet. 
+Ein solcher KI-Agent ist mehr als ein normaler Chatbot. Er arbeitet selbstständig, verfolgt Ziele und kann Werkzeuge nutzen. Um einen Agenten zu erstellen, gibt man dem Sprachmodell klare Anweisungen zu seiner Rolle und seinen Aufgaben. Zudem erhält der Agent Zugang zu externen Tools oder Datenbanken.
 
-Ein wesentliches Merkmal von Multi-Agenten-Strukturen ist die architektonische Flexibilität ihrer 
-Orchestrierung. Es existiert kein starrer, mathematisch vorgegebener Standard, wie ein solches System 
-strukturiert sein muss. Die Ausgestaltung des Kontrollflusses und der Kommunikationspfade obliegt dem 
-Systemarchitekten. Dabei lassen sich zwei fundamentale Organisationsformen unterscheiden:
+Ein großer Vorteil von Multi-Agenten-Systemen ist ihre Flexibilität. Es gibt keine starren Regeln für ihren Aufbau. Man unterscheidet grob zwei Ansätze:
 \begin{enumerate}
-    \item \textbf{Statische Orchestrierung:} Der Entwickler definiert im Vorfeld unveränderliche 
-    Kommunikationsketten und deterministische Ablaufpläne (z.\,B. Agent A muss seine Ausgabe zwingend 
-    an Agent B übergeben).
-    \item \textbf{Dynamische Autonomie:} Das Multi-Agenten-System erhält die inhärente Fähigkeit, zur 
-    Laufzeit eigenständig zu entscheiden, ob, wann und welche Sub-Agenten oder Werkzeuge zur Lösung 
-    eines auftretenden Teilproblems aktiviert werden müssen.
+\item \textbf{Statische Orchestrierung:} Der Entwickler gibt genaue Ablaufpläne vor (z.,B. Agent A übergibt sein Ergebnis immer an Agent B).
+\item \textbf{Dynamische Autonomie:} Das System entscheidet selbstständig, wann welcher Agent oder welches Werkzeug gebraucht wird, um ein Teilproblem zu lösen.
 \end{enumerate}
 
 \subsubsection{Die kognitive Kern-Anatomie nach Wang et al.}
-Obgleich die konkrete softwaretechnische Implementierung je nach verwendetem Entwicklungs-Framework 
-variieren kann, hat sich in der wissenschaftlichen Literatur eine universelle, standardisierte kognitive 
-Architektur für autonome Agenten herauskristallisiert. Wie \textcite{wangSurveyLargeLanguage2024} im Rahmen einer 
-umfassenden Systematisierung nachweisen, lässt sich die funktionale Anatomie eines leistungsfähigen 
-LLM-basierten Agenten trennscharf in vier interagierende Kernmodule unterteilen:
+Auch wenn die Umsetzung variieren kann, besteht ein leistungsfähiger Agent laut \textcite{wangSurveyLargeLanguage2024} meist aus vier zentralen Bausteinen:
 
 \begin{itemize}
-    \item \textbf{Profiling-Modul (Rollen-Spezifität):} Dieses Modul legt fest, welche spezifische 
-    Persona, Expertise und Verhaltensrestriktionen der Agent adaptiert. Durch die Zuweisung einer 
-    dedizierten Rolle (z.\,B. „SAP-AVC-Architekt“) wird der Suchraum des Sprachmodells im 
-    Pre-Training-Wissen fokussiert, was die Relevanz der Ausgaben drastisch erhöht.
-    \item \textbf{Memory-Modul (Gedächtnis-Strukturen):} Das Gedächtnis sichert die zeitliche 
-    Konsistenz des Agenten. Es unterteilt sich in ein Kurzzeitgedächtnis (\textit{Short-term Memory}), 
-    welches den aktuellen Konversationskontext puffert, und ein Langzeitgedächtnis 
-    (\textit{Long-term Memory}), das es dem Agenten erlaubt, historische Informationen, erfolgreich gelöste Aufgaben oder domänenspezifisches Wissen dauerhaft zu persistieren.
-    \item \textbf{Planning-Modul (Aufgaben-Dekonstruktion):} Komplexe Fragestellungen überfordern 
-    die direkte autoregressive Textgenerierung. Das Planungs-Modul befähigt den Agenten, ein globales 
-    Endziel autonom in überschaubare, logisch aufeinander aufbauende Teilaufgaben (\textit{Sub-tasks}) 
-    zu zerlegen und Prioritäten zu setzen.
-    \item \textbf{Action-Modul (Werkzeug-Exekution):} Dieses Modul bildet die Brücke zur Außenwelt. 
-    Es übersetzt die textuellen Intentionen des Sprachmodells in konkrete API-Aufrufe, 
-    Datenbankabfragen oder Code-Ausführungen und führt damit die im Planungs-Schritt definierten 
-    Aufgaben real aus.
+\item \textbf{Profil (Rolle):} Hier wird festgelegt, welche Expertise der Agent hat (z.,B. „SAP-Entwickler“). Das hilft dem Modell, sein Wissen gezielt auf diese Rolle zu fokussieren.
+\item \textbf{Gedächtnis:} Ein Kurzzeitgedächtnis merkt sich den aktuellen Verlauf der Unterhaltung, ein Langzeitgedächtnis speichert gelernte Regeln oder gelöste Probleme dauerhaft.
+\item \textbf{Planung:} Der Agent zerlegt ein großes Ziel in machbare Teilaufgaben und setzt Prioritäten.
+\item \textbf{Aktion (Werkzeuge):} Der Agent setzt seine Pläne in echte Handlungen um, indem er Datenbanken abfragt oder Code ausführt.
 \end{itemize}
 
 \subsubsection{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}
-Innerhalb des für Migrationsprozesse besonders kritischen Planungs- und Aktionsmoduls droht bei rein 
-prozeduralen Prompts die Gefahr einer unkontrollierten Fehlerfortpflanzung. Um eine adaptive und 
-verlässliche Problemlösungskompetenz zu garantieren, bildet das von \textcite{yaoReactSynergizingReasoning2022} eingeführte 
-\textit{ReAct}-Paradigma (\textit{Reasoning and Acting}) das theoretische Fundament moderner 
-Agenten-Kognition.
+Damit sich Fehler nicht unbemerkt durch das System ziehen, nutzen moderne Agenten das \textit{ReAct}-Prinzip (Reasoning and Acting) von \textcite{yaoReactSynergizingReasoning2022}.
 
-Das ReAct-Muster bricht die isolierte, statische Natur klassischer Sprachmodelle auf, indem es eine 
-kontinuierliche, interaktive Schleife aus drei sequenziellen Phasen erzwingt:
+Dabei arbeitet der Agent in einer ständigen Schleife aus drei Schritten:
+
 
 $$\mbox{Thought (Gedanke)} \longrightarrow \mbox{Action (Handlung)} \longrightarrow \mbox{Observation (Beobachtung)}$$
 
-In der \textit{Thought}-Phase nutzt der Agent das LLM, um den aktuellen Zustand verbal zu analysieren, 
-logische Schlussfolgerungen zu ziehen und eine spezifische Handlungsabsicht zu formulieren. In der 
-darauffolgenden \textit{Action}-Phase wird diese Absicht durch den Aufruf eines externen Werkzeugs – 
-beispielsweise eines Compilers – exekutiert. Die entscheidende Innovation liegt in der 
-\textit{Observation}-Phase: Das reale Feedback der Umgebung (z.\,B. eine syntaktische Fehlermeldung des 
-Compilers) wird abgefangen und als neuer Text-Kontext in das Modell zurückgespeist. 
+Zuerst analysiert der Agent das Problem (Thought) und entscheidet sich für eine Handlung. Dann führt er diese Handlung mit einem Werkzeug aus (Action). Das entscheidende Element ist die Beobachtung (Observation): Das Ergebnis der Handlung (z.,B. eine Fehlermeldung) wird als neues Wissen an den Agenten zurückgespielt.
 
-Das Modell verarbeitet diese Beobachtung in der nächsten \textit{Thought}-Phase, reflektiert den Fehler 
-aktiv und passt seinen nachfolgenden Aktionsplan dynamisch an. Dieser zirkuläre Prozess des 
-\textit{Self-Refinements} verhindert, dass der Agent – wie ein monolithischer Prompt 
-– blind fehlerhafte Code-Strukturen halluziniert oder falsche Annahmen unkorrigiert fortschreibt. Das 
-ReAct-Paradigma ermöglicht somit eine faktenbasierte, empirisch überprüfbare und selbstreparierende 
-Code-Generierung, die für die präzise Transformation restriktiver SAP AVC-Constraint-Netzwerke 
-unerlässlich ist.
+So kann der Agent Fehler erkennen und seinen Code im nächsten Versuch anpassen. Dieses selbstkorrigierende Verhalten verhindert, dass das Modell einfach falschen Code produziert, und ist für komplexe SAP-Migrationen essenziell.
 
 \subsection{Kollaborative Agenten-Muster}
 \label{subsec:kollaborative_agenten_muster}
 
-Nachdem im vorangegangenen Abschnitt die kognitive Funktionsweise und Anatomie einzelner KI-Agenten
-definiert wurde, befasst sich dieser Abschnitt mit der Orchestrierung mehrerer Agenten. Das Ziel 
-\textit{kollaborativer Agenten-Muster} ist es, die in Kapitel 
-\ref{subsec:limitationen_monolithischer_ansaetze} beschriebenen Limitationen monolithischer 
-Sprachmodelle – wie den Kontextverlust bei langen Logikketten und das Fehlen systemweiter Validierung 
-– durch arbeitsteilige Architekturen gezielt auszumerzen. In der aktuellen Forschung haben sich 
-hierfür verschiedene methodische Paradigmen etabliert.
+Dieser Abschnitt beleuchtet, wie mehrere KI-Agenten zusammenarbeiten können. Die Forschung hat verschiedene Muster entwickelt, um Aufgaben effizient zu verteilen und Fehler zu minimieren.
 
 \subsubsection{Rollenspezialisierung und Dehalluzination}
-Eine der effektivsten Methoden zur Steigerung der Codequalität ist die Zuweisung harter, voneinander 
-abgegrenzter Expertenrollen (wie beispielsweise Programmierer, Architekt und Tester), die sich in ihrer 
-Zusammenarbeit an bewährten Vorgehensmodellen wie dem Wasserfallprinzip orientieren. Wie 
-\textcite{qianChatdevCommunicativeAgents2024} in ihrem \textit{ChatDev}-Framework demonstrieren, 
-ermöglicht diese Arbeitsteilung eine strukturierte Problemlösung, die monolithischen Ansätzen deutlich 
-überlegen ist. Ein zentrales Konzept zur Fehlervermeidung ist dabei die 
-\textit{Communicative Dehallucination} (kommunikative Dehalluzination): Anstatt bei unklaren 
-Anforderungen fehlende Parameter oder Logiken blind zu erfinden (zu halluzinieren), werden Agenten so 
-instruiert, dass sie proaktiv beim planenden Agenten nachfragen und detailliertere Spezifikationen 
-einfordern, bevor Quellcode generiert wird.
+Eine sehr gute Methode ist es, Agenten klare Expertenrollen zuzuweisen (z.,B. Programmierer, Architekt, Tester). Das \textit{ChatDev}-Framework von \textcite{qianChatdevCommunicativeAgents2024} zeigt, dass dies isolierten Ansätzen weit überlegen ist. Wichtig ist dabei die sogenannte kommunikative Dehalluzination: Die Agenten sollen nicht einfach raten, wenn Informationen fehlen, sondern beim zuständigen Agenten nachfragen und Details einfordern.
 
 \subsubsection{Inception Prompting und System-Leitplanken}
-Um sicherzustellen, dass Agenten ihre zugewiesenen Rollen strikt beibehalten und zielgerichtet 
-interagieren, bedarf es klarer Leitplanken. \textcite{liCamelCommunicativeAgents2023} führen hierfür im 
-\textit{CAMEL}-Framework das Konzept des \textit{Inception Promptings} ein. Dabei werden Agenten durch 
-asymmetrische System-Prompts zu Beginn der Konversation in eine feste Rolle gezwungen und mit strikten 
-Verhaltensregeln ausgestattet. Um systemimmanente Gefahren wie das \textit{Role Flipping} 
-(den ungewollten Rollentausch zwischen Instrukteur und Assistent) oder sinnlose 
-Kommunikations-Endlosschleifen zu verhindern, implementiert das System exakte Kommunikationsprotokolle 
-und dedizierte Abbruch-Tokens (\textit{Termination Tokens}).
+Damit die Agenten ihre Rollen nicht verlassen, brauchen sie feste Regeln. \textcite{liCamelCommunicativeAgents2023} nutzen im \textit{CAMEL}-Framework klare Systemanweisungen und Kommunikationsprotokolle, um Endlosschleifen oder ungewollte Rollenwechsel zu verhindern.
 
 \subsubsection{Werkzeugnutzung und Code-Ausführung}
-Kollaboration in Multi-Agenten-Systemen beschränkt sich nicht ausschließlich auf den Austausch 
-natürlicher Sprache, sondern umfasst auch die Interaktion mit externen Werkzeugen (\textit{Tool Use}) 
-und Laufzeitumgebungen. Das \textit{AutoGen}-Framework von \textcite{wuAutogenEnablingNextgen2024} 
-etabliert hierfür das Paradigma des \textit{Conversation Programming}, bei dem der Kontrollfluss der 
-Anwendung direkt durch den Agenten-Dialog gesteuert wird. Eine zentrale Rolle nehmen dabei sogenannte 
-Proxy-Agenten ein. Deren einzige Aufgabe ist es, den von generierenden LLM-Agenten geschriebenen 
-Quellcode auszuführen und im Falle von Syntax- oder Laufzeitfehlern die rohen Fehlermeldungen in den 
-Chat zurückzuspiegeln. Dadurch entsteht eine unverzichtbare Brücke zwischen Textgenerierung und 
-empirischer Validierung.
+Agenten sprechen nicht nur miteinander, sondern nutzen auch Werkzeuge. Das \textit{AutoGen}-Framework von \textcite{wuAutogenEnablingNextgen2024} setzt dafür spezielle "Proxy-Agenten" ein. Deren einzige Aufgabe ist es, den generierten Code auszuführen und mögliche Fehlermeldungen direkt an die anderen Agenten zurückzumelden. So wird der Code direkt auf seine Funktionalität geprüft.
 
 \subsubsection{Iterative Fehlerkorrektur (Self-Refinement)}
-Die zielgerichtete Reaktion auf solche durch Proxy-Agenten aufgeworfenen Fehler erfordert strukturierte 
-Kognitionsmechanismen. \textcite{shinnReflexionLanguageAgents2023} beschreiben in ihrem 
-\textit{Reflexion}-Framework den Prozess der iterativen Fehlerkorrektur durch \textit{Self-Refinement}. 
-Meldet die Ausführungsumgebung einen Fehler, rät das Sprachmodell nicht blind auf eine neue Lösung. 
-Stattdessen nutzt der Agent ein episodisches Gedächtnis, um den aufgetretenen Fehler verbal zu 
-analysieren und zu reflektieren. Durch diesen „semantischen Gradienten“ leitet der Agent eine konkrete 
-Lösungsstrategie aus dem Fehler ab, speichert diese und passt den Code im nächsten iterativen Versuch 
-präzise an.
+Um auf Fehler gut reagieren zu können, müssen die Agenten strukturiert nachdenken. \textcite{shinnReflexionLanguageAgents2023} beschreiben im \textit{Reflexion}-Framework, wie Agenten aus Fehlern lernen: Statt einfach einen neuen Code zu raten, analysiert der Agent den Fehler, entwickelt eine Lösungsstrategie, speichert diese ab und passt den Code gezielt an.
 
-\subsubsection{Standard Operating Procedures und das Fließband-Paradigma}
-Die Synthese all dieser Muster führt zu hochkomplexen, skalierbaren Multi-Agenten-Systemen, die 
-traditionelle Monolithen deklassieren. Den umfassenden empirischen Beleg hierfür liefert das 
-\textit{MetaGPT}-Framework von \textcite{hongMetaGPTMetaProgramming2024}. Die Architektur simuliert ein 
-softwareentwickelndes Unternehmen als Fließband-System (\textit{Assembly Line Paradigm}), das seine 
-Agenten zur Einhaltung strenger menschlicher Standardarbeitsanweisungen 
-(\textit{Standard Operating Procedures, SOPs}) zwingt. Eine entscheidende Neuerung ist hier der 
-strukturierte Dokumentenaustausch: Anstatt frei miteinander zu chatten, kommunizieren die Agenten über 
-formalisierte Spezifikationen und Design-Dokumente. Die Studie beweist, dass diese strikt orchestrierte 
-Architektur kaskadierende Halluzinationen stoppt und Monolithen in sämtlichen Benchmarks zur 
-Code-Generierung signifikant schlägt.
+\subsubsection{Das Fließband-Paradigma}
+\textcite{hongMetaGPTMetaProgramming2024} fassen all diese Muster im \textit{MetaGPT}-Framework zusammen. Sie lassen die Agenten wie am Fließband arbeiten und strikte Arbeitsanweisungen (SOPs) befolgen. Die Agenten chatten dabei nicht frei miteinander, sondern tauschen klar strukturierte Dokumente aus. Die Studie zeigt, dass diese strenge Organisation herkömmliche Ansätze deutlich übertrifft.
 
 \subsection{Entwicklungs-Frameworks für MAS}
 \label{subsec:entwicklungs_frameworks}
 
-Um die theoretischen Konzepte der kognitiven Anatomie (Kapitel \ref{subsec:definition_und_kognitive_architekturen}) 
-und der kollaborativen Muster (Kapitel \ref{subsec:kollaborative_agenten_muster}) informationstechnisch 
-umzusetzen, greift die moderne Softwareentwicklung auf spezialisierte Agenten-Frameworks zurück. Diese 
-Bibliotheken abstrahieren die grundlegende Komplexität der Modell-Orchestrierung und stellen die softwaretechnische 
-Infrastruktur (wie API-Anbindungen, Kontext-Fenster-Management und Logging) bereit. 
+Um Agenten-Systeme zu programmieren, greift man meist auf fertige Frameworks zurück. Diese Bibliotheken übernehmen Standardaufgaben wie die Verwaltung von Schnittstellen oder des Gedächtnisses.
 
-Dass sich primär drei Frameworks etabliert haben, welche den wissenschaftlichen Diskurs sowie die industrielle 
-Praxis maßgeblich prägen, lässt sich durch aktuelle quantitative Forschung belegen. In der ersten großangelegten 
-empirischen Studie zur Evolution von Open-Source-Multi-Agenten-Systemen analysieren \textcite{liuLargescaleStudyDevelopment2025} 
-über 42.000 Commits führender Repositories. Die Autoren weisen anhand von GitHub-Metriken empirisch nach, dass 
-insbesondere \textit{LangChain} (als Basis-Ökosystem), \textit{AutoGen} und \textit{CrewAI} mit zehntausenden 
-Entwickler-Interaktionen den Markt anführen und das rasante Wachstum dieser Technologie seit 2023 treiben. 
-Diese drei dominanten Plattformen unterscheiden sich in ihrer Architekturphilosophie wie folgt:
+Eine Studie von \textcite{liuLargescaleStudyDevelopment2025} zeigt, dass vor allem drei Frameworks den Markt dominieren: \textit{LangChain}, \textit{AutoGen} und \textit{CrewAI}. Sie unterscheiden sich grundlegend:
 
 \begin{itemize}
-    \item \textbf{LangGraph:} Entwickelt als Erweiterung des populären \textit{LangChain}-Ökosystems, modelliert 
-    dieses Framework Multi-Agenten-Systeme als zustandsbehaftete, zyklische Graphen. Jeder Agent oder jedes 
-    Werkzeug repräsentiert einen Knoten (\textit{Node}), während die Kommunikationspfade als Kanten (\textit{Edges}) 
-    definiert werden \parencite{langchain2024}. Es bietet maximale Flexibilität für komplexe, dynamische Kontrollflüsse, 
-    erfordert jedoch einen sehr hohen manuellen Programmieraufwand bei der Definition der Zustandsübergänge.
-    \item \textbf{AutoGen:} Das von Microsoft entwickelte Framework stellt das Paradigma des „Conversation Programming“ 
-    in den Mittelpunkt. Agenten sind hier primär als dialogfähige Entitäten 
-    konzipiert, die Aufgaben lösen, indem sie direkt miteinander chatten. AutoGen zeichnet sich laut den Entwicklern 
-    durch die native Integration von \textit{Proxy-Agenten} zur sicheren Code-Ausführung aus, bietet jedoch weniger 
-    strukturelle Leitplanken für streng prozedurale Abläufe \parencite{wuAutogenEnablingNextgen2024}.
-    \item \textbf{CrewAI:} Dieses Framework wählt einen rollenbasierten Top-Down-Ansatz und ist architektonisch stark 
-    an das Fließband-Paradigma von MetaGPT angelehnt. Eine Entität (die \textit{Crew}) orchestriert definierte Agenten, 
-    die als Mitglieder einer Hierarchie agieren und spezifische, sequentielle Aufgaben (\textit{Tasks}) abarbeiten. 
-    Es fokussiert sich auf strikte Rollenverteilungen, Delegation und Standardarbeitsanweisungen \parencite{liuLargescaleStudyDevelopment2025}.
+\item \textbf{LangGraph:} Diese Erweiterung von \textit{LangChain} betrachtet Agenten und Werkzeuge als Knoten in einem Graphen. Die Verbindungen dazwischen steuern den Ablauf \parencite{langchain2024}. Das bietet maximale Flexibilität, erfordert aber viel Programmierarbeit.
+\item \textbf{AutoGen:} Das Framework von Microsoft setzt auf Dialoge. Die Agenten lösen Aufgaben, indem sie miteinander chatten. Ein großer Vorteil ist die einfache Integration von Proxy-Agenten, um Code direkt auszuführen \parencite{wuAutogenEnablingNextgen2024}.
+\item \textbf{CrewAI:} Dieses Framework arbeitet nach dem Fließband-Prinzip (ähnlich wie MetaGPT). Ein System steuert verschiedene Agenten, die klare, aufeinanderfolgende Aufgaben abarbeiten. Der Fokus liegt auf festen Rollen und Aufgabenverteilungen \parencite{liuLargescaleStudyDevelopment2025}.
 \end{itemize}
 
 \subsubsection{Mapping von Theorie und Framework-Praxis}
-Die Entscheidung für ein solches Framework verschiebt die Aufgaben des Systemarchitekten. Die von \textcite{wangSurveyLargeLanguage2024} 
-definierte kognitive Kern-Anatomie ist in diesen Frameworks in der Regel als abstrahierte Code-Basis (\textit{Out-of-the-Box}) verankert. 
-So wird das Kurz- und Langzeitgedächtnis (\textit{Memory}) oftmals automatisiert über integrierte Vektordatenbanken verwaltet. 
-Auch das entscheidende \textit{ReAct}-Paradigma \parencite{yaoReactSynergizingReasoning2022} – mithin die Schleife aus Denken, 
-Werkzeugnutzung und Beobachtung – läuft als nativer Hintergrundprozess ab, sobald einem Agenten ein Tool zugewiesen wird. 
-
-Obgleich diese Frameworks die informationstechnische Infrastruktur bereitstellen, abstrahieren sie lediglich universelle 
-Prozesse und besitzen keinerlei domänenspezifisches Wissen über proprietäre SAP-Architekturen. Die maßgebliche 
-Implementierungsleistung verlagert sich somit zwingend auf die manuelle Domänenspezialisierung. Unabhängig vom gewählten 
-Framework verbleiben daher zwei Kernaufgaben in der Hand des Entwicklers:
+Diese Frameworks nehmen Entwicklern viel Routinearbeit ab (z.,B. durch integrierte Datenbanken für das Gedächtnis oder vorbereitete ReAct-Schleifen). Sie kennen jedoch keine domänenspezifischen Themen wie SAP-Architekturen. Für den Entwickler bleiben deshalb zwei Hauptaufgaben:
 
 \begin{enumerate}
-    \item \textbf{Systemdesign und Prompt-Engineering:} Der Entwickler muss evaluieren, welche der in Kapitel 
-    \ref{subsec:kollaborative_agenten_muster} beschriebenen theoretischen Konzepte am besten zur vorliegenden 
-    Problemstellung passen, und das Framework damit „befüllen“. Dies umfasst das harte Kodieren des Profilings 
-    (Rollen und Identitäten), der Standardarbeitsanweisungen (SOPs) sowie der Delegationsregeln.
-    \item \textbf{Custom Tools (Werkzeug-Entwicklung):} Während das Framework die Logik des \textit{Tool-Aufrufs} 
-    an sich abstrahiert, existieren für proprietäre Domänen – wie die SAP Variantenkonfiguration – keine 
-    vorgefertigten Werkzeuge. Die informationstechnische Brücke zwischen dem Agenten und der Zielumgebung 
-    (beispielsweise ein \textit{Mock-Compiler} zur Syntax-Validierung von Constraint-Netzwerken) muss vollständig 
-    manuell entwickelt und als funktionale Schnittstelle in das Framework injiziert werden.
+\item \textbf{Systemdesign:} Man muss entscheiden, welches der Agenten-Muster am besten zur Aufgabe passt. Anschließend muss man dem Framework die Rollen, Arbeitsanweisungen und Regeln einprogrammieren.
+\item \textbf{Werkzeug-Entwicklung:} Es gibt keine fertigen Werkzeuge für SAP-Migrationen. Die Brücke zwischen den Agenten und der Zielumgebung (etwa ein Compiler zur Überprüfung des SAP-Codes) muss komplett selbst entwickelt werden.
 \end{enumerate}
 
-Mit den in diesem Kapitel erläuterten Konzepten – von den restriktiven Constraint-Netzwerken der SAP-Variantenkonfiguration 
-über die Limitationen monolithischer Sprachmodelle bis hin zu den kollaborativen Architekturmustern moderner Agenten-Frameworks 
-– sind nun alle wesentlichen technologischen Grundlagen für das tiefe Verständnis dieser Arbeit geschaffen. Im methodischen 
-Gesamtkontext der Masterarbeit bildet diese fundierte Literaturanalyse die erste tragende Säule einer methodischen Triangulation. 
-Die hier gewonnenen wissenschaftlichen Erkenntnisse dienen als theoretisches Alibi und Fundament, auf dem die nachfolgenden 
-praktischen und architektonischen Entscheidungen aufbauen, um schließlich die eigens konzipierte Multi-Agenten-Migrationsarchitektur 
-wissenschaftlich fundiert herzuleiten und zu begründen.
+Mit den hier erläuterten Konzepten – von den SAP-Konfigurationsmodellen über die Schwächen einzelner KI-Modelle bis hin zu den Architekturen moderner Agenten-Frameworks – sind die technologischen Grundlagen für diese Masterarbeit geschaffen. Diese Erkenntnisse bilden das theoretische Fundament, auf dem die nachfolgenden Entscheidungen für die eigene Migrationsarchitektur aufbauen.

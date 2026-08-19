@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  16 AUG 2026 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  19 AUG 2026 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -632,12 +632,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 ]
-Overfull \hbox (2.25362pt too wide) in paragraph at lines 54--54
+Overfull \hbox (2.25362pt too wide) in paragraph at lines 53--53
  [][] []\T1/lmr/m/n/12 (-20) Technologischer Rea-li-t‰ts-ab-gleich und em-pi-ri-sche Scope-Definition [][]  
  []
 
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 73.
+(babel)             Reported on input line 74.
 [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
@@ -674,151 +674,129 @@ Overfull \hbox (7.43684pt too wide) in paragraph at lines 76--77
 
  (chapter/02_theoretische_grundlagen.tex
 Kapitel 2.
+Package acronym Info: Label `acro:KMAT' newly defined as it shall be overridden
+although it is yet undefined on input line 11.
 [6
 
 
 
 
 {C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-Package acronym Info: Label `acro:KMAT' newly defined as it shall be overridden
-although it is yet undefined on input line 24.
 Package acronym Info: Label `acro:Super BOM' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
+although it is yet undefined on input line 19.
 
 
-LaTeX Warning: Reference `fig:variantenkonfig' on page 7 undefined on input line 57.
+LaTeX Warning: Reference `fig:variantenkonfig' on page 7 undefined on input line 23.
 
 [7]
+Overfull \hbox (9.83484pt too wide) in paragraph at lines 37--38
+[]\T1/lmr/bx/n/12 (-20) Bessere Tech-no-lo-gie: [][] \T1/lmr/m/n/12 (-20) nutzt mit \T1/lmr/m/it/12 (-20) Ge-co-de \T1/lmr/m/n/12 (-20) einen mo-der-nen Constraint-
+ []
+
 Package acronym Info: Label `acro:ML' newly defined as it shall be overridden
-although it is yet undefined on input line 98.
- [8]
+although it is yet undefined on input line 38.
+[8]
 Package acronym Info: Label `acro:CSP' newly defined as it shall be overridden
-although it is yet undefined on input line 132.
- [9]
+although it is yet undefined on input line 51.
 Package acronym Info: Label `acro:LLMs' newly defined as it shall be overridden
-although it is yet undefined on input line 162.
- [10] [11]
+although it is yet undefined on input line 63.
+ [9]
 Package acronym Info: Label `acro:ICL' newly defined as it shall be overridden
-although it is yet undefined on input line 207.
- [12] [13] [14{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+although it is yet undefined on input line 75.
+ [10] [11{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 Package acronym Info: Label `acro:MAS' newly defined as it shall be overridden
-although it is yet undefined on input line 333.
- [15] [16]
-Overfull \hbox (1.74281pt too wide) detected at line 401
+although it is yet undefined on input line 116.
+ [12]
+Overfull \hbox (1.74281pt too wide) detected at line 145
 [] [][]\OMS/lmsy/m/n/12 ! [] [][]! []
  []
 
-[17{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [18] [19] [20] [21]) [22]
+[13{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [14] [15]) [16]
 \openout2 = `chapter/03_related_work.aux'.
 
  (chapter/03_related_work.tex
 Kapitel 3.
-[23
+[17
+
+
+
+
+] [18]) [19]
+\openout2 = `chapter/04_experteninterview.aux'.
+
+ (chapter/04_experteninterview.tex
+Kapitel 4.
+[20
 
 
 
 
 ]
-Overfull \hbox (29.56721pt too wide) in paragraph at lines 39--55
-\T1/lmr/m/n/12 (-20) ha-ben die Mˆg-lich-kei-ten der au-to-ma-ti-sier-ten Code-Generierung und -Transformation
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 21
+ []
+
+[21]
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 22
+ []
+
+[22]
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 23
+ []
+
+[23]
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 24
+ []
+
+[24]
+Overfull \hbox (8.13283pt too wide) in paragraph at lines 79--80
+\T1/lmr/m/n/12 (-20) nur als de-ter-mi-nis-ti-scher Kon-ver-ter agie-ren. Es soll Design-Entscheidungen
  []
 
 
-Overfull \hbox (2.45761pt too wide) in paragraph at lines 56--66
-\T1/lmr/m/n/12 (-20) kon-zep-tio-nel-le Schw‰-chen in der Kon-trol-lier-bar-keit sol-cher ^^ROne-Shot^^P-Ans‰tze.
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 25
  []
 
-[24] [25]) [26]
-\openout2 = `chapter/04_experteninterview.aux'.
+[25])
+Overfull \hbox (86.21347pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 26
+ []
 
- (chapter/04_experteninterview.tex
-Kapitel 4.
+[26]
+\openout2 = `chapter/05_fallstudie.aux'.
+
+ (chapter/05_fallstudie.tex
+Kapitel 5.
 [27
 
 
 
 
 ]
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 28
+Overfull \hbox (73.00916pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 28
  []
 
 [28]
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 29
+Overfull \hbox (73.00916pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 29
  []
 
 [29]
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 30
+
+LaTeX Warning: Reference `app:migrationsprotokolle' on page 30 undefined on input line 68.
+
+
+Overfull \hbox (73.00916pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 30
  []
 
 [30]
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 31
- []
-
-[31]
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 32
- []
-
-[32]
-Overfull \hbox (0.7785pt too wide) in paragraph at lines 152--153
-\T1/lmr/m/n/12 (-20) Die He-te-ro-ge-ni-t‰t der An-for-de-run-gen ^^U von der Ana-ly-se kom-ple-xer Z-Functions
- []
-
-
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 33
- []
-
-[33])
-Overfull \hbox (86.21347pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF‹HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 34
- []
-
-[34]
-\openout2 = `chapter/05_fallstudie.aux'.
-
- (chapter/05_fallstudie.tex
-Kapitel 5.
-[35
-
-
-
-
-]
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 36
- []
-
-[36]
-Overfull \hbox (4.39941pt too wide) in paragraph at lines 43--44
-[]\T1/lmr/m/n/12 (-20) F¸r die dar-auf-fol-gen-de Ar-te-fakt-kon-struk-ti-on der Multi-Agenten-Architektur
- []
-
-
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 37
- []
-
-[37]
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 38
- []
-
-[38]
-
-LaTeX Warning: Reference `app:migrationsprotokolle' on page 39 undefined on input line 101.
-
-
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 39
- []
-
-[39]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 107.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 80.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -827,41 +805,36 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 40
- []
-
-[40]
-Overfull \hbox (13.48979pt too wide) in paragraph at lines 122--122
+Overfull \hbox (13.48979pt too wide) in paragraph at lines 88--88
 []\T1/lmr/bx/n/14.4 (-20) Ableitung der V1-Architektur und System-Prompts 
  []
 
 
-Overfull \hbox (17.48558pt too wide) in paragraph at lines 137--140
+Overfull \hbox (73.00916pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 31
+ []
+
+[31]
+Overfull \hbox (17.48558pt too wide) in paragraph at lines 103--106
 \T1/lmr/bx/n/12 (-20) Handlungsregel: \T1/lmr/m/n/12 (-20) Schrei-be den fi-na-len Co-de (\T1/lmtt/m/n/12 TABLE\T1/lmr/m/n/12 (-20) -Aufrufe und \T1/lmtt/m/n/12 RESTRICT\T1/lmr/m/n/12 (-20) -
  []
 
-
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 41
+)
+Overfull \hbox (73.00916pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 32
  []
 
-[41])
-Overfull \hbox (144.30539pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  DURCHF‹HRUNG UND AUSWERTUNG DES PRAKTISCHEN SELBSTVERSUCHS \T1/lmr/m/n/12 42
- []
-
-[42]
+[32]
 \openout2 = `chapter/06_architektur.aux'.
 
  (chapter/06_architektur.tex
 Kapitel 6.
-[43
+[33
 
 
 
 
-] [44] [45] [46] [47] [48] [49]) [50]
+] [34] [35] [36] [37] [38] [39]) [40]
 \openout2 = `chapter/07_evaluierung.aux'.
 
  (chapter/07_evaluierung.tex
@@ -871,17 +844,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[51
+[41
 
 
 
 
-] [52] [53] [54] [55] [56] [57]) [58]
+] [42] [43] [44] [45] [46] [47]) [48]
 \openout2 = `chapter/08_fazit.aux'.
 
  (chapter/08_fazit.tex
 Kapitel 8.
-[59
+[49
 
 
 
@@ -891,12 +864,12 @@ Overfull \hbox (20.4119pt too wide) in paragraph at lines 50--51
 []\T1/lmr/m/n/12 (-20) Die Au-to-ma-ti-sie-rung der Mi-gra-ti-on durch ei-ne rei-ne Multi-Agenten-Architektur
  []
 
-[60]
+[50]
 Overfull \hbox (19.9506pt too wide) in paragraph at lines 73--74
 []\T1/lmr/m/n/12 (-20) Komplexe Struk-tu-rie-rungs-ent-schei-dun-gen (Analysten- und Architekten-
  []
 
-[61] [62]) [63] [64
+[51] [52]) [53] [54
 
 
 
@@ -906,16 +879,16 @@ Overfull \hbox (14.2671pt too wide) in paragraph at lines 49--49
 \T1/lmr/m/n/12 (-20) iclr . cc / paper _ ^^\les / paper / 2024 / hash / edac78c3e300629acfe6cbe9ca88fb84 -[]
  []
 
-[65] [66] [67]
+[55] [56] [57]
 \openout2 = `chapter/anhang.aux'.
 
- (chapter/anhang.tex [68
+ (chapter/anhang.tex [58
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=244, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=212, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf  used on input line 18.
@@ -926,7 +899,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√º
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=246, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=214, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page1 used on input line 18.
@@ -935,7 +908,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[69
+[59
 
 ]
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
@@ -950,12 +923,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
- [70
+ [60
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=261, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=229, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page2 used on input line 18.
@@ -968,12 +941,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page2 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[71
+[61
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=266, page=3, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=234, page=3, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 3>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page3 used on input line 18.
@@ -986,12 +959,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 3>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[72
+[62
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=271, page=4, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, id=240, page=4, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 4>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page4 used on input line 18.
@@ -1004,7 +977,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf, page 4>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf , page4 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[73
+[63
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengef√ºhrt.pdf>]) (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux) (chapter/anhang.aux))
  ***********
@@ -1020,17 +993,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17027 strings out of 467683
- 327005 string characters out of 5414237
- 1331004 words of memory out of 5000000
- 45523 multiletter control sequences out of 15000+600000
- 700687 words of font info for 221 fonts, out of 8000000 for 9000
+ 17012 strings out of 467683
+ 326830 string characters out of 5414237
+ 1330972 words of memory out of 5000000
+ 45520 multiletter control sequences out of 15000+600000
+ 699987 words of font info for 215 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  72i,18n,90p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (78 pages, 498089 bytes).
+Output written on main.pdf (68 pages, 463963 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
+ 294 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  37407 words of extra memory for PDF output out of 42996 (max. 10000000)
 
