@@ -285,6 +285,11 @@ INPUT .\chapter\02_theoretische_grundlagen.tex
 INPUT chapter\02_theoretische_grundlagen.tex
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT .\chapter\03_related_work.tex
@@ -305,10 +310,6 @@ OUTPUT chapter\05_fallstudie.aux
 INPUT .\chapter\05_fallstudie.tex
 INPUT .\chapter\05_fallstudie.tex
 INPUT chapter\05_fallstudie.tex
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 INPUT .\chapter\06_architektur.tex
 INPUT .\chapter\06_architektur.tex
 OUTPUT chapter\06_architektur.aux
@@ -394,6 +395,8 @@ INPUT main.run.xml
 OUTPUT main.run.xml
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
