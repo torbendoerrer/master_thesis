@@ -38,25 +38,27 @@ Das System muss standardkonformen AVC-Code erzeugen. Obsolete Elemente, wie klas
 Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch (vgl. Kapitel~\ref{sec:methodik_fallstudie} ff.) konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
 
 Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von KI-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen (Version 1) wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
+\section{Methodisches Setup und Durchführung}
+\label{subsec:methodisches_setup_selbstversuch}
 
-\section{Wissenschaftliche Einordnung und methodisches Vorgehen im Selbstversuch}
-\label{sec:methodik_fallstudie}
+Um die abstrakten Anforderungen aus der Praxis in konkrete agentische Rollen und System-Prompts zu übersetzen, wurde der kognitive Transformationsprozess durch einen praktischen Selbstversuch auf Code-Ebene analysiert. Anstatt dieses introspektive Vorgehen als klassische Fallstudie zu deklarieren, nutzt diese Arbeit das etablierte Rahmenwerk nach \textcite{runesonGuidelinesConductingReporting2009} als methodische Schablone zur strukturierten Protokollierung. Die klassischen Prinzipien der Datenerhebung und Auswertung wurden dabei zielgerichtet adaptiert, um die eigenen kognitiven Schritte beim Programmieren nachvollziehbar zu dokumentieren. Das methodische Vorgehen definiert sich durch folgende Kernkriterien:
 
-Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers – dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}.
+\textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} \
+In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers – dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}. Das Ziel dieses Selbstversuchs ist es, dieses unbewusste Wissen greifbar zu machen und den kognitiven Übersetzungsprozess (Baseline) methodisch zu dekonstruieren, um daraus die Architektur und die System-Prompts des Multi-Agenten-Systems ableiten zu können. Somit beantwortet dieser Selbstversuch sowohl einen Teil der ersten Forschungsfrage als auch die zweite Forschungsfrage.
 
-Um dieses Wissen greifbar zu machen, schlüpft der Autor in die Rolle des Entwicklers und migriert reale LO-VC-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wird der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Migrationsschritt wird in drei klar getrennten Phasen dokumentiert:
+\textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} \
+Die Datengrundlage für diesen Selbstversuch bildete ein reales Kundenprojekt der \textit{msg systems ag}. Aufgrund strenger Datenschutzvorgaben, Geschäftsgeheimnissen und stark reglementierter Zugriffsrechte auf historische Altdaten war die Auswahl pragmatisch auf dieses spezifische, verfügbare Projekt beschränkt. Ähnlich wie im Kapitel 4 wird also auch hier im Einklang mit \textcite{runesonGuidelinesConductingReporting2009} primär nach Verfügbarkeit ausgewählt. Aus diesem Projekt wurden fünf Merkmale mitsamt ihrem historisch gewachsenen Beziehungswissen für die manuelle Migration ausgewählt. Die Begrenzung auf genau fünf Merkmale ergab sich aus dem praktischen Verlauf: Nach der Bearbeitung zeigte sich, dass sich die grundlegenden kognitiven Schritte stetig wiederholten und inhaltliche Sättigung erreicht war.
 
+\textbf{Datenerhebungsmethode (Methods):} \
+Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. Um das von \textit{Tacit Knowledge} zu erheben, schlüpfte der Autor in die Rolle des Entwicklers und migrierte die realen LO-VC-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wurde der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Schritt wurde in drei klar getrennten Phasen dokumentiert:
 \begin{enumerate}
-\item \textbf{Bestandsaufnahme (Input):} Zunächst wird exakt festgehalten, welche historischen LO-VC-Strukturen und logischen Vorbedingungen für ein Merkmal vorliegen.
-\item \textbf{Kognitive Analyse (Gedankengänge):} In diesem Kernschritt wird das \textit{Tacit Knowledge} explizit gemacht. Es wird schriftlich dokumentiert, welche Überlegungen bei der Migration angestellt werden – etwa die Identifikation von veraltetem Code, das Erkennen von Redundanzen oder architektonische Entscheidungen zur Bündelung von Logik.
-\item \textbf{Code-Synthese (Output):} Abschließend wird der aus diesen Gedankengängen resultierende, korrekte AVC-Code inklusive eventuell notwendiger Variantentabellen erstellt.
+\item \textbf{Bestandsaufnahme (Input):} Festhalten der historischen LO-VC-Strukturen und Vorbedingungen.
+\item \textbf{Kognitive Analyse (Gedankengänge):} Explizite schriftliche Dokumentation der Überlegungen (z.,B. Identifikation von veraltetem Code oder Architekturentscheidungen zur Bündelung).
+\item \textbf{Code-Synthese (Output):} Erstellung des aus den Gedankengängen resultierenden AVC-Codes.
 \end{enumerate}
 
-Durch diesen direkten Vergleich von Input, dem eigenen Denkprozess und dem finalen Output lassen sich wiederkehrende Handlungsmuster beim Programmieren identifizieren. Diese Dokumentation der eigenen Denkschritte erfüllt zwei methodische Zwecke: Sie sichert die für Fallstudien geforderte lückenlose Beweiskette (\textit{Chain of Evidence}) \parencite{runesonGuidelinesConductingReporting2009} und bildet die direkte Vorlage, um im nächsten Schritt die konkreten Rollen und Instruktionen (Prompts) für das Multi-Agenten-System abzuleiten.
-
-\section{Datenbasis und Auswahl der Stichprobe}\label{sec:sampling_strategie}
-
-Die Datengrundlage für diesen Selbstversuch bildet ein reales Kundenprojekt der \textit{msg systems ag}. Aufgrund strenger Datenschutzvorgaben, Geschäftsgeheimnissen und stark reglementierter Zugriffsrechte auf historische Altdaten war die Auswahl pragmatisch auf dieses spezifische, verfügbare Projekt beschränkt. Wie \textcite{runesonGuidelinesConductingReporting2009} in ihren methodischen Richtlinien festhalten, ist es in der Praxis der empirischen Softwaretechnik durchaus üblich, Fälle primär nach ihrer reinen Verfügbarkeit auszuwählen.  Aus diesem Projekt wurden fünf Merkmale mitsamt ihrem historisch gewachsenen Beziehungswissen für die manuelle Migration ausgewählt. Die Begrenzung auf genau fünf Merkmale war nicht vorab künstlich definiert, sondern ergab sich aus dem praktischen Verlauf des Selbstversuchs: Nach der Bearbeitung dieser fünf Beispiele zeigte sich, dass sich die grundlegenden kognitiven und syntaktischen Schritte bei der Migration stetig wiederholten. Es traten keine fundamental neuen Muster oder Hürden mehr auf. Mit dem Erreichen dieser inhaltlichen Sättigung war der Zweck des Selbstversuchs erfüllt, da weitere Merkmale keinen zusätzlichen methodischen Mehrwert für die Ableitung der Systemregeln geboten hätten.
+\textbf{Datenauswertung (Data Analysis):} \
+Die Auswertung erfolgte durch den direkten analytischen Vergleich von Input, dem eigenen Denkprozess und dem finalen Output. Durch dieses Verfahren ließen sich wiederkehrende Handlungsmuster beim Programmieren identifizieren. Diese Dokumentation der eigenen Denkschritte bildet die direkte Auswertungsvorlage, um im nächsten Schritt die konkreten agentischen Rollen und Instruktionen (Prompts) für das \textit{CrewAI}-System abzuleiten.
 \section{Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}
 \label{sec:ergebnisse_selbstversuch}
 
@@ -99,9 +101,5 @@ Das in Kapitel 6 konzipierte System wird exakt nach diesem Vorbild aufgebaut: Ei
 \item[Rolle 3: AVC Syntax Coder (Synthesizer)] \hfill \\
 \textbf{Ziel:} Übersetzung des Bauplans in fehlerfreien AVC-Code.\\
 \textbf{Handlungsregel:} Schreibe den finalen Code (\texttt{TABLE}-Aufrufe und \texttt{RESTRICT}-Constraints). Nutze die korrekten Objektreferenzen (wie \texttt{\$self.}) und wende die aktuellen Standard-Operatoren an.
-
-\item[Tool-Integration:] \hfill \\
-Übergib den Code abschließend an einen deterministischen Validator. Dieser prüft programmatisch auf verbotene LO-VC-Relikte und erzwingt bei Fehlern eine automatische Korrekturschleife.
 \end{description}
-
 Diese empirisch hergeleitete Agentenstruktur bildet das Fundament für die anstehende technische Entwicklung des Systems.
