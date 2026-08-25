@@ -11,6 +11,13 @@
 \usepackage{microtype}
 \usepackage[title, titletoc]{appendix}
 \usepackage{acronym}
+\usepackage{graphicx}
+\usepackage[
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+]{geometry}
 % 1. Macht die gesamte erste Nennung kursiv
 \renewcommand*{\acffont}[1]{\textit{#1}}
 
@@ -21,6 +28,9 @@
 \usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{literatur.bib} % Deine exportierte Datei
 
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
 \begin{document}
 \frontmatter
 \begin{titlepage}
