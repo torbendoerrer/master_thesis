@@ -11,27 +11,27 @@
 \contentsline {subsection}{\numberline {2.1.1}Einführung in die logische Architektur der Variantenkonfiguration}{6}{}%
 \contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{7}{}%
 \contentsline {subsection}{\numberline {2.1.3}Die moderne Architektur (AVC) und das Constraint Paradigma}{8}{}%
-\contentsline {subsection}{\numberline {2.1.4}Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}{8}{}%
+\contentsline {subsection}{\numberline {2.1.4}Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}{9}{}%
 \contentsline {section}{\numberline {2.2}Generative künstliche Intelligenz im Software Engineering}{10}{}%
 \contentsline {subsection}{\numberline {2.2.1}Large Language Models für Quellcode}{10}{}%
-\contentsline {subsubsection}{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}{10}{}%
-\contentsline {subsubsection}{In-Context Learning und Few-Shot Prompting}{10}{}%
+\contentsline {subsubsection}{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}{11}{}%
+\contentsline {subsubsection}{In-Context Learning und Few-Shot Prompting}{11}{}%
 \contentsline {subsubsection}{Das Paradoxon der Code-Übersetzung}{11}{}%
 \contentsline {subsection}{\numberline {2.2.2}Limitationen monolithischer Ansätze}{11}{}%
-\contentsline {subsubsection}{Die Komplexitätsfalle und das probabilistische Paradigma}{11}{}%
+\contentsline {subsubsection}{Die Komplexitätsfalle und das probabilistische Paradigma}{12}{}%
 \contentsline {subsubsection}{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}{12}{}%
-\contentsline {section}{\numberline {2.3}Multi-Agenten-Systeme (MAS)}{12}{}%
-\contentsline {subsection}{\numberline {2.3.1}Definition und kognitive Architekturen}{12}{}%
-\contentsline {subsubsection}{Der Begriff des LLM-basierten Agenten}{12}{}%
+\contentsline {section}{\numberline {2.3}Multi-Agenten-Systeme (MAS)}{13}{}%
+\contentsline {subsection}{\numberline {2.3.1}Definition und kognitive Architekturen}{13}{}%
+\contentsline {subsubsection}{Der Begriff des LLM-basierten Agenten}{13}{}%
 \contentsline {subsubsection}{Die kognitive Kern-Anatomie nach Wang et al.}{13}{}%
-\contentsline {subsubsection}{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}{13}{}%
-\contentsline {subsection}{\numberline {2.3.2}Kollaborative Agenten-Muster}{13}{}%
+\contentsline {subsubsection}{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}{14}{}%
+\contentsline {subsection}{\numberline {2.3.2}Kollaborative Agenten-Muster}{14}{}%
 \contentsline {subsubsection}{Rollenspezialisierung und Dehalluzination}{14}{}%
 \contentsline {subsubsection}{Inception Prompting und System-Leitplanken}{14}{}%
 \contentsline {subsubsection}{Werkzeugnutzung und Code-Ausführung}{14}{}%
 \contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{14}{}%
-\contentsline {subsubsection}{Das Fließband-Paradigma}{14}{}%
-\contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{14}{}%
+\contentsline {subsubsection}{Das Fließband-Paradigma}{15}{}%
+\contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{15}{}%
 \contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{15}{}%
 \contentsline {chapter}{\numberline {3}Related Work}{16}{}%
 \contentsline {chapter}{\numberline {4}Durchführung und Auswertung des Experteninterviews}{18}{}%

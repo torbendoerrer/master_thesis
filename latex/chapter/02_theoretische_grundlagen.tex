@@ -20,7 +20,12 @@ Ein wichtiges Konzept, um diese Komplexität zu meistern, ist das Maximal-Prinzi
 
 Das \textit{Beziehungswissen} verbindet die kaufmännische Konfiguration mit der technischen Fertigung. Es übersetzt den Kundenwunsch in eine konkrete Fertigungsstückliste \parencite[S. 101]{blumohrAdvancedVariantConfiguration2023}. Gesteuert wird das beispielsweise durch \textit{Auswahlbedingungen}. Wählt ein Kunde aus sechs möglichen Motoren einen aus, sorgen die Auswahlbedingungen dafür, dass die restlichen fünf Motoren aus der fertigen Stückliste gestrichen werden.
 
-Abbildung \ref{fig:variantenkonfig} zeigt diese Zusammenhänge vom konfigurierbaren Materialstamm über das Beziehungswissen bis zur fertigen Stückliste im Überblick.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/vc_full.pdf}
+    \caption{Logische Architektur der SAP-Variantenkonfiguration (in Anlehnung an \cite{blumohrAdvancedVariantConfiguration2023}).}
+    \label{fig:avc_table}
+\end{figure}
 
 \subsection{Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}
 \label{sec:lovc_context}
@@ -66,7 +71,7 @@ In der klassischen \ac{LO-VC}-Welt wird die Konfigurationslogik häufig über is
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{grafiken/lovc_precon.pdf}
-    \caption{Das Design Science Research Framework (in Anlehnung an \cite{hevnerDesignScienceInformation2004}).}
+    \caption{Bedingungen in der klassischen Variantenkonfiguration (Eigene Darstellung)}
     \label{fig:lovc_precon}
 \end{figure}
 
@@ -75,7 +80,7 @@ In der neuen \ac{AVC}-Architektur ist diese fragmentierte Logik ineffizient. Sta
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{grafiken/avc_tabelle.pdf}
-    \caption{Das Design Science Research Framework (in Anlehnung an \cite{hevnerDesignScienceInformation2004}).}
+    \caption{Bedingungen in der Advanced Variant Configuration (Eigene Darstellung)}
     \label{fig:avc_table}
 \end{figure}
 

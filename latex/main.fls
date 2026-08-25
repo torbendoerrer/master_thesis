@@ -408,6 +408,12 @@ INPUT .\chapter\02_theoretische_grundlagen.tex
 INPUT chapter\02_theoretische_grundlagen.tex
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT .\grafiken\vc_full.pdf
+INPUT .\grafiken\vc_full.pdf
+INPUT .\grafiken\vc_full.pdf
+INPUT .\grafiken\vc_full.pdf
+INPUT .\grafiken\vc_full.pdf
+INPUT .\grafiken\vc_full.pdf
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
