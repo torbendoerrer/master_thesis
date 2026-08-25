@@ -290,6 +290,12 @@ INPUT .\grafiken\Hevner_DSR.pdf
 INPUT .\grafiken\Hevner_DSR.pdf
 INPUT .\grafiken\Hevner_DSR.pdf
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
+INPUT .\grafiken\dsr_phasen.pdf
+INPUT .\grafiken\dsr_phasen.pdf
+INPUT .\grafiken\dsr_phasen.pdf
+INPUT .\grafiken\dsr_phasen.pdf
+INPUT .\grafiken\dsr_phasen.pdf
+INPUT .\grafiken\dsr_phasen.pdf
 INPUT .\chapter\02_theoretische_grundlagen.tex
 INPUT .\chapter\02_theoretische_grundlagen.tex
 OUTPUT chapter\02_theoretische_grundlagen.aux
