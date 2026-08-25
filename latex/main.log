@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  26 AUG 2026 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  26 AUG 2026 00:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -921,21 +921,21 @@ Package acronym Info: Label `acro:DSR' newly defined as it shall be overridden
 although it is yet undefined on input line 33.
 
 
-pdfTeX warning: pdflatex (file ./grafiken/Hevner_DSR.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/Hevner_DSR.pdf, id=25, 579.12357pt x 242.8272pt>
-File: grafiken/Hevner_DSR.pdf Graphic file (type pdf)
-<use grafiken/Hevner_DSR.pdf>
-Package pdftex.def Info: grafiken/Hevner_DSR.pdf  used on input line 38.
-(pdftex.def)             Requested size: 455.24411pt x 190.89024pt.
+pdfTeX warning: pdflatex (file ./grafiken/hevner_dsr.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<grafiken/hevner_dsr.pdf, id=25, 580.08719pt x 242.8272pt>
+File: grafiken/hevner_dsr.pdf Graphic file (type pdf)
+<use grafiken/hevner_dsr.pdf>
+Package pdftex.def Info: grafiken/hevner_dsr.pdf  used on input line 38.
+(pdftex.def)             Requested size: 455.24411pt x 190.5716pt.
 [2{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 pdfTeX warning: pdflatex (file ./grafiken/dsr_phasen.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/dsr_phasen.pdf, id=30, 592.13219pt x 288.11641pt>
+<grafiken/dsr_phasen.pdf, id=30, 571.17387pt x 280.1667pt>
 File: grafiken/dsr_phasen.pdf Graphic file (type pdf)
 <use grafiken/dsr_phasen.pdf>
 Package pdftex.def Info: grafiken/dsr_phasen.pdf  used on input line 79.
-(pdftex.def)             Requested size: 455.24411pt x 221.5118pt.
-[3 <./grafiken/Hevner_DSR.pdf>]) [4 <./grafiken/dsr_phasen.pdf>] [5]
+(pdftex.def)             Requested size: 455.24411pt x 223.3043pt.
+[3 <./grafiken/hevner_dsr.pdf>] [4 <./grafiken/dsr_phasen.pdf>]) [5]
 \openout2 = `chapter/02_theoretische_grundlagen.aux'.
 
  (chapter/02_theoretische_grundlagen.tex
@@ -952,7 +952,7 @@ although it is yet undefined on input line 19.
 {C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 
 pdfTeX warning: pdflatex (file ./grafiken/vc_full.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/vc_full.pdf, id=70, 581.2917pt x 357.25468pt>
+<grafiken/vc_full.pdf, id=69, 581.2917pt x 357.25468pt>
 File: grafiken/vc_full.pdf Graphic file (type pdf)
 <use grafiken/vc_full.pdf>
 Package pdftex.def Info: grafiken/vc_full.pdf  used on input line 25.
@@ -974,7 +974,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 pdfTeX warning: pdflatex (file ./grafiken/lovc_precon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/lovc_precon.pdf, id=87, 587.3142pt x 204.765pt>
+<grafiken/lovc_precon.pdf, id=86, 587.3142pt x 204.765pt>
 File: grafiken/lovc_precon.pdf Graphic file (type pdf)
 <use grafiken/lovc_precon.pdf>
 Package pdftex.def Info: grafiken/lovc_precon.pdf  used on input line 73.
@@ -982,7 +982,7 @@ Package pdftex.def Info: grafiken/lovc_precon.pdf  used on input line 73.
 
 
 pdfTeX warning: pdflatex (file ./grafiken/avc_tabelle.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/avc_tabelle.pdf, id=88, 352.43669pt x 204.765pt>
+<grafiken/avc_tabelle.pdf, id=87, 352.43669pt x 204.765pt>
 File: grafiken/avc_tabelle.pdf Graphic file (type pdf)
 <use grafiken/avc_tabelle.pdf>
 Package pdftex.def Info: grafiken/avc_tabelle.pdf  used on input line 82.
@@ -1176,7 +1176,7 @@ Overfull \hbox (30.10672pt too wide) in paragraph at lines 67--67
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=243, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=242, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf  used on input line 18.
@@ -1187,7 +1187,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengefü
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=245, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=244, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
@@ -1216,7 +1216,7 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=261, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=260, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
@@ -1234,7 +1234,7 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=266, page=3, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=265, page=3, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
@@ -1252,7 +1252,7 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=271, page=4, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=270, page=4, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
@@ -1286,15 +1286,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  29631 strings out of 467683
  613364 string characters out of 5414237
- 1586691 words of memory out of 5000000
+ 1586692 words of memory out of 5000000
  57919 multiletter control sequences out of 15000+600000
  704143 words of font info for 213 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  98i,18n,108p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (58 pages, 964468 bytes).
+Output written on main.pdf (58 pages, 970080 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
+ 328 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  39492 words of extra memory for PDF output out of 42996 (max. 10000000)
 
