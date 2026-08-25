@@ -63,7 +63,21 @@ Um nachvollziehen zu können, warum die automatisierte Migration von \ac{LO-VC} 
 
 In der klassischen \ac{LO-VC}-Welt wird die Konfigurationslogik häufig über isolierte \textit{Vorbedingungen} (Preconditions) modelliert. Diese Vorbedingungen sind imperativ und meist direkt an einzelne Ausprägungen eines Merkmals geheftet. Ein Entwickler definiert beispielsweise direkt an dem Wert \texttt{'Ledersitze'}, dass dieser nur wählbar ist, wenn \texttt{Modell = 'Premium' AND Land = 'DE'} gilt. Bei historisch gewachsenen Modellen führt dies zu hunderten, dezentral verstreuten Wenn-Dann-Bedingungen, die isoliert voneinander abgearbeitet werden.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/lovc_precon.pdf}
+    \caption{Das Design Science Research Framework (in Anlehnung an \cite{hevnerDesignScienceInformation2004}).}
+    \label{fig:lovc_precon}
+\end{figure}
+
 In der neuen \ac{AVC}-Architektur ist diese fragmentierte Logik ineffizient. Stattdessen nutzt der \textit{Gecode}-Solver eine Zentralisierung der Logik in mathematisch strikten Matrizen, den sogenannten \textit{Variantentabellen}. Anstatt Werte einzeln abzufragen, wird eine Tabelle aufgespannt, deren Spalten die interagierenden Merkmale repräsentieren (z.,B. \texttt{Modell}, \texttt{Land}, \texttt{Sitzbezug}). Ein \ac{AVC}-Constraint ruft diese Tabelle anschließend über eine restriktive Syntax wie \texttt{RESTRICT TABLE  (...)} auf. Das System gleicht dann die Eingaben des Nutzers global mit den gültigen Zeilenkombinationen der Tabelle ab.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{grafiken/avc_tabelle.pdf}
+    \caption{Das Design Science Research Framework (in Anlehnung an \cite{hevnerDesignScienceInformation2004}).}
+    \label{fig:avc_table}
+\end{figure}
 
 Die Migration von \ac{LO-VC} nach \ac{AVC} ist an dieser Stelle keine reine linguistische Code-Übersetzung, sondern eine fundamentale logische Restrukturierung, die keinen Raum für syntaktische Unschärfen lässt:
 \begin{itemize}

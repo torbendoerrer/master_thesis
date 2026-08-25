@@ -11,6 +11,14 @@
 \usepackage{microtype}
 \usepackage[title, titletoc]{appendix}
 \usepackage{acronym}
+\usepackage{tcolorbox}
+\newtcolorbox{forschungsfrage}{
+  colback=gray!5,       % Sehr helles Grau als Hintergrund
+  colframe=gray!40,      % Etwas dunklerer, feiner Rahmen
+  boxrule=0.5pt,         % Sehr dünner Rahmen
+  arc=0pt,               % Eckige Kanten (wirkt wissenschaftlicher)
+  left=8pt, right=8pt, top=8pt, bottom=8pt % Innenabstand
+}
 \usepackage{graphicx}
 \usepackage[
   left=2.5cm,

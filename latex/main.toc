@@ -12,78 +12,78 @@
 \contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{7}{}%
 \contentsline {subsection}{\numberline {2.1.3}Die moderne Architektur (AVC) und das Constraint Paradigma}{8}{}%
 \contentsline {subsection}{\numberline {2.1.4}Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}{8}{}%
-\contentsline {section}{\numberline {2.2}Generative künstliche Intelligenz im Software Engineering}{9}{}%
-\contentsline {subsection}{\numberline {2.2.1}Large Language Models für Quellcode}{9}{}%
-\contentsline {subsubsection}{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}{9}{}%
+\contentsline {section}{\numberline {2.2}Generative künstliche Intelligenz im Software Engineering}{10}{}%
+\contentsline {subsection}{\numberline {2.2.1}Large Language Models für Quellcode}{10}{}%
+\contentsline {subsubsection}{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}{10}{}%
 \contentsline {subsubsection}{In-Context Learning und Few-Shot Prompting}{10}{}%
-\contentsline {subsubsection}{Das Paradoxon der Code-Übersetzung}{10}{}%
-\contentsline {subsection}{\numberline {2.2.2}Limitationen monolithischer Ansätze}{10}{}%
+\contentsline {subsubsection}{Das Paradoxon der Code-Übersetzung}{11}{}%
+\contentsline {subsection}{\numberline {2.2.2}Limitationen monolithischer Ansätze}{11}{}%
 \contentsline {subsubsection}{Die Komplexitätsfalle und das probabilistische Paradigma}{11}{}%
-\contentsline {subsubsection}{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}{11}{}%
+\contentsline {subsubsection}{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}{12}{}%
 \contentsline {section}{\numberline {2.3}Multi-Agenten-Systeme (MAS)}{12}{}%
 \contentsline {subsection}{\numberline {2.3.1}Definition und kognitive Architekturen}{12}{}%
 \contentsline {subsubsection}{Der Begriff des LLM-basierten Agenten}{12}{}%
-\contentsline {subsubsection}{Die kognitive Kern-Anatomie nach Wang et al.}{12}{}%
-\contentsline {subsubsection}{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}{12}{}%
+\contentsline {subsubsection}{Die kognitive Kern-Anatomie nach Wang et al.}{13}{}%
+\contentsline {subsubsection}{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}{13}{}%
 \contentsline {subsection}{\numberline {2.3.2}Kollaborative Agenten-Muster}{13}{}%
-\contentsline {subsubsection}{Rollenspezialisierung und Dehalluzination}{13}{}%
-\contentsline {subsubsection}{Inception Prompting und System-Leitplanken}{13}{}%
-\contentsline {subsubsection}{Werkzeugnutzung und Code-Ausführung}{13}{}%
-\contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{13}{}%
+\contentsline {subsubsection}{Rollenspezialisierung und Dehalluzination}{14}{}%
+\contentsline {subsubsection}{Inception Prompting und System-Leitplanken}{14}{}%
+\contentsline {subsubsection}{Werkzeugnutzung und Code-Ausführung}{14}{}%
+\contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{14}{}%
 \contentsline {subsubsection}{Das Fließband-Paradigma}{14}{}%
 \contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{14}{}%
-\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{14}{}%
-\contentsline {chapter}{\numberline {3}Related Work}{15}{}%
-\contentsline {chapter}{\numberline {4}Durchführung und Auswertung des Experteninterviews}{17}{}%
-\contentsline {section}{\numberline {4.1}Methodisches Setup und Durchführung}{17}{}%
-\contentsline {section}{\numberline {4.2}Ergebnisse der Befragung}{18}{}%
-\contentsline {subsection}{\numberline {4.2.1}Kognitive Altlasten und historischer Code}{18}{}%
-\contentsline {subsection}{\numberline {4.2.2}Paradigmenwechsel und syntaktisches Umdenken}{19}{}%
-\contentsline {subsection}{\numberline {4.2.3}Fragmentierung manueller Prozessschritte}{19}{}%
-\contentsline {subsection}{\numberline {4.2.4}Limitierungen bestehender Standard-Tools}{19}{}%
-\contentsline {subsection}{\numberline {4.2.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{19}{}%
-\contentsline {subsection}{\numberline {4.2.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{19}{}%
-\contentsline {section}{\numberline {4.3}Implikationen für die Systemarchitektur (Ideales Zielbild)}{20}{}%
-\contentsline {subsection}{\numberline {4.3.1}Funktionale Anforderungen aus der Expertenperspektive}{20}{}%
-\contentsline {subsection}{\numberline {4.3.2}Architektonische Paradigmen und Beratungsansatz}{20}{}%
-\contentsline {subsection}{\numberline {4.3.3}Quantitative Zielvorgaben für die Systemvalidierung}{21}{}%
-\contentsline {subsection}{\numberline {4.3.4}Überleitung zum methodischen Realitätsabgleich}{21}{}%
-\contentsline {chapter}{\numberline {5}Machbarkeitsanalyse und praktischer Selbstversuch}{22}{}%
-\contentsline {section}{\numberline {5.1}Technologischer Realitätsabgleich und empirische Scope-Definition}{22}{}%
-\contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{22}{}%
-\contentsline {subsection}{\numberline {5.1.2}Evaluation der architektonischen Paradigmen}{23}{}%
-\contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{23}{}%
-\contentsline {section}{\numberline {5.2}Methodisches Setup und Durchführung}{24}{}%
-\contentsline {section}{\numberline {5.3}Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}{25}{}%
-\contentsline {subsection}{\numberline {5.3.1}Kognitive Phasen der manuellen Migration}{25}{}%
-\contentsline {subsection}{\numberline {5.3.2}Ableitung der V1-Architektur und System-Prompts}{26}{}%
-\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{27}{}%
-\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{27}{}%
-\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{27}{}%
-\contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{28}{}%
-\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{28}{}%
-\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{29}{}%
-\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{29}{}%
-\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{31}{}%
-\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{31}{}%
-\contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{33}{}%
-\contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{33}{}%
-\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{34}{}%
-\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{34}{}%
-\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{35}{}%
-\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{36}{}%
-\contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{36}{}%
-\contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{37}{}%
-\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{39}{}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{39}{}%
-\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{39}{}%
-\contentsline {section}{\numberline {8.3}Limitierungen der Arbeit}{41}{}%
-\contentsline {subsection}{\numberline {8.3.1}Eingeschränkte Datenverfügbarkeit und fehlende Ground Truth}{41}{}%
-\contentsline {subsection}{\numberline {8.3.2}Domänenkomplexität und Expertenverfügbarkeit}{42}{}%
-\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{42}{}%
-\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{42}{}%
-\contentsline {subsection}{\numberline {8.4.2}Technische Weiterentwicklung des Artefakts}{42}{}%
-\contentsline {subsection}{\numberline {8.4.3}Reevaluation der Modellwahl: Code-LLMs für die reine Code-Synthese}{43}{}%
-\contentsline {section}{\numberline {8.5}Schlusswort}{43}{}%
-\contentsline {chapter}{Anhang Anhang}{48}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{49}{}%
+\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{15}{}%
+\contentsline {chapter}{\numberline {3}Related Work}{16}{}%
+\contentsline {chapter}{\numberline {4}Durchführung und Auswertung des Experteninterviews}{18}{}%
+\contentsline {section}{\numberline {4.1}Methodisches Setup und Durchführung}{18}{}%
+\contentsline {section}{\numberline {4.2}Ergebnisse der Befragung}{19}{}%
+\contentsline {subsection}{\numberline {4.2.1}Kognitive Altlasten und historischer Code}{19}{}%
+\contentsline {subsection}{\numberline {4.2.2}Paradigmenwechsel und syntaktisches Umdenken}{20}{}%
+\contentsline {subsection}{\numberline {4.2.3}Fragmentierung manueller Prozessschritte}{20}{}%
+\contentsline {subsection}{\numberline {4.2.4}Limitierungen bestehender Standard-Tools}{20}{}%
+\contentsline {subsection}{\numberline {4.2.5}Manueller Aufwand und Fehleranfälligkeit im Testprozess}{20}{}%
+\contentsline {subsection}{\numberline {4.2.6}Zeitliche Metriken und Identifikation von Flaschenhälsen}{20}{}%
+\contentsline {section}{\numberline {4.3}Implikationen für die Systemarchitektur (Ideales Zielbild)}{21}{}%
+\contentsline {subsection}{\numberline {4.3.1}Funktionale Anforderungen aus der Expertenperspektive}{21}{}%
+\contentsline {subsection}{\numberline {4.3.2}Architektonische Paradigmen und Beratungsansatz}{21}{}%
+\contentsline {subsection}{\numberline {4.3.3}Quantitative Zielvorgaben für die Systemvalidierung}{22}{}%
+\contentsline {subsection}{\numberline {4.3.4}Überleitung zum methodischen Realitätsabgleich}{22}{}%
+\contentsline {chapter}{\numberline {5}Machbarkeitsanalyse und praktischer Selbstversuch}{23}{}%
+\contentsline {section}{\numberline {5.1}Technologischer Realitätsabgleich und empirische Scope-Definition}{23}{}%
+\contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{23}{}%
+\contentsline {subsection}{\numberline {5.1.2}Evaluation der architektonischen Paradigmen}{24}{}%
+\contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{24}{}%
+\contentsline {section}{\numberline {5.2}Methodisches Setup und Durchführung}{25}{}%
+\contentsline {section}{\numberline {5.3}Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}{26}{}%
+\contentsline {subsection}{\numberline {5.3.1}Kognitive Phasen der manuellen Migration}{26}{}%
+\contentsline {subsection}{\numberline {5.3.2}Ableitung der V1-Architektur und System-Prompts}{27}{}%
+\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{28}{}%
+\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{28}{}%
+\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{28}{}%
+\contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{29}{}%
+\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{29}{}%
+\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{30}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{30}{}%
+\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{32}{}%
+\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{32}{}%
+\contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{34}{}%
+\contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{34}{}%
+\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{35}{}%
+\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{35}{}%
+\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{36}{}%
+\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{37}{}%
+\contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{37}{}%
+\contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{38}{}%
+\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{40}{}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{40}{}%
+\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{40}{}%
+\contentsline {section}{\numberline {8.3}Limitierungen der Arbeit}{42}{}%
+\contentsline {subsection}{\numberline {8.3.1}Eingeschränkte Datenverfügbarkeit und fehlende Ground Truth}{42}{}%
+\contentsline {subsection}{\numberline {8.3.2}Domänenkomplexität und Expertenverfügbarkeit}{43}{}%
+\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{43}{}%
+\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{43}{}%
+\contentsline {subsection}{\numberline {8.4.2}Technische Weiterentwicklung des Artefakts}{43}{}%
+\contentsline {subsection}{\numberline {8.4.3}Reevaluation der Modellwahl: Code-LLMs für die reine Code-Synthese}{44}{}%
+\contentsline {section}{\numberline {8.5}Schlusswort}{44}{}%
+\contentsline {chapter}{Anhang Anhang}{49}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{50}{}%
