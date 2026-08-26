@@ -186,6 +186,12 @@ INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.st
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
@@ -432,6 +438,12 @@ INPUT .\grafiken\avc_tabelle.pdf
 INPUT .\grafiken\avc_tabelle.pdf
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT .\grafiken\auto_agent.pdf
+INPUT .\grafiken\auto_agent.pdf
+INPUT .\grafiken\auto_agent.pdf
+INPUT .\grafiken\auto_agent.pdf
+INPUT .\grafiken\auto_agent.pdf
+INPUT .\grafiken\auto_agent.pdf
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT .\chapter\03_related_work.tex
 INPUT .\chapter\03_related_work.tex

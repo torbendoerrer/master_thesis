@@ -24,7 +24,7 @@ Das \textit{Beziehungswissen} verbindet die kaufmännische Konfiguration mit der
     \centering
     \includegraphics[width=\textwidth]{grafiken/vc_full.pdf}
     \caption{Logische Architektur der SAP-Variantenkonfiguration (in Anlehnung an \cite{blumohrAdvancedVariantConfiguration2023}).}
-    \label{fig:avc_table}
+    \label{fig:vc_full}
 \end{figure}
 
 \subsection{Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}
@@ -164,6 +164,14 @@ Auch wenn die Umsetzung variieren kann, besteht ein leistungsfähiger Agent laut
 \item \textbf{Aktion (Werkzeuge):} Der Agent setzt seine Pläne in echte Handlungen um, indem er Datenbanken abfragt oder Code ausführt.
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/auto_agent.pdf}
+    \caption{Zentrale Architektur eines autonomen LLM-Agenten (in Anlehnung an \cite{wangSurveyLargeLanguage2024}).}
+    \label{fig:auto_agent}
+\end{figure}
+
+
 \subsubsection{Das ReAct-Paradigma zur dynamischen Fehlerkorrektur}
 Damit sich Fehler nicht unbemerkt durch das System ziehen, nutzen moderne Agenten das \textit{ReAct}-Prinzip (Reasoning and Acting) von \textcite{yaoReactSynergizingReasoning2022}.
 
@@ -208,6 +216,44 @@ Eine Studie von \textcite{liuLargescaleStudyDevelopment2025} zeigt, dass vor all
 \item \textbf{AutoGen:} Das Framework von Microsoft setzt auf Dialoge. Die Agenten lösen Aufgaben, indem sie miteinander chatten. Ein großer Vorteil ist die einfache Integration von Proxy-Agenten, um Code direkt auszuführen \parencite{wuAutogenEnablingNextgen2024}.
 \item \textbf{CrewAI:} Dieses Framework arbeitet nach dem Fließband-Prinzip (ähnlich wie MetaGPT). Ein System steuert verschiedene Agenten, die klare, aufeinanderfolgende Aufgaben abarbeiten. Der Fokus liegt auf festen Rollen und Aufgabenverteilungen \parencite{liuLargescaleStudyDevelopment2025}.
 \end{itemize}
+
+\begin{table}[htbp]
+    \centering
+    \label{tab:framework_vergleich}
+    % tabularx nutzt die volle Textbreite (\textwidth). 
+    % L = Linksbündig für kurze Texte, X = Blocksatz mit automatischem Umbruch für lange Texte.
+    % p{...} erzwingt eine feste Breite, X teilt sich den Rest.
+    % >{\raggedright\arraybackslash} sorgt für Flattersatz (kein hässlicher Blocksatz in schmalen Spalten).
+    \begin{tabularx}{\textwidth}{@{} 
+        >{\raggedright\arraybackslash}p{2.5cm} 
+        >{\raggedright\arraybackslash}p{3.5cm} 
+        >{\raggedright\arraybackslash}X 
+        >{\raggedright\arraybackslash}X @{}}
+        \toprule
+        \textbf{Framework} & \textbf{Architektur-Paradigma} & \textbf{Stärken} & \textbf{Schwächen} \\
+        \midrule
+        
+        \textbf{LangChain} \newline (LangGraph) & 
+        Graphbasiert \newline (Zustandsautomaten) & 
+        Höchste Kontrolle über den Ablauf; gigantisches Ökosystem an Integrationen. & 
+        Sehr steile Lernkurve; viel Boilerplate-Code für einfache Multi-Agenten-Szenarien. \\
+        \addlinespace
+        
+        \textbf{AutoGen} & 
+        Chatbasiert \newline (Conversational) & 
+        Out-of-the-Box Multi-Agenten-Dialoge; starke native Code-Ausführung. & 
+        Gefahr von Endlosschleifen bei unklarer Steuerung; Kommunikationsfluss teils unvorhersehbar. \\
+        \addlinespace
+        
+        \textbf{CrewAI} & 
+        SOP / Fließband \newline (Rollen \& Tasks) & 
+        Extrem entwicklerfreundlich; klare Delegation und strukturierte Prozesse. & 
+        Weniger flexibel bei hochdynamischen oder stark verzweigten Problemstellungen. \\
+        
+        \bottomrule
+        \end{tabularx}
+    \caption{Vergleich der dominierenden Multi-Agenten-Frameworks (in Anlehnung an \cite{liuLargescaleStudyDevelopment2025}).}
+\end{table}
 
 \subsubsection{Mapping von Theorie und Framework-Praxis}
 Diese Frameworks nehmen Entwicklern viel Routinearbeit ab (z.,B. durch integrierte Datenbanken für das Gedächtnis oder vorbereitete ReAct-Schleifen). Sie kennen jedoch keine domänenspezifischen Themen wie SAP-Architekturen. Für den Entwickler bleiben deshalb zwei Hauptaufgaben:

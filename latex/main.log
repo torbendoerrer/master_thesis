@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  26 AUG 2026 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  26 AUG 2026 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -412,6 +412,44 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box73
 \tcb@temp=\box74
 \tcb@temp=\box75
+) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen269
+\lightrulewidth=\dimen270
+\cmidrulewidth=\dimen271
+\belowrulesep=\dimen272
+\belowbottomsep=\dimen273
+\aboverulesep=\dimen274
+\abovetopsep=\dimen275
+\cmidrulesep=\dimen276
+\cmidrulekern=\dimen277
+\defaultaddspace=\dimen278
+\@cmidla=\count325
+\@cmidlb=\count326
+\@aboverulesep=\dimen279
+\@belowrulesep=\dimen280
+\@thisruleclass=\count327
+\@lastruleclass=\count328
+\@thisrulewidth=\dimen281
+) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen282
+\ar@mcellbox=\box76
+\extrarowheight=\dimen283
+\NC@list=\toks41
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box77
+)
+\TX@col@width=\dimen284
+\TX@old@table=\dimen285
+\TX@old@col=\dimen286
+\TX@target=\dimen287
+\TX@delta=\dimen288
+\TX@cols=\count329
+\TX@ftn=\toks42
 ) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
@@ -419,18 +457,18 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count325
-\Gm@cntv=\count326
-\c@Gm@tempcnt=\count327
-\Gm@bindingoffset=\dimen269
-\Gm@wd@mp=\dimen270
-\Gm@odd@mp=\dimen271
-\Gm@even@mp=\dimen272
-\Gm@layoutwidth=\dimen273
-\Gm@layoutheight=\dimen274
-\Gm@layouthoffset=\dimen275
-\Gm@layoutvoffset=\dimen276
-\Gm@dimlist=\toks41
+\Gm@cnth=\count330
+\Gm@cntv=\count331
+\c@Gm@tempcnt=\count332
+\Gm@bindingoffset=\dimen289
+\Gm@wd@mp=\dimen290
+\Gm@odd@mp=\dimen291
+\Gm@even@mp=\dimen292
+\Gm@layoutwidth=\dimen293
+\Gm@layoutheight=\dimen294
+\Gm@layouthoffset=\dimen295
+\Gm@layoutvoffset=\dimen296
+\Gm@dimlist=\toks43
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
@@ -449,70 +487,70 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count328
+\lrq@indent=\count333
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count329
-\c@listtotal=\count330
-\c@listcount=\count331
-\c@liststart=\count332
-\c@liststop=\count333
-\c@citecount=\count334
-\c@citetotal=\count335
-\c@multicitecount=\count336
-\c@multicitetotal=\count337
-\c@instcount=\count338
-\c@maxnames=\count339
-\c@minnames=\count340
-\c@maxitems=\count341
-\c@minitems=\count342
-\c@citecounter=\count343
-\c@maxcitecounter=\count344
-\c@savedcitecounter=\count345
-\c@uniquelist=\count346
-\c@uniquename=\count347
-\c@refsection=\count348
-\c@refsegment=\count349
-\c@maxextratitle=\count350
-\c@maxextratitleyear=\count351
-\c@maxextraname=\count352
-\c@maxextradate=\count353
-\c@maxextraalpha=\count354
-\c@abbrvpenalty=\count355
-\c@highnamepenalty=\count356
-\c@lownamepenalty=\count357
-\c@maxparens=\count358
-\c@parenlevel=\count359
-\blx@tempcnta=\count360
-\blx@tempcntb=\count361
-\blx@tempcntc=\count362
-\c@blx@maxsection=\count363
-\blx@maxsegment@0=\count364
-\blx@notetype=\count365
-\blx@parenlevel@text=\count366
-\blx@parenlevel@foot=\count367
-\blx@sectionciteorder@0=\count368
-\blx@sectionciteorderinternal@0=\count369
-\blx@entrysetcounter=\count370
-\blx@biblioinstance=\count371
-\labelnumberwidth=\skip55
-\labelalphawidth=\skip56
-\biblabelsep=\skip57
-\bibitemsep=\skip58
-\bibnamesep=\skip59
-\bibinitsep=\skip60
-\bibparsep=\skip61
-\bibhang=\skip62
+\c@tabx@nest=\count334
+\c@listtotal=\count335
+\c@listcount=\count336
+\c@liststart=\count337
+\c@liststop=\count338
+\c@citecount=\count339
+\c@citetotal=\count340
+\c@multicitecount=\count341
+\c@multicitetotal=\count342
+\c@instcount=\count343
+\c@maxnames=\count344
+\c@minnames=\count345
+\c@maxitems=\count346
+\c@minitems=\count347
+\c@citecounter=\count348
+\c@maxcitecounter=\count349
+\c@savedcitecounter=\count350
+\c@uniquelist=\count351
+\c@uniquename=\count352
+\c@refsection=\count353
+\c@refsegment=\count354
+\c@maxextratitle=\count355
+\c@maxextratitleyear=\count356
+\c@maxextraname=\count357
+\c@maxextradate=\count358
+\c@maxextraalpha=\count359
+\c@abbrvpenalty=\count360
+\c@highnamepenalty=\count361
+\c@lownamepenalty=\count362
+\c@maxparens=\count363
+\c@parenlevel=\count364
+\blx@tempcnta=\count365
+\blx@tempcntb=\count366
+\blx@tempcntc=\count367
+\c@blx@maxsection=\count368
+\blx@maxsegment@0=\count369
+\blx@notetype=\count370
+\blx@parenlevel@text=\count371
+\blx@parenlevel@foot=\count372
+\blx@sectionciteorder@0=\count373
+\blx@sectionciteorderinternal@0=\count374
+\blx@entrysetcounter=\count375
+\blx@biblioinstance=\count376
+\labelnumberwidth=\skip57
+\labelalphawidth=\skip58
+\biblabelsep=\skip59
+\bibitemsep=\skip60
+\bibnamesep=\skip61
+\bibinitsep=\skip62
+\bibparsep=\skip63
+\bibhang=\skip64
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count372
-\c@maxcomprange=\count373
-\c@mincompwidth=\count374
+\c@mincomprange=\count377
+\c@maxcomprange=\count378
+\c@mincompwidth=\count379
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -520,103 +558,104 @@ File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'apa.dbx' found.
- (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.dbx
+
+(C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.dbx
 File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count375
-\c@savedafterword=\count376
-\c@annotator=\count377
-\c@savedannotator=\count378
-\c@author=\count379
-\c@savedauthor=\count380
-\c@bookauthor=\count381
-\c@savedbookauthor=\count382
-\c@commentator=\count383
-\c@savedcommentator=\count384
-\c@editor=\count385
-\c@savededitor=\count386
-\c@editora=\count387
-\c@savededitora=\count388
-\c@editorb=\count389
-\c@savededitorb=\count390
-\c@editorc=\count391
-\c@savededitorc=\count392
-\c@foreword=\count393
-\c@savedforeword=\count394
-\c@holder=\count395
-\c@savedholder=\count396
-\c@introduction=\count397
-\c@savedintroduction=\count398
-\c@namea=\count399
-\c@savednamea=\count400
-\c@nameb=\count401
-\c@savednameb=\count402
-\c@namec=\count403
-\c@savednamec=\count404
-\c@translator=\count405
-\c@savedtranslator=\count406
-\c@shortauthor=\count407
-\c@savedshortauthor=\count408
-\c@shorteditor=\count409
-\c@savedshorteditor=\count410
-\c@narrator=\count411
-\c@savednarrator=\count412
-\c@execproducer=\count413
-\c@savedexecproducer=\count414
-\c@execdirector=\count415
-\c@savedexecdirector=\count416
-\c@with=\count417
-\c@savedwith=\count418
-\c@labelname=\count419
-\c@savedlabelname=\count420
-\c@institution=\count421
-\c@savedinstitution=\count422
-\c@lista=\count423
-\c@savedlista=\count424
-\c@listb=\count425
-\c@savedlistb=\count426
-\c@listc=\count427
-\c@savedlistc=\count428
-\c@listd=\count429
-\c@savedlistd=\count430
-\c@liste=\count431
-\c@savedliste=\count432
-\c@listf=\count433
-\c@savedlistf=\count434
-\c@location=\count435
-\c@savedlocation=\count436
-\c@organization=\count437
-\c@savedorganization=\count438
-\c@origlocation=\count439
-\c@savedoriglocation=\count440
-\c@origpublisher=\count441
-\c@savedorigpublisher=\count442
-\c@publisher=\count443
-\c@savedpublisher=\count444
-\c@language=\count445
-\c@savedlanguage=\count446
-\c@origlanguage=\count447
-\c@savedoriglanguage=\count448
-\c@citation=\count449
-\c@savedcitation=\count450
-\c@pageref=\count451
-\c@savedpageref=\count452
-\shorthandwidth=\skip63
-\shortjournalwidth=\skip64
-\shortserieswidth=\skip65
-\shorttitlewidth=\skip66
-\shortauthorwidth=\skip67
-\shorteditorwidth=\skip68
-\locallabelnumberwidth=\skip69
-\locallabelalphawidth=\skip70
-\localshorthandwidth=\skip71
-\localshortjournalwidth=\skip72
-\localshortserieswidth=\skip73
-\localshorttitlewidth=\skip74
-\localshortauthorwidth=\skip75
-\localshorteditorwidth=\skip76
+\c@afterword=\count380
+\c@savedafterword=\count381
+\c@annotator=\count382
+\c@savedannotator=\count383
+\c@author=\count384
+\c@savedauthor=\count385
+\c@bookauthor=\count386
+\c@savedbookauthor=\count387
+\c@commentator=\count388
+\c@savedcommentator=\count389
+\c@editor=\count390
+\c@savededitor=\count391
+\c@editora=\count392
+\c@savededitora=\count393
+\c@editorb=\count394
+\c@savededitorb=\count395
+\c@editorc=\count396
+\c@savededitorc=\count397
+\c@foreword=\count398
+\c@savedforeword=\count399
+\c@holder=\count400
+\c@savedholder=\count401
+\c@introduction=\count402
+\c@savedintroduction=\count403
+\c@namea=\count404
+\c@savednamea=\count405
+\c@nameb=\count406
+\c@savednameb=\count407
+\c@namec=\count408
+\c@savednamec=\count409
+\c@translator=\count410
+\c@savedtranslator=\count411
+\c@shortauthor=\count412
+\c@savedshortauthor=\count413
+\c@shorteditor=\count414
+\c@savedshorteditor=\count415
+\c@narrator=\count416
+\c@savednarrator=\count417
+\c@execproducer=\count418
+\c@savedexecproducer=\count419
+\c@execdirector=\count420
+\c@savedexecdirector=\count421
+\c@with=\count422
+\c@savedwith=\count423
+\c@labelname=\count424
+\c@savedlabelname=\count425
+\c@institution=\count426
+\c@savedinstitution=\count427
+\c@lista=\count428
+\c@savedlista=\count429
+\c@listb=\count430
+\c@savedlistb=\count431
+\c@listc=\count432
+\c@savedlistc=\count433
+\c@listd=\count434
+\c@savedlistd=\count435
+\c@liste=\count436
+\c@savedliste=\count437
+\c@listf=\count438
+\c@savedlistf=\count439
+\c@location=\count440
+\c@savedlocation=\count441
+\c@organization=\count442
+\c@savedorganization=\count443
+\c@origlocation=\count444
+\c@savedoriglocation=\count445
+\c@origpublisher=\count446
+\c@savedorigpublisher=\count447
+\c@publisher=\count448
+\c@savedpublisher=\count449
+\c@language=\count450
+\c@savedlanguage=\count451
+\c@origlanguage=\count452
+\c@savedoriglanguage=\count453
+\c@citation=\count454
+\c@savedcitation=\count455
+\c@pageref=\count456
+\c@savedpageref=\count457
+\shorthandwidth=\skip65
+\shortjournalwidth=\skip66
+\shortserieswidth=\skip67
+\shorttitlewidth=\skip68
+\shortauthorwidth=\skip69
+\shorteditorwidth=\skip70
+\locallabelnumberwidth=\skip71
+\locallabelalphawidth=\skip72
+\localshorthandwidth=\skip73
+\localshortjournalwidth=\skip74
+\localshortserieswidth=\skip75
+\localshorttitlewidth=\skip76
+\localshortauthorwidth=\skip77
+\localshorteditorwidth=\skip78
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
@@ -626,31 +665,30 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count453
-\c@textcitetotal=\count454
-\c@textcitemaxnames=\count455
-\c@biburlbigbreakpenalty=\count456
-\c@biburlbreakpenalty=\count457
-\c@biburlnumpenalty=\count458
-\c@biburlucpenalty=\count459
-\c@biburllcpenalty=\count460
+\c@textcitecount=\count458
+\c@textcitetotal=\count459
+\c@textcitemaxnames=\count460
+\c@biburlbigbreakpenalty=\count461
+\c@biburlbreakpenalty=\count462
+\c@biburlnumpenalty=\count463
+\c@biburlucpenalty=\count464
+\c@biburllcpenalty=\count465
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count461
+\c@smartand=\count466
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
-
-(C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.bbx
+ (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.bbx
 File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count462
-\c@bbx:relatedtotal=\count463
+\c@bbx:relatedcount=\count467
+\c@bbx:relatedtotal=\count468
 )
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
@@ -690,7 +728,7 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2026-04-28 L3 programming layer (loader) 
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count464
+\l__color_backend_stack_int=\count469
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2026-04-28 L3 programming layer (loader) 
@@ -705,48 +743,44 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count465
-\@quotereset=\count466
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 42.
+\@quotelevel=\count470
+\@quotereset=\count471
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 44.
 (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 7.
- (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux
-
-LaTeX Warning: Label `fig:avc_table' multiply defined.
-
-) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux) (chapter/anhang.aux))
+ (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux) (chapter/anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count467
-\scratchdimen=\dimen277
-\scratchbox=\box76
-\nofMPsegments=\count468
-\nofMParguments=\count469
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count470
-\MPscratchDim=\dimen278
-\MPnumerator=\count471
-\makeMPintoPDFobject=\count472
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count472
+\scratchdimen=\dimen297
+\scratchbox=\box78
+\nofMPsegments=\count473
+\nofMParguments=\count474
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count475
+\MPscratchDim=\dimen298
+\MPnumerator=\count476
+\makeMPintoPDFobject=\count477
+\everyMPtoPDFconversion=\toks45
 ) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -761,13 +795,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Info: Redefining \microtypecontext on input line 42.
-Package microtype Info: Applying patch `item' on input line 42.
-Package microtype Info: Applying patch `toc' on input line 42.
-Package microtype Info: Applying patch `eqnum' on input line 42.
-Package microtype Info: Applying patch `footnote' on input line 42.
-Package microtype Info: Applying patch `verbatim' on input line 42.
-LaTeX Info: Redefining \microtypesetup on input line 42.
+LaTeX Info: Redefining \microtypecontext on input line 44.
+Package microtype Info: Applying patch `item' on input line 44.
+Package microtype Info: Applying patch `toc' on input line 44.
+Package microtype Info: Applying patch `eqnum' on input line 44.
+Package microtype Info: Applying patch `footnote' on input line 44.
+Package microtype Info: Applying patch `verbatim' on input line 44.
+LaTeX Info: Redefining \microtypesetup on input line 44.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -853,30 +887,30 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 42.
-Package biblatex Info: Reference segment=0 on input line 42.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 48.
+Package biblatex Info: Reference section=0 on input line 44.
+Package biblatex Info: Reference segment=0 on input line 44.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 50.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 48.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 50.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 48.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 50.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 48.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 50.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 48.
+(Font)              <14.4> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 48.
+(Font)              <10> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 50.
  [1
 
 
@@ -896,7 +930,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout5 = `main.toc'.
 
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 50.
+(babel)             Reported on input line 52.
  [2] (abkuerzungen.tex) [3]
 \openout2 = `chapter/01_einleitung.aux'.
 
@@ -1014,32 +1048,40 @@ Package acronym Warning: Acronym SAP is not defined on input line 135.
 [12{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 Package acronym Info: Label `acro:MAS' newly defined as it shall be overridden
 although it is yet undefined on input line 144.
- [13] [14{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]) [15]
+
+
+pdfTeX warning: pdflatex (file ./grafiken/auto_agent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<grafiken/auto_agent.pdf, id=124, 587.3142pt x 248.8497pt>
+File: grafiken/auto_agent.pdf Graphic file (type pdf)
+<use grafiken/auto_agent.pdf>
+Package pdftex.def Info: grafiken/auto_agent.pdf  used on input line 169.
+(pdftex.def)             Requested size: 455.24411pt x 192.88689pt.
+[13] [14{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./grafiken/auto_agent.pdf>]
+Overfull \hbox (7.28203pt too wide) in paragraph at lines 254--254
+\T1/lmr/m/n/12 (-20) (Zustandsautomaten)|  
+ []
+
+[15]) [16]
 \openout2 = `chapter/03_related_work.aux'.
 
  (chapter/03_related_work.tex
 Kapitel 3.
-[16
+[17
 
 
 
 
-]) [17]
+]) [18]
 \openout2 = `chapter/04_experteninterview.aux'.
 
  (chapter/04_experteninterview.tex
 Kapitel 4.
-[18
+[19
 
 
 
 
 ]
-Overfull \hbox (20.96936pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF�HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 19
- []
-
-[19]
 Overfull \hbox (20.96936pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 4.  DURCHF�HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 20
  []
@@ -1049,60 +1091,65 @@ Overfull \hbox (20.96936pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 4.  DURCHF�HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 21
  []
 
-[21])
+[21]
 Overfull \hbox (20.96936pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 4.  DURCHF�HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 22
  []
 
-[22]
+[22])
+Overfull \hbox (20.96936pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 4.  DURCHF�HRUNG UND AUSWERTUNG DES EXPERTENINTERVIEWS \T1/lmr/m/n/12 23
+ []
+
+[23]
 \openout2 = `chapter/05_fallstudie.aux'.
 
  (chapter/05_fallstudie.tex
 Kapitel 5.
-[23
+[24
 
 
 
 
 ]
 
-LaTeX Warning: Reference `sec:methodik_fallstudie' on page 24 undefined on input line 38.
+LaTeX Warning: Reference `sec:methodik_fallstudie' on page 25 undefined on input line 38.
 
 
-Overfull \hbox (7.76505pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 24
- []
-
-[24]
 Overfull \hbox (7.76505pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 25
  []
 
 [25]
-
-LaTeX Warning: Reference `app:migrationsprotokolle' on page 26 undefined on input line 65.
-
-
 Overfull \hbox (7.76505pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 26
  []
 
 [26]
+
+LaTeX Warning: Reference `app:migrationsprotokolle' on page 27 undefined on input line 65.
+
+
+Overfull \hbox (7.76505pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 27
+ []
+
+[27]
 Overfull \hbox (17.61711pt too wide) in paragraph at lines 101--104
 \T1/lmr/bx/n/12 (-20) Handlungsregel: \T1/lmr/m/n/12 (-20) Schrei-be den fi-na-len Co-de (\T1/lmtt/m/n/12 TABLE\T1/lmr/m/n/12 (-20) -Aufrufe und \T1/lmtt/m/n/12 RESTRICT\T1/lmr/m/n/12 (-20) -Constraints).
  []
 
 )
 Overfull \hbox (7.76505pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 27
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 28
  []
 
-[27]
+[28]
 \openout2 = `chapter/06_architektur.aux'.
 
  (chapter/06_architektur.tex
 Kapitel 6.
-[28
+[29
 
 
 
@@ -1112,12 +1159,12 @@ Overfull \hbox (17.6893pt too wide) in paragraph at lines 23--23
 []\T1/lmr/bx/n/17.28 (-20) Iterative Ent-wick-lung des Pro-to-typs (De-sign Science
  []
 
-[29]
+[30]
 Overfull \hbox (0.96263pt too wide) in paragraph at lines 43--44
 []\T1/lmr/m/n/12 (-20) Aus die-sen in-itia-len Tes-t-er-geb-nis-sen lie� sich ab-lei-ten, dass die kom-ple-xe Strukturierungs-
  []
 
-[30] [31] [32]) [33]
+[31] [32] [33]) [34]
 \openout2 = `chapter/07_evaluierung.aux'.
 
  (chapter/07_evaluierung.tex
@@ -1127,22 +1174,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[34
+[35
 
 
 
 
-] [35] [36] [37] [38]) [39]
+] [36] [37] [38] [39]) [40]
 \openout2 = `chapter/08_fazit.aux'.
 
  (chapter/08_fazit.tex
 Kapitel 8.
-[40
+[41
 
 
 
 
-] [41]
+] [42]
 Overfull \hbox (12.56087pt too wide) in paragraph at lines 40--41
 \T1/lmr/m/n/12 (-20) mar-chi-tek-tur im vier-ten Ite-ra-ti-ons-zy-klus fun-da-men-tal zu ei-nem neuro-symbolischen
  []
@@ -1152,31 +1199,31 @@ Overfull \hbox (17.88174pt too wide) in paragraph at lines 41--42
 []\T1/lmr/m/n/12 (-20) Komplexe Struk-tu-rie-rungs-ent-schei-dun-gen (Analysten- und Architekten-Perspektive)
  []
 
-[42]
+[43]
 Overfull \hbox (13.32143pt too wide) in paragraph at lines 73--74
 []\T1/lmr/bx/n/12 (-20) Integration lo-ka-ler Va-li-die-rung zur Si-mu-la-ti-on feh-len-den Compiler-Feedbacks
  []
 
-[43]) [44] [45]
-Overfull \hbox (30.10672pt too wide) in paragraph at lines 67--67
+[44]) [45] [46]
+Overfull \hbox (30.10672pt too wide) in paragraph at lines 69--69
 \T1/lmr/m/n/12 (-20) ter $https : / / proceedings . neurips . cc / paper / 2023 / hash / a3621ee907def47c1b952ade25c67698 -[]
  []
 
-[46
+[47
 
 
 
 
-] [47] [48]
+] [48] [49]
 \openout2 = `chapter/anhang.aux'.
 
- (chapter/anhang.tex [49
+ (chapter/anhang.tex [50
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=242, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=285, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf  used on input line 18.
@@ -1187,7 +1234,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengefü
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=244, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=287, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
@@ -1196,7 +1243,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[50
+[51
 
 ]
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
@@ -1211,12 +1258,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
- [51
+ [52
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=260, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=303, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
@@ -1228,44 +1275,44 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[52
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=265, page=3, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [53
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=270, page=4, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=308, page=3, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [54
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=313, page=4, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[55
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]) (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux) (chapter/anhang.aux))
  ***********
@@ -1276,25 +1323,22 @@ L3 programming layer <2026-04-28>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29631 strings out of 467683
- 613364 string characters out of 5414237
- 1586692 words of memory out of 5000000
- 57919 multiletter control sequences out of 15000+600000
+ 29842 strings out of 467683
+ 616953 string characters out of 5414237
+ 1590171 words of memory out of 5000000
+ 58122 multiletter control sequences out of 15000+600000
  704143 words of font info for 213 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  98i,18n,108p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (58 pages, 970080 bytes).
+Output written on main.pdf (59 pages, 1070749 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
+ 371 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 39492 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 39497 words of extra memory for PDF output out of 42996 (max. 10000000)
 
