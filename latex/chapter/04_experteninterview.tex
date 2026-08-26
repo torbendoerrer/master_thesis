@@ -6,18 +6,23 @@ Dieses Kapitel dokumentiert die Durchführung und Auswertung des qualitativen Ex
 \section{Methodisches Setup und Durchführung}
 \label{subsec:methodisches_setup_experteninterview}
 Um die prozessualen Hürden und die zeitliche Baseline der manuellen Migration fundiert zu erfassen, wurde das Forschungsdesign für diese initiale Anforderungsanalyse als explorative Fallstudie gemäß den etablierten Richtlinien für das Software Engineering nach Runeson und Höst strukturiert \parencite{runesonGuidelinesConductingReporting2009}. Das methodische Vorgehen definiert sich durch folgende Kernkriterien:
-\textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} \
+
+\begin{itemize}
+
+\item \textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} \
 Kapitel~\ref{sec:lovc_context} hat bereits aufgezeigt, wie relevant und kritisch die Migration von LO-VC zu AVC ist. Um ein \ac{MAS} fundiert zu konzipieren, reicht es jedoch nicht aus, lediglich theoretische Syntaxunterschiede zu analysieren. Historisch gewachsene Praxisprobleme sind stark kontextabhängig und gehen oft nicht aus der reinen Systemdokumentation hervor. Zudem fehlen in der Fachliteratur quantitative Daten zum tatsächlichen manuellen Migrationsaufwand. Ziel dieses Kapitels ist die Beantwortung der ersten Forschungsfrage und damit die Identifikation der prozessualen Hürden bei der manuellen Migration historischer SAP-Modelle sowie die Ermittlung des bisherigen zeitlichen Aufwands zur Definition einer expertenbasierten Baseline.
 
-\textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} \
+\item \textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} \
 
 Der untersuchte „Fall“ dieser explorativen Datenerhebung ist ein qualitatives Interview, das mit einem erfahrenen Fachexperten (Product Owner und Softwareentwickler) der \textit{msg systems ag} geführt wurde. Hinsichtlich der Selektionsstrategie handelt es sich um eine pragmatische Auswahl nach Verfügbarkeit. Da der Zugang zu hochspezialisiertem Personal im proprietären SAP-Beratungsumfeld innerhalb der \textit{msg systems ag} stark limitiert ist, fiel die Wahl auf diesen Experten, da er für das Forschungsprojekt zeitlich und organisatorisch zur Verfügung stand. Wie \textcite{runesonGuidelinesConductingReporting2009} festhalten, ist ein solches Vorgehen in industriellen Fallstudien der Softwaretechnik gängige Praxis. Der Befragte erfüllt die inhaltlichen Anforderungen an einen Experten: Er verfügt über zwölf Jahre Erfahrung als Maschinenbauingenieur und ist seit über sechs Jahren auf die SAP-Variantenkonfiguration spezialisiert. Seit knapp vier Jahren betreut er primär Migrationen von LO-VC nach AVC im msg-Kontext und repräsentiert somit exakt die fachliche Zielgruppe des zu entwickelnden Systems.
 
-\textbf{Datenerhebungsmethode (Methods):} \
+\item \textbf{Datenerhebungsmethode (Methods):} \
 Da die Code-Transformation maßgeblich von undokumentiertem Erfahrungswissen (\textit{Tacit Knowledge}) geprägt ist, erfordert die Durchdringung dieser Problemstellung einen qualitativen Forschungsansatz \parencite{seamanQualitativeMethodsEmpirical1999}. Als Erhebungsinstrument diente ein semi-strukturiertes Interview. Der flexible Leitfaden kombinierte offene und spezifische Fragen. Dies stellte sicher, dass antizipierte Daten, wie zeitliche Metriken, systematisch erfasst wurden, ließ aber gleichzeitig Raum für unvorhergesehene Einblicke in die Migrationspraxis \parencite{seamanQualitativeMethodsEmpirical1999}. Im Gegensatz zu sozialwissenschaftlichen Interviews erfordert dieser Ansatz im Software Engineering ein tiefgreifendes technisches Vorverständnis des Interviewers, um fachspezifische Nuancen korrekt zu erfassen und zu hinterfragen \parencite{hoveExperiencesConductingSemistructured2005}. Deshalb wurde das Interview bewusst erst nach einer Einarbeitungsphase des Interviewers durchgeführt. Das etwa 45-minütige Gespräch wurde am 17.03.2026 vom Autor dieser Arbeit moderiert und mit Einverständnis des Experten digital aufgezeichnet.
 
-\textbf{Datenauswertung und Codierungsverfahren (Data Analysis):} \
+
+\item \textbf{Datenauswertung und Codierungsverfahren (Data Analysis):} \
 Zur Wahrung der Datenqualität und wissenschaftlichen Integrität durchlief das Rohmaterial zunächst drei Aufbereitungsschritte: (1) Manuelle Anonymisierung aller personen- und projektspezifischen Daten, (2) KI-gestützte Glättung von rein sprachlichen Redundanzen zur besseren Lesbarkeit sowie (3) eine manuelle zeilenweise Verifikation durch den Autor. Dieses geglättete finale Transkript (siehe Anhang~\ref{app:codierte_passagen}) bildete die Basis für die Codierung. Der Codierungsprozess verlief in Anlehnung an \textcite{mayringQualitativeContentAnalysis2014} in zwei Phasen: Einer deduktiven Kategorienanwendung (theoriegeleitete Anwendung vorab definierter Codes, z.,B. manuelle Prozessschritte, Zeitaufwand) sowie einer induktiven Kategorienbildung zur Erfassung unvorhergesehener Praxisprobleme. Um die methodische Qualität der Fallstudie zu sichern, wird so gemäß den Richtlinien von \textcite{runesonGuidelinesConductingReporting2009} eine lückenlose Beweiskette (\textit{Chain of Evidence}) etabliert, die über die folgenden Kapitel hinweg wissenschaftlich überprüfbar macht, wie das Systemdesign schrittweise aus den qualitativen Rohdaten abgeleitet wurde.
+\end{itemize}
 \section{Ergebnisse der Befragung}
 \label{sec:ergebnisse_interview}
 Die folgende Übersicht fasst die zentralen Erkenntnisse der qualitativen Inhaltsanalyse zusammen, gegliedert in thematische Schwerpunkte. Sie beschreiben den empirischen Ist-Zustand des Migrationsprozesses und bilden die Grundlage für die Anforderungsanalyse sowie die Definition der manuellen Baseline.
@@ -41,6 +46,14 @@ Die Qualitätssicherung stellt einen signifikanten Flaschenhals dar. Da bestehen
 Die Schätzung des zeitlichen Migrationsaufwands variiert je nach Modellkomplexität erheblich. Während ein durchschnittliches Modell laut dem Experten in drei bis vier Werktagen überführt werden kann, erfordert allein die Erstellung von Constraint-Tabellen aus bestehenden Vorbedingungen bei hochkomplexen Modellen einen mehrmonatigen Arbeitsaufwand. Selbst nach dieser zeitintensiven manuellen Übertragung weisen die generierten Tabellen häufig noch hohe Fehlerraten auf. Dies verdeutlicht, dass die manuelle Migration mit zunehmender Komplexität der Legacy-Modelle zu einem extrem langwierigen und fehleranfälligen Prozess wird.
 
 Zur Definition der Baseline differenziert der Experte zudem zwischen zwei Vorgehensweisen. Beim Greenfield-Ansatz (kompletter Neuaufbau) verteilen sich die Aufwände auf die Merkmalswelt (20\%), die Analyse (40\%) und die Umsetzung (40\%). Da sich ein derartiger manueller Neuaufbau informationstechnisch kaum automatisieren lässt, fokussiert sich der Prototyp auf die direkte Migration. Bei diesem Ansatz stellt die Umwandlung der Vorbedingungen in Constraints den primären prozessualen Flaschenhals dar: Dieser Arbeitsschritt bindet schätzungsweise 66\% der Gesamtarbeitszeit und bildet somit den zentralen Ansatzpunkt für die technologische Unterstützung.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/pie_time.pdf}
+    \caption{Zeitaufwand bei der direkten Migration von LO-VC zu AVC (Schätzwert nach Experteninterview).}
+    \label{fig:pie_time}
+\end{figure}
+
 \section{Implikationen für die Systemarchitektur (Ideales Zielbild)}
 \label{sec:implikationen}
 Aus den empirischen Befunden lassen sich konkrete Anforderungen an die Systemarchitektur ableiten. Dieser Abschnitt stellt ausschließlich die Implikationen dar, die direkt aus dem Interview resultieren. Sie repräsentieren den maximalen \textit{Business Need} der Praxis und skizzieren das theoretische Idealbild des Systems.
@@ -60,9 +73,53 @@ Der Paradigmenwechsel in der Modellierungstechnik erfordert zudem spezifische Ar
 \item \textbf{Einhaltung von AVC-Modellierungsrichtlinien:} Die Architektur muss standardkonformen AVC-Code erzeugen und Performance-Best-Practices (z.,B. nativen SAP-Standard statt veralteter Z-Funktionen) direkt berücksichtigen, um eine fehlerfreie Lauffähigkeit zu garantieren.
 \end{itemize}
 
+Die Tabelle 4.1 fasst die empirischen Befunde und die daraus abgeleiteten Systemanforderungen abschließend zusammen.
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{2}
+    \label{tab:anforderungsmatrix_exakt}
+    \begin{tabularx}{\textwidth}{@{} 
+        >{\raggedright\arraybackslash}p{7cm} 
+        >{\raggedright\arraybackslash}X @{}}
+        \toprule
+        \textbf{Empirische Befunde (Ist-Zustand, Kap. 4.2)} & \textbf{Systemimplikationen (Ideales Zielbild, Kap. 4.3)} \\
+        \midrule
+        
+        \textbf{4.2.1 Kognitive Altlasten:} \newline
+        Toter Code und ungenutzte Merkmale erschweren die 1:1 Konvertierung und belasten den Entwickler. & 
+        \textbf{Semantische Analyse \& Code-Bereinigung:} \newline
+        Automatische Identifikation ungenutzter Elemente zur Senkung der kognitiven Last im Vorfeld. \\
+        \addlinespace
+        
+        \textbf{4.2.6 \& 4.2.3 Flaschenhals Vorbedingungen:} \newline
+        Manuelle Auswertung und Restrukturierung binden 66\,\% der Gesamtarbeitszeit bei der direkten Migration. & 
+        \textbf{Automatisierte Logik-Transformation:} \newline
+        Eigenständige Generierung von Tabellen und Constraints zur Behebung des zeitlichen Flaschenhalses. \\
+        \addlinespace
+        
+        \textbf{4.2.5 Fehleranfälligkeit im Testprozess:} \newline
+        Händischer Abgleich migrierter Modelle ist extrem aufwendig und birgt hohes Risiko für Flüchtigkeitsfehler. & 
+        \textbf{Konsistenzprüfung im Testprozess:} \newline
+        Mapping alter Testkonfigurationen auf Zielmodelle zur Erkennung logischer Abweichungen. \\
+        \addlinespace
+        
+        \textbf{4.2.4 Limitierungen von Standard-Tools:} \newline
+        Reine Code-Konvertierung ohne proaktive Ratschläge auf einer „beratenden Flugebene“ reicht nicht aus. & 
+        \textbf{Interaktive Assistenz (Consulting-Ansatz):} \newline
+        Das System muss über deterministische Konvertierung hinausgehen und Design-Entscheidungen begründen. \\
+        \addlinespace
+        
+        \textbf{4.2.2 Paradigmenwechsel \& Clean Core:} \newline
+        Zwang zu klassifizierten Merkmalen und Verbot proprietärer Eigenentwicklungen (z.\,B. Z-Functions). & 
+        \textbf{Einhaltung von AVC-Modellierungsrichtlinien:} \newline
+        Generierung von standardkonformem Code unter direkter Berücksichtigung von Performance-Best-Practices. \\
+        
+        \bottomrule
+    \end{tabularx}
+    \caption{Requirement Traceability Matrix: Ableitung der funktionalen und architektonischen Systemanforderungen (Kap. 4.3) aus den empirisch identifizierten Praxis-Hürden (Kap. 4.2).}
+\end{table}
+
 \subsection{Quantitative Zielvorgaben für die Systemvalidierung}
 Die erhobenen Zeitmetriken definieren die Erfolgskriterien für die spätere Evaluierung. Das System muss sich also bei mittleren Modellen gegen die manuelle Baseline von drei bis vier Tagen pro Modell beweisen. Insbesondere soll gezeigt werden, dass die automatisierte Unterstützung den Hauptflaschenhals der Vorbedingungs-Transformation (66\% des Aufwands) messbar reduziert und dem Entwickler eine schnellere Migration ermöglicht.
 
-\subsection{Überleitung zum methodischen Realitätsabgleich}
-\label{sec:ueberleitung_scoping}
-Diese Implikationen beschreiben das Idealbild aus Sicht der Praxis. Im Sinne des \textit{Design Science Research} darf dieses Anforderungsprofil jedoch nicht unreflektiert in den Systementwurf übernommen werden. Das folgende Kapitel unterzieht diese Forderungen daher zunächst einem technologischen Realitätsabgleich (Machbarkeitsanalyse). Die als umsetzbar bewerteten Anforderungen werden anschließend in einem praktischen Selbstversuch erprobt. Indem der Code-Transformationsprozess systematisch durchlaufen wird, lassen sich wiederkehrende Muster und in sich geschlossene Aufgabenblöcke identifizieren. Diese praktische Erfahrung dient als methodisches Werkzeug, um das System passgenau zuzuschneiden: Aus den isolierten Teilschritten der manuellen Erprobung werden die spezifischen Agentenrollen, deren Instruktionen (Prompts) sowie die Prozesslogik abgeleitet. Das finale Resultat dieses Selbstversuchs ist somit die fundierte und detaillierte erste Architekturversion (V1) des Multi-Agenten-Systems.
