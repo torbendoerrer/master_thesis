@@ -509,6 +509,12 @@ INPUT .\grafiken\selbstversuch.pdf
 INPUT .\grafiken\selbstversuch.pdf
 INPUT .\grafiken\selbstversuch.pdf
 INPUT .\grafiken\selbstversuch.pdf
+INPUT .\grafiken\v1_architektur.pdf
+INPUT .\grafiken\v1_architektur.pdf
+INPUT .\grafiken\v1_architektur.pdf
+INPUT .\grafiken\v1_architektur.pdf
+INPUT .\grafiken\v1_architektur.pdf
+INPUT .\grafiken\v1_architektur.pdf
 INPUT .\chapter\06_architektur.tex
 INPUT .\chapter\06_architektur.tex
 OUTPUT chapter\06_architektur.aux

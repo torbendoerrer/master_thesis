@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  27 AUG 2026 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  27 AUG 2026 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1174,11 +1174,11 @@ LaTeX Warning: Reference `app:migrationsprotokolle' on page 28 undefined on inpu
 
 
 pdfTeX warning: pdflatex (file ./grafiken/selbstversuch.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/selbstversuch.pdf, id=245, 548.0475pt x 548.0475pt>
+<grafiken/selbstversuch.pdf, id=245, 536.0025pt x 489.74968pt>
 File: grafiken/selbstversuch.pdf Graphic file (type pdf)
 <use grafiken/selbstversuch.pdf>
 Package pdftex.def Info: grafiken/selbstversuch.pdf  used on input line 84.
-(pdftex.def)             Requested size: 455.24411pt x 455.25562pt.
+(pdftex.def)             Requested size: 455.24411pt x 415.96037pt.
 
 Overfull \hbox (7.76505pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 28
@@ -1194,17 +1194,30 @@ Overfull \hbox (17.61711pt too wide) in paragraph at lines 124--127
 \T1/lmr/bx/n/12 (-20) Handlungsregel: \T1/lmr/m/n/12 (-20) Schrei-be den fi-na-len Co-de (\T1/lmtt/m/n/12 TABLE\T1/lmr/m/n/12 (-20) -Aufrufe und \T1/lmtt/m/n/12 RESTRICT\T1/lmr/m/n/12 (-20) -Constraints).
  []
 
+
+
+pdfTeX warning: pdflatex (file ./grafiken/v1_architektur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<grafiken/v1_architektur.pdf, id=276, 566.115pt x 521.0667pt>
+File: grafiken/v1_architektur.pdf Graphic file (type pdf)
+<use grafiken/v1_architektur.pdf>
+Package pdftex.def Info: grafiken/v1_architektur.pdf  used on input line 132.
+(pdftex.def)             Requested size: 455.24411pt x 419.03244pt.
 )
 Overfull \hbox (7.76505pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 30
  []
 
 [30]
+Overfull \hbox (7.76505pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 KAPITEL 5.  MACHBARKEITSANALYSE UND PRAKTISCHER SELBSTVERSUCH \T1/lmr/m/n/12 31
+ []
+
+[31 <./grafiken/v1_architektur.pdf>]
 \openout2 = `chapter/06_architektur.aux'.
 
  (chapter/06_architektur.tex
 Kapitel 6.
-[31
+[32
 
 
 
@@ -1214,12 +1227,12 @@ Overfull \hbox (17.6893pt too wide) in paragraph at lines 23--23
 []\T1/lmr/bx/n/17.28 (-20) Iterative Ent-wick-lung des Pro-to-typs (De-sign Science
  []
 
-[32]
+[33]
 Overfull \hbox (0.96263pt too wide) in paragraph at lines 43--44
 []\T1/lmr/m/n/12 (-20) Aus die-sen in-itia-len Tes-t-er-geb-nis-sen lie� sich ab-lei-ten, dass die kom-ple-xe Strukturierungs-
  []
 
-[33] [34] [35]) [36]
+[34] [35] [36]) [37]
 \openout2 = `chapter/07_evaluierung.aux'.
 
  (chapter/07_evaluierung.tex
@@ -1229,22 +1242,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[37
+[38
 
 
 
 
-] [38] [39] [40] [41]) [42]
+] [39] [40] [41] [42]) [43]
 \openout2 = `chapter/08_fazit.aux'.
 
  (chapter/08_fazit.tex
 Kapitel 8.
-[43
+[44
 
 
 
 
-] [44]
+] [45]
 Overfull \hbox (12.56087pt too wide) in paragraph at lines 40--41
 \T1/lmr/m/n/12 (-20) mar-chi-tek-tur im vier-ten Ite-ra-ti-ons-zy-klus fun-da-men-tal zu ei-nem neuro-symbolischen
  []
@@ -1254,31 +1267,31 @@ Overfull \hbox (17.88174pt too wide) in paragraph at lines 41--42
 []\T1/lmr/m/n/12 (-20) Komplexe Struk-tu-rie-rungs-ent-schei-dun-gen (Analysten- und Architekten-Perspektive)
  []
 
-[45]
+[46]
 Overfull \hbox (13.32143pt too wide) in paragraph at lines 73--74
 []\T1/lmr/bx/n/12 (-20) Integration lo-ka-ler Va-li-die-rung zur Si-mu-la-ti-on feh-len-den Compiler-Feedbacks
  []
 
-[46]) [47] [48]
+[47]) [48] [49]
 Overfull \hbox (30.10672pt too wide) in paragraph at lines 70--70
 \T1/lmr/m/n/12 (-20) ter $https : / / proceedings . neurips . cc / paper / 2023 / hash / a3621ee907def47c1b952ade25c67698 -[]
  []
 
-[49
+[50
 
 
 
 
-] [50] [51]
+] [51] [52]
 \openout2 = `chapter/anhang.aux'.
 
- (chapter/anhang.tex [52
+ (chapter/anhang.tex [53
 
 
 ]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=349, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=393, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf  used on input line 18.
@@ -1289,7 +1302,7 @@ pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengefü
 
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=351, page=1, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=395, page=1, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
@@ -1298,7 +1311,7 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[53
+[54
 
 ]
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
@@ -1313,12 +1326,12 @@ File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type 
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 1>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page1 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
- [54
+ [55
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=366, page=2, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=410, page=2, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
@@ -1330,44 +1343,44 @@ Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf 
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
 <use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 2>
 Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page2 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-[55
-
- <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
-
-pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=371, page=3, 844.95674pt x 597.432pt>
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
-(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
-File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [56
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
 
 pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=376, page=4, 844.95674pt x 597.432pt>
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=415, page=3, 844.95674pt x 597.432pt>
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
-<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
-Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 3>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page3 used on input line 18.
 (pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
 [57
+
+ <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]
+
+pdfTeX warning: pdflatex (file ./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, id=421, page=4, 844.95674pt x 597.432pt>
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+File: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf Graphic file (type pdf)
+<use anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf, page 4>
+Package pdftex.def Info: anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf , page4 used on input line 18.
+(pdftex.def)             Requested size: 675.96631pt x 477.94624pt.
+[58
 
  <./anhang/Codierte_Passagen_Sortiert_zusammengeführt.pdf>]) (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux) (chapter/anhang.aux))
  ***********
@@ -1383,17 +1396,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30432 strings out of 467683
- 624744 string characters out of 5414237
- 1590880 words of memory out of 5000000
- 58691 multiletter control sequences out of 15000+600000
+ 30440 strings out of 467683
+ 625025 string characters out of 5414237
+ 1590907 words of memory out of 5000000
+ 58699 multiletter control sequences out of 15000+600000
  706516 words of font info for 224 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  98i,18n,108p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (61 pages, 1305634 bytes).
+Output written on main.pdf (62 pages, 1394712 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
+ 479 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 39512 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 39517 words of extra memory for PDF output out of 42996 (max. 10000000)
 
