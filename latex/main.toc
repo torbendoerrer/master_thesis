@@ -55,34 +55,34 @@
 \contentsline {section}{\numberline {5.2}Methodisches Setup und Durchführung}{27}{}%
 \contentsline {section}{\numberline {5.3}Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}{28}{}%
 \contentsline {subsection}{\numberline {5.3.1}Kognitive Phasen der manuellen Migration}{28}{}%
-\contentsline {subsection}{\numberline {5.3.2}Ableitung der V1-Architektur und System-Prompts}{29}{}%
-\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{30}{}%
-\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{30}{}%
-\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{30}{}%
-\contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{31}{}%
-\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{31}{}%
-\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{32}{}%
-\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{32}{}%
-\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{34}{}%
-\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{34}{}%
-\contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{36}{}%
-\contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{36}{}%
-\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{37}{}%
-\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{37}{}%
-\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{38}{}%
-\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{39}{}%
-\contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{39}{}%
-\contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{40}{}%
-\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{42}{}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{42}{}%
-\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{42}{}%
-\contentsline {section}{\numberline {8.3}Limitierungen der Arbeit}{44}{}%
-\contentsline {subsection}{\numberline {8.3.1}Eingeschränkte Datenverfügbarkeit und fehlende Ground Truth}{44}{}%
-\contentsline {subsection}{\numberline {8.3.2}Domänenkomplexität und Expertenverfügbarkeit}{45}{}%
-\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{45}{}%
-\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{45}{}%
-\contentsline {subsection}{\numberline {8.4.2}Technische Weiterentwicklung des Artefakts}{45}{}%
-\contentsline {subsection}{\numberline {8.4.3}Reevaluation der Modellwahl: Code-LLMs für die reine Code-Synthese}{46}{}%
-\contentsline {section}{\numberline {8.5}Schlusswort}{46}{}%
-\contentsline {chapter}{Anhang Anhang}{51}{}%
-\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{52}{}%
+\contentsline {subsection}{\numberline {5.3.2}Ableitung der V1-Architektur und System-Prompts}{30}{}%
+\contentsline {chapter}{\numberline {6}Systemdesign und Prototypenentwicklung}{31}{}%
+\contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{31}{}%
+\contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{31}{}%
+\contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{32}{}%
+\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{32}{}%
+\contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{33}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{33}{}%
+\contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{35}{}%
+\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{35}{}%
+\contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{37}{}%
+\contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{37}{}%
+\contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{38}{}%
+\contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{38}{}%
+\contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{39}{}%
+\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{40}{}%
+\contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{40}{}%
+\contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{41}{}%
+\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{43}{}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{43}{}%
+\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{43}{}%
+\contentsline {section}{\numberline {8.3}Limitierungen der Arbeit}{45}{}%
+\contentsline {subsection}{\numberline {8.3.1}Eingeschränkte Datenverfügbarkeit und fehlende Ground Truth}{45}{}%
+\contentsline {subsection}{\numberline {8.3.2}Domänenkomplexität und Expertenverfügbarkeit}{46}{}%
+\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{46}{}%
+\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{46}{}%
+\contentsline {subsection}{\numberline {8.4.2}Technische Weiterentwicklung des Artefakts}{46}{}%
+\contentsline {subsection}{\numberline {8.4.3}Reevaluation der Modellwahl: Code-LLMs für die reine Code-Synthese}{47}{}%
+\contentsline {section}{\numberline {8.5}Schlusswort}{47}{}%
+\contentsline {chapter}{Anhang Anhang}{52}{}%
+\contentsline {chapter}{Anhang Datenauswertung der Experteninterviews}{53}{}%

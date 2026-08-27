@@ -8,6 +8,7 @@ Nachdem das Experteninterview im vorangegangenen Kapitel die subjektiven Praxisp
 
 Die im vorherigen Kapitel beschriebenen Praxisanforderungen (vgl. Kapitel~\ref{sec:implikationen}) skizzieren das Idealbild eines zukünftigen Migrationssystems. Nach dem Paradigma des \textit{Design Science Research} \parencite{hevnerDesignScienceInformation2004} dürfen diese Wünsche jedoch nicht ungeprüft in die Systementwicklung übernommen werden. Es ist vorab eine Machbarkeitsprüfung (\textit{Feasibility Check}) notwendig, um den technologischen und funktionalen Umfang (\textit{Scope}) des Prototyps klar abzugrenzen.
 
+
 Dieser Abschnitt evaluiert die fünf Kernimplikationen aus Kapitel~\ref{sec:implikationen}. Es wird festgelegt, welche Anforderungen im folgenden praktischen Selbstversuch auf Code-Ebene untersucht und anschließend in die Multi-Agenten-Architektur integriert werden:
 
 \subsection{Evaluation der funktionalen Praxisanforderungen}
@@ -37,7 +38,18 @@ Das System muss standardkonformen AVC-Code erzeugen. Obsolete Elemente, wie klas
 
 Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch (vgl. Kapitel~\ref{sec:methodik_fallstudie} ff.) konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/scope.pdf}
+    \caption{Scope-Matrix des Prototyps}
+    \label{fig:scope}
+\end{figure}
+
+
 Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von KI-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen (Version 1) wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
+
+
+
 \section{Methodisches Setup und Durchführung}
 \label{subsec:methodisches_setup_selbstversuch}
 
@@ -65,7 +77,18 @@ Die Auswertung erfolgte durch den direkten analytischen Vergleich von Input, dem
 Die vollständigen Protokolle der manuellen Migration – inklusive Input-Code, kognitiven Zwischenschritten und finalem AVC-Code – sind aus Gründen der Lesbarkeit im Anhang \ref{app:migrationsprotokolle} dokumentiert. Dieser Abschnitt fasst die zentralen Erkenntnisse der Fallstudie zusammen und leitet daraus die Handlungsregeln für die Multi-Agenten-Architektur ab.
 
 \subsection{Kognitive Phasen der manuellen Migration}
-Die Analyse der Protokolle zeigt, dass die Transformation von LO-VC nach AVC weit mehr ist als ein einfacher Syntax-Austausch. Der Entwickler durchläuft während der Migration unbewusst ein dreistufiges kognitives Modell. Eine bloße 1:1-Übersetzung würde in der neuen AVC-Engine zu fehlerhaftem oder ineffizientem Code führen. Folgende drei Phasen bilden die Blaupause für das zu entwickelnde System:
+Die Analyse der Protokolle zeigt, dass die Transformation von LO-VC nach AVC weit mehr ist als ein einfacher Syntax-Austausch. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/selbstversuch.pdf}
+    \caption{Das dreistufige kognitive Modell der manuellen Code-Migration.}
+    \label{fig:selbstversuch}
+\end{figure}
+
+Der Entwickler durchläuft während der Migration unbewusst ein dreistufiges kognitives Modell. Eine bloße 1:1-Übersetzung würde in der neuen AVC-Engine zu fehlerhaftem oder ineffizientem Code führen. Folgende drei Phasen bilden die Blaupause für das zu entwickelnde System:
+
+
 
 \begin{enumerate}
 \item \textbf{Strukturelle und semantische Bereinigung (Die Analysten-Perspektive)}\
