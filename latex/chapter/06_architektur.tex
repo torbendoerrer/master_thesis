@@ -17,9 +17,19 @@ Bei der automatisierten Verarbeitung von industriellen Produktdaten und Konfigur
 
 Um diese Vorgaben zu erfüllen, erfolgt die Anbindung der Sprachmodelle in diesem Prototyp über den \textit{SAP AI Core}. Dies stellt sicher, dass die Datenverarbeitung in einer kontrollierten Systemumgebung stattfindet. Neben dem Datenschutz hat diese Entscheidung auch organisatorische Gründe: Da die \textit{msg systems ag} den \textit{SAP AI Core} bereits in anderen Projekten einsetzt, ist die nötige Infrastruktur bereits vorhanden. Dies erleichtert die technische Bereitstellung und ermöglicht es, die anfallenden Nutzungskosten standardisiert über bestehende Unternehmensverträge abzurechnen.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/tech_stack.pdf}
+    \caption{Schichtenarchitektur des technischen Fundaments.}
+    \label{fig:tech_stack}
+\end{figure}
+
 Ein weiterer technischer Aspekt betrifft die Anbindung der Modelle an das Agentensystem. Um flexibel auf technologische Änderungen reagieren zu können, soll der Prototyp nicht fest an einen einzelnen Anbieter oder ein spezifisches Modell gebunden werden (\textit{Vendor Lock-in}). 
 
 Um dies zu verhindern, wird die Python-Bibliothek \textit{liteLLM} genutzt und in das \textit{CrewAI}-Framework integriert. Sie fungiert als standardisierende Schnittstelle zwischen den KI-Agenten und den Sprachmodellen. Dadurch wird der Quellcode der Multi-Agenten-Architektur vom verwendeten Modell entkoppelt. Das ermöglicht es, das zugrundeliegende Modell bei Bedarf mit minimalem Konfigurationsaufwand über den \textit{SAP AI Core} auszutauschen, ohne den Programmcode der eigentlichen Agenten anpassen zu müssen.
+
+
+
 \section{Iterative Entwicklung des Prototyps (Design Science Research)}
 \label{sec:iterative_entwicklung}
 

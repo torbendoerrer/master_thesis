@@ -60,11 +60,11 @@
 \contentsline {section}{\numberline {6.1}Technologieauswahl und Infrastruktur}{32}{}%
 \contentsline {subsection}{\numberline {6.1.1}Orchestrierungs-Framework: CrewAI}{32}{}%
 \contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{33}{}%
-\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{33}{}%
+\contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{34}{}%
 \contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{34}{}%
-\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{34}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{35}{}%
 \contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{36}{}%
-\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{36}{}%
+\contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{37}{}%
 \contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{38}{}%
 \contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{38}{}%
 \contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{39}{}%

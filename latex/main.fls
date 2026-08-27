@@ -521,6 +521,12 @@ OUTPUT chapter\06_architektur.aux
 INPUT .\chapter\06_architektur.tex
 INPUT .\chapter\06_architektur.tex
 INPUT chapter\06_architektur.tex
+INPUT .\grafiken\tech_stack.pdf
+INPUT .\grafiken\tech_stack.pdf
+INPUT .\grafiken\tech_stack.pdf
+INPUT .\grafiken\tech_stack.pdf
+INPUT .\grafiken\tech_stack.pdf
+INPUT .\grafiken\tech_stack.pdf
 INPUT .\chapter\07_evaluierung.tex
 INPUT .\chapter\07_evaluierung.tex
 OUTPUT chapter\07_evaluierung.aux
