@@ -82,6 +82,16 @@ INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\bigfoot\suffix.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\generic\xstring\xstring.tex
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\ltablex\ltablex.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\ltablex\ltablex.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
@@ -208,10 +218,6 @@ INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfi
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlfile-hook.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlogo.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrlogo.sty
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty

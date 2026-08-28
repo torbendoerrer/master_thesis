@@ -10,6 +10,7 @@
 \usepackage{microtype}
 \usepackage[title, titletoc]{appendix}
 \usepackage{acronym}
+\usepackage{xltabular}
 \usepackage{amssymb}
 \usepackage{tcolorbox}
 \newtcolorbox{forschungsfrage}{
@@ -182,11 +183,347 @@ Wenn alle 5 Dashboards durchgesehen sind, wird der Think-Aloud-Modus für geziel
 \noindent\textbf{Abschlussfrage (Business Value):}\\
 ,,Glaubst du, dass ein Entwickler mit diesem Dashboard als Vorlage schneller wäre als bei einer komplett händischen Migration, selbst wenn er syntaktische Fehler noch manuell korrigieren muss?``
 \chapter{Codebücher der qualitativen Analyse}
-Dieser Anhang enthält die Codebücher der qualitative Analyse von Kapitel 4 und Kapitel 7. 
+
 \section{Codebuch Experteninterview}
+% WICHTIG: Keine \begin{table}-Umgebung mehr außen herum!
+
+\renewcommand{\arraystretch}{1.4} 
+\begin{xltabular}{\textwidth}{@{} 
+    >{\raggedright\arraybackslash}p{4.8cm} 
+    >{\raggedright\arraybackslash}p{4.2cm} 
+    >{\raggedright\arraybackslash}X @{}}
+    
+    
+    \label{tab:coding_guideline_aufwaende} \\
+    \toprule
+    \textbf{Code / Kategorie} & \textbf{Definition} & \textbf{Ankerbeispiel (aus dem Interview)} \\
+    \midrule
+    \endfirsthead
+    
+    % --- 2. Kopf für alle folgenden Seiten (Wiederholung) ---
+    \caption*{Tabelle \ref{tab:coding_guideline_aufwaende} (Fortsetzung)} \\
+    \toprule
+    \textbf{Code / Kategorie} & \textbf{Definition} & \textbf{Ankerbeispiel (aus dem Interview)} \\
+    \midrule
+    \endhead
+    
+    % --- 3. Fußende für Seitenumbrüche (unten auf der Seite) ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Fortsetzung auf der nächsten Seite...}} \\
+    \endfoot
+    
+    % --- 4. Fußende für die allerletzte Seite ---
+    \bottomrule
+    \endlastfoot
+    
+    % ==========================================
+    % HIER STARTET DER EIGENTLICHE INHALT
+    % ==========================================
+
+    % Block 1: Manueller Prozess
+    \textbf{RQ2-1: 01\_Manueller\_Prozess} & 
+    \textbf{Erfassung aller händischen Schritte, Systemwechsel und Prozessabhängigkeiten.} & 
+    \\
+    
+    RQ2-5: 01\_01\_Prozess\_ \newline Schritt\_Manuell & 
+    Jede explizite Nennung einer händischen Tätigkeit, die ein Entwickler bei der Übertragung von LO-VC zu AVC physisch ausführen muss. & 
+    „Wir legen die Struktur für die Tabelle dann im AVC komplett händisch neu an.“ \\
+    
+    RQ2-6: 01\_02\_Prozess\_ \newline Toolbruch & 
+    Medienbrüche, bei denen das SAP-System verlassen und Drittsoftware (insbesondere Excel) für Workarounds genutzt werden muss. & 
+    „Da müssen wir uns die Daten erst in ein Excel ziehen und dort bereinigen, bevor wir sie wieder hochladen.“ \\
+    \addlinespace
+    
+    % Block 2: Zeitlicher Aufwand
+    \textbf{RQ2-2: 02\_Zeitlicher\_Aufwand} & 
+    \textbf{Identifikation von Flaschenhälsen und Extraktion harter Metriken für die Baseline.} & 
+    \\
+    
+    RQ2-8: 02\_01\_Zeit\_ \newline Dauer\_Konkret & 
+    Nennung harter numerischer Werte und Zeiträume (Stunden, Tage, Monate, etc.) für spezifische Migrationsschritte oder Gesamtprojekte. & 
+    „Für ein durchschnittliches Modell brauchen wir aktuell etwa drei Personentage.“ \\
+    
+    RQ2-9: 02\_02\_Zeit\_ \newline Flaschenhals & 
+    Subjektive Einschätzung des Experten, welche Aufgabe den unverhältnismäßig größten Zeitanteil frisst oder den Prozess am stärksten bremst. & 
+    „Die meiste Zeit verlieren wir eigentlich bei der Bereinigung der alten Tabellen.“ \\
+    \addlinespace
+    
+    % Block 3: Kognitiver Aufwand
+    \textbf{RQ2-3: 03\_Kognitiver\_Aufwand} & 
+    \textbf{Erfassung dessen, was das menschliche Gehirn überlastet und wo typische Fehler passieren.} & 
+    \\
+    
+    RQ2-11: 03\_01\_Kognitiv\_ \newline Altlasten & 
+    Schwierigkeiten bei der Migration, die nicht durch das neue System (AVC) entstehen, sondern durch das Verstehen von historisch gewachsenem, undokumentiertem oder totem Code im Altsystem (LO-VC). & 
+    „Das Problem ist Code, der 15 Jahre alt ist und bei dem niemand mehr weiß, ob der überhaupt noch genutzt wird.“ \\
+    
+    RQ2-12: 03\_02\_Kognitiv\_ \newline Syntax\_Umdenken & 
+    Kognitive Schwierigkeiten, die durch die neuen technischen Paradigmen, die strengere Syntax oder die HANA-Logik von AVC entstehen. & 
+    „In AVC musst du die Logik teilweise völlig anders aufbauen, das alte LO-VC Denken funktioniert da nicht mehr.“ \\
+    
+    RQ2-13: 03\_03\_Kognitiv\_ \newline Fehler\_Menschlich & 
+    Typische Flüchtigkeits- oder Konzentrationsfehler, die Entwicklern aufgrund der monotonen, manuellen Arbeit unterlaufen. & 
+    „Wenn du das stundenlang abtippst, vergisst du halt auch einfach mal eine Klammer oder ein Komma.“ \\
+    \addlinespace
+    
+    % Block 4: Tool-Anforderungen
+    \textbf{RQ2-4: 04\_Tool\_Anforderungen} & 
+    \textbf{Direkte Lösungsansätze und Wünsche des Experten für die KI-Agenten.} & 
+    \\
+    
+    RQ2-14: 04\_01\_Tool\_ \newline Konkrete\_Anforderung & 
+    Ein direkter, konkreter Funktionswunsch an eine unterstützende Software oder KI zur Bewältigung der in Kategorie 1-3 genannten Probleme. & 
+    „Das Tool müsste mir eigentlich direkt die Zeile markieren können, in der der Syntax-Fehler liegt.“ \\
+    
+    RQ2-15: 04\_02\_Tool\_ \newline Usability & 
+    Anforderungen an die Transparenz, Bedienbarkeit und das Vertrauen in ein automatisiertes System (Explainability). & 
+    „Die KI darf keine Blackbox sein, ich muss als Entwickler nachvollziehen können, warum sie das Constraint so umgeschrieben hat.“ \\
+    \addlinespace
+
+    
+    RQ2-16 (induktiv): 05\_01\_Explizite\_Tool\_Nennung & 
+    Explizite Nennung von spezifischen Software-Tools, die im Prozess genutzt werden oder fehlen. & 
+    \textit{-- (Induktiv erhoben)} \\
+    
+    RQ2-17 (induktiv): 05\_02\_Testen & 
+    Thematisierung des Aufwands und der Vorgehensweise bei der Validierung und beim Testen der Modelle. & 
+    \textit{-- (Induktiv erhoben)} \\
+    
+    RQ2-18 (induktiv): 05\_03\_Komplexität\_Modellgröße & 
+    Aussagen zur Skalierbarkeit, Größe und strukturellen Komplexität der zu migrierenden Produktmodelle. & 
+    \textit{-- (Induktiv erhoben)} \\
+    
+    RQ2-19 (induktiv): 05\_04\_Limitierung\_KI\_Tool & 
+    Erwähnung von Grenzen, Schwächen oder Herausforderungen beim potenziellen Einsatz von KI-Tools. & 
+    \textit{-- (Induktiv erhoben)} \\
+
+\end{xltabular}
+\newpage
 \section{Codebuch Evaluation}
+% WICHTIG: Keine \begin{table}-Umgebung mehr außen herum!
+
+\renewcommand{\arraystretch}{1.5} 
+\begin{xltabular}{\textwidth}{@{} 
+    >{\raggedright\arraybackslash}p{4cm} 
+    >{\raggedright\arraybackslash}p{4.5cm} 
+    >{\raggedright\arraybackslash}X @{}}
+    
+    % --- 1. Kopf für die allererste Seite ---
+    \label{tab:coding_guideline_expert} \\
+    \toprule
+    \textbf{Code / Kategorie} & \textbf{Definition} & \textbf{Ankerbeispiel} \\
+    \midrule
+    \endfirsthead
+    
+    % --- 2. Kopf für alle folgenden Seiten (Wiederholung) ---
+    \caption*{Tabelle \ref{tab:coding_guideline_expert} (Fortsetzung)} \\
+    \toprule
+    \textbf{Code / Kategorie} & \textbf{Definition} & \textbf{Ankerbeispiel} \\
+    \midrule
+    \endhead
+    
+    % --- 3. Fußende für Seitenumbrüche (unten auf der Seite) ---
+    \midrule
+    \multicolumn{3}{r}{\textit{Fortsetzung auf der nächsten Seite...}} \\
+    \endfoot
+    
+    % --- 4. Fußende für die allerletzte Seite ---
+    \bottomrule
+    \endlastfoot
+    
+    % ==========================================
+    % HIER STARTET DER EIGENTLICHE INHALT
+    % ==========================================
+    
+    \textbf{RQ4-1: Nachvollziehbarkeit} & 
+    Alles, was sich darauf bezieht, wie gut der Gedankengang des Architekten lesbar, granular und logisch dokumentiert ist. & 
+    „Der Experte kritisierte, dass die architektonische Herleitung des Agenten nicht immer schlüssig war. Zwar deckte sich die Entscheidung \texttt{NO\_TABLE} mit dem Fehlen der Tabelle im Code, das Warum fehlte jedoch. Bei komplexen Bedingungen konnte der Experte nicht nachvollziehen, warum das System sich gegen eine Tabelle entschieden hat.“ \\
+    \addlinespace
+    
+    \textbf{RQ4-2: Semantische Äquivalenz \& Logik \newline (Struktur \& Architektur)} & 
+    Alles, was sich auf den inhaltlichen und logischen Aufbau der Tabellen bezieht (z.\,B. der richtige oder falsche architektonische Umgang mit UNCLASSIFIED-Merkmalen und das Fehlen des Wildcard-Konzepts). & 
+    „Das System hat Werte ignoriert, die keine Vorbedingung hatten, anstatt zu erkennen, dass diese Werte immer gültig sind. Zudem hat es bei redundanten Bedingungen zwei separate Tabellen erstellt, anstatt eine einzige Tabelle mit der Schnittmenge und Wildcards (Platzhaltern) zu bauen.“ \\
+    \addlinespace
+    
+    \textbf{RQ4-3: Syntaktische Korrektheit \newline (AVC-Compliance)} & 
+    Alles, was harte SAP-Regeln, Syntaxfehler, Präfixe oder fehlende Zeichen im generierten Code betrifft. & 
+    „Das System hat den Code \texttt{NOT SPECIFIED(UNCLASSIFIED\_umgebung)} generiert. Der Experte merkte an, dass dies ein Hard-Fail ist, da die neue AVC-Engine \texttt{NOT SPECIFIED} in Constraints syntaktisch nicht mehr zulässt. Auch der Syntax-Aufruf unterhalb der korrekten Tabellenmatrizen war fehlerhaft formatiert.“ \\
+    \addlinespace
+    
+    \textbf{RQ4-4: Praxistauglichkeit \& Business Value} & 
+    Alles, was die finale Frage beantwortet, ob das Tool dem Entwickler Arbeit abnimmt, Zeit spart oder in einen produktiven Workflow integriert werden kann. & 
+    „In der exakten jetzigen Form spart das Dashboard noch keine Zeit, da die manuelle Nacharbeit bei Wildcards zu hoch ist. Allein das automatische Erkennen der nicht klassifizierten Merkmale liefert aber bereits einen enormen inhaltlichen Mehrwert für den menschlichen Bearbeiter.“ \\
+    
+\end{xltabular}
 \chapter{Dokumentation Selbstversuch}
-Dieser Anhang enthält die Dokumentation des Selbstversuchs (Kapitel 5).
 
+\subsection*{Artefakt 1: K40\_BRM}
 
+\textbf{Ausgangslage (LO-VC Input / Rohdaten):}
+\begin{itemize}
+    \item \textbf{Merkmalsname:} K40\_BRM (Charakter-Merkmal).
+    \item \textbf{Zugeordnete Werte:} 0, 1 und 2.
+    \item Wert 0 hat keine Vorbedingungen.
+    \item Wert 1 hat die Vorbedingungen: \texttt{V\_TW0003} (\texttt{K40\_fg\_af = '3'}) und \texttt{V\_001} (\texttt{specified dummy}).
+    \item Wert 2 hat die Vorbedingung: \texttt{V\_TW0004} (\texttt{K40\_fg\_af = '1'}).
+\end{itemize}
+
+\textbf{Meine Analyse \& Gedankengänge bei der Migration:}
+\begin{itemize}
+    \item \textbf{Logik-Verknüpfung:} Wenn ein Wert mehrere Preconditions hat, müssen alle erfüllt sein (logisches AND).
+    \item \textbf{Umgang mit ,,specified dummy``:} Ich weiß aus Erfahrung mit den Kundendaten, dass der Ausdruck \texttt{specified dummy} immer dann verwendet wird, wenn ein Wert nie aufgerufen werden soll (da der Dummy nie klassifiziert wird). Das ist quasi historisch gewachsener ,,toter Code``. \textbf{Meine Entscheidung:} Ich lasse Wert 1 komplett bei der Migration weg.
+    \item \textbf{Struktur-Entscheidung:} Da Wert 0 keine Bedingung hat und Wert 1 gelöscht wird, verbleibt nur noch Wert 2 mit einer Bedingung. Da es nur ein einziger Wert ist, schreibe ich das als direkte Code-Zeile und schränke es nicht über eine extra Variantentabelle ein.
+    \item \textbf{AVC-Syntax-Anpassung:} Ich war mir anfangs unsicher, wie der genaue AVC-Code aussehen soll. Nach Blick in die Dokumentation lasse ich den alten INFERENCES-Block komplett weg, da AVC ohnehin alles herleitet. Auch den umständlichen OBJECTS-Block spare ich mir und referenziere die Merkmale direkt über das Präfix \texttt{\$self.}.
+\end{itemize}
+
+\textbf{Mein erstellter AVC Ziel-Code:}
+\begin{verbatim}
+RESTRICTIONS:
+$self.K40_BRM = '2' if $self.K40_fg_af = '1'.
+\end{verbatim}
+
+\vspace{1em}
+
+\subsection*{Artefakt 2: K40\_KO}
+
+\textbf{Ausgangslage (LO-VC Input / Rohdaten):}
+\begin{itemize}
+    \item \textbf{Merkmalsname:} K40\_KO mit den Werten 01 bis 10 sowie 99.
+    \item Viele Werte haben komplexe, teils redundante Vorbedingungen im JSON-Format hinterlegt.
+\end{itemize}
+
+\textbf{Meine Analyse \& Gedankengänge bei der Migration:}
+\begin{itemize}
+    \item \textbf{Bereinigung toter Code:} Die Werte 04, 06, 09 und 10 haben wieder die Vorbedingung \texttt{specified dummy}. Diese ignoriere ich bei der Ziel-Generierung komplett.
+    \item \textbf{Bereinigung Kommentare:} Bei Wert 99 sind drei der vier Zeilen der Vorbedingung mit einem Stern (*) auskommentiert. Es verbleibt für diesen Wert also eigentlich nur eine echte, aktive Vorbedingung.
+    \item \textbf{Mustererkennung \& Tabellenbildung:} Mir fällt auf, dass sich die Werte 01, 02 und 03 exakt dieselbe Tabellen-Vorbedingung teilen. Das Gleiche gilt für die Werte 05 und 07. Wenn ich das alles als einzelne IF-Zuweisungen ausschreibe, wird der Code endlos lang. Ich entscheide mich, diese Cluster in zwei Variantentabellen zusammenzufassen.
+    \item \textbf{Syntax-Update:} Wert 08 hat eine sehr eigenständige Vorbedingung, in der \texttt{ne} (not equal) vorkommt. Die korrekte Syntax hierfür in der modernen AVC-Engine ist \texttt{<>}. Das muss ich beim Schreiben ersetzen.
+\end{itemize}
+
+\textbf{Mein erstellter AVC Ziel-Code:}
+\begin{verbatim}
+RESTRICTIONS:
+table K40_KO_01 (
+    K40_fg_af = $self.K40_fg_af,
+    K40_abl = $self.K40_abl,
+    K40_KO = $self.K40_KO
+),
+table K40_KO_02 (
+    K40_fg_af = $self.K40_fg_af,
+    K40_ts = $self.K40_ts,
+    K40_KO = $self.K40_KO
+),
+$self.K40_KO = '08' if ($self.K40_fg_af = '3' or $self.K40_fg_af = '4') 
+    and $self.K40_brm = '0' and $self.K40_ts <> '1',
+$self.K40_KO = '99' if $self.K40_pl in ('d1','h1','h2').
+\end{verbatim}
+
+\textbf{Meine Tabellen hierzu:}
+\begin{itemize}
+    \item Für die erste Variantentabelle (K40\_KO\_01) werden die Werte 01, 02 und 03 zusammengefasst. Aus dem JSON geht hervor, dass diese Werte exakt dieselbe Vorbedingung teilen (\texttt{K40\_fg\_af in ('1','2')} und \texttt{K40\_abl = '0'}). Aufgelöst in eine Tabellenmatrix ergeben sich daraus insgesamt sechs gültige Kombinationen (Zeilen): Die Zielwerte 01, 02 und 03 werden jeweils einmal mit der Merkmalskombination \texttt{K40\_fg\_af = 1} \& \texttt{K40\_abl = 0} sowie ein weiteres Mal mit \texttt{K40\_fg\_af = 2} \& \texttt{K40\_abl = 0} verknüpft.
+    \item Für die zweite Variantentabelle (K40\_KO\_02) werden die Zielwerte 05 und 07 analog behandelt. Da in deren JSON-Vorbedingung zwei \texttt{IN}-Operatoren aufeinandertreffen (\texttt{K40\_fg\_af in ('3','4')} und \texttt{K40\_ts in ('0','1')}), entstehen pro Zielwert vier Kombinationsmöglichkeiten. Daraus ergeben sich insgesamt acht Tabellenzeilen: Die Zielwerte 05 und 07 werden jeweils mit allen vier möglichen Ausprägungen der Vorbedingungen verknüpft (\texttt{K40\_fg\_af} = 3 oder 4, kombiniert mit \texttt{K40\_ts} = 0 oder 1).
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{Artefakt 3: K40\_PL}
+
+\textbf{Ausgangslage (LO-VC Input / Rohdaten):}
+\begin{itemize}
+    \item \textbf{Merkmalsname:} K40\_PL (Char).
+    \item \textbf{Zugeordnete Werte:} H2, H3, H5, D1, H1, H4, D2.
+    \item Werte H2, H3 und H5 enthalten alle die Bedingung \texttt{specified dummy}. Bei H2 steht diese in Kombination mit einer weiteren Bedingung (\texttt{K40\_fst = '0'}).
+    \item Werte D1 und H1 haben beide exakt dieselbe Bedingung: \texttt{K40\_fst = '0'}.
+    \item Wert H4 hat die Bedingung: \texttt{Specified K40\_FG\_AF and K40\_FG\_AF = '4'}.
+    \item Wert D2 hat keine Vorbedingungen.
+\end{itemize}
+
+\textbf{Meine Analyse \& Gedankengänge bei der Migration:}
+\begin{itemize}
+    \item \textbf{Umgang mit Dummy-Werten:} Auch hier taucht das Anti-Pattern \texttt{specified dummy} wieder auf. Die Werte H3 und H5 fliegen direkt raus. Interessant ist H2: Hier gibt es noch eine zweite Vorbedingung. Da Vorbedingungen bei Werten aber logisch mit AND verknüpft werden, zieht der Dummy den kompletten Wert mit runter. Ich lösche H2 also ebenfalls komplett aus der Ziel-Architektur.
+    \item \textbf{Redundanz-Bereinigung:} Bei Wert H4 steht \texttt{Specified K40\_FG\_AF and K40\_FG\_AF = '4'}. Das ist logisch betrachtet ,,doppelt gemoppelt``. Wenn ein Merkmal den Wert '4' hat, ist es automatisch auch spezifiziert. Ich entscheide mich, diesen alten Ballast abzuwerfen und den AVC-Code schlanker zu machen, indem ich das Specified einfach weglasse.
+    \item \textbf{Mustererkennung \& Tabellenbildung:} Die Werte D1 und H1 teilen sich wieder exakt dieselbe Bedingung (\texttt{K40\_fst = '0'}). Um den Code elegant zu halten und die Engine nicht mit IF-Statements zu überladen, packe ich diese beiden Werte in eine kleine Variantentabelle.
+    \item \textbf{Wert ohne Bedingung:} Da D2 keine Bedingung hat, muss ich dafür keinen Code generieren. Er ist einfach immer erlaubt.
+\end{itemize}
+
+\textbf{Mein erstellter AVC Ziel-Code:}
+\begin{verbatim}
+RESTRICTIONS:
+table K40_PL_01 (
+    K40_fst = $self.K40_fst,
+    K40_PL = $self.K40_PL
+),
+$self.K40_PL = 'H4' if $self.K40_FG_AF = '4'.
+\end{verbatim}
+
+\textbf{Meine Tabellen hierzu:}
+\begin{itemize}
+    \item \textbf{Tabelle 1 (K40\_PL\_01):}
+    \begin{itemize}
+        \item Spalten: \texttt{K40\_fst}, \texttt{K40\_PL}
+        \item Zeilen: \texttt{0, D1}; \texttt{0, H1}
+    \end{itemize}
+\end{itemize}
+
+\vspace{1em}
+
+\subsection*{Artefakt 4: K40\_SCHP}
+
+\textbf{Ausgangslage (LO-VC Input / Rohdaten):}
+\begin{itemize}
+    \item \textbf{Merkmalsname:} K40\_SCHP (Char) mit den Werten 01 bis 10.
+    \item \textbf{Besonderheiten bei den Vorbedingungen:}
+    \begin{itemize}
+        \item Wert 02: Enthält einen großen Block an auskommentiertem Freitext (z.\,B. \texttt{*Merkmalswert ausgeblendet}) und nur eine aktive Zeile (\texttt{not specified K40\_FG\_AF}).
+        \item Werte 01 und 10: Haben exakt dieselbe Bedingung (\texttt{K40\_ko\_af = '1' and K40\_ps ne 'pw04' and K40\_ps ne 'ps03'}).
+        \item Werte 07 und 08: Haben exakt dieselbe Bedingung (\texttt{K40\_ko\_af = '2' and K40\_fg\_af in ('3','4') and K40\_ko ne '07'}).
+        \item Werte 03 und 09: Haben exakt dieselbe Bedingung (\texttt{K40\_ko = '08' and K40\_abl = '0'}).
+        \item Wert 05: Ähnelt 03/09, prüft aber auf \texttt{K40\_ko = '09'}.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Meine Analyse \& Gedankengänge bei der Migration:}
+\begin{itemize}
+    \item \textbf{Code-Bereinigung:} Bei Wert 02 hat früher offensichtlich jemand die Dokumentation direkt in den Code geschrieben und alte Logik auskommentiert (*). Das muss rigoros gelöscht werden, es zählt nur die aktive Zeile.
+    \item \textbf{Syntax-Update:} Der veraltete Operator \texttt{ne} taucht in mehreren Bedingungen auf. Dieser muss zwingend in \texttt{<>} übersetzt werden.
+    \item \textbf{Struktur-Entscheidung (Redundanzen bündeln):} Es gibt hier massive Dopplungen. Da einige Bedingungen Ungleichungen (\texttt{ne} bzw. \texttt{<>}) enthalten, eignen sich diese nicht optimal für klassische Variantentabellen (da Tabellen meist auf reine Gleichheit prüfen). Daher entscheide ich mich hier für einen anderen Weg der Bündelung: Ich schreibe die Restriktionen nicht einzeln pro Wert, sondern fasse die Werte im IF-Statement über Listen-Abfragen (\texttt{in}) zusammen. Das hält den Code ebenfalls sehr kompakt und ist für die AVC-Engine schnell auswertbar.
+\end{itemize}
+
+\textbf{Mein erstellter AVC Ziel-Code:}
+\begin{verbatim}
+RESTRICTIONS:
+$self.K40_SCHP = '02' if not specified $self.K40_FG_AF,
+$self.K40_SCHP = '06' if $self.K40_brm = '0' and $self.K40_abl = '0',
+$self.K40_SCHP = '04' if $self.K40_ko = '09' and not specified $self.K40_ps,
+$self.K40_SCHP in ('03', '09') if $self.K40_ko = '08' and $self.K40_abl = '0',
+$self.K40_SCHP = '05' if $self.K40_ko = '09' and $self.K40_abl = '0',
+$self.K40_SCHP in ('01', '10') if $self.K40_ko_af = '1' 
+    and $self.K40_ps <> 'pw04' and $self.K40_ps <> 'ps03',
+$self.K40_SCHP in ('07', '08') if $self.K40_ko_af = '2' 
+    and $self.K40_fg_af in ('3','4') and $self.K40_ko <> '07'.
+\end{verbatim}
+
+\vspace{1em}
+
+\subsection*{Artefakt 5: K40\_GK\_FB}
+
+\textbf{Ausgangslage (LO-VC Input / Rohdaten):}
+\begin{itemize}
+    \item \textbf{Merkmalsname:} K40\_GK\_FB (Char) mit insgesamt 10 Werten (Farb- bzw. Strukturcodes wie 1018, 3000, 2004 etc.).
+    \item \textbf{Besonderheit:} Die ersten 7 Werte (1018, 3000, 5002, 5003, 6024, 2002, 7016) haben alle exakt dieselbe Vorbedingung hinterlegt: \texttt{V\_TW0228} mit der Syntax \texttt{K40\_grh\_af ne '3'}.
+    \item Die verbleibenden 3 Werte (2004, 7032, 7035) besitzen überhaupt keine Vorbedingungen.
+\end{itemize}
+
+\textbf{Meine Analyse \& Gedankengänge bei der Migration:}
+\begin{itemize}
+    \item \textbf{Mustererkennung \& Redundanz:} Das ist ein klassisches Beispiel für ineffiziente Datenpflege im Altsystem. Anstatt die Bedingung einmal zentral abzuprüfen, wurde sie an 7 verschiedene Einzelwerte gehängt.
+    \item \textbf{Struktur-Entscheidung (Architektur-Wahl):} Wenn ich das 1:1 in AVC übersetze, müsste ich ein IF-Statement mit einer langen Liste (\texttt{IN ('1018', '3000', ... )}) schreiben. Da es hier aber ausschließlich um eine einfache Bedingung mit einer Ungleichung (\texttt{ne}) geht und die anderen drei Werte ohnehin immer gelten, entscheide ich mich für eine elegantere Logik-Umkehr. Anstatt positiv aufzulisten, welche 7 Werte bei \texttt{<> '3'} erlaubt sind, schreibe ich ein Constraint, das definiert, was passiert, wenn der Wert doch '3' ist (dann sind eben nur noch die drei freien Werte erlaubt).
+    \item \textbf{Syntax-Update:} Der Operator \texttt{ne} wird in AVC durch \texttt{<>} ersetzt.
+\end{itemize}
+
+\textbf{Mein erstellter AVC Ziel-Code:}
+\begin{verbatim}
+RESTRICTIONS:
+$self.K40_GK_FB in ('2004', '7032', '7035') if $self.K40_grh_af = '3'.
+\end{verbatim}
 \end{document}
