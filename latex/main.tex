@@ -2,7 +2,6 @@
 
 \documentclass[12pt, a4paper, oneside]{book}
 
-% --- Pakete ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -22,6 +21,13 @@
 }
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[headsepline=false]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles      % Löscht alle Default-Kopf- und Fußzeilen
+\cfoot[\pagemark]{\pagemark}% Seitenzahl mittig in die Fußzeile (durchgehend)
+% Hinweis: Falls die Seitenzahl rechts stehen soll: \ofoot[\pagemark]{\pagemark}
 \usepackage{tabularx}
 \usepackage[
   left=2.5cm,
@@ -65,12 +71,122 @@
 \include{chapter/08_fazit}
 
 
-\backmatter
-\printbibliography % Hier erscheint das Verzeichnis
 
-\begin{appendices}
-        % Hier binden wir die Anhang-Datei ein
-        \include{chapter/anhang}
-\end{appendices}
+\printbibliography[heading=bibintoc, title={Literaturverzeichnis}]
+
+\appendix
+\chapter{Interview- und Evaluationsleitfaden}
+\section{Leitfaden Experteninterview}
+\subsection*{Interview-Ziele für FF1:}
+\begin{enumerate}
+    \item Definition des exakten manuellen Prozessablaufs (,,Was macht der Mensch?``).
+    \item Quantifizierung des zeitlichen Aufwands (,,Wie lange dauert das?``).
+    \item Identifikation des kognitiven Aufwands und der Fehlerquellen (,,Was ist daran so schwer?``).
+\end{enumerate}
+
+\subsection*{Phase 0: Einleitung \& Warm-up (ca. 5 Minuten)}
+\textit{(Regieanweisung: Ziel dieser Phase ist es, den ethischen Rahmen zu klären, Vertrauen aufzubauen und den Experten in einen erzählenden Modus zu bringen.)}
+
+\vspace{0.5em}
+\noindent\textbf{Begrüßung \& Kontext:}\\
+,,Vielen Dank für deine Zeit. Das Ziel meiner Masterarbeit ist es, ein Multi-Agenten-System zu bauen, das die Migration von LO-VC nach AVC automatisiert. Um zu beweisen, dass dieses System eine echte Erleichterung bringt, muss ich zunächst die `menschliche Baseline' verstehen: Wie läuft die manuelle Migration aktuell ab, wie lange dauert sie und wo liegen die Hürden?``
+
+\vspace{0.5em}
+\noindent\textbf{Formalia (Ethik \& Transkription):}\\
+,,Bevor wir starten, kurz zum formellen Ablauf: Um keine Details zu verpassen, würde ich das Gespräch gerne als Audio aufzeichnen. Die Aufnahme wird im Nachgang für die Auswertung wörtlich transkribiert. Das Transkript schicke ich dir gerne zur Freigabe zu. In meiner Masterarbeit werden alle Aussagen anonymisiert verwendet, sodass keine Rückschlüsse auf dich persönlich oder spezifische Kundenprojekte gezogen werden können. Bist du damit einverstanden?``
+
+\vspace{0.5em}
+\noindent\textbf{Eisbrecher-Frage:}\\
+\textbf{Hauptfrage 1:} ,,Zum Start: Kannst du kurz deine aktuelle Rolle beschreiben und in welchem Umfang du in deinem Projektalltag mit LO-VC und AVC-Code zu tun hast?``
+
+\subsection*{Phase 1: Der manuelle Prozessablauf (ca. 10 Minuten)}
+\textit{(Regieanweisung: Trichter-Modell anwenden. Den Experten den Prozess frei beschreiben lassen, nicht unterbrechen. Erst danach anhand der Probes gezielt Lücken schließen, falls die in den Probes erwähnten Fragen nicht bereits beantwortet wurden.)}
+
+\begin{itemize}
+    \item \textbf{Hauptfrage 2 (Offen):} ,,Stell dir vor, du hast eine typische, komplexe LO-VC Prozedur vor dir, die beispielsweise harte Berechnungen und weiche Vorschlagswerte mischt. Kannst du mich Schritt für Schritt durch deinen Arbeitsablauf führen, wie du diese nach AVC migrierst?``
+    \begin{itemize}
+        \item \textbf{Probe A (Werkzeuge):} ,,Nutzt du dafür bestimmte Tools oder machst du das direkt im SAP-System?``
+        \item \textbf{Probe B (Splitting):} ,,Nach welchen Kriterien entscheidest du, welche Zeilen in eine neue Prozedur wandern und was ein Constraint wird?``
+        \item \textbf{Probe C (Legacy-Funktionen):} ,,Wie gehst du mit veralteten Aufrufen wie den SAP\_VF-Funktionen um?``
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Phase 2: Zeitlicher Aufwand \& Metriken (ca. 10 Minuten)}
+\textit{(Regieanweisung: Ziel ist es, harte Metriken für die Baseline zu sammeln. Vage Aussagen wie `lange' müssen auf konkrete Zeiten festgenagelt werden.)}
+
+\begin{itemize}
+    \item \textbf{Hauptfrage 3 (Offen):} ,,Wie würdest du den zeitlichen Aufwand für diese manuellen Migrationsschritte in euren Projekten beschreiben?``
+    \begin{itemize}
+        \item \textbf{Probe A (Durchschnitt):} ,,Können wir das in Minuten oder Stunden fassen? Wie lange dauert eine durchschnittliche, komplexe Prozedur inklusive Splitting und Testen?``
+        \item \textbf{Probe B (Komplexität):} ,,Wie groß ist die Streuung? Was ist der Zeitunterschied zwischen einem simplen \$?=-Umschreiben und Logiken mit verschachtelten IF-Bedingungen?``
+        \item \textbf{Probe C (Gesamtprojekt):} ,,Wenn ihr ein gesamtes Kundenprojekt betrachtet: Welcher prozentuale Anteil der Projektzeit entfällt rein auf diese syntaktische und logische Code-Migration?``
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Phase 3: Kognitiver Aufwand \& Fehlerquellen (ca. 10 Minuten)}
+\textit{(Regieanweisung: Argumente sammeln, warum der Mensch fehleranfällig ist und eine KI-gestützte Automatisierung (das Artefakt) einen Mehrwert bietet.)}
+
+\begin{itemize}
+    \item \textbf{Hauptfrage 4 (Offen):} ,,Wenn du auf die letzten Migrationen zurückblickst: Was empfindest du bei diesem manuellen Umschreiben als die größte kognitive Herausforderung? Wo raucht der Kopf am meisten?``
+    \begin{itemize}
+        \item \textbf{Probe A (Fehlerarten):} ,,Welche Fehler passieren den Kollegen oder dir am häufigsten, die dann später im Test auffallen (z.\,B. vergessene Punkte, falsch aufgelöste IF-Bedingungen)?``
+        \item \textbf{Probe B (Qualitätssicherung):} ,,Wie stellt ihr aktuell sicher, dass der migrierte AVC-Code logisch exakt dasselbe tut wie der alte LO-VC-Code? Gibt es da automatisierte Verfahren oder ist das rein manuelles Testen?``
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Phase 4: Abschluss \& Blick auf die Lösung (ca. 5 Minuten)}
+\textit{(Regieanweisung: Überleitung von der Problemstellung (Baseline) zur Lösungsbewertung (KI-System).)}
+
+\begin{itemize}
+    \item \textbf{Hauptfrage 5:} ,,Angenommen, wir hätten ein System, das dir dieses Splitting und die Syntax-Übersetzung zu 90\,\% fehlerfrei automatisiert abnimmt: Welchen Einfluss hätte das auf deinen Arbeitsalltag und die Projektlaufzeiten?``
+    \item \textbf{Abschluss:} ,,Gibt es aus deiner Sicht noch einen wichtigen Aspekt beim manuellen Umschreiben von LO-VC, über den wir heute noch gar nicht gesprochen haben?``
+\end{itemize}
+\section{Leitfaden Evaluation}
+
+\subsection*{Phase 1: Das Briefing (Die ersten 5 Minuten)}
+Hier werden die methodischen Rahmenbedingungen gesetzt. Die wichtigsten Fragen hierfür:
+
+\begin{itemize}
+    \item ,,Darf ich diesen Call für meine Masterarbeit aufzeichnen, damit ich später deine Zitate auswerten kann?``
+    \item ,,Wir machen heute ein Think-Aloud-Verfahren. Ich zeige dir gleich Excel-Dashboards, die mein Agent generiert hat.``
+    \item ,,Deine Aufgabe: Bitte sprich alles laut aus, was dir durch den Kopf geht, während du die Excel liest. Auch wenn du stockst, dich wunderst oder fluchst -- sag es laut.``
+    \item ,,Wichtig: Ich bin heute nur neutraler Beobachter. Ich werde keine Architektur-Entscheidungen der KI verteidigen oder dir erklären, warum sie etwas falsch gemacht hat. Ich höre nur zu.``
+\end{itemize}
+
+\subsection*{Phase 2: Die Think-Aloud Durchführung (ca. 30--40 Minuten)}
+Die Excel Dateien zusammen mit den JSON Files wurden im Vorhinein geschickt. Der Experte liest sich durch die Dateien. Wenn der Experte verstummt, können folgende Ermutigungen helfen, seine Gedanken zu teilen:
+
+\begin{itemize}
+    \item \textbf{Wenn er länger als 15 Sekunden schweigt:} ,,Was schaust du dir gerade an?`` oder ,,Was denkst du gerade?``
+    \item \textbf{Wenn er stutzt oder seufzt:} ,,Warum hast du gerade gezögert?``
+    \item \textbf{Wenn er sagt: ,Das ist ja komisch`:} ,,Was genau ist daran komisch?``
+    \item \textbf{Wenn er sagt: ,Das hätte ich anders gemacht`:} ,,Wie hättest du es manuell gelöst?``
+\end{itemize}
+
+\subsection*{Phase 3: Das Systematische Debriefing (ca. 10 Minuten)}
+Wenn alle 5 Dashboards durchgesehen sind, wird der Think-Aloud-Modus für gezielte Rückfragen beendet. Diese Fragen decken die in Kapitel 7 definierten Evaluierungskriterien ab:
+
+\vspace{0.5em}
+\noindent\textbf{Kriterium 1: Nachvollziehbarkeit (Traceability)}\\
+,,Wie gut konntest du anhand der Notizen des `Architekten' nachvollziehen, warum aus dem alten Code eine Tabelle oder ein IF-Statement wurde?``
+
+\vspace{0.5em}
+\noindent\textbf{Kriterium 2: Semantische Äquivalenz (Logik)}\\
+,,Hat das Multi-Agenten-System die eigentliche Geschäftslogik der Vorbedingungen verfälscht, oder blieb die fachliche Bedeutung bei der Migration erhalten?``
+
+\vspace{0.5em}
+\noindent\textbf{Kriterium 3: Syntaktische Korrektheit (AVC-Standard)}\\
+,,Wie bewertest du die rohe Syntax, die der Synthesizer am Ende ausgespuckt hat? Was waren die größten Schnitzer (z.\,B. fehlendes Präfix) und wie schlimm sind diese für die Praxis?``
+
+\vspace{0.5em}
+\noindent\textbf{Abschlussfrage (Business Value):}\\
+,,Glaubst du, dass ein Entwickler mit diesem Dashboard als Vorlage schneller wäre als bei einer komplett händischen Migration, selbst wenn er syntaktische Fehler noch manuell korrigieren muss?``
+\chapter{Codebücher der qualitativen Analyse}
+Dieser Anhang enthält die Codebücher der qualitative Analyse von Kapitel 4 und Kapitel 7. 
+\section{Codebuch Experteninterview}
+\section{Codebuch Evaluation}
+\chapter{Dokumentation Selbstversuch}
+Dieser Anhang enthält die Dokumentation des Selbstversuchs (Kapitel 5).
+
 
 \end{document}

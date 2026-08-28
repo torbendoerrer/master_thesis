@@ -103,3 +103,10 @@ Es arbeitet auf einer Kopie der Rohdaten, löscht leere Werte ohne Vorbedingunge
 Durch diese Anpassungen entwickelte sich die Architektur von einer reinen KI-Pipeline zu einem \textit{neuro-symbolischen} System. Die Künstliche Intelligenz wurde schrittweise aus der logischen Entscheidungsfindung verdrängt. Dem LLM verbleibt im finalen Prototyp lediglich die Aufgabe, den vorbereiteten Bauplan in AVC-Code zusammenzusetzen und grundlegend zu validieren. 
 
 Die Ergebnisse waren im letzten Testlauf reproduzierbar; das System lieferte bei drei Durchläufen dreimal exakt dasselbe Resultat. Die zentrale Erkenntnis dieser iterativen Entwicklung ist, dass der Problemraum der Code-Migration stark deterministisch ist. Der Einsatz von generativer KI erweist sich für die strukturelle Analyse als ineffizient und ist bei vollständiger Umsetzung mathematischer Solver (wie AST-Parser und SAT-Solver) für diesen Teilprozess weitestgehend obsolet.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{grafiken/final_arch.pdf}
+    \caption{Finale Gesamtarchitektur des neuro-symbolischen Prototyps (V4).}
+    \label{fig:final_arch}
+\end{figure}
