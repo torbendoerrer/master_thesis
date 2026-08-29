@@ -1,0 +1,40 @@
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_BRM
+   ========================================== */
+TABLE K40_BRM
+DESCRIPTION 'K40_BRM Characteristics'
+CODE 'K40_BRM'
+{
+  '1': '1',
+  RESTRICT ($self.K40_fg_af='3' AND $self.V_TW0003);
+
+  '2': '2',
+  RESTRICT ($self.K40_fg_af='1' AND $self.V_TW0004);
+
+  '0': '0'
+}
+
+/* ==========================================
+   AVC CONSTRAINT FÜR MERKMAL: K40_KO
+   ========================================== */
+```plaintext
+TABLE K40_KO
+  CONSTRAINT RESTRICT (
+    WHEN $self.code IN ('01', '02', '03', '04') THEN
+      $self.dependency_precondition IN ('V_TW0008', 'V_TW0569') AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('1','2'), $self.K40_abl = '0')
+    WHEN $self.code IN ('05', '07') THEN
+      $self.dependency_precondition = 'V_TW0009' AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('3','4') AND $self.K40_ts IN ('0','1'))
+    WHEN $self.code = '08' THEN
+      $self.dependency_precondition = 'V_TW0010' AND
+      $self.dependency_syntax IN (($self.K40_fg_af = '3') OR $self.K40_fg_af = '4' AND $self.K40_brm = '0' AND NOT $self.K40_ts = '1')
+    WHEN $self.code = '09' THEN
+      $self.dependency_precondition IN ('V_TW0011', 'V_TW0569') AND
+      $self.dependency_syntax IN ($self.K40_fg_af = '1' AND $self.K40_brm = '0' AND NOT $self.K40_ts = '1' AND $self.K40_pl_af = 'd' AND ($self.K40_pl IN ('d1','d2') OR $self.K40_pl IN ('H1','H3')), $self.K40_abl = '0')
+    WHEN $self.code = '99' THEN
+      $self.dependency_precondition = '0000003046' AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('1','2','3','4') AND $self.K40_pl IN ('d1','h1','h2') OR $self.K40_fg_af IN ('1','2','3','4') AND $self.K40_pl IN ('d2','h3') AND $self.K40_fst = '0')
+  );
+```

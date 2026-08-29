@@ -172,7 +172,7 @@ def process_lovc_json(input_file, output_file):
 # ==========================================
 if __name__ == "__main__":
     # Passe hier die Dateinamen an deine lokalen Dateien an
-    INPUT_JSON = "Beispiel1_Vorbedingungen.json"
-    OUTPUT_FILE = "MAS_Output_AVC_Constraints_Third_Run.txt"
+    INPUT_JSON = "Anhang.json"
+    OUTPUT_FILE = "Beispiel_Anhang.txt"
     
     process_lovc_json(INPUT_JSON, OUTPUT_FILE)

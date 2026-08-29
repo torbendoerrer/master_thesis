@@ -92,3 +92,7 @@
 \contentsline {section}{\numberline {B.1}Codebuch Experteninterview}{67}{}%
 \contentsline {section}{\numberline {B.2}Codebuch Evaluation}{72}{}%
 \contentsline {chapter}{\numberline {C}Dokumentation Selbstversuch}{74}{}%
+\contentsline {chapter}{\numberline {D}Beispiel}{80}{}%
+\contentsline {section}{\numberline {D.1}Beispielhafter JSON Input}{80}{}%
+\contentsline {section}{\numberline {D.2}Erstes Beispiel eines Ergebnisses der V1-Architektur}{82}{}%
+\contentsline {section}{\numberline {D.3}Erstes Beispiel des Ergebnisses der finalen Architektur}{83}{}%

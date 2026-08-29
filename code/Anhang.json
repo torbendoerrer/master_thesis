@@ -1,0 +1,198 @@
+{
+    "material": "KMAT1_PRECONDITIONS",
+    "classes": [
+        {
+            "type": "300",
+            "name": "CLASS1",
+            "description": null,
+            "characteristics": [
+                {
+                    "name": "K40_BRM",
+                    "description": "K40_BRM",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "1",
+                            "description": "1",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0003",
+                                    "syntax": "K40_fg_af = '3'"
+                                },
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "2",
+                            "description": "2",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0004",
+                                    "syntax": "K40_fg_af = '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "0",
+                            "description": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "K40_KO",
+                    "description": "K40_KO",
+                    "type": "char",
+                    "values": [
+                        {
+                            "code": "04",
+                            "description": "04",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "06",
+                            "description": "06",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "09",
+                            "description": "09",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                },
+                                {
+                                    "precondition": "V_TW0011",
+                                    "syntax": "K40_fg_af = '1' and K40_brm = '0' and K40_ts ne '1' and                 \n*K40_pl_af = 'd' and K40_pl in ('d1','d2')                              \n(K40_pl in('d1','d2') or K40_pl in ('H1','H3'))"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "10",
+                            "description": "10",
+                            "dependency": [
+                                {
+                                    "precondition": "V_001",
+                                    "syntax": "specified dummy"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "01",
+                            "description": "01",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "02",
+                            "description": "02",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "03",
+                            "description": "03",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0008",
+                                    "syntax": "K40_fg_af in ('1','2')"
+                                },
+                                {
+                                    "precondition": "V_TW0569",
+                                    "syntax": "K40_abl = '0'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "05",
+                            "description": "05",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "07",
+                            "description": "07",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0009",
+                                    "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "08",
+                            "description": "08",
+                            "dependency": [
+                                {
+                                    "precondition": "V_TW0010",
+                                    "syntax": "(K40_fg_af = '3') or                                                    \nK40_fg_af = '4' and                                                     \nK40_brm = '0' and K40_ts ne '1'"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "99",
+                            "description": "99",
+                            "dependency": [
+                                {
+                                    "precondition": "0000003046",
+                                    "syntax": "*K40_fg_af in ('1','2','3','4') and                                     \nK40_pl in ('d1','h1','h2')                                              \n*K40_fg_af in ('1','2','3','4') and                                     \n*K40_pl in ('d2','h3') and K40_fst = '0'"
+                                }
+                            ]
+                        }
+                    ]
+                }
+               
+        
+            ]
+        }
+    ]
+}

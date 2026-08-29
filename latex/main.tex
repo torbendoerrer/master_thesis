@@ -4,6 +4,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{listings}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
@@ -526,4 +527,137 @@ $self.K40_SCHP in ('07', '08') if $self.K40_ko_af = '2'
 RESTRICTIONS:
 $self.K40_GK_FB in ('2004', '7032', '7035') if $self.K40_grh_af = '3'.
 \end{verbatim}
+\chapter{Beispiel}
+\section{Beispielhafter JSON Input}
+\subsection*{Merkmal: K40\_BRM}
+\textbf{Beschreibung:} K40\_BRM \\
+\textbf{Typ:} char
+
+\begin{itemize}
+    \item \textbf{Wert 1} (Beschreibung: 1)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0003):} \texttt{K40\_fg\_af = '3'}
+        \item \textit{Bedingung (V\_001):} \texttt{specified dummy}
+    \end{itemize}
+    \item \textbf{Wert 2} (Beschreibung: 2)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0004):} \texttt{K40\_fg\_af = '1'}
+    \end{itemize}
+    \item \textbf{Wert 0} (Beschreibung: 0)
+\end{itemize}
+
+\subsection*{Merkmal: K40\_KO}
+\textbf{Beschreibung:} K40\_KO \\
+\textbf{Typ:} char
+
+\begin{itemize}
+    \item \textbf{Wert 04} (Beschreibung: 04)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_001):} \texttt{specified dummy}
+        \item \textit{Bedingung (V\_TW0008):} \texttt{K40\_fg\_af in ('1','2')}
+        \item \textit{Bedingung (V\_TW0569):} \texttt{K40\_abl = '0'}
+    \end{itemize}
+    \item \textbf{Wert 06} (Beschreibung: 06)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_001):} \texttt{specified dummy}
+        \item \textit{Bedingung (V\_TW0009):} \texttt{K40\_fg\_af in ('3','4') and K40\_ts in ('0','1')}
+    \end{itemize}
+    \item \textbf{Wert 09} (Beschreibung: 09)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_001):} \texttt{specified dummy}
+        \item \textit{Bedingung (V\_TW0011):} \texttt{K40\_fg\_af = '1' and K40\_brm = '0' and K40\_ts ne '1' and \\ 
+        *K40\_pl\_af = 'd' and K40\_pl in ('d1','d2') \\ 
+        (K40\_pl in('d1','d2') or K40\_pl in ('H1','H3'))}
+        \item \textit{Bedingung (V\_TW0569):} \texttt{K40\_abl = '0'}
+    \end{itemize}
+    \item \textbf{Wert 10} (Beschreibung: 10)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_001):} \texttt{specified dummy}
+    \end{itemize}
+    \item \textbf{Wert 01} (Beschreibung: 01)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0008):} \texttt{K40\_fg\_af in ('1','2')}
+        \item \textit{Bedingung (V\_TW0569):} \texttt{K40\_abl = '0'}
+    \end{itemize}
+    \item \textbf{Wert 02} (Beschreibung: 02)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0008):} \texttt{K40\_fg\_af in ('1','2')}
+        \item \textit{Bedingung (V\_TW0569):} \texttt{K40\_abl = '0'}
+    \end{itemize}
+    \item \textbf{Wert 03} (Beschreibung: 03)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0008):} \texttt{K40\_fg\_af in ('1','2')}
+        \item \textit{Bedingung (V\_TW0569):} \texttt{K40\_abl = '0'}
+    \end{itemize}
+    \item \textbf{Wert 05} (Beschreibung: 05)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0009):} \texttt{K40\_fg\_af in ('3','4') and K40\_ts in ('0','1')}
+    \end{itemize}
+    \item \textbf{Wert 07} (Beschreibung: 07)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0009):} \texttt{K40\_fg\_af in ('3','4') and K40\_ts in ('0','1')}
+    \end{itemize}
+    \item \textbf{Wert 08} (Beschreibung: 08)
+    \begin{itemize}
+        \item \textit{Bedingung (V\_TW0010):} \texttt{(K40\_fg\_af = '3') or \\ 
+        K40\_fg\_af = '4' and \\ 
+        K40\_brm = '0' and K40\_ts ne '1'}
+    \end{itemize}
+    \item \textbf{Wert 99} (Beschreibung: 99)
+    \begin{itemize}
+        \item \textit{Bedingung (0000003046):} \texttt{*K40\_fg\_af in ('1','2','3','4') and \\ 
+        K40\_pl in ('d1','h1','h2') \\ 
+        *K40\_fg\_af in ('1','2','3','4') and \\ 
+        *K40\_pl in ('d2','h3') and K40\_fst = '0'}
+    \end{itemize}
+\end{itemize}
+\section{Erstes Beispiel eines Ergebnisses der V1-Architektur}
+
+% WICHTIG: Fügen Sie \usepackage{listings} in die Präambel Ihrer Arbeit ein.
+\begin{lstlisting}[breaklines=true, basicstyle=\ttfamily\small, tabsize=2]
+/* ==========================================
+   AVC CONSTRAINT FUER MERKMAL: K40_BRM
+   ========================================== */
+TABLE K40_BRM
+DESCRIPTION 'K40_BRM Characteristics'
+CODE 'K40_BRM'
+{
+  '1': '1',
+  RESTRICT ($self.K40_fg_af='3' AND $self.V_TW0003);
+
+  '2': '2',
+  RESTRICT ($self.K40_fg_af='1' AND $self.V_TW0004);
+
+  '0': '0'
+}
+
+/* ==========================================
+   AVC CONSTRAINT FUER MERKMAL: K40_KO
+   ========================================== */
+TABLE K40_KO
+  CONSTRAINT RESTRICT (
+    WHEN $self.code IN ('01', '02', '03', '04') THEN
+      $self.dependency_precondition IN ('V_TW0008', 'V_TW0569') AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('1','2'), $self.K40_abl = '0')
+    WHEN $self.code IN ('05', '07') THEN
+      $self.dependency_precondition = 'V_TW0009' AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('3','4') AND $self.K40_ts IN ('0','1'))
+    WHEN $self.code = '08' THEN
+      $self.dependency_precondition = 'V_TW0010' AND
+      $self.dependency_syntax IN (($self.K40_fg_af = '3') OR $self.K40_fg_af = '4' AND $self.K40_brm = '0' AND NOT $self.K40_ts = '1')
+    WHEN $self.code = '09' THEN
+      $self.dependency_precondition IN ('V_TW0011', 'V_TW0569') AND
+      $self.dependency_syntax IN ($self.K40_fg_af = '1' AND $self.K40_brm = '0' AND NOT $self.K40_ts = '1' AND $self.K40_pl_af = 'd' AND ($self.K40_pl IN ('d1','d2') OR $self.K40_pl IN ('H1','H3')), $self.K40_abl = '0')
+    WHEN $self.code = '99' THEN
+      $self.dependency_precondition = '0000003046' AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('1','2','3','4') AND $self.K40_pl IN ('d1','h1','h2') OR $self.K40_fg_af IN ('1','2','3','4') AND $self.K40_pl IN ('d2','h3') AND $self.K40_fst = '0')
+  );
+\end{lstlisting}
+\section{Erstes Beispiel des Ergebnisses der finalen Architektur}
+Das Finale Ergebnis der V4-Architektur ist ein Excel-Dashboard, das die migrierten Merkmale, die Tabellenvorschläge und den zugehörigen AVC-Code in einer übersichtlichen Form darstellt. Die nachfolgende Abbildung zeigt einen Teilausschnitt des Dashboards für das erste Merkmal K40\_BRM. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{anhang/mas_ergebnis.png}
+    \caption{Ausschnitt des generierten Excel-Dashboards (V4-Output)}
+\end{figure}
 \end{document}
