@@ -9,8 +9,8 @@
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{6}{}%
 \contentsline {section}{\numberline {2.1}Domänenspezifische Grundlagen: SAP Variantenkonfiguration}{6}{}%
 \contentsline {subsection}{\numberline {2.1.1}Einführung in die logische Architektur der Variantenkonfiguration}{6}{}%
-\contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{8}{}%
-\contentsline {subsection}{\numberline {2.1.3}Die moderne Architektur (AVC) und das Constraint Paradigma}{9}{}%
+\contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{7}{}%
+\contentsline {subsection}{\numberline {2.1.3}Die moderne Architektur (AVC) und das Constraint Paradigma}{8}{}%
 \contentsline {subsection}{\numberline {2.1.4}Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}{9}{}%
 \contentsline {section}{\numberline {2.2}Generative künstliche Intelligenz im Software Engineering}{11}{}%
 \contentsline {subsection}{\numberline {2.2.1}Large Language Models für Quellcode}{11}{}%
@@ -32,9 +32,9 @@
 \contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{16}{}%
 \contentsline {subsubsection}{Das Fließband-Paradigma}{16}{}%
 \contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{17}{}%
-\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{17}{}%
+\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{18}{}%
 \contentsline {chapter}{\numberline {3}Related Work}{19}{}%
-\contentsline {chapter}{\numberline {4}Durchführung und Auswertung des Experteninterviews}{22}{}%
+\contentsline {chapter}{\numberline {4}Experteninterview}{22}{}%
 \contentsline {section}{\numberline {4.1}Methodisches Setup und Durchführung}{22}{}%
 \contentsline {section}{\numberline {4.2}Ergebnisse der Befragung}{24}{}%
 \contentsline {subsection}{\numberline {4.2.1}Kognitive Altlasten und historischer Code}{24}{}%
@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {4.3.1}Funktionale Anforderungen aus der Expertenperspektive}{26}{}%
 \contentsline {subsection}{\numberline {4.3.2}Architektonische Paradigmen und Beratungsansatz}{27}{}%
 \contentsline {subsection}{\numberline {4.3.3}Quantitative Zielvorgaben für die Systemvalidierung}{27}{}%
-\contentsline {chapter}{\numberline {5}Machbarkeitsanalyse und praktischer Selbstversuch}{29}{}%
+\contentsline {chapter}{\numberline {5}Machbarkeitsanalyse und Selbstversuch}{29}{}%
 \contentsline {section}{\numberline {5.1}Technologischer Realitätsabgleich und empirische Scope-Definition}{29}{}%
 \contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{30}{}%
 \contentsline {subsection}{\numberline {5.1.2}Evaluation der architektonischen Paradigmen}{30}{}%
@@ -65,7 +65,7 @@
 \contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{40}{}%
 \contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{42}{}%
 \contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{43}{}%
-\contentsline {chapter}{\numberline {7}Qualitative Evaluation des Artefakts}{46}{}%
+\contentsline {chapter}{\numberline {7}Qualitative Evaluation}{46}{}%
 \contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{46}{}%
 \contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{48}{}%
 \contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{48}{}%

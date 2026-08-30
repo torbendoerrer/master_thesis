@@ -1,19 +1,19 @@
 % !TeX root = ../main.tex
 \chapter{Theoretische Grundlagen}
 \label{ch:theory}
-Um die Entwicklung eines KI-gestützten Migrationssystems gut nachvollziehen zu können, müssen zunächst die zugrundeliegenden Technologien verstanden werden. Dieses Kapitel bildet das theoretische Fundament der Arbeit. Es erklärt die wichtigsten Konzepte der SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz (KI) und der Orchestrierung von Multi-Agenten-Systemen.
+Dieses Kapitel bildet das theoretische Fundament der Arbeit. Es erklärt die wichtigsten Konzepte der SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz (KI) und der Orchestrierung von Multi-Agenten-Systemen.
 
 \section{Domänenspezifische Grundlagen: SAP Variantenkonfiguration}
 \subsection{Einführung in die logische Architektur der Variantenkonfiguration}
 
-Die moderne Fertigungsindustrie braucht flexible IT-Systeme, um kundenindividuelle Produkte abzubilden. Die Idee der Variantenkonfiguration ist es, ein anpassbares Produkt (wie ein Auto) nicht als unzählige separate Endprodukte anzulegen. Stattdessen gibt es ein zentrales Grundmodell, das durch verschiedene Merkmale (wie Lackierung, Motor oder Reifen) genauer bestimmt wird. Ein logisches Regelwerk verknüpft diese Merkmale und beachtet dabei technische und kaufmännische Einschränkungen. Weil die Kombination aller Merkmale schnell zu Millionen oder gar Quadrillionen ($10^{24}$) Varianten führen kann, ist es in der Praxis unmöglich, für jede Ausprägung eigene Stammdaten anzulegen \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
+Die Idee der Variantenkonfiguration ist es, ein anpassbares Produkt (wie ein Auto) im SAP-System nicht als unzählige separate Endprodukte anzulegen. Stattdessen gibt es ein zentrales Grundmodell, das durch verschiedene Merkmale genauer bestimmt wird. Ein logisches Regelwerk verknüpft diese Merkmale und beachtet dabei technische und kaufmännische Einschränkungen. Weil die Kombination aller Merkmale schnell zu Millionen oder gar Quadrillionen ($10^{24}$) Varianten führen kann, ist es in der Praxis unmöglich, für jede Ausprägung eigene Stammdaten anzulegen \parencite[S. 86]{blumohrAdvancedVariantConfiguration2023}.
 
-Um diese Variantenvielfalt im SAP-System zu bewältigen, gibt es den sogenannten \ac{KMAT}. Er dient als Platzhalter, der alle Varianten eines Produkts bündelt \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. Damit Nutzer das Produkt konfigurieren können, nutzt SAP drei zentrale Bausteine \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}:
+Um diese Variantenvielfalt im SAP-System zu bewältigen, gibt es den sogenannten \ac{KMAT}. Er dient als Platzhalter, der alle Varianten eines Produkts bündelt \parencite[S. 90]{blumohrAdvancedVariantConfiguration2023}. Damit Nutzer das Produkt konfigurieren können, nutzt SAP drei zentrale Bausteine:
 
 \begin{itemize}
-\item \textbf{Merkmale:} Sie definieren die Eigenschaften eines Produkts (z.,B. die Lackierung oder Traglast).
-\item \textbf{Variantenklassen:} Sie bündeln die Merkmale und sind direkt dem \ac{KMAT} zugeordnet.
-\item \textbf{Konfigurationsprofil:} Es steuert den Konfigurationsprozess und hält die Stammdaten zusammen.
+\item \textbf{Merkmale:} Sie definieren die Eigenschaften eines Produkts (z.B. die Lackierung, Motor oder Reifen) \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Variantenklassen:} Sie bündeln die Merkmale und sind direkt dem \ac{KMAT} zugeordnet \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Konfigurationsprofil:} Es steuert den Konfigurationsprozess und hält die Stammdaten zusammen \parencite[S. 90 - 96]{blumohrAdvancedVariantConfiguration2023}.
 \end{itemize}
 
 Ein wichtiges Konzept, um diese Komplexität zu meistern, ist das Maximal-Prinzip. Statt ein Produkt Bauteil für Bauteil zusammenzusetzen (ein additives 100 \%-Modell), nutzt SAP ein subtraktives 150 \%-Modell. Die Basis dafür ist die \ac{Super BOM}. Diese Stückliste enthält alle Bauteile, die für jede noch so seltene Variante des Produkts gebraucht werden könnten \parencite[S. 169]{blumohrAdvancedVariantConfiguration2023}. Bei der Konfiguration kommen keine neuen Teile dazu – es werden lediglich die nicht benötigten Bauteile herausgefiltert.
@@ -32,16 +32,15 @@ Das \textit{Beziehungswissen} verbindet die kaufmännische Konfiguration mit der
 
 Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, muss man sich die Evolution der SAP-Systeme ansehen. Während \textit{SAP ERP} (SAP R/3) lange der Standard war, brachte \textit{SAP S/4HANA} durch die In-Memory-Datenbanktechnologie einen grundlegenden Wechsel \parencite[S. 28]{blumohrAdvancedVariantConfiguration2023}. Dadurch wurde auch die Variantenkonfiguration auf ein neues Fundament gestellt.
 
-Der Begriff \ac{LO-VC} wird heute meist genutzt, um die klassische Konfiguration von der neuen \ac{AVC} zu unterscheiden \parencite[S. 32]{blumohrAdvancedVariantConfiguration2023}. Auch wenn \ac{LO-VC} in aktuellen S/4HANA-Systemen zur Rückwärtskompatibilität noch verfügbar ist, gilt die Technik als veraltet.
-
-\ac{LO-VC} arbeitet mit prozeduraler Logik. Weil diese in vielen Unternehmen über Jahre hinweg durch Ausprobieren ("Learning-by-Doing") gewachsen ist, sind die Modelle oft unnötig komplex \parencite[S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu \ac{AVC} ist daher nicht nur ein technisches Update, sondern aus folgenden Gründen eine strategische Notwendigkeit:
+Der Begriff \ac{LO-VC} wird heute meist genutzt, um die klassische Konfiguration von der neuen \ac{AVC} zu unterscheiden \parencite[S. 32]{blumohrAdvancedVariantConfiguration2023}.
+\ac{LO-VC} arbeitet mit prozeduraler Logik. Weil diese in vielen Unternehmen über Jahre hinweg gewachsen ist, sind die Modelle oft unnötig komplex \parencite[S. 58]{blumohrAdvancedVariantConfiguration2023}. Der Wechsel zu \ac{AVC} ist daher nicht nur ein technisches Update, sondern aus folgenden Gründen eine strategische Notwendigkeit:
 
 \begin{itemize}
-\item \textbf{Vereinfachung:} \ac{AVC} ist der neue Standard. Die Migration bietet die Chance, historisch gewachsene und schwer wartbare Logiken ("Spaghetti-Code") aufzuräumen \parencite[S. 57]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Vereinfachung:} \ac{AVC} ist der neue Standard. Die Migration bietet die Chance, historisch gewachsene und schwer wartbare Logiken aufzuräumen \parencite[S. 57]{blumohrAdvancedVariantConfiguration2023}.
 \item \textbf{Neue Geschäftsmodelle:} \ac{LO-VC} ist primär auf den reinen Produktverkauf ausgelegt. Moderne Ansätze wie \textit{Solution Bundling} (die Kombination aus Produkt, Service und Abo) lassen sich im Standard nur mit \ac{AVC} abbilden \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
+\item \textbf{Attraktivität für Fachkräfte:} Die Arbeit mit über 25 Jahre alter Software ist für junge Talente wenig reizvoll. Moderne Architekturen helfen dabei, Fachkräfte zu gewinnen \parencite[S. 60]{blumohrAdvancedVariantConfiguration2023}.
 \item \textbf{Bessere Technologie:} \ac{AVC} nutzt mit \textit{Gecode} einen modernen Constraint-Solver. Im Gegensatz zur schrittweisen \ac{LO-VC}-Logik arbeitet dieser analytisch, was Leistung und Flexibilität deutlich erhöht \parencite[S. 59]{blumohrAdvancedVariantConfiguration2023}.
 \item \textbf{Zukunftssicherheit:} Neue Technologien wie \ac{KI} oder \ac{ML} werden nur noch für \ac{AVC} entwickelt. Eine nachträgliche Integration in \ac{LO-VC} wäre zu aufwändig und unzureichend \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
-\item \textbf{Attraktivität für Fachkräfte:} Die Arbeit mit über 25 Jahre alter Software ist für junge Talente wenig reizvoll. Moderne Architekturen helfen dabei, Fachkräfte zu gewinnen \parencite[S. 60]{blumohrAdvancedVariantConfiguration2023}.
 \end{itemize}
 
 Zusammenfassend lässt sich sagen: Wer bei LO-VC bleibt, spart zwar kurzfristig den Aufwand für eine Migration. Langfristig steigt jedoch das Risiko, technologisch den Anschluss zu verlieren und die spätere Umstellung noch teurer zu machen \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
@@ -49,22 +48,22 @@ Zusammenfassend lässt sich sagen: Wer bei LO-VC bleibt, spart zwar kurzfristig 
 \subsection{Die moderne Architektur (AVC) und das Constraint Paradigma}
 \label{sec:avc_constraint}
 
-Die Antwort auf die Schwächen der klassischen Variantenkonfiguration ist die \ac{AVC} in SAP S/4HANA. Um den wachsenden Anforderungen an Leistung und komplexe Modelle (wie bei Einzelfertigungen) gerecht zu werden, hat SAP nicht nur die Oberfläche modernisiert, sondern die zugrundeliegende Rechenlogik komplett ausgetauscht.
+Die Antwort auf die Schwächen der klassischen Variantenkonfiguration ist die \ac{AVC} in SAP S/4HANA. Um den wachsenden Anforderungen an Leistung und komplexe Modelle gerecht zu werden, hat SAP nicht nur die Oberfläche modernisiert, sondern die zugrundeliegende Rechenlogik komplett ausgetauscht.
 
-Während LO-VC (wie in Kapitel \ref{sec:lovc_context} beschrieben) Regeln Schritt für Schritt abarbeitet, nutzt \ac{AVC} einen deklarativen Ansatz. Das Herzstück der \ac{AVC} ist der \textit{Constraint Solver} namens \textit{Gecode}. Diese quelloffene Softwarebibliothek wurde zusammen mit dem Fraunhofer ITWM tief in SAP integriert und für Produktkonfigurationen optimiert \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
+Während in LO-VC Regeln Schritt für Schritt abarbeitet, nutzt \ac{AVC} einen deklarativen Ansatz. Das Herzstück der \ac{AVC} ist der \textit{Constraint Solver} namens \textit{Gecode}. Diese quelloffene Softwarebibliothek wurde zusammen mit dem Fraunhofer ITWM tief in SAP integriert und für Produktkonfigurationen optimiert \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
-Durch diese Engine wird die Konfiguration zu einem mathematischen \ac{CSP}. In der Informatik ist ein \ac{CSP} ein System aus Variablen, Wertebereichen (Domänen) und Bedingungen (Constraints), die festlegen, welche Kombinationen zulässig sind \parencite[eigene Übersetzung nach][S. 180]{russellArtificialIntelligenceModern2010}.
+Durch diese Engine wird die Konfiguration zu einem mathematischen \ac{CSP}. In der Informatik ist ein \ac{CSP} ein System aus Variablen, Wertebereichen (Domänen) und Bedingungen (Constraints), die festlegen, welche Kombinationen zulässig sind \parencite[S. 180]{russellArtificialIntelligenceModern2010}.
 
 Dieser Wechsel hat große Auswirkungen für die Nutzer: Sobald jemand in der Konfiguration einen Wert wählt, schränkt die Gecode-Engine in Echtzeit die Auswahlmöglichkeiten aller anderen abhängigen Merkmale ein. Statt also einen Fehler erst am Ende einer Berechnung auszugeben, blendet das System unmögliche Optionen im Vorfeld aus. Das verhindert fehlerhafte Konfigurationen \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
 Außerdem bietet AVC bessere Analysewerkzeuge wie den \textit{Dependency Trace}. Damit können Entwickler genau sehen, welche Regel dafür gesorgt hat, dass ein bestimmtes Merkmal eingeschränkt wurde \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}.
 
-Kurz gesagt ändert AVC die Herangehensweise: Statt zu fragen „\textit{Wie} berechne ich die Variante Schritt für Schritt?“, fragt das System „\textit{Welche} Bedingungen müssen für das Endprodukt erfüllt sein?“. Dieser Wechsel von einer schrittweisen zu einer netzwerkbasierten Logik ist die größte Hürde für Unternehmen, wenn sie alte Modelle in das neue System übertragen wollen.
+Kurz gesagt ändert AVC die Herangehensweise: Statt zu fragen „\textit{Wie} berechne ich die Variante Schritt für Schritt?“, fragt das System „\textit{Welche} Bedingungen müssen für das Endprodukt erfüllt sein?“. Dieser Wechsel von einer schrittweisen zu einer netzwerkbasierten Logik ist ein Hürde für Unternehmen, wenn sie alte Modelle in das neue System übertragen wollen.
 
 \subsection{Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}
 \label{sec:lovc_avc_syntax}
 
-Um nachvollziehen zu können, warum die automatisierte Migration von \ac{LO-VC} nach \ac{AVC} ein informationstechnisch hochkomplexes Problem darstellt, muss der Paradigmenwechsel auf syntaktischer Ebene betrachtet werden.
+Um nachvollziehen zu können, warum die automatisierte Migration von \ac{LO-VC} nach \ac{AVC} ein Problem darstellt, muss der Paradigmenwechsel auf syntaktischer Ebene betrachtet werden.
 
 In der klassischen \ac{LO-VC}-Welt wird die Konfigurationslogik häufig über isolierte \textit{Vorbedingungen} (Preconditions) modelliert. Diese Vorbedingungen sind imperativ und meist direkt an einzelne Ausprägungen eines Merkmals geheftet. Ein Entwickler definiert beispielsweise direkt an dem Wert \texttt{'Ledersitze'}, dass dieser nur wählbar ist, wenn \texttt{Modell = 'Premium' AND Land = 'DE'} gilt. Bei historisch gewachsenen Modellen führt dies zu hunderten, dezentral verstreuten Wenn-Dann-Bedingungen, die isoliert voneinander abgearbeitet werden.
 
