@@ -8,6 +8,23 @@
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!5},
+    stringstyle=\color{teal},
+    commentstyle=\color{gray},
+    keywordstyle=\bfseries\color{navy}
+}
 \usepackage{microtype}
 \usepackage[title, titletoc]{appendix}
 \usepackage{acronym}
@@ -357,7 +374,8 @@ Wenn alle 5 Dashboards durchgesehen sind, wird der Think-Aloud-Modus für geziel
     
 \end{xltabular}
 \chapter{Dokumentation Selbstversuch}
-
+\label{subsec:selbstversuch_doku}
+\section{Selbstversuch Protokoll}
 \subsection*{Artefakt 1: K40\_BRM}
 
 \textbf{Ausgangslage (LO-VC Input / Rohdaten):}
@@ -527,6 +545,466 @@ $self.K40_SCHP in ('07', '08') if $self.K40_ko_af = '2'
 RESTRICTIONS:
 $self.K40_GK_FB in ('2004', '7032', '7035') if $self.K40_grh_af = '3'.
 \end{verbatim}
+\section{Input-JSON für Selbstversuch}
+\begin{lstlisting}[language=json, caption={Auszug aus den LO-VC-Merkmalsstrukturen und Beziehungswissen}, label={lst:lo_vc_data}]
+[
+  {
+    "name": "K40_BRM",
+    "description": "K40_BRM",
+    "type": "char",
+    "values": [
+      {
+        "code": "1",
+        "description": "1",
+        "dependency": [
+          {
+            "precondition": "V_TW0003",
+            "syntax": "K40_fg_af = '3'"
+          },
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          }
+        ]
+      },
+      {
+        "code": "2",
+        "description": "2",
+        "dependency": [
+          {
+            "precondition": "V_TW0004",
+            "syntax": "K40_fg_af = '1'"
+          }
+        ]
+      },
+      {
+        "code": "0",
+        "description": "0"
+      }
+    ]
+  },
+  {
+    "name": "K40_KO",
+    "description": "K40_KO",
+    "type": "char",
+    "values": [
+      {
+        "code": "04",
+        "description": "04",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          },
+          {
+            "precondition": "V_TW0008",
+            "syntax": "K40_fg_af in ('1','2')"
+          },
+          {
+            "precondition": "V_TW0569",
+            "syntax": "K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "06",
+        "description": "06",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          },
+          {
+            "precondition": "V_TW0009",
+            "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+          }
+        ]
+      },
+      {
+        "code": "09",
+        "description": "09",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          },
+          {
+            "precondition": "V_TW0011",
+            "syntax": "K40_fg_af = '1' and K40_brm = '0' and K40_ts ne '1' and \n*K40_pl_af = 'd' and K40_pl in ('d1','d2') \n(K40_pl in('d1','d2') or K40_pl in ('H1','H3'))"
+          },
+          {
+            "precondition": "V_TW0569",
+            "syntax": "K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "10",
+        "description": "10",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          }
+        ]
+      },
+      {
+        "code": "01",
+        "description": "01",
+        "dependency": [
+          {
+            "precondition": "V_TW0008",
+            "syntax": "K40_fg_af in ('1','2')"
+          },
+          {
+            "precondition": "V_TW0569",
+            "syntax": "K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "02",
+        "description": "02",
+        "dependency": [
+          {
+            "precondition": "V_TW0008",
+            "syntax": "K40_fg_af in ('1','2')"
+          },
+          {
+            "precondition": "V_TW0569",
+            "syntax": "K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "03",
+        "description": "03",
+        "dependency": [
+          {
+            "precondition": "V_TW0008",
+            "syntax": "K40_fg_af in ('1','2')"
+          },
+          {
+            "precondition": "V_TW0569",
+            "syntax": "K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "05",
+        "description": "05",
+        "dependency": [
+          {
+            "precondition": "V_TW0009",
+            "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+          }
+        ]
+      },
+      {
+        "code": "07",
+        "description": "07",
+        "dependency": [
+          {
+            "precondition": "V_TW0009",
+            "syntax": "K40_fg_af in ('3','4') and K40_ts in ('0','1')"
+          }
+        ]
+      },
+      {
+        "code": "08",
+        "description": "08",
+        "dependency": [
+          {
+            "precondition": "V_TW0010",
+            "syntax": "(K40_fg_af = '3') or \nK40_fg_af = '4' and \nK40_brm = '0' and K40_ts ne '1'"
+          }
+        ]
+      },
+      {
+        "code": "99",
+        "description": "99",
+        "dependency": [
+          {
+            "precondition": "0000003046",
+            "syntax": "*K40_fg_af in ('1','2','3','4') and \nK40_pl in ('d1','h1','h2') \n*K40_fg_af in ('1','2','3','4') and \n*K40_pl in ('d2','h3') and K40_fst = '0'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "K40_PL",
+    "description": "K40_PL",
+    "type": "char",
+    "values": [
+      {
+        "code": "H2",
+        "description": "H2",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          },
+          {
+            "precondition": "0000043884",
+            "syntax": "K40_fst = '0'"
+          }
+        ]
+      },
+      {
+        "code": "H3",
+        "description": "H3",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          }
+        ]
+      },
+      {
+        "code": "H5",
+        "description": "H5",
+        "dependency": [
+          {
+            "precondition": "V_001",
+            "syntax": "specified dummy"
+          }
+        ]
+      },
+      {
+        "code": "D1",
+        "description": "D1",
+        "dependency": [
+          {
+            "precondition": "V_TW0005",
+            "syntax": "K40_fst = '0'"
+          }
+        ]
+      },
+      {
+        "code": "H1",
+        "description": "H1",
+        "dependency": [
+          {
+            "precondition": "0000043883",
+            "syntax": "K40_fst = '0'"
+          }
+        ]
+      },
+      {
+        "code": "H4",
+        "description": "H4",
+        "dependency": [
+          {
+            "precondition": "0000043885",
+            "syntax": "Specified K40_FG_AF and K40_FG_AF = '4'"
+          }
+        ]
+      },
+      {
+        "code": "D2",
+        "description": "D2"
+      }
+    ]
+  },
+  {
+    "name": "K40_SCHP",
+    "description": "K40_SCHP",
+    "type": "char",
+    "values": [
+      {
+        "code": "06",
+        "description": "06",
+        "dependency": [
+          {
+            "precondition": "V_TW0023",
+            "syntax": "K40_brm = '0' and K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "01",
+        "description": "01",
+        "dependency": [
+          {
+            "precondition": "V_TW0026",
+            "syntax": "K40_ko_af = '1' and K40_ps ne 'pw04' and K40_ps ne 'ps03'"
+          }
+        ]
+      },
+      {
+        "code": "02",
+        "description": "02",
+        "dependency": [
+          {
+            "precondition": "V_TW0027",
+            "syntax": "*Merkmalswert ausgeblendet \n*Schreibplatte Produktbereinigt \nnot specified K40_FG_AF \n*K40_ko_af = '2' and K40_brm = '0' and K40_ko ne '07'"
+          }
+        ]
+      },
+      {
+        "code": "03",
+        "description": "03",
+        "dependency": [
+          {
+            "precondition": "V_TW0031",
+            "syntax": "K40_ko = '08' and K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "05",
+        "description": "05",
+        "dependency": [
+          {
+            "precondition": "V_TW0032",
+            "syntax": "K40_ko = '09' and K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "04",
+        "description": "04",
+        "dependency": [
+          {
+            "precondition": "V_TW0084",
+            "syntax": "K40_ko = '09' and not specified K40_ps"
+          }
+        ]
+      },
+      {
+        "code": "07",
+        "description": "07",
+        "dependency": [
+          {
+            "precondition": "0000003553",
+            "syntax": "K40_ko_af = '2' and K40_fg_af in ('3','4') and K40_ko ne '07'"
+          }
+        ]
+      },
+      {
+        "code": "08",
+        "description": "08",
+        "dependency": [
+          {
+            "precondition": "0000016949",
+            "syntax": "K40_ko_af = '2' and K40_fg_af in ('3','4') and K40_ko ne '07'"
+          }
+        ]
+      },
+      {
+        "code": "09",
+        "description": "09",
+        "dependency": [
+          {
+            "precondition": "0000016950",
+            "syntax": "K40_ko = '08' and K40_abl = '0'"
+          }
+        ]
+      },
+      {
+        "code": "10",
+        "description": "10",
+        "dependency": [
+          {
+            "precondition": "0000017034",
+            "syntax": "K40_ko_af = '1' and K40_ps ne 'pw04' and K40_ps ne 'ps03'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "K40_GK_FB",
+    "description": "K40_GK_FB",
+    "type": "char",
+    "values": [
+      {
+        "code": "1018",
+        "description": "1018",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "3000",
+        "description": "3000",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "5002",
+        "description": "5002",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "5003",
+        "description": "5003",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "6024",
+        "description": "6024",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "2002",
+        "description": "2002",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "7016",
+        "description": "7016",
+        "dependency": [
+          {
+            "precondition": "V_TW0228",
+            "syntax": "K40_grh_af ne '3'"
+          }
+        ]
+      },
+      {
+        "code": "2004",
+        "description": "2004"
+      },
+      {
+        "code": "7032",
+        "description": "7032"
+      },
+      {
+        "code": "7035",
+        "description": "7035"
+      }
+    ]
+  }
+]
+\end{lstlisting}
 \chapter{Beispiel}
 \section{Beispielhafter JSON Input}
 \subsection*{Merkmal: K40\_BRM}
@@ -611,6 +1089,7 @@ $self.K40_GK_FB in ('2004', '7032', '7035') if $self.K40_grh_af = '3'.
         *K40\_pl in ('d2','h3') and K40\_fst = '0'}
     \end{itemize}
 \end{itemize}
+
 \section{Erstes Beispiel eines Ergebnisses der V1-Architektur}
 
 % WICHTIG: Fügen Sie \usepackage{listings} in die Präambel Ihrer Arbeit ein.

@@ -1,13 +1,11 @@
 \chapter{Machbarkeitsanalyse und Selbstversuch}
 \label{ch:explorative_fallstudie}
 
-Nachdem das Experteninterview im vorangegangenen Kapitel die subjektiven Praxisprobleme und die zeitliche Baseline definiert hat, verlagert dieses Kapitel den Fokus auf die technische Ebene der rohen LO-VC-Datenstrukturen. Als zweiter empirischer Baustein zur Analyse des \textit{Environments} nach \textcite{hevnerDesignScienceInformation2004} verfolgt es zwei konkrete Ziele: Zunächst prüft eine Machbarkeitsanalyse (Scoping), welche der idealisierten Praxisanforderungen sich technologisch im Rahmen dieser Arbeit überhaupt automatisieren lassen. Darauf aufbauend dient ein praktischer Selbstversuch dazu, die manuelle Code-Migration Schritt für Schritt zu durchlaufen und exakte syntaktische Transformationsregeln zu extrahieren. Diese praktischen Erkenntnisse liefern die methodische Blaupause, um im Anschluss die Architektur und die System-Prompts des Multi-Agenten-Systems fundiert ableiten zu können.
+Während das vorangegangene Kapitel die subjektiven Praxisprobleme und die zeitliche Baseline erhoben hat, beschreiben diese Implikationen zunächst ein reines Praxis-Idealbild. Im Sinne des Design Science Research nach \textcite{hevnerDesignScienceInformation2004} verlagert dieses Kapitel den Fokus daher als zweiter empirischer Baustein auf die technische Ebene der rohen LO-VC-Datenstrukturen.
 
+Hierzu wird das Anforderungsprofil zunächst einer Machbarkeitsanalyse unterzogen, um den technologisch automatisierbaren Rahmen abzugrenzen. Die umsetzbaren Anforderungen werden anschließend in einem praktischen Selbstversuch der manuellen Code-Migration systematisch durchlaufen. Aus den dabei identifizierten Mustern, Teilschritten und Transformationsregeln werden die spezifischen Agentenrollen, deren Prompts sowie die initiale Architektur (V1) des Multi-Agenten-Systems abgeleitet.
 \section{Technologischer Realitätsabgleich und empirische Scope-Definition}
 \label{sec:scope_abgrenzung}
-
-Die im vorherigen Kapitel beschriebenen Praxisanforderungen (vgl. Kapitel~\ref{sec:implikationen}) skizzieren das Idealbild eines zukünftigen Migrationssystems. Nach dem Paradigma des \textit{Design Science Research} \parencite{hevnerDesignScienceInformation2004} dürfen diese Wünsche jedoch nicht ungeprüft in die Systementwicklung übernommen werden. Es ist vorab eine Machbarkeitsprüfung (\textit{Feasibility Check}) notwendig, um den technologischen und funktionalen Umfang (\textit{Scope}) des Prototyps klar abzugrenzen.
-
 
 Dieser Abschnitt evaluiert die fünf Kernimplikationen aus Kapitel~\ref{sec:implikationen}. Es wird festgelegt, welche Anforderungen im folgenden praktischen Selbstversuch auf Code-Ebene untersucht und anschließend in die Multi-Agenten-Architektur integriert werden:
 
@@ -15,7 +13,7 @@ Dieser Abschnitt evaluiert die fünf Kernimplikationen aus Kapitel~\ref{sec:impl
 
 \begin{enumerate}
 \item \textbf{Konsistenzprüfung im Testprozess (Out-of-Scope):}
-Die automatisierte Überführung historischer Testkonfigurationen würde Migrationsprojekte erheblich entlasten. Die Umsetzung in diesem Proof-of-Concept ist jedoch \textit{Out-of-Scope}. Eine solche Funktion erfordert eine tiefe Integration in kundenspezifische Testumgebungen und unstrukturiertes Domänenwissen über Altsysteme. Da sich diese Umgebung im Prototyp nicht simulieren lässt, können KI-Agenten die Validierung nicht verlässlich übernehmen. Ein dedizierter „Tester-Agent“ wird daher verworfen.
+Die automatisierte Überführung historischer Testkonfigurationen würde Migrationsprojekte erheblich entlasten. Die Umsetzung in diesem Proof-of-Concept ist jedoch \textit{Out-of-Scope}. Eine solche Funktion erfordert eine tiefe Integration in kundenspezifische Testumgebungen und unstrukturiertes Domänenwissen über Altsysteme. Da sich diese Umgebung im Prototyp nicht ohne großen Zeitaufwand und detailliertes Wissen zu SAP simulieren lässt, können KI-Agenten die Validierung nicht verlässlich übernehmen. Ein dedizierter „Tester-Agent“ wird daher verworfen.
 
 \item \textbf{Semantische Analyse und Code-Bereinigung (In-Scope):} 
 Funktional obsolete Altlasten lassen sich direkt im Code identifizieren. Da diese Bereinigung den Entwickler stark entlastet, wird sie in den Scope aufgenommen. Der Selbstversuch dient dazu, wiederkehrende Muster von „totem Code“ zu erkennen. So können dem zukünftigen Analysten-Agenten entsprechende Erkennungsregeln mitgegeben werden.
@@ -36,7 +34,7 @@ Das System muss standardkonformen AVC-Code erzeugen. Obsolete Elemente, wie klas
 
 \subsection{Synthese des finalen System-Scopes}
 
-Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch (vgl. Kapitel~\ref{sec:methodik_fallstudie} ff.) konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
+Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen, die \textbf{Einhaltung von AVC-Modellierungsrichtlinien} sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
 
 \begin{figure}[htbp]
     \centering
@@ -46,7 +44,7 @@ Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Samplin
 \end{figure}
 
 
-Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von KI-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen (Version 1) wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
+Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von KI-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
 
 
 
@@ -55,26 +53,28 @@ Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das S
 
 Um die abstrakten Anforderungen aus der Praxis in konkrete agentische Rollen und System-Prompts zu übersetzen, wurde der kognitive Transformationsprozess durch einen praktischen Selbstversuch auf Code-Ebene analysiert. Anstatt dieses introspektive Vorgehen als klassische Fallstudie zu deklarieren, nutzt diese Arbeit das etablierte Rahmenwerk nach \textcite{runesonGuidelinesConductingReporting2009} als methodische Schablone zur strukturierten Protokollierung. Die klassischen Prinzipien der Datenerhebung und Auswertung wurden dabei zielgerichtet adaptiert, um die eigenen kognitiven Schritte beim Programmieren nachvollziehbar zu dokumentieren. Das methodische Vorgehen definiert sich durch folgende Kernkriterien:
 
-\textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} \
-In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers – dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}. Das Ziel dieses Selbstversuchs ist es, dieses unbewusste Wissen greifbar zu machen und den kognitiven Übersetzungsprozess (Baseline) methodisch zu dekonstruieren, um daraus die Architektur und die System-Prompts des Multi-Agenten-Systems ableiten zu können. Somit beantwortet dieser Selbstversuch sowohl einen Teil der ersten Forschungsfrage als auch die zweite Forschungsfrage.
-
-\textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} \
-Die Datengrundlage für diesen Selbstversuch bildete ein reales Kundenprojekt der \textit{msg systems ag}. Aufgrund strenger Datenschutzvorgaben, Geschäftsgeheimnissen und stark reglementierter Zugriffsrechte auf historische Altdaten war die Auswahl pragmatisch auf dieses spezifische, verfügbare Projekt beschränkt. Ähnlich wie im Kapitel 4 wird also auch hier im Einklang mit \textcite{runesonGuidelinesConductingReporting2009} primär nach Verfügbarkeit ausgewählt. Aus diesem Projekt wurden fünf Merkmale mitsamt ihrem historisch gewachsenen Beziehungswissen für die manuelle Migration ausgewählt. Die Begrenzung auf genau fünf Merkmale ergab sich aus dem praktischen Verlauf: Nach der Bearbeitung zeigte sich, dass sich die grundlegenden kognitiven Schritte stetig wiederholten und inhaltliche Sättigung erreicht war.
-
-\textbf{Datenerhebungsmethode (Methods):} \
-Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. Um das von \textit{Tacit Knowledge} zu erheben, schlüpfte der Autor in die Rolle des Entwicklers und migrierte die realen LO-VC-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wurde der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Schritt wurde in drei klar getrennten Phasen dokumentiert:
 \begin{enumerate}
-\item \textbf{Bestandsaufnahme (Input):} Festhalten der historischen LO-VC-Strukturen und Vorbedingungen.
-\item \textbf{Kognitive Analyse (Gedankengänge):} Explizite schriftliche Dokumentation der Überlegungen (z.,B. Identifikation von veraltetem Code oder Architekturentscheidungen zur Bündelung).
-\item \textbf{Code-Synthese (Output):} Erstellung des aus den Gedankengängen resultierenden AVC-Codes.
-\end{enumerate}
+    \item \textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} 
+    In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers -- dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}. Das Ziel dieses Selbstversuchs ist es, dieses unbewusste Wissen greifbar zu machen und den kognitiven Übersetzungsprozess (Baseline) methodisch zu dekonstruieren, um daraus die Architektur und die System-Prompts des Multi-Agenten-Systems ableiten zu können. Somit beantwortet dieser Selbstversuch sowohl einen Teil der ersten Forschungsfrage als auch die zweite Forschungsfrage.
 
-\textbf{Datenauswertung (Data Analysis):} \
-Die Auswertung erfolgte durch den direkten analytischen Vergleich von Input, dem eigenen Denkprozess und dem finalen Output. Durch dieses Verfahren ließen sich wiederkehrende Handlungsmuster beim Programmieren identifizieren. Diese Dokumentation der eigenen Denkschritte bildet die direkte Auswertungsvorlage, um im nächsten Schritt die konkreten agentischen Rollen und Instruktionen (Prompts) für das \textit{CrewAI}-System abzuleiten.
+    \item \textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} 
+    Die Datengrundlage für diesen Selbstversuch bildete ein reales Kundenprojekt der \textit{msg systems ag}. Aufgrund strenger Datenschutzvorgaben, Geschäftsgeheimnissen und stark reglementierter Zugriffsrechte auf historische Altdaten war die Auswahl pragmatisch auf dieses spezifische, verfügbare Projekt beschränkt. Ähnlich wie in Kapitel~4 wird also auch hier im Einklang mit \textcite{runesonGuidelinesConductingReporting2009} primär nach Verfügbarkeit ausgewählt. Aus diesem Projekt wurden fünf Merkmale mitsamt ihrem historisch gewachsenen Beziehungswissen für die manuelle Migration ausgewählt. Die Begrenzung auf genau fünf Merkmale ergab sich aus dem praktischen Verlauf: Nach der Bearbeitung zeigte sich, dass sich die grundlegenden kognitiven Schritte stetig wiederholten und inhaltliche Sättigung erreicht war.
+
+    \item \textbf{Datenerhebungsmethode (Methods):} 
+    Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. Um das implizite Erfahrungswissen (\textit{Tacit Knowledge}) strukturiert zu erheben, schlüpfte der Autor in die Rolle des Entwicklers und migrierte die realen LO-VC-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wurde der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Schritt wurde in drei klar getrennten Phasen dokumentiert:
+    \begin{itemize}
+        \item \textbf{Bestandsaufnahme (Input):} Festhalten der historischen LO-VC-Strukturen und Vorbedingungen.
+        \item \textbf{Kognitive Analyse (Gedankengänge):} Explizite schriftliche Dokumentation der Überlegungen (z.\,B. Identifikation von veraltetem Code oder Architekturentscheidungen zur Bündelung).
+        \item \textbf{Code-Synthese (Output):} Erstellung des aus den Gedankengängen resultierenden AVC-Codes.
+    \end{itemize}
+
+    \item \textbf{Datenauswertung (Data Analysis):} 
+    Die Auswertung erfolgte durch den direkten analytischen Vergleich von Input, dem eigenen Denkprozess und dem finalen Output. Durch dieses Verfahren ließen sich wiederkehrende Handlungsmuster beim Programmieren identifizieren. Diese Dokumentation der eigenen Denkschritte bildet die direkte Auswertungsvorlage, um im nächsten Schritt die konkreten agentischen Rollen und Instruktionen (Prompts) für das \textit{CrewAI}-System abzuleiten.
+\end{enumerate}
 \section{Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}
 \label{sec:ergebnisse_selbstversuch}
 
-Die vollständigen Protokolle der manuellen Migration – inklusive Input-Code, kognitiven Zwischenschritten und finalem AVC-Code – sind aus Gründen der Lesbarkeit im Anhang \ref{app:migrationsprotokolle} dokumentiert. Dieser Abschnitt fasst die zentralen Erkenntnisse der Fallstudie zusammen und leitet daraus die Handlungsregeln für die Multi-Agenten-Architektur ab.
+Die vollständigen Protokolle der manuellen Migration – inklusive Input-Code, kognitiven Zwischenschritten und finalem AVC-Code – sind aus Gründen der Lesbarkeit im Anhang \ref{subsec:selbstversuch_doku} dokumentiert. Dieser Abschnitt fasst die zentralen Erkenntnisse der Fallstudie zusammen und leitet daraus die Handlungsregeln für die Multi-Agenten-Architektur ab.
 
 \subsection{Kognitive Phasen der manuellen Migration}
 Die Analyse der Protokolle zeigt, dass die Transformation von LO-VC nach AVC weit mehr ist als ein einfacher Syntax-Austausch. 
@@ -113,8 +113,8 @@ Um diesen komplexen kognitiven Prozess maschinell abzubilden, ist ein einzelnes 
 Das in Kapitel 6 konzipierte System wird exakt nach diesem Vorbild aufgebaut: Ein kollaboratives Team aus drei KI-Agenten, unterstützt von einem deterministischen Validierungstool. Aus der Fallstudie lassen sich folgende initiale Rollen und Instruktionen (Prompts) ableiten:
 
 \begin{description}
-\item[Rolle 1: LO-VC Data Analyst \& Cleaner] \hfill \
-\textbf{Ziel:} Bereinigung der rohen JSON-Eingabedaten.\
+\item[Rolle 1: LO-VC Data Analyst \& Cleaner] \hfill \ \newline
+\textbf{Ziel:} Bereinigung der rohen JSON-Eingabedaten.\ \newline
 \textbf{Handlungsregel:} Analysiere komplexe Vorbedingungen. Identifiziere und ignoriere toten Code und alte Kommentare. Erstelle aus den gültigen Werten eine saubere Liste der steuernden Merkmale.
 
 \item[Rolle 2: AVC Table Architect] \hfill \\

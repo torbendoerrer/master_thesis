@@ -32,7 +32,6 @@
 \contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{16}{}%
 \contentsline {subsubsection}{Das Fließband-Paradigma}{16}{}%
 \contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{17}{}%
-\contentsline {subsubsection}{Mapping von Theorie und Framework-Praxis}{18}{}%
 \contentsline {chapter}{\numberline {3}Related Work}{19}{}%
 \contentsline {chapter}{\numberline {4}Experteninterview}{22}{}%
 \contentsline {section}{\numberline {4.1}Methodisches Setup und Durchführung}{22}{}%
@@ -49,9 +48,9 @@
 \contentsline {subsection}{\numberline {4.3.3}Quantitative Zielvorgaben für die Systemvalidierung}{27}{}%
 \contentsline {chapter}{\numberline {5}Machbarkeitsanalyse und Selbstversuch}{29}{}%
 \contentsline {section}{\numberline {5.1}Technologischer Realitätsabgleich und empirische Scope-Definition}{29}{}%
-\contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{30}{}%
+\contentsline {subsection}{\numberline {5.1.1}Evaluation der funktionalen Praxisanforderungen}{29}{}%
 \contentsline {subsection}{\numberline {5.1.2}Evaluation der architektonischen Paradigmen}{30}{}%
-\contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{31}{}%
+\contentsline {subsection}{\numberline {5.1.3}Synthese des finalen System-Scopes}{30}{}%
 \contentsline {section}{\numberline {5.2}Methodisches Setup und Durchführung}{31}{}%
 \contentsline {section}{\numberline {5.3}Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}{33}{}%
 \contentsline {subsection}{\numberline {5.3.1}Kognitive Phasen der manuellen Migration}{33}{}%
@@ -62,7 +61,7 @@
 \contentsline {subsection}{\numberline {6.1.2}Infrastruktur und Modellintegration: SAP AI Core und liteLLM}{38}{}%
 \contentsline {section}{\numberline {6.2}Iterative Entwicklung des Prototyps (Design Science Research)}{39}{}%
 \contentsline {subsection}{\numberline {6.2.1}Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}{39}{}%
-\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{40}{}%
+\contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{41}{}%
 \contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{42}{}%
 \contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{43}{}%
 \contentsline {chapter}{\numberline {7}Qualitative Evaluation}{46}{}%
@@ -92,7 +91,9 @@
 \contentsline {section}{\numberline {B.1}Codebuch Experteninterview}{67}{}%
 \contentsline {section}{\numberline {B.2}Codebuch Evaluation}{72}{}%
 \contentsline {chapter}{\numberline {C}Dokumentation Selbstversuch}{74}{}%
-\contentsline {chapter}{\numberline {D}Beispiel}{80}{}%
-\contentsline {section}{\numberline {D.1}Beispielhafter JSON Input}{80}{}%
-\contentsline {section}{\numberline {D.2}Erstes Beispiel eines Ergebnisses der V1-Architektur}{82}{}%
-\contentsline {section}{\numberline {D.3}Erstes Beispiel des Ergebnisses der finalen Architektur}{83}{}%
+\contentsline {section}{\numberline {C.1}Selbstversuch Protokoll}{74}{}%
+\contentsline {section}{\numberline {C.2}Input-JSON für Selbstversuch}{80}{}%
+\contentsline {chapter}{\numberline {D}Beispiel}{91}{}%
+\contentsline {section}{\numberline {D.1}Beispielhafter JSON Input}{91}{}%
+\contentsline {section}{\numberline {D.2}Erstes Beispiel eines Ergebnisses der V1-Architektur}{93}{}%
+\contentsline {section}{\numberline {D.3}Erstes Beispiel des Ergebnisses der finalen Architektur}{94}{}%

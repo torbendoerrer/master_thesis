@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  30 AUG 2026 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.29)  31 AUG 2026 12:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -830,7 +830,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count483
 \@quotereset=\count484
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 53.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 70.
 (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux
@@ -839,20 +839,20 @@ Package babel Info: 'ngerman' activates 'german' shorthands.
  (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 \c@lstlisting=\count485
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -881,13 +881,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Info: Redefining \microtypecontext on input line 53.
-Package microtype Info: Applying patch `item' on input line 53.
-Package microtype Info: Applying patch `toc' on input line 53.
-Package microtype Info: Applying patch `eqnum' on input line 53.
-Package microtype Info: Applying patch `footnote' on input line 53.
-Package microtype Info: Applying patch `verbatim' on input line 53.
-LaTeX Info: Redefining \microtypesetup on input line 53.
+LaTeX Info: Redefining \microtypecontext on input line 70.
+Package microtype Info: Applying patch `item' on input line 70.
+Package microtype Info: Applying patch `toc' on input line 70.
+Package microtype Info: Applying patch `eqnum' on input line 70.
+Package microtype Info: Applying patch `footnote' on input line 70.
+Package microtype Info: Applying patch `verbatim' on input line 70.
+LaTeX Info: Redefining \microtypesetup on input line 70.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -983,37 +983,37 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 53.
-Package biblatex Info: Reference segment=0 on input line 53.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 59.
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 59.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 59.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 59.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 59.
+(Font)              <14.4> on input line 76.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 59.
+(Font)              <10> on input line 76.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 59.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+(Font)              <7> on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
@@ -1039,7 +1039,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=17.99445pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 43.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 42.
 
 
 Overfull \vbox (5.99445pt too high) has occurred while \output is active []
@@ -1151,39 +1151,20 @@ although it is yet undefined on input line 98.
  [11]
 Package acronym Info: Label `acro:ICL' newly defined as it shall be overridden
 although it is yet undefined on input line 110.
-Package acronym Info: Label `acro:LLM' newly defined as it shall be overridden
-although it is yet undefined on input line 130.
-
-
-Package acronym Warning: Acronym LLM is not defined on input line 130.
-
-
-Package acronym Warning: Acronym LLM is not defined on input line 130.
-
-[12]
-Package acronym Info: Label `acro:SAP' newly defined as it shall be overridden
-although it is yet undefined on input line 134.
-
-
-Package acronym Warning: Acronym SAP is not defined on input line 134.
-
-
-Package acronym Warning: Acronym SAP is not defined on input line 134.
-
-[13{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [14]
+ [12] [13] [14]
 
 pdfTeX warning: pdflatex (file ./grafiken/auto_agent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/auto_agent.pdf, id=133, 587.3142pt x 248.8497pt>
+<grafiken/auto_agent.pdf, id=131, 587.3142pt x 248.8497pt>
 File: grafiken/auto_agent.pdf Graphic file (type pdf)
 <use grafiken/auto_agent.pdf>
-Package pdftex.def Info: grafiken/auto_agent.pdf  used on input line 168.
+Package pdftex.def Info: grafiken/auto_agent.pdf  used on input line 169.
 (pdftex.def)             Requested size: 455.24411pt x 192.88689pt.
 [15{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./grafiken/auto_agent.pdf>] [16]
-Overfull \hbox (7.28203pt too wide) in paragraph at lines 253--253
+Overfull \hbox (7.28203pt too wide) in paragraph at lines 254--254
 \T1/lmr/m/n/12 (-20) (Zustandsautomaten)|  
  []
 
-[17]) [18]
+) [17] [18]
 \openout2 = `chapter/03_related_work.aux'.
 
  (chapter/03_related_work.tex
@@ -1210,7 +1191,7 @@ LaTeX Warning: Reference `app:codierte_passagen' on page 23 undefined on input l
 [23] [24]
 
 pdfTeX warning: pdflatex (file ./grafiken/pie_time.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/pie_time.pdf, id=205, 580.08719pt x 262.0992pt>
+<grafiken/pie_time.pdf, id=203, 580.08719pt x 262.0992pt>
 File: grafiken/pie_time.pdf Graphic file (type pdf)
 <use grafiken/pie_time.pdf>
 Package pdftex.def Info: grafiken/pie_time.pdf  used on input line 52.
@@ -1227,24 +1208,16 @@ Kapitel 5.
 
 ]
 
-LaTeX Warning: Reference `sec:methodik_fallstudie' on page 30 undefined on input line 39.
-
-[30]
-
 pdfTeX warning: pdflatex (file ./grafiken/scope.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/scope.pdf, id=234, 566.115pt x 313.17pt>
+<grafiken/scope.pdf, id=229, 566.115pt x 313.17pt>
 File: grafiken/scope.pdf Graphic file (type pdf)
 <use grafiken/scope.pdf>
-Package pdftex.def Info: grafiken/scope.pdf  used on input line 43.
+Package pdftex.def Info: grafiken/scope.pdf  used on input line 41.
 (pdftex.def)             Requested size: 455.24411pt x 251.84566pt.
-[31 <./grafiken/scope.pdf>] [32]
-
-LaTeX Warning: Reference `app:migrationsprotokolle' on page 33 undefined on input line 77.
-
-
+[30] [31 <./grafiken/scope.pdf>] [32]
 
 pdfTeX warning: pdflatex (file ./grafiken/selbstversuch.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/selbstversuch.pdf, id=263, 536.0025pt x 489.74968pt>
+<grafiken/selbstversuch.pdf, id=261, 536.0025pt x 489.74968pt>
 File: grafiken/selbstversuch.pdf Graphic file (type pdf)
 <use grafiken/selbstversuch.pdf>
 Package pdftex.def Info: grafiken/selbstversuch.pdf  used on input line 84.
@@ -1257,7 +1230,7 @@ Overfull \hbox (17.61711pt too wide) in paragraph at lines 124--127
 
 
 pdfTeX warning: pdflatex (file ./grafiken/v1_architektur.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/v1_architektur.pdf, id=293, 566.115pt x 521.0667pt>
+<grafiken/v1_architektur.pdf, id=291, 566.115pt x 521.0667pt>
 File: grafiken/v1_architektur.pdf Graphic file (type pdf)
 <use grafiken/v1_architektur.pdf>
 Package pdftex.def Info: grafiken/v1_architektur.pdf  used on input line 132.
@@ -1275,28 +1248,34 @@ Kapitel 6.
 ]
 
 pdfTeX warning: pdflatex (file ./grafiken/tech_stack.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/tech_stack.pdf, id=343, 542.98856pt x 171.76169pt>
+<grafiken/tech_stack.pdf, id=341, 542.98856pt x 171.76169pt>
 File: grafiken/tech_stack.pdf Graphic file (type pdf)
 <use grafiken/tech_stack.pdf>
-Package pdftex.def Info: grafiken/tech_stack.pdf  used on input line 22.
+Package pdftex.def Info: grafiken/tech_stack.pdf  used on input line 26.
 (pdftex.def)             Requested size: 455.24411pt x 144.00888pt.
 [38]
-Overfull \hbox (17.6893pt too wide) in paragraph at lines 33--33
+Overfull \hbox (17.6893pt too wide) in paragraph at lines 37--37
 []\T1/lmr/bx/n/17.28 (-20) Iterative Ent-wick-lung des Pro-to-typs (De-sign Science
  []
 
 [39 <./grafiken/tech_stack.pdf>]
-Overfull \hbox (0.96263pt too wide) in paragraph at lines 53--54
+Overfull \hbox (0.96263pt too wide) in paragraph at lines 96--97
 []\T1/lmr/m/n/12 (-20) Aus die-sen in-itia-len Tes-t-er-geb-nis-sen lieÿ sich ab-lei-ten, dass die kom-ple-xe Strukturierungs-
  []
 
-[40] [41] [42] [43]
+[40]
+<grafiken/ergebnis_6.2.png, id=377, 567.3195pt x 383.63326pt>
+File: grafiken/ergebnis_6.2.png Graphic file (type png)
+<use grafiken/ergebnis_6.2.png>
+Package pdftex.def Info: grafiken/ergebnis_6.2.png  used on input line 116.
+(pdftex.def)             Requested size: 409.71692pt x 277.05867pt.
+ [41] [42 <./grafiken/ergebnis_6.2.png>] [43]
 
 pdfTeX warning: pdflatex (file ./grafiken/final_arch.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<grafiken/final_arch.pdf, id=387, 579.12357pt x 803.8833pt>
+<grafiken/final_arch.pdf, id=389, 579.12357pt x 803.8833pt>
 File: grafiken/final_arch.pdf Graphic file (type pdf)
 <use grafiken/final_arch.pdf>
-Package pdftex.def Info: grafiken/final_arch.pdf  used on input line 109.
+Package pdftex.def Info: grafiken/final_arch.pdf  used on input line 160.
 (pdftex.def)             Requested size: 455.24411pt x 631.94522pt.
 ) [44] [45 <./grafiken/final_arch.pdf>]
 \openout2 = `chapter/07_evaluierung.aux'.
@@ -1313,7 +1292,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
 
 
-] [47] [48] [49] [50] [51]) [52]
+{C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [47] [48] [49] [50] [51]) [52]
 \openout2 = `chapter/08_fazit.aux'.
 
  (chapter/08_fazit.tex
@@ -1343,7 +1322,7 @@ Overfull \hbox (13.32143pt too wide) in paragraph at lines 73--74
 
 
 ]
-Overfull \hbox (30.10672pt too wide) in paragraph at lines 77--77
+Overfull \hbox (30.10672pt too wide) in paragraph at lines 94--94
 \T1/lmr/m/n/12 (-20) ter $https : / / proceedings . neurips . cc / paper / 2023 / hash / a3621ee907def47c1b952ade25c67698 -[]
  []
 
@@ -1354,7 +1333,7 @@ Anhang A.
 ] [64] [65] [66]
 Anhang B.
 
-Overfull \hbox (8.92017pt too wide) in paragraph at lines 301--301
+Overfull \hbox (8.92017pt too wide) in paragraph at lines 318--318
 \T1/lmr/bx/n/12 (-20) 04_Tool_Anforderungen|  
  []
 
@@ -1365,7 +1344,7 @@ ignored: Infinite glue shrinkage found in box being split [67
 ignored: Infinite glue shrinkage found in box being split [68]
 ignored: Infinite glue shrinkage found in box being split [69]
 ignored: Infinite glue shrinkage found in box being split [70] [71]
-Overfull \hbox (6.9694pt too wide) in paragraph at lines 358--358
+Overfull \hbox (6.9694pt too wide) in paragraph at lines 375--375
 \T1/lmtt/m/n/12 SPECIFIED(UNCLASSIFIED_umgebung) 
  []
 
@@ -1373,68 +1352,68 @@ Overfull \hbox (6.9694pt too wide) in paragraph at lines 358--358
 ignored: Infinite glue shrinkage found in box being split [72] [73]
 Anhang C.
 
-Overfull \hbox (4.9077pt too wide) in paragraph at lines 368--369
+Overfull \hbox (4.9077pt too wide) in paragraph at lines 386--387
 []\T1/lmr/m/n/12 (-20) Wert 1 hat die Vor-be-din-gun-gen: \T1/lmtt/m/n/12 V_TW0003 \T1/lmr/m/n/12 (-20) (\T1/lmtt/m/n/12 K40_fg_af = '3'\T1/lmr/m/n/12 (-20) ) und \T1/lmtt/m/n/12 V_001 \T1/lmr/m/n/12 (-20) (\T1/lmtt/m/n/12 specified
  []
 
 [74
 
 ] [75] [76]
-Overfull \hbox (13.68782pt too wide) in paragraph at lines 445--446
+Overfull \hbox (13.68782pt too wide) in paragraph at lines 463--464
 []\T1/lmr/bx/n/12 (-20) Redundanz-Bereinigung: \T1/lmr/m/n/12 (-20) Bei Wert H4 steht \T1/lmtt/m/n/12 Specified K40_FG_AF and K40_FG_AF
  []
 
 [77]
-Overfull \hbox (7.71085pt too wide) in paragraph at lines 481--482
+Overfull \hbox (7.71085pt too wide) in paragraph at lines 499--500
 []\T1/lmr/m/n/12 (-20) Werte 03 und 09: Ha-ben ex-akt die-sel-be Be-din-gung (\T1/lmtt/m/n/12 K40_ko = '08' and K40_abl
  []
 
 
-Overfull \hbox (14.04912pt too wide) in paragraph at lines 498--498
+Overfull \hbox (14.04912pt too wide) in paragraph at lines 516--516
 []\T1/lmtt/m/n/12 $self.K40_SCHP = '04' if $self.K40_ko = '09' and not specified $self.K40_ps,[] 
  []
 
 
-Overfull \hbox (26.39912pt too wide) in paragraph at lines 499--499
+Overfull \hbox (26.39912pt too wide) in paragraph at lines 517--517
 []\T1/lmtt/m/n/12 $self.K40_SCHP in ('03', '09') if $self.K40_ko = '08' and $self.K40_abl = '0',[] 
  []
 
-[78] [79]
+[78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
 Anhang D.
 
-Overfull \hbox (13.16257pt too wide) in paragraph at lines 563--564
+Overfull \hbox (13.16257pt too wide) in paragraph at lines 1041--1042
 []\T1/lmr/m/it/12 (-20) Bedingung (V_TW0009): \T1/lmtt/m/n/12 K40_fg_af in ('3','4') and K40_ts in ('0','1') 
  []
 
-[80
+[91
 
 ]
-Overfull \hbox (2.04756pt too wide) in paragraph at lines 568--571
+Overfull \hbox (2.04756pt too wide) in paragraph at lines 1046--1049
 []\T1/lmr/m/it/12 (-20) Bedingung (V_TW0011): \T1/lmtt/m/n/12 K40_fg_af = '1' and K40_brm = '0' and K40_ts
  []
 
 
-Overfull \hbox (13.16257pt too wide) in paragraph at lines 594--595
+Overfull \hbox (13.16257pt too wide) in paragraph at lines 1072--1073
 []\T1/lmr/m/it/12 (-20) Bedingung (V_TW0009): \T1/lmtt/m/n/12 K40_fg_af in ('3','4') and K40_ts in ('0','1') 
  []
 
 
-Overfull \hbox (13.16257pt too wide) in paragraph at lines 598--599
+Overfull \hbox (13.16257pt too wide) in paragraph at lines 1076--1077
 []\T1/lmr/m/it/12 (-20) Bedingung (V_TW0009): \T1/lmtt/m/n/12 K40_fg_af in ('3','4') and K40_ts in ('0','1') 
  []
 
-[81]
-Overfull \hbox (23.94649pt too wide) in paragraph at lines 614--614
+[92]
+Overfull \hbox (23.94649pt too wide) in paragraph at lines 1093--1093
 []\T1/lmr/bx/n/17.28 (-20) Erstes Bei-spiel ei-nes Er-geb-nis-ses der V1-Architektur 
  []
 
-[82]
-<anhang/mas_ergebnis.png, id=576, 738.96075pt x 226.446pt>
+[93]
+<anhang/mas_ergebnis.png, id=615, 738.96075pt x 226.446pt>
 File: anhang/mas_ergebnis.png Graphic file (type png)
 <use anhang/mas_ergebnis.png>
-Package pdftex.def Info: anhang/mas_ergebnis.png  used on input line 660.
+Package pdftex.def Info: anhang/mas_ergebnis.png  used on input line 1139.
 (pdftex.def)             Requested size: 455.24411pt x 139.50705pt.
- [83 <./anhang/mas_ergebnis.png>] (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux))
+ [94 <./anhang/mas_ergebnis.png>] (main.aux (chapter/01_einleitung.aux) (chapter/02_theoretische_grundlagen.aux) (chapter/03_related_work.aux) (chapter/04_experteninterview.aux) (chapter/05_fallstudie.aux) (chapter/06_architektur.aux) (chapter/07_evaluierung.aux) (chapter/08_fazit.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
@@ -1448,17 +1427,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34214 strings out of 467683
- 709895 string characters out of 5414237
- 1826404 words of memory out of 5000000
- 62407 multiletter control sequences out of 15000+600000
- 710886 words of font info for 237 fonts, out of 8000000 for 9000
+ 34235 strings out of 467683
+ 710321 string characters out of 5414237
+ 1896731 words of memory out of 5000000
+ 62418 multiletter control sequences out of 15000+600000
+ 716347 words of font info for 245 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  123i,20n,121p,2099b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (88 pages, 1645148 bytes).
+<C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/doerrt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (99 pages, 1746680 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
+ 678 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 42062 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 47187 words of extra memory for PDF output out of 51595 (max. 10000000)
 

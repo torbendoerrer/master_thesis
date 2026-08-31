@@ -74,7 +74,7 @@ In der klassischen \ac{LO-VC}-Welt wird die Konfigurationslogik häufig über is
     \label{fig:lovc_precon}
 \end{figure}
 
-In der neuen \ac{AVC}-Architektur ist diese fragmentierte Logik ineffizient. Stattdessen nutzt der \textit{Gecode}-Solver eine Zentralisierung der Logik in mathematisch strikten Matrizen, den sogenannten \textit{Variantentabellen}. Anstatt Werte einzeln abzufragen, wird eine Tabelle aufgespannt, deren Spalten die interagierenden Merkmale repräsentieren (z.,B. \texttt{Modell}, \texttt{Land}, \texttt{Sitzbezug}). Ein \ac{AVC}-Constraint ruft diese Tabelle anschließend über eine restriktive Syntax wie \texttt{RESTRICT TABLE  (...)} auf. Das System gleicht dann die Eingaben des Nutzers global mit den gültigen Zeilenkombinationen der Tabelle ab.
+Diese fragmentierte Logik ist vor allem bei wachsenden Konfigurationen zunehmend ineffizient. Stattdessen nutzt der \textit{Gecode}-Solver in AVC eine Zentralisierung der Logik in mathematisch strikten Matrizen, den sogenannten \textit{Variantentabellen}. Anstatt Werte einzeln abzufragen, wird eine Tabelle aufgespannt, deren Spalten die interagierenden Merkmale repräsentieren (z.,B. \texttt{Modell}, \texttt{Land}, \texttt{Sitzbezug}). Ein \ac{AVC}-Constraint ruft diese Tabelle anschließend über eine restriktive Syntax wie \texttt{RESTRICT TABLE  (...)} auf. Das System gleicht dann die Eingaben des Nutzers global mit den gültigen Zeilenkombinationen der Tabelle ab.
 
 \begin{figure}[htbp]
     \centering
@@ -95,14 +95,14 @@ Genau diese strukturelle Härte und die Notwendigkeit, aus unscharfem historisch
 \subsection{Large Language Models für Quellcode}
 \label{subsec:llms_fuer_code}
 
-In den letzten Jahren haben KI-Systeme enorme Fortschritte gemacht. Im Zentrum stehen dabei \ac{LLMs}. Das sind große neuronale Netze, die mit riesigen Textmengen trainiert wurden, um das wahrscheinlichste nächste Zeichen in einem Text vorherzusagen. Was als einfaches Werkzeug zur Textvervollständigung begann, hat sich zu leistungsstarken Systemen entwickelt, die auch im Software Engineering eingesetzt werden. Um diese Modelle für die automatisierte Code-Migration nutzen zu können, muss man verstehen, wie sie funktionieren und wie man sie steuert.
+In den letzten Jahren haben KI-Systeme große Fortschritte gemacht. Im Zentrum stehen dabei \ac{LLMs}. Das sind große neuronale Netze, die mit riesigen Textmengen trainiert wurden, um das wahrscheinlichste nächste Zeichen in einem Text vorherzusagen. Was als einfaches Werkzeug zur Textvervollständigung begann, hat sich zu leistungsstarken Systemen entwickelt, die auch im Software Engineering eingesetzt werden. Um diese Modelle für die automatisierte Code-Migration nutzen zu können, muss man verstehen, wie sie funktionieren und wie man sie steuert.
 
 \subsubsection{Die Transformer-Architektur und der Aufmerksamkeitsmechanismus}
 Die meisten heutigen Sprachmodelle basieren auf der Transformer-Architektur, die von \textcite{vaswaniAttentionAllYou2017} vorgestellt wurde. Der große Durchbruch dieser Architektur ist, dass Texte oder Quellcode nicht mehr strikt nacheinander (Wort für Wort) verarbeitet werden müssen, wie es bei älteren Modellen der Fall war.
 
 Der sogenannte \textit{Self-Attention-Mechanismus} ermöglicht es, alle Wörter eines Textes gleichzeitig zu verarbeiten. Das Modell berechnet für jedes Wort, wie wichtig es im Verhältnis zu allen anderen Wörtern ist.
 
-Für das Programmieren ist das besonders nützlich, weil es das Problem der weitreichenden Abhängigkeiten löst. Wenn eine Variable ganz oben im Code definiert und hunderte Zeilen später genutzt wird, erkennt das Modell diese Verbindung sofort – unabhängig davon, wie weit die beiden Stellen auseinanderliegen. Der Quellcode wird vom Modell also als ein Netz zusammenhängender Logikbausteine verstanden.
+Für das Programmieren ist das besonders nützlich, weil es das Problem der weitreichenden Abhängigkeiten löst. Wenn eine Variable ganz oben im Code definiert und hunderte Zeilen später genutzt wird, erkennt das Modell diese Verbindung sofort – unabhängig davon, wie weit die beiden Stellen auseinanderliegen. Der Quellcode wird vom Modell also als ein Netz zusammenhängender Logikbausteine verstanden \parencite{vaswaniAttentionAllYou2017}.
 
 \subsubsection{In-Context Learning und Few-Shot Prompting}
 Früher musste man neuronale Netze für neue Aufgaben aufwändig nachtrainieren (\textit{Fine-Tuning}). Moderne LLMs sind jedoch ab einer gewissen Größe so leistungsstark, dass das oft nicht mehr nötig ist.
@@ -127,11 +127,12 @@ Auch wenn Sprachmodelle Code syntaktisch gut verstehen und übersetzen können, 
 
 \subsubsection{Die Komplexitätsfalle und das probabilistische Paradigma}
 
-Dass LLMs bei langen, sequenziellen Logikketten schwächeln, zeigten \textcite{chenEvaluatingLargeLanguage2021} bereits bei der Evaluation früherer Code-Modelle wie Codex. Sie bewiesen, dass Modelle kurze, isolierte Aufgaben zwar zuverlässig lösen können, die Leistung jedoch drastisch einbricht, sobald eine Aufgabe viele aneinandergereihte Arbeitsschritte erfordert.  Für die automatisierte Migration von SAP-Modellen ist das ein zentrales Problem: Wenn ein Modell gezwungen wird, eine komplett neue Constraint-Architektur mit all ihren Tabellen und Vorbedingungen auf einmal zu entwerfen, überfordert das die kognitive Kapazität (das \textit{Reasoning}) des \ac{LLM}. Das Modell geht dann in ein rein probabilistisches Paradigma über – es generiert den Code nur noch basierend auf Wahrscheinlichkeiten, ohne die mathematische Logik im Hintergrund tiefgreifend zu prüfen.  Das Paper beschreibt zudem, dass die Wahrscheinlichkeit für einen direkten Treffer im ersten Versuch (Metrik $pass@1$) bei solch komplexen Aufgaben extrem gering ist. Erst wenn ein System in der Lage ist, iterativ Lösungswege zu generieren, diese zu prüfen und zu verfeinern, steigt die Erfolgsquote. Ein monolithischer Ansatz bietet jedoch keinerlei Mechanismus für solche kognitiven Prüfschleifen.  
+Dass LLMs bei langen, sequenziellen Logikketten schwächeln, zeigten \textcite{chenEvaluatingLargeLanguage2021} bereits bei der Evaluation früherer Code-Modelle wie Codex. Sie bewiesen, dass Modelle kurze, isolierte Aufgaben zwar zuverlässig lösen können, die Leistung jedoch drastisch einbricht, sobald eine Aufgabe viele aneinandergereihte Arbeitsschritte erfordert.  Für die automatisierte Migration von SAP-Modellen ist das ein zentrales Problem: Wenn ein Modell gezwungen wird, eine komplett neue Constraint-Architektur mit all ihren Tabellen und Vorbedingungen auf einmal zu entwerfen, überfordert das die kognitive Kapazität (das \textit{Reasoning}) des \ac{LLMs}. Das Modell geht dann in ein rein probabilistisches Paradigma über – es generiert den Code nur noch basierend auf Wahrscheinlichkeiten, ohne die mathematische Logik im Hintergrund tiefgreifend zu prüfen.  Das Paper von \textcite{chenEvaluatingLargeLanguage2021} beschreibt zudem, dass die Wahrscheinlichkeit für einen direkten Treffer im ersten Versuch bei solch komplexen Aufgaben extrem gering ist. Erst wenn ein System in der Lage ist, iterativ Lösungswege zu generieren, diese zu prüfen und zu verfeinern, steigt die Erfolgsquote. Ein monolithischer Ansatz bietet jedoch keinerlei Mechanismus für solche kognitiven Prüfschleifen.  
 
 \subsubsection{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}
 
-Neben der sequenziellen Komplexität stellt die globale Vernetzung von Code eine weitere Hürde dar. \textcite{jimenezSwebenchCanLanguage2024} untersuchten mit dem \textit{SWE-bench}-Benchmark reale Software-Projekte und zeigten auf, dass LLMs massive Probleme haben, wenn Code-Bausteine systemweite Folgen nach sich ziehen. Selbst Top-Modelle wie GPT-4 scheiterten im monolithischen Ansatz und konnten kaum $5\%$ der Probleme lösen.  Obwohl bei der Systemtransformation ein völlig neues AVC-Zielmodell generiert wird, lassen sich diese Erkenntnisse direkt auf die \ac{SAP}-Variantenkonfiguration übertragen:\begin{enumerate}
+Neben der sequenziellen Komplexität stellt die globale Vernetzung von Code eine weitere Hürde dar. \textcite{jimenezSwebenchCanLanguage2024} untersuchten mit dem \textit{SWE-bench}-Benchmark reale Software-Projekte und zeigten auf, dass LLMs massive Probleme haben, wenn Code-Bausteine systemweite Folgen nach sich ziehen. Selbst Top-Modelle wie GPT-4 scheiterten im monolithischen Ansatz und konnten kaum $5\%$ der Probleme lösen.  Obwohl bei der Systemtransformation ein völlig neues AVC-Zielmodell generiert wird, lassen sich diese Erkenntnisse direkt auf die SAP-Variantenkonfiguration übertragen:
+\begin{enumerate}
 \item \textbf{Fehlender Überblick über Netzwerke:} Selbst bei der Generierung eines komplett neuen Modells verliert ein monolithisches LLM schnell den Überblick über die strikten, netzwerkartigen Abhängigkeiten der deklarativen Constraint-Architektur. Das Modell generiert beispielsweise isolierte Tabellen für einzelne Merkmale, berücksichtigt dabei aber nicht die globalen Schnittmengen und Wechselwirkungen mit anderen, parallel generierten Constraints. Bei der vernetzten \ac{AVC}-Architektur führt das unweigerlich zu fehlerhafter Logik.
 \item \textbf{Fehlendes Feedback (Blindflug):} Ein monolithischer Ansatz operiert im luftleeren Raum. Das Modell schreibt Code, kann ihn aber nicht autonom verifizieren. In der realen Softwareentwicklung ist Programmieren jedoch ein iterativer Prozess aus Schreiben und Testen. Wird ein Sprachmodell lediglich über einen isolierten Prompt gesteuert und ist nicht architektonisch in eine dynamische Feedback-Schleife (beispielsweise mit einer Test- oder Compilerumgebung) eingebunden, muss es blind raten, ob die erzeugte Struktur funktionsfähig ist.
 \end{enumerate}  Zusammenfassend lässt sich festhalten, dass einfache KI-Prompts für den Aufbau komplexer, voneinander abhängiger Architektur-Modelle ungeeignet sind. Um die Fehleranfälligkeit des fehlenden Feedbacks und der Komplexitätsfalle abzufangen, bedarf es strukturierter Multi-Agenten-Systeme, die Aufgaben in analytische Zwischenschritte dekonstruieren.  
@@ -179,9 +180,9 @@ Dabei arbeitet der Agent in einer ständigen Schleife aus drei Schritten:
 
 $$\mbox{Thought (Gedanke)} \longrightarrow \mbox{Action (Handlung)} \longrightarrow \mbox{Observation (Beobachtung)}$$
 
-Zuerst analysiert der Agent das Problem (Thought) und entscheidet sich für eine Handlung. Dann führt er diese Handlung mit einem Werkzeug aus (Action). Das entscheidende Element ist die Beobachtung (Observation): Das Ergebnis der Handlung (z.,B. eine Fehlermeldung) wird als neues Wissen an den Agenten zurückgespielt.
+Zuerst analysiert der Agent das Problem (Thought) und entscheidet sich für eine Handlung. Dann führt er diese Handlung mit einem Werkzeug aus (Action). Das entscheidende Element ist die Beobachtung (Observation): Das Ergebnis der Handlung (z.B. eine Fehlermeldung) wird als neues Wissen an den Agenten zurückgespielt.
 
-So kann der Agent Fehler erkennen und seinen Code im nächsten Versuch anpassen. Dieses selbstkorrigierende Verhalten verhindert, dass das Modell einfach falschen Code produziert, und ist für komplexe SAP-Migrationen essenziell.
+So kann der Agent Fehler erkennen und seinen Code im nächsten Versuch anpassen. Dieses selbstkorrigierende Verhalten verhindert, dass das Modell falschen Code produziert, und ist für komplexe SAP-Migrationen essenziell.
 
 \subsection{Kollaborative Agenten-Muster}
 \label{subsec:kollaborative_agenten_muster}
@@ -195,7 +196,7 @@ Eine sehr gute Methode ist es, Agenten klare Expertenrollen zuzuweisen (z.,B. Pr
 Damit die Agenten ihre Rollen nicht verlassen, brauchen sie feste Regeln. \textcite{liCamelCommunicativeAgents2023} nutzen im \textit{CAMEL}-Framework klare Systemanweisungen und Kommunikationsprotokolle, um Endlosschleifen oder ungewollte Rollenwechsel zu verhindern.
 
 \subsubsection{Werkzeugnutzung und Code-Ausführung}
-Agenten sprechen nicht nur miteinander, sondern nutzen auch Werkzeuge. Das \textit{AutoGen}-Framework von \textcite{wuAutogenEnablingNextgen2024} setzt dafür spezielle "Proxy-Agenten" ein. Deren einzige Aufgabe ist es, den generierten Code auszuführen und mögliche Fehlermeldungen direkt an die anderen Agenten zurückzumelden. So wird der Code direkt auf seine Funktionalität geprüft.
+Agenten sprechen nicht nur miteinander, sondern nutzen auch Werkzeuge. Das \textit{AutoGen}-Framework von \textcite{wuAutogenEnablingNextgen2024} setzt dafür spezielle Proxy-Agenten ein. Deren einzige Aufgabe ist es, den generierten Code auszuführen und mögliche Fehlermeldungen direkt an die anderen Agenten zurückzumelden. So wird der Code direkt auf seine Funktionalität geprüft.
 
 \subsubsection{Iterative Fehlerkorrektur (Self-Refinement)}
 Um auf Fehler gut reagieren zu können, müssen die Agenten strukturiert nachdenken. \textcite{shinnReflexionLanguageAgents2023} beschreiben im \textit{Reflexion}-Framework, wie Agenten aus Fehlern lernen: Statt einfach einen neuen Code zu raten, analysiert der Agent den Fehler, entwickelt eine Lösungsstrategie, speichert diese ab und passt den Code gezielt an.
@@ -208,7 +209,7 @@ Um auf Fehler gut reagieren zu können, müssen die Agenten strukturiert nachden
 
 Um Agenten-Systeme zu programmieren, greift man meist auf fertige Frameworks zurück. Diese Bibliotheken übernehmen Standardaufgaben wie die Verwaltung von Schnittstellen oder des Gedächtnisses.
 
-Eine Studie von \textcite{liuLargescaleStudyDevelopment2025} zeigt, dass vor allem drei Frameworks den Markt dominieren: \textit{LangChain}, \textit{AutoGen} und \textit{CrewAI}. Sie unterscheiden sich grundlegend:
+Eine Studie von \textcite{liuLargescaleStudyDevelopment2025} zeigt, dass vor allem drei Frameworks den Markt dominieren: \textit{LangGraph}, \textit{AutoGen} und \textit{CrewAI}. Sie unterscheiden sich grundlegend:
 
 \begin{itemize}
 \item \textbf{LangGraph:} Diese Erweiterung von \textit{LangChain} betrachtet Agenten und Werkzeuge als Knoten in einem Graphen. Die Verbindungen dazwischen steuern den Ablauf \parencite{langchain2024}. Das bietet maximale Flexibilität, erfordert aber viel Programmierarbeit.
@@ -253,13 +254,5 @@ Eine Studie von \textcite{liuLargescaleStudyDevelopment2025} zeigt, dass vor all
         \end{tabularx}
     \caption{Vergleich der dominierenden Multi-Agenten-Frameworks (in Anlehnung an \cite{liuLargescaleStudyDevelopment2025}).}
 \end{table}
-
-\subsubsection{Mapping von Theorie und Framework-Praxis}
-Diese Frameworks nehmen Entwicklern viel Routinearbeit ab (z.,B. durch integrierte Datenbanken für das Gedächtnis oder vorbereitete ReAct-Schleifen). Sie kennen jedoch keine domänenspezifischen Themen wie SAP-Architekturen. Für den Entwickler bleiben deshalb zwei Hauptaufgaben:
-
-\begin{enumerate}
-\item \textbf{Systemdesign:} Man muss entscheiden, welches der Agenten-Muster am besten zur Aufgabe passt. Anschließend muss man dem Framework die Rollen, Arbeitsanweisungen und Regeln einprogrammieren.
-\item \textbf{Werkzeug-Entwicklung:} Es gibt keine fertigen Werkzeuge für SAP-Migrationen. Die Brücke zwischen den Agenten und der Zielumgebung (etwa ein Compiler zur Überprüfung des SAP-Codes) muss komplett selbst entwickelt werden.
-\end{enumerate}
 
 Mit den hier erläuterten Konzepten – von den SAP-Konfigurationsmodellen über die Schwächen einzelner KI-Modelle bis hin zu den Architekturen moderner Agenten-Frameworks – sind die technologischen Grundlagen für diese Masterarbeit geschaffen. Diese Erkenntnisse bilden das theoretische Fundament, auf dem die nachfolgenden Entscheidungen für die eigene Migrationsarchitektur aufbauen.

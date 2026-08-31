@@ -8,8 +8,12 @@ Nachdem in den beiden vorangegangenen Abschnitten die Zielarchitektur des Multi-
 \label{sec:technologieauswahl_und_infrastruktur}
 
 Die Auswahl der genutzten Frameworks und Plattformen richtet sich nach den internen Vorgaben der \textit{msg systems ag} an Datenschutz und IT-Sicherheit sowie nach grundlegenden Prinzipien der Softwareentwicklung wie Wartbarkeit und Flexibilität. Das technische Fundament des Prototyps besteht aus drei Komponenten: dem Orchestrierungs-Framework \textit{CrewAI}, dem \textit{SAP AI Core} als sicherer Ausführungsumgebung und \textit{liteLLM} als standardisierter Schnittstelle zur Modellanbindung.
-\subsection{Orchestrierungs-Framework: CrewAI}\label{subsec:auswahl_crewai}Laut Liu et al. (2025) gehören LangGraph, AutoGen und CrewAI zu den aktuell etabliertesten Frameworks für Multi-Agenten-Systeme. Für den Prototyp in dieser Arbeit fiel die Wahl auf \textit{CrewAI}. Diese Entscheidung ergab sich primär aus den strukturellen Anforderungen der Code-Migration sowie dem Ziel, die Entwicklungszeit effizient zu halten.  Die in Kapitel 2 vorgestellten Konzepte wie dynamische \textit{ReAct}-Schleifen oder offene Agenten-Dialoge (wie sie beispielsweise \textit{AutoGen} nutzt) eignen sich vor allem für ergebnisoffene Problemlösungen. 
-Für die Migration von SAP-Constraint-Logik sind sie jedoch weniger zielführend. Da in diesem Prototyp aufgrund der proprietären SAP-Umgebung kein direkter Compiler-Zugriff existiert, erhalten die Agenten kein verlässliches technisches Feedback. Freie, ungelenkte Interaktionsschleifen zwischen Agenten führen unter diesen Bedingungen schnell zu Halluzinationen oder Endlosschleifen.  Die Aufgabenstellung erfordert stattdessen einen stark geführten, sequenziellen Ablauf. \textit{CrewAI} setzt das in Kapitel 2.3.2 beschriebene \glqq Fließband-Paradigma\grqq{} um (Singh, 2025). Die Agenten arbeiten hier in einer fest definierten Pipeline: Analyse, Architekturentwurf und Code-Synthese folgen strikt nacheinander. Diese Einschränkung der Freiheitsgrade ist bei der Code-Migration von Vorteil, da sie einen deterministischeren Prozess erzwingt und Fehler durch ungeplante Agenten-Interaktionen reduziert. Ein ähnlicher Workflow ließe sich zwar auch mit \textit{LangGraph} abbilden, \textit{CrewAI} bietet hierfür jedoch einen deutlich geringeren Programmieraufwand bei der grundlegenden Zustandsverwaltung.  Auch wenn die Architektur auf dynamisches ReAct-Feedback verzichtet, kommen andere zentrale KI-Konzepte aus Kapitel 2 zum Einsatz. Da ein aufwändiges \textit{Fine-Tuning} eigener Sprachmodelle für die spezifische SAP-Domäne den Rahmen der Arbeit sprengen würde, nutzt das System primär \textit{In-Context Learning (ICL)} und \textit{Few-Shot Prompting}. Diese Methoden sind direkt in die System-Prompts der Agenten integriert: Die Rollenbeschreibungen in \textit{CrewAI} enthalten nicht nur Handlungsanweisungen, sondern auch konkrete Lösungsbeispiele (\textit{Few-Shot}) für die korrekte AVC-Syntax, an denen sich die Sprachmodelle bei der Code-Generierung orientieren können.  
+\subsection{Orchestrierungs-Framework: CrewAI}
+\label{subsec:auswahl_crewai}
+Laut \textcite{liuLargescaleStudyDevelopment2025} gehören LangGraph, AutoGen und CrewAI zu den aktuell etabliertesten Frameworks für Multi-Agenten-Systeme. Für den Prototyp in dieser Arbeit fiel die Wahl auf \textit{CrewAI}. Diese Entscheidung ergab sich primär aus den strukturellen Anforderungen der Code-Migration sowie dem Ziel, die Entwicklungszeit effizient zu halten.  Die in Kapitel 2 vorgestellten Konzepte wie dynamische \textit{ReAct}-Schleifen oder offene Agenten-Dialoge (wie sie beispielsweise \textit{AutoGen} nutzt) eignen sich vor allem für ergebnisoffene Problemlösungen. 
+Für die Migration von SAP-Constraint-Logik sind sie jedoch weniger zielführend. Da in diesem Prototyp aufgrund der proprietären SAP-Umgebung kein direkter Compiler-Zugriff existiert, erhalten die Agenten kein verlässliches technisches Feedback. Freie, ungelenkte Interaktionsschleifen zwischen Agenten führen unter diesen Bedingungen schnell zu Halluzinationen oder Endlosschleifen.  Die Aufgabenstellung erfordert stattdessen einen stark geführten, sequenziellen Ablauf. \textit{CrewAI} setzt das in Kapitel 2.3.2 beschriebene \glqq Fließband-Paradigma\grqq{} um. Die Agenten arbeiten hier in einer fest definierten Pipeline: Analyse, Architekturentwurf und Code-Synthese folgen strikt nacheinander. Diese Einschränkung der Freiheitsgrade ist bei der Code-Migration von Vorteil, da sie einen deterministischeren Prozess erzwingt und Fehler durch ungeplante Agenten-Interaktionen reduziert. Ein ähnlicher Workflow ließe sich zwar auch mit \textit{LangGraph} abbilden, \textit{CrewAI} bietet hierfür jedoch einen deutlich geringeren Programmieraufwand bei der grundlegenden Zustandsverwaltung \parencite{liuLargescaleStudyDevelopment2025}.  
+
+Auch wenn die Architektur auf dynamisches ReAct-Feedback verzichtet, kommen andere zentrale KI-Konzepte aus Kapitel 2 zum Einsatz. Da ein aufwändiges \textit{Fine-Tuning} eigener Sprachmodelle für die spezifische SAP-Domäne den Rahmen der Arbeit sprengen würde, nutzt das System primär \textit{In-Context Learning (ICL)} und \textit{Few-Shot Prompting}.
 \subsection{Infrastruktur und Modellintegration: SAP AI Core und liteLLM}
 \label{subsec:infrastruktur_modellintegration}
 
@@ -24,7 +28,7 @@ Um diese Vorgaben zu erfüllen, erfolgt die Anbindung der Sprachmodelle in diese
     \label{fig:tech_stack}
 \end{figure}
 
-Ein weiterer technischer Aspekt betrifft die Anbindung der Modelle an das Agentensystem. Um flexibel auf technologische Änderungen reagieren zu können, soll der Prototyp nicht fest an einen einzelnen Anbieter oder ein spezifisches Modell gebunden werden (\textit{Vendor Lock-in}). 
+Ein weiterer technischer Aspekt betrifft die Anbindung der Modelle an das Agentensystem. Um flexibel auf technologische Änderungen reagieren zu können, soll der Prototyp nicht fest an einen einzelnen Anbieter oder ein spezifisches Modell gebunden werden. 
 
 Um dies zu verhindern, wird die Python-Bibliothek \textit{liteLLM} genutzt und in das \textit{CrewAI}-Framework integriert. Sie fungiert als standardisierende Schnittstelle zwischen den KI-Agenten und den Sprachmodellen. Dadurch wird der Quellcode der Multi-Agenten-Architektur vom verwendeten Modell entkoppelt. Das ermöglicht es, das zugrundeliegende Modell bei Bedarf mit minimalem Konfigurationsaufwand über den \textit{SAP AI Core} auszutauschen, ohne den Programmcode der eigentlichen Agenten anpassen zu müssen.
 
@@ -50,6 +54,45 @@ Die ersten Tests mit dieser grundlegenden Architektur zeigten jedoch deutliche S
     \item \textbf{Probleme bei der Tabellenbildung:} Die Hauptaufgabe – zu bewerten, wann eine Variantentabelle sinnvoll ist und wann nicht – überforderte das System. Besonders in Fällen, in denen innerhalb eines Merkmals nur bestimmte Werte für eine Tabelle geeignet waren und andere isoliert behandelt werden mussten, konnte das LLM keine korrekten und konsistenten Entscheidungen treffen.
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
+    % Einstellungen für eine kompakte, saubere Code-Box
+    \lstset{
+        basicstyle=\scriptsize\ttfamily, % Sehr kleine Schrift spart massiv Platz
+        frame=single,                    % Rahmen drumherum
+        backgroundcolor=\color{gray!10}, % Leicht grauer Hintergrund
+        breaklines=true,
+        xleftmargin=1em,
+        xrightmargin=1em
+    }
+\begin{lstlisting}
+/* ==========================================
+   FEHLERBILD 1: Vermischung von JSON und AVC (K40_BRM)
+   ========================================== */
+TABLE K40_BRM
+{
+  '1': '1',
+  RESTRICT ($self.K40_fg_af='3' AND $self.V_TW0003);
+  [...]
+}
+
+/* ==========================================
+   FEHLERBILD 2: Erfundene SQL-Syntax und Variablen (K40_KO)
+   ========================================== */
+TABLE K40_KO
+  CONSTRAINT RESTRICT (
+    WHEN $self.code IN ('01', '02', '03', '04') THEN
+      $self.dependency_precondition IN ('V_TW0008', 'V_TW0569') AND
+      $self.dependency_syntax IN ($self.K40_fg_af IN ('1','2'), ...)
+    
+    WHEN $self.code IN ('05', '07') THEN
+      $self.dependency_precondition = 'V_TW0009' AND [...]
+  );
+\end{lstlisting}
+    \caption{Auszug syntaktischer Halluzinationen im ersten Prototyp-Run. Das LLM generierte ungültige Struktur-Mischformen und erfand nicht existierende SQL-Befehle sowie fiktive AVC-Variablen und Tabellen.}
+    \label{fig:syntax_halluzinationen_run1}
+\end{figure}
+
 Aus diesen initialen Testergebnissen ließ sich ableiten, dass die komplexe Strukturierungs- und Übersetzungsaufgabe nicht allein durch ein generisches Agenten-Setup gelöst werden kann. Um die mangelnde Zuverlässigkeit und das fehlende domänenspezifische Fachwissen der Modelle zu kompensieren, waren für die folgende Iteration gezielte funktionale und inhaltliche Erweiterungen des Prototyps erforderlich.
 
 \subsection{Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}
@@ -66,6 +109,14 @@ Die Evaluierung dieses angepassten Systems zeigte zunächst einen organisatorisc
     \item \textbf{Übergenerierung und Halluzinationen:} Das System verstand nun zwar grundsätzlich den Auftrag, zwischen Variantentabellen und isolierten \textit{IF}-Bedingungen (Standalone) zu unterscheiden. Allerdings zeigte das LLM die Tendenz, zwanghaft für jedes Merkmal riesige Tabellen generieren zu wollen, in die alle Werte gequetscht wurden. Dabei verlor das Modell den Bezug zum JSON-Input: Es erfand Spaltennamen (teilweise aus einfachen Syntax-Fragmenten), halluzinierte nicht-existente Tabelleneinträge und behalf sich mit Platzhaltern, um die fehlerhaften Tabellenstrukturen künstlich aufrechtzuerhalten.
     \item \textbf{Problem des festverdrahteten Domänenwissens:} Ein konzeptioneller Fehler zeigte sich beim Umgang mit spezifischen Kundendaten. Das Herausfiltern des Wertes \glqq specified dummy\grqq{} (ein kundenindividueller Workaround für obsoleten Code) war in dieser Phase noch fest im System-Prompt des Agenten einprogrammiert (Hardcoding).
 \end{itemize}
+
+\begin{figure}[!ht]
+    \centering
+    % Breite auf 85% bis 100% der Textbreite anpassen, je nach Lesbarkeit des Screenshots
+    \includegraphics[width=0.9\textwidth]{grafiken/ergebnis_6.2.png}
+    \caption{Ausschnitt des generierten Excel-Dashboards aus dem zweiten Iterationszyklus. Die fehlerhafte Ausgabe dokumentiert die Übergenerierung des Sprachmodells: Es erzwingt künstliche Tabellenstrukturen, erfindet invalide Spaltennamen aus Syntax-Fragmenten und halluziniert nicht-existente Tabelleneinträge, wodurch der Bezug zum ursprünglichen JSON-Input verloren geht.}
+    \label{fig:zyklus2_halluzinationen}
+\end{figure}
 
 Um die mangelnde Flexibilität beim Domänenwissen sofort zu adressieren, wurde noch innerhalb dieses Zyklus ein externes Konfigurationsdokument eingeführt. Der Entwickler kann hier projektbezogene Sonderregeln dynamisch hinterlegen, wodurch das Kernsystem domänenunabhängig wird. Begleitend wurden die System-Prompts der Agenten sowie das Dokument für die AVC-Syntax weiter detailliert, in der Hoffnung, die Präzision der Tabellengenerierung zu erhöhen.
 
