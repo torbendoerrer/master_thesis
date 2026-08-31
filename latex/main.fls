@@ -431,6 +431,7 @@ INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmro12.tfm
 OUTPUT main.toc
 INPUT .\abkuerzungen.tex
@@ -446,7 +447,6 @@ OUTPUT chapter\01_einleitung.aux
 INPUT .\chapter\01_einleitung.tex
 INPUT .\chapter\01_einleitung.tex
 INPUT chapter\01_einleitung.tex
-INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
@@ -583,6 +583,7 @@ OUTPUT chapter\08_fazit.aux
 INPUT .\chapter\08_fazit.tex
 INPUT .\chapter\08_fazit.tex
 INPUT chapter\08_fazit.tex
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
@@ -624,6 +625,8 @@ INPUT main.run.xml
 OUTPUT main.run.xml
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
+INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\doerrt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb

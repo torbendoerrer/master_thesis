@@ -2,7 +2,7 @@
 \chapter{Systemdesign und Prototypenentwicklung}
 \label{ch:architektur}
 
-Nachdem in den beiden vorangegangenen Abschnitten die Zielarchitektur des Multi-Agenten-Systems konzeptionell aus der Anforderungsanalyse hergeleitet wurde, dokumentiert dieses Kapitel die informationstechnische Umsetzung des Prototyps. Die Entwicklung gliedert sich hierbei in zwei Phasen: Zunächst wird die Technologieauswahl und Infrastruktur begründet. Darauf aufbauend wird im Sinne des \textit{Design Science Research} (DSR) die iterative, evolutionäre Entwicklung der Systemarchitektur dokumentiert, welche durch kontinuierliche Evaluierungszyklen zur finalen Pipeline führte.
+Nachdem in den beiden vorangegangenen Abschnitten die Zielarchitektur des Multi-Agenten-Systems konzeptionell aus der Anforderungsanalyse hergeleitet wurde, dokumentiert dieses Kapitel die informationstechnische Umsetzung des Prototyps. Die Entwicklung gliedert sich hierbei in zwei Phasen: Zunächst wird die Technologieauswahl und Infrastruktur begründet. Darauf aufbauend wird im Sinne des \textit{Design Science Research} (\ac{DSR}) die iterative, evolutionäre Entwicklung der Systemarchitektur dokumentiert, welche durch kontinuierliche Evaluierungszyklen zur finalen Pipeline führte.
 
 \section{Technologieauswahl und Infrastruktur}
 \label{sec:technologieauswahl_und_infrastruktur}
@@ -13,11 +13,11 @@ Die Auswahl der genutzten Frameworks und Plattformen richtet sich nach den inter
 Laut \textcite{liuLargescaleStudyDevelopment2025} gehören LangGraph, AutoGen und CrewAI zu den aktuell etabliertesten Frameworks für Multi-Agenten-Systeme. Für den Prototyp in dieser Arbeit fiel die Wahl auf \textit{CrewAI}. Diese Entscheidung ergab sich primär aus den strukturellen Anforderungen der Code-Migration sowie dem Ziel, die Entwicklungszeit effizient zu halten.  Die in Kapitel 2 vorgestellten Konzepte wie dynamische \textit{ReAct}-Schleifen oder offene Agenten-Dialoge (wie sie beispielsweise \textit{AutoGen} nutzt) eignen sich vor allem für ergebnisoffene Problemlösungen. 
 Für die Migration von SAP-Constraint-Logik sind sie jedoch weniger zielführend. Da in diesem Prototyp aufgrund der proprietären SAP-Umgebung kein direkter Compiler-Zugriff existiert, erhalten die Agenten kein verlässliches technisches Feedback. Freie, ungelenkte Interaktionsschleifen zwischen Agenten führen unter diesen Bedingungen schnell zu Halluzinationen oder Endlosschleifen.  Die Aufgabenstellung erfordert stattdessen einen stark geführten, sequenziellen Ablauf. \textit{CrewAI} setzt das in Kapitel 2.3.2 beschriebene \glqq Fließband-Paradigma\grqq{} um. Die Agenten arbeiten hier in einer fest definierten Pipeline: Analyse, Architekturentwurf und Code-Synthese folgen strikt nacheinander. Diese Einschränkung der Freiheitsgrade ist bei der Code-Migration von Vorteil, da sie einen deterministischeren Prozess erzwingt und Fehler durch ungeplante Agenten-Interaktionen reduziert. Ein ähnlicher Workflow ließe sich zwar auch mit \textit{LangGraph} abbilden, \textit{CrewAI} bietet hierfür jedoch einen deutlich geringeren Programmieraufwand bei der grundlegenden Zustandsverwaltung \parencite{liuLargescaleStudyDevelopment2025}.  
 
-Auch wenn die Architektur auf dynamisches ReAct-Feedback verzichtet, kommen andere zentrale KI-Konzepte aus Kapitel 2 zum Einsatz. Da ein aufwändiges \textit{Fine-Tuning} eigener Sprachmodelle für die spezifische SAP-Domäne den Rahmen der Arbeit sprengen würde, nutzt das System primär \textit{In-Context Learning (ICL)} und \textit{Few-Shot Prompting}.
+Auch wenn die Architektur auf dynamisches ReAct-Feedback verzichtet, kommen andere zentrale KI-Konzepte aus Kapitel 2 zum Einsatz. Da ein aufwändiges \textit{Fine-Tuning} eigener Sprachmodelle für die spezifische SAP-Domäne den Rahmen der Arbeit sprengen würde, nutzt das System primär \textit{In-Context Learning (\ac{ICL})} und \textit{Few-Shot Prompting}.
 \subsection{Infrastruktur und Modellintegration: SAP AI Core und liteLLM}
 \label{subsec:infrastruktur_modellintegration}
 
-Bei der automatisierten Verarbeitung von industriellen Produktdaten und Konfigurationsmodellen (LO-VC) müssen interne Datenschutzvorgaben zwingend eingehalten werden. Da diese Modelle vertrauliches Firmenwissen enthalten, ist die direkte Übertragung an öffentliche APIs (wie die Standard-Schnittstelle von OpenAI) aus Sicherheitsgründen ausgeschlossen. 
+Bei der automatisierten Verarbeitung von industriellen Produktdaten und Konfigurationsmodellen (\ac{LO-VC}) müssen interne Datenschutzvorgaben zwingend eingehalten werden. Da diese Modelle vertrauliches Firmenwissen enthalten, ist die direkte Übertragung an öffentliche APIs (wie die Standard-Schnittstelle von OpenAI) aus Sicherheitsgründen ausgeschlossen. 
 
 Um diese Vorgaben zu erfüllen, erfolgt die Anbindung der Sprachmodelle in diesem Prototyp über den \textit{SAP AI Core}. Dies stellt sicher, dass die Datenverarbeitung in einer kontrollierten Systemumgebung stattfindet. Neben dem Datenschutz hat diese Entscheidung auch organisatorische Gründe: Da die \textit{msg systems ag} den \textit{SAP AI Core} bereits in anderen Projekten einsetzt, ist die nötige Infrastruktur bereits vorhanden. Dies erleichtert die technische Bereitstellung und ermöglicht es, die anfallenden Nutzungskosten standardisiert über bestehende Unternehmensverträge abzurechnen.
 
@@ -30,7 +30,7 @@ Um diese Vorgaben zu erfüllen, erfolgt die Anbindung der Sprachmodelle in diese
 
 Ein weiterer technischer Aspekt betrifft die Anbindung der Modelle an das Agentensystem. Um flexibel auf technologische Änderungen reagieren zu können, soll der Prototyp nicht fest an einen einzelnen Anbieter oder ein spezifisches Modell gebunden werden. 
 
-Um dies zu verhindern, wird die Python-Bibliothek \textit{liteLLM} genutzt und in das \textit{CrewAI}-Framework integriert. Sie fungiert als standardisierende Schnittstelle zwischen den KI-Agenten und den Sprachmodellen. Dadurch wird der Quellcode der Multi-Agenten-Architektur vom verwendeten Modell entkoppelt. Das ermöglicht es, das zugrundeliegende Modell bei Bedarf mit minimalem Konfigurationsaufwand über den \textit{SAP AI Core} auszutauschen, ohne den Programmcode der eigentlichen Agenten anpassen zu müssen.
+Um dies zu verhindern, wird die Python-Bibliothek \textit{liteLLM} genutzt und in das \textit{CrewAI}-Framework integriert. Sie fungiert als standardisierende Schnittstelle zwischen den \ac{KI}-Agenten und den Sprachmodellen. Dadurch wird der Quellcode der Multi-Agenten-Architektur vom verwendeten Modell entkoppelt. Das ermöglicht es, das zugrundeliegende Modell bei Bedarf mit minimalem Konfigurationsaufwand über den \textit{SAP AI Core} auszutauschen, ohne den Programmcode der eigentlichen Agenten anpassen zu müssen.
 
 
 
@@ -44,14 +44,14 @@ Die folgenden Abschnitte dokumentieren die schrittweise Weiterentwicklung der Sy
 \subsection{Zyklus 1: Limitierungen einer rein agentenbasierten Architektur}
 \label{subsec:zyklus_1_llm_limitierungen}
 
-Die erste Version des Prototyps (V1-Architektur) basierte auf der Annahme, dass ein Netzwerk aus drei KI-Agenten (Analyst, Architekt, Synthesizer) die JSON-Daten schrittweise verarbeiten kann. Der Prozess lief sequenziell pro Merkmal ab: Das System erhielt ein standardisiertes JSON-Dokument mit allen Merkmalen, Werten und Vorbedingungen. Die Agenten sollten die Daten nacheinander bearbeiten und am Ende ein strukturiertes Zielformat ausgeben. Dieses Ergebnis sollte entweder aus einfachem AVC-Code bestehen (falls das System entscheidet, keine Tabelle zu generieren) oder aus einem Tabellenvorschlag inklusive des zugehörigen AVC-Aufrufs.
+Die erste Version des Prototyps (V1-Architektur) basierte auf der Annahme, dass ein Netzwerk aus drei \ac{KI}-Agenten (Analyst, Architekt, Synthesizer) die JSON-Daten schrittweise verarbeiten kann. Der Prozess lief sequenziell pro Merkmal ab: Das System erhielt ein standardisiertes JSON-Dokument mit allen Merkmalen, Werten und Vorbedingungen. Die Agenten sollten die Daten nacheinander bearbeiten und am Ende ein strukturiertes Zielformat ausgeben. Dieses Ergebnis sollte entweder aus einfachem \ac{AVC}-Code bestehen (falls das System entscheidet, keine Tabelle zu generieren) oder aus einem Tabellenvorschlag inklusive des zugehörigen \ac{AVC}-Aufrufs.
 
 Die ersten Tests mit dieser grundlegenden Architektur zeigten jedoch deutliche Schwächen:
 
 \begin{itemize}
     \item \textbf{Mangelnde Reproduzierbarkeit:} Das System lieferte keine deterministischen Ergebnisse. Bei drei Durchläufen mit exakt derselben Datenbasis generierten die Agenten drei unterschiedliche Ausgaben.
-    \item \textbf{Fehlendes Wissen:} Einem \textit{Large Language Model} (LLM) lediglich per System-Prompt die Rolle eines SAP-AVC-Entwicklers zuzuweisen, reichte nicht aus. Das Modell kannte die spezifische Syntax nicht ausreichend, verlor schnell den fachlichen Kontext und nutzte falsche Bezeichnungen für Merkmale und Werte.
-    \item \textbf{Probleme bei der Tabellenbildung:} Die Hauptaufgabe – zu bewerten, wann eine Variantentabelle sinnvoll ist und wann nicht – überforderte das System. Besonders in Fällen, in denen innerhalb eines Merkmals nur bestimmte Werte für eine Tabelle geeignet waren und andere isoliert behandelt werden mussten, konnte das LLM keine korrekten und konsistenten Entscheidungen treffen.
+    \item \textbf{Fehlendes Wissen:} Einem \textit{Large Language Model} (\ac{LLM}) lediglich per System-Prompt die Rolle eines SAP-AVC-Entwicklers zuzuweisen, reichte nicht aus. Das Modell kannte die spezifische Syntax nicht ausreichend, verlor schnell den fachlichen Kontext und nutzte falsche Bezeichnungen für Merkmale und Werte.
+    \item \textbf{Probleme bei der Tabellenbildung:} Die Hauptaufgabe – zu bewerten, wann eine Variantentabelle sinnvoll ist und wann nicht – überforderte das System. Besonders in Fällen, in denen innerhalb eines Merkmals nur bestimmte Werte für eine Tabelle geeignet waren und andere isoliert behandelt werden mussten, konnte das \ac{LLM} keine korrekten und konsistenten Entscheidungen treffen.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -89,7 +89,7 @@ TABLE K40_KO
       $self.dependency_precondition = 'V_TW0009' AND [...]
   );
 \end{lstlisting}
-    \caption{Auszug syntaktischer Halluzinationen im ersten Prototyp-Run. Das LLM generierte ungültige Struktur-Mischformen und erfand nicht existierende SQL-Befehle sowie fiktive AVC-Variablen und Tabellen.}
+    \caption{Auszug syntaktischer Halluzinationen im ersten Prototyp-Run. Das \ac{LLM} generierte ungültige Struktur-Mischformen und erfand nicht existierende SQL-Befehle sowie fiktive \ac{AVC}-Variablen und Tabellen.}
     \label{fig:syntax_halluzinationen_run1}
 \end{figure}
 
@@ -100,13 +100,13 @@ Aus diesen initialen Testergebnissen ließ sich ableiten, dass die komplexe Stru
 
 Um den identifizierten Schwächen aus dem ersten Zyklus zu begegnen, wurden in der zweite Iteration mehrere methodische und strukturelle Anpassungen am Prototyp vorgenommen. Zunächst wurde der Quellcode in verschiedene Module (\texttt{main.py}, \texttt{agents.py}, \texttt{utils.py}) aufgeteilt, um die Übersichtlichkeit und Wartbarkeit der Anwendung zu verbessern. Zudem wurden die Aufgabenbeschreibungen (Prompts) der einzelnen Agenten inhaltlich deutlich geschärft. 
 
-Um das im ersten Durchlauf fehlende Syntaxwissen auszugleichen, wurde ein separates Wissensdokument angelegt, das dem Synthesizer-Agenten als Referenz für gültigen AVC-Code dienen sollte. Zur besseren Überprüfbarkeit der generierten Ergebnisse wurde außerdem eine Hilfsfunktion in die \texttt{utils.py} integriert. Diese formatiert den Text-Output des \textit{Large Language Models} so um, dass nach jedem Durchlauf automatisch ein strukturiertes Excel-Dashboard erstellt wird.
+Um das im ersten Durchlauf fehlende Syntaxwissen auszugleichen, wurde ein separates Wissensdokument angelegt, das dem Synthesizer-Agenten als Referenz für gültigen \ac{AVC}-Code dienen sollte. Zur besseren Überprüfbarkeit der generierten Ergebnisse wurde außerdem eine Hilfsfunktion in die \texttt{utils.py} integriert. Diese formatiert den Text-Output des \textit{Large Language Models} so um, dass nach jedem Durchlauf automatisch ein strukturiertes Excel-Dashboard erstellt wird.
 
 Die Evaluierung dieses angepassten Systems zeigte zunächst einen organisatorischen Erfolg: Die Aufbereitung der Ergebnisse im Excel-Dashboard funktionierte zuverlässig und erleichterte die manuelle Code-Prüfung erheblich. Bei der inhaltlichen Logikgenerierung traten jedoch neue Probleme auf:
 
 \begin{itemize}
     \item \textbf{Anhaltende Stochastik:} Trotz der geschärften Prompts blieb das System unzuverlässig. Drei identische Durchläufe produzierten weiterhin drei unterschiedliche Ergebnisse.
-    \item \textbf{Übergenerierung und Halluzinationen:} Das System verstand nun zwar grundsätzlich den Auftrag, zwischen Variantentabellen und isolierten \textit{IF}-Bedingungen (Standalone) zu unterscheiden. Allerdings zeigte das LLM die Tendenz, zwanghaft für jedes Merkmal riesige Tabellen generieren zu wollen, in die alle Werte gequetscht wurden. Dabei verlor das Modell den Bezug zum JSON-Input: Es erfand Spaltennamen (teilweise aus einfachen Syntax-Fragmenten), halluzinierte nicht-existente Tabelleneinträge und behalf sich mit Platzhaltern, um die fehlerhaften Tabellenstrukturen künstlich aufrechtzuerhalten.
+    \item \textbf{Übergenerierung und Halluzinationen:} Das System verstand nun zwar grundsätzlich den Auftrag, zwischen Variantentabellen und isolierten \textit{IF}-Bedingungen (Standalone) zu unterscheiden. Allerdings zeigte das \ac{LLM} die Tendenz, zwanghaft für jedes Merkmal riesige Tabellen generieren zu wollen, in die alle Werte gequetscht wurden. Dabei verlor das Modell den Bezug zum JSON-Input: Es erfand Spaltennamen (teilweise aus einfachen Syntax-Fragmenten), halluzinierte nicht-existente Tabelleneinträge und behalf sich mit Platzhaltern, um die fehlerhaften Tabellenstrukturen künstlich aufrechtzuerhalten.
     \item \textbf{Problem des festverdrahteten Domänenwissens:} Ein konzeptioneller Fehler zeigte sich beim Umgang mit spezifischen Kundendaten. Das Herausfiltern des Wertes \glqq specified dummy\grqq{} (ein kundenindividueller Workaround für obsoleten Code) war in dieser Phase noch fest im System-Prompt des Agenten einprogrammiert (Hardcoding).
 \end{itemize}
 
@@ -118,7 +118,7 @@ Die Evaluierung dieses angepassten Systems zeigte zunächst einen organisatorisc
     \label{fig:zyklus2_halluzinationen}
 \end{figure}
 
-Um die mangelnde Flexibilität beim Domänenwissen sofort zu adressieren, wurde noch innerhalb dieses Zyklus ein externes Konfigurationsdokument eingeführt. Der Entwickler kann hier projektbezogene Sonderregeln dynamisch hinterlegen, wodurch das Kernsystem domänenunabhängig wird. Begleitend wurden die System-Prompts der Agenten sowie das Dokument für die AVC-Syntax weiter detailliert, in der Hoffnung, die Präzision der Tabellengenerierung zu erhöhen.
+Um die mangelnde Flexibilität beim Domänenwissen sofort zu adressieren, wurde noch innerhalb dieses Zyklus ein externes Konfigurationsdokument eingeführt. Der Entwickler kann hier projektbezogene Sonderregeln dynamisch hinterlegen, wodurch das Kernsystem domänenunabhängig wird. Begleitend wurden die System-Prompts der Agenten sowie das Dokument für die \ac{AVC}-Syntax weiter detailliert, in der Hoffnung, die Präzision der Tabellengenerierung zu erhöhen.
 
 Die erneute Prüfung dieser spezifischen Anpassungen brachte jedoch keine signifikante Verbesserung. Die Ergebnisse blieben bei mehrfacher Ausführung weiterhin inkonsistent, waren fachlich fehlerhaft und von den beschriebenen strukturellen Halluzinationen geprägt. 
 
@@ -127,7 +127,7 @@ Die abschließende Erkenntnis aus Zyklus 2 zeigte unmissverständlich: Ein Sprac
 \subsection{Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}
 \label{subsec:zyklus_3_regelbasiert}
 
-Die Tests zeigten, dass die architektonische Entscheidungsfindung (Tabelle vs. Einzelbedingung) für das Sprachmodell zu komplex war. Um die Aufgabe zu vereinfachen, musste geklärt werden, ob es für die Erstellung von Variantentabellen klare, deterministische Regeln gibt. Die Rücksprache mit einem Fachexperten bestätigte dies: Eine Tabelle ist in der industriellen Praxis nur dann sinnvoll, wenn direkte Gleichsetzungsbedingungen vorliegen (z.\,B. \texttt{Merkmal\_A = '1'}). Bei Ungleichungen (z.\,B. \texttt{<>}) verbietet sich eine Tabelle. Zudem lohnt sich der Aufbau einer Tabelle meist erst, wenn mehr als zwei Merkmale involviert sind, um eine Fragmentierung in viele Kleinsttabellen zu vermeiden.
+Zyklus 2 zeigte, dass die architektonische Entscheidungsfindung (Tabelle vs. Einzelbedingung) für das Sprachmodell zu komplex war. Um die Aufgabe zu vereinfachen wurden in diesem Zyklus klare, deterministische Regeln für die Erstellung von Variantentabellen definiert. Dies erfolgt in erneuter Rücksprache mit dem Fachexperten und anhand eigener Recherchen. Die Ergebnisse hierzu: Eine Tabelle ist in der industriellen Praxis nur dann sinnvoll, wenn direkte Gleichsetzungsbedingungen vorliegen (z.\,B. \texttt{Merkmal\_A = '1'}). Bei Ungleichungen (z.\,B. \texttt{<>}) verbietet sich eine Tabelle. Zudem lohnt sich der Aufbau einer Tabelle meist erst, wenn mehr als zwei Merkmale involviert sind, um eine Fragmentierung in viele Kleinsttabellen zu vermeiden.
 
 Ein zweiter wichtiger Punkt aus der Absprache mit dem Experten betraf den Umgang mit der \texttt{specified}-Syntax. Diese prüft, ob ein Merkmal im Material überhaupt bewertet wurde. Der Kunde nutzte dies als Workaround, um obsoleten Code (Dummy-Werte) zu blockieren, da diese Dummy-Merkmale im Material nie klassifiziert waren. Um dieses harte Domänenwissen nicht mehr im Agenten-Prompt festschreiben zu müssen, wurde ein vorgeschaltetes Python-Skript entwickelt. Dieses Skript liest zunächst das gesamte JSON-Dokument ein und erstellt eine vollständige Liste aller im Material existierenden Merkmale. Mit dieser Liste kann das System im Vorfeld deterministisch prüfen, ob ein Ausdruck wie \texttt{specified(Merkmal\_X)} wahr oder falsch ist, und den entsprechenden Code-Block automatisch verarbeiten oder ignorieren. 
 
@@ -142,18 +142,20 @@ Aufgrund der begrenzten Bearbeitungszeit der Masterarbeit mussten in Bezug auf d
 
 \begin{itemize}
     \item \textbf{Tabellen-Redundanzen:} Das Erkennen und Eliminieren von logischen Teiltabellen erfordert komplexe mathematische Berechnungen (z.\,B. durch einen SAT-Solver). Da dies zeitlich nicht umsetzbar war, verbleibt dieses Problem in der \textit{Future Work}. Umgesetzt wurde lediglich ein Modul, das exakt identische Tabellen zusammenführt (Join). Obwohl auch dies deterministisch über Python lösbar wäre, wurde es aus Zeitgründen als Agenten-Aufgabe im System belassen.
-    \item \textbf{Syntax-Validierung:} Eine fehlerfreie syntaktische Prüfung von AVC-Code erfordert idealerweise einen \textit{Abstract Syntax Tree} (AST) Parser. Auch dies wurde in die \textit{Future Work} verschoben. Die Validierung der häufigsten Fehler (z.\,B. fehlende \texttt{\$self}-Präfixe) übernimmt im finalen Prototyp stattdessen ein dedizierter KI-Agent mit rudimentären Prüfregeln.
+    \item \textbf{Syntax-Validierung:} Eine fehlerfreie syntaktische Prüfung von \ac{AVC}-Code erfordert idealerweise einen \textit{Abstract Syntax Tree} (AST) Parser. Auch dies wurde in die \textit{Future Work} verschoben. Die Validierung der häufigsten Fehler (z.\,B. fehlende \texttt{\$self}-Präfixe) übernimmt im finalen Prototyp stattdessen ein dedizierter \ac{KI}-Agent mit rudimentären Prüfregeln.
 \end{itemize}
 
-Die Notwendigkeit dieser deterministischen Vorverarbeitung in Python bestätigt exakt die Intuition des Fachexperten aus dem initialen Interview (vgl. Anhang, Z. 42), der klassische Parser-Ansätze für strikte Regelwerke empfahl. Der iterative DSR-Prozess hat diese Praxis-Expertise empirisch validiert: Reine KI-Agenten scheitern an harten Constraint-Entscheidungen (Tabellenbau). Eine hybride (neuro-symbolische) Architektur ist zwingend erforderlich, wenngleich die Rollenverteilung zwischen Determinismus und KI in zukünftigen Iterationen weiter in Richtung klassischer AST-Parser verschoben werden muss.
+Die weitreichendste Änderung in diesem finalen Iterationszyklus war die massive Ausweitung der deterministischen Vorverarbeitung (Preprocessing). Um die stochastische Instabilität der Vorzyklen zu beheben, wurde ein umfassendes Python-Skript implementiert, das den \ac{KI}-Agenten die strukturelle Entscheidungsfindung abnimmt.
 
-Die weitreichendste Änderung in diesem finalen Zyklus war die massive Ausweitung der deterministischen Vorverarbeitung (Preprocessing). Es wurde ein umfassendes Python-Skript integriert, das den Agenten den Großteil der kognitiven Arbeit abnimmt:
-Es arbeitet auf einer Kopie der Rohdaten, löscht leere Werte ohne Vorbedingungen und bereinigt alte Kommentare. Es verknüpft mehrere Vorbedingungen logisch mit \texttt{AND}, korrigiert fehlerhafte Altlogik (\glqq Ghost Logic\grqq{}), markiert unklassifizierte Merkmale und fällt vor allem die strikte, deterministische Entscheidung, ob und wie viele Tabellen für ein Merkmal gebaut werden. Zuletzt wurde eine Hilfsfunktion implementiert, die sicherstellt, dass aus der Agenten-Antwort ausschließlich reines JSON extrahiert wird, um Programmabstürze durch unnötigen Begleittext (z.\,B. \glqq Hier ist das Ergebnis:\grqq{}) zu verhindern.
+Dieses Modul arbeitet auf einer Kopie der Rohdaten und bereinigt zunächst leere Werte sowie historische Kommentare. Anschließend verknüpft es Vorbedingungen logisch mit AND, korrigiert fehlerhafte Altlogik („Ghost Logic“), markiert unklassifizierte Merkmale und trifft vor allem die deterministische Entscheidung, ob und in welcher Struktur Variantentabellen generiert werden. Begleitend stellt eine neue Hilfsfunktion sicher, dass aus der Agenten-Antwort ausschließlich valides JSON extrahiert wird, um Programmabstürze durch halluzinierten Fließtext (z.B. „Hier ist das Ergebnis:“) zu unterbinden.
 
-\textbf{Ergebnis und architektonisches Fazit:} \\
-Durch diese Anpassungen entwickelte sich die Architektur von einer reinen KI-Pipeline zu einem \textit{neuro-symbolischen} System. Die Künstliche Intelligenz wurde schrittweise aus der logischen Entscheidungsfindung verdrängt. Dem LLM verbleibt im finalen Prototyp lediglich die Aufgabe, den vorbereiteten Bauplan in AVC-Code zusammenzusetzen und grundlegend zu validieren. 
+\subsection{Architektonisches Fazit des finalen Zyklus}
 
-Die Ergebnisse waren im letzten Testlauf reproduzierbar; das System lieferte bei drei Durchläufen dreimal exakt dasselbe Resultat. Die zentrale Erkenntnis dieser iterativen Entwicklung ist, dass der Problemraum der Code-Migration stark deterministisch ist. Der Einsatz von generativer KI erweist sich für die strukturelle Analyse als ineffizient und ist bei vollständiger Umsetzung mathematischer Solver (wie AST-Parser und SAT-Solver) für diesen Teilprozess weitestgehend obsolet.
+Durch diese Eingriffe entwickelte sich der Prototyp von einer reinen KI-Pipeline zu einem neuro-symbolischen System. Die fehleranfällige logische Strukturierung wurde in die deterministische Python-Schicht verlagert. Den generativen \ac{KI}-Agenten verbleibt im finalen System lediglich die Aufgabe, den algorithmisch vorbereiteten Bauplan in korrekte \ac{AVC}-Syntax zu übersetzen und grundlegend zu validieren.
+
+Dieser Architekturwechsel führte zur erhofften technischen Stabilisierung: Im abschließenden Funktionstest dieses Zyklus lieferte das System bei mehrfacher Ausführung konstante und reproduzierbare Ergebnisse. Damit ist die iterative Entwicklung (Build-Phase) abgeschlossen. Der Prototyp (Version 4) bildet das finale technologische Artefakt dieser Arbeit und dient als Grundlage für die anschließende Experten-Evaluation im folgenden Kapitel.
+
+Unter Anhang \ref{beispiel} ist zur besseren Nachvollziehung ein beispielhafter Durchlauf des anfänglichen Prototypen und des finalen Prototypen inklusive Input zu finden. 
 
 \begin{figure}[htbp]
     \centering

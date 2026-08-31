@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 \chapter{Theoretische Grundlagen}
 \label{ch:theory}
-Dieses Kapitel bildet das theoretische Fundament der Arbeit. Es erklärt die wichtigsten Konzepte der SAP-Variantenkonfiguration, der generativen künstlichen Intelligenz (KI) und der Orchestrierung von Multi-Agenten-Systemen.
+Dieses Kapitel bildet das theoretische Fundament der Arbeit. Es erklärt die wichtigsten Konzepte der SAP-Variantenkonfiguration, der generativen \ac{KI} und der Orchestrierung von Multi-Agenten-Systemen.
 
 \section{Domänenspezifische Grundlagen: SAP Variantenkonfiguration}
 \subsection{Einführung in die logische Architektur der Variantenkonfiguration}
@@ -27,7 +27,7 @@ Das \textit{Beziehungswissen} verbindet die kaufmännische Konfiguration mit der
     \label{fig:vc_full}
 \end{figure}
 
-\subsection{Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}
+\subsection{Die klassische Variantenkonfiguration (\ac{LO-VC}) im Kontext der Systemtransformation}
 \label{sec:lovc_context}
 
 Um die technologische Entwicklung der Variantenkonfiguration zu verstehen, muss man sich die Evolution der SAP-Systeme ansehen. Während \textit{SAP ERP} (SAP R/3) lange der Standard war, brachte \textit{SAP S/4HANA} durch die In-Memory-Datenbanktechnologie einen grundlegenden Wechsel \parencite[S. 28]{blumohrAdvancedVariantConfiguration2023}. Dadurch wurde auch die Variantenkonfiguration auf ein neues Fundament gestellt.
@@ -43,22 +43,22 @@ Der Begriff \ac{LO-VC} wird heute meist genutzt, um die klassische Konfiguration
 \item \textbf{Zukunftssicherheit:} Neue Technologien wie \ac{KI} oder \ac{ML} werden nur noch für \ac{AVC} entwickelt. Eine nachträgliche Integration in \ac{LO-VC} wäre zu aufwändig und unzureichend \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
 \end{itemize}
 
-Zusammenfassend lässt sich sagen: Wer bei LO-VC bleibt, spart zwar kurzfristig den Aufwand für eine Migration. Langfristig steigt jedoch das Risiko, technologisch den Anschluss zu verlieren und die spätere Umstellung noch teurer zu machen \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
+Zusammenfassend lässt sich sagen: Wer bei \ac{LO-VC} bleibt, spart zwar kurzfristig den Aufwand für eine Migration. Langfristig steigt jedoch das Risiko, technologisch den Anschluss zu verlieren und die spätere Umstellung noch teurer zu machen \parencite[S. 61]{blumohrAdvancedVariantConfiguration2023}.
 
 \subsection{Die moderne Architektur (AVC) und das Constraint Paradigma}
 \label{sec:avc_constraint}
 
 Die Antwort auf die Schwächen der klassischen Variantenkonfiguration ist die \ac{AVC} in SAP S/4HANA. Um den wachsenden Anforderungen an Leistung und komplexe Modelle gerecht zu werden, hat SAP nicht nur die Oberfläche modernisiert, sondern die zugrundeliegende Rechenlogik komplett ausgetauscht.
 
-Während in LO-VC Regeln Schritt für Schritt abarbeitet, nutzt \ac{AVC} einen deklarativen Ansatz. Das Herzstück der \ac{AVC} ist der \textit{Constraint Solver} namens \textit{Gecode}. Diese quelloffene Softwarebibliothek wurde zusammen mit dem Fraunhofer ITWM tief in SAP integriert und für Produktkonfigurationen optimiert \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
+Während in \ac{LO-VC} Regeln Schritt für Schritt abarbeitet, nutzt \ac{AVC} einen deklarativen Ansatz. Das Herzstück der \ac{AVC} ist der \textit{Constraint Solver} namens \textit{Gecode}. Diese quelloffene Softwarebibliothek wurde zusammen mit dem Fraunhofer ITWM tief in SAP integriert und für Produktkonfigurationen optimiert \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
 Durch diese Engine wird die Konfiguration zu einem mathematischen \ac{CSP}. In der Informatik ist ein \ac{CSP} ein System aus Variablen, Wertebereichen (Domänen) und Bedingungen (Constraints), die festlegen, welche Kombinationen zulässig sind \parencite[S. 180]{russellArtificialIntelligenceModern2010}.
 
 Dieser Wechsel hat große Auswirkungen für die Nutzer: Sobald jemand in der Konfiguration einen Wert wählt, schränkt die Gecode-Engine in Echtzeit die Auswahlmöglichkeiten aller anderen abhängigen Merkmale ein. Statt also einen Fehler erst am Ende einer Berechnung auszugeben, blendet das System unmögliche Optionen im Vorfeld aus. Das verhindert fehlerhafte Konfigurationen \parencite[S. 35]{blumohrAdvancedVariantConfiguration2023}.
 
-Außerdem bietet AVC bessere Analysewerkzeuge wie den \textit{Dependency Trace}. Damit können Entwickler genau sehen, welche Regel dafür gesorgt hat, dass ein bestimmtes Merkmal eingeschränkt wurde \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}.
+Außerdem bietet \ac{AVC} bessere Analysewerkzeuge wie den \textit{Dependency Trace}. Damit können Entwickler genau sehen, welche Regel dafür gesorgt hat, dass ein bestimmtes Merkmal eingeschränkt wurde \parencite[S. 37]{blumohrAdvancedVariantConfiguration2023}.
 
-Kurz gesagt ändert AVC die Herangehensweise: Statt zu fragen „\textit{Wie} berechne ich die Variante Schritt für Schritt?“, fragt das System „\textit{Welche} Bedingungen müssen für das Endprodukt erfüllt sein?“. Dieser Wechsel von einer schrittweisen zu einer netzwerkbasierten Logik ist ein Hürde für Unternehmen, wenn sie alte Modelle in das neue System übertragen wollen.
+Kurz gesagt ändert \ac{AVC} die Herangehensweise: Statt zu fragen „\textit{Wie} berechne ich die Variante Schritt für Schritt?“, fragt das System „\textit{Welche} Bedingungen müssen für das Endprodukt erfüllt sein?“. Dieser Wechsel von einer schrittweisen zu einer netzwerkbasierten Logik ist ein Hürde für Unternehmen, wenn sie alte Modelle in das neue System übertragen wollen.
 
 \subsection{Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}
 \label{sec:lovc_avc_syntax}
@@ -74,7 +74,7 @@ In der klassischen \ac{LO-VC}-Welt wird die Konfigurationslogik häufig über is
     \label{fig:lovc_precon}
 \end{figure}
 
-Diese fragmentierte Logik ist vor allem bei wachsenden Konfigurationen zunehmend ineffizient. Stattdessen nutzt der \textit{Gecode}-Solver in AVC eine Zentralisierung der Logik in mathematisch strikten Matrizen, den sogenannten \textit{Variantentabellen}. Anstatt Werte einzeln abzufragen, wird eine Tabelle aufgespannt, deren Spalten die interagierenden Merkmale repräsentieren (z.,B. \texttt{Modell}, \texttt{Land}, \texttt{Sitzbezug}). Ein \ac{AVC}-Constraint ruft diese Tabelle anschließend über eine restriktive Syntax wie \texttt{RESTRICT TABLE  (...)} auf. Das System gleicht dann die Eingaben des Nutzers global mit den gültigen Zeilenkombinationen der Tabelle ab.
+Diese fragmentierte Logik ist vor allem bei wachsenden Konfigurationen zunehmend ineffizient. Stattdessen nutzt der \textit{Gecode}-Solver in \ac{AVC} eine Zentralisierung der Logik in mathematisch strikten Matrizen, den sogenannten \textit{Variantentabellen}. Anstatt Werte einzeln abzufragen, wird eine Tabelle aufgespannt, deren Spalten die interagierenden Merkmale repräsentieren (z.,B. \texttt{Modell}, \texttt{Land}, \texttt{Sitzbezug}). Ein \ac{AVC}-Constraint ruft diese Tabelle anschließend über eine restriktive Syntax wie \texttt{RESTRICT TABLE  (...)} auf. Das System gleicht dann die Eingaben des Nutzers global mit den gültigen Zeilenkombinationen der Tabelle ab.
 
 \begin{figure}[htbp]
     \centering
@@ -105,7 +105,7 @@ Der sogenannte \textit{Self-Attention-Mechanismus} ermöglicht es, alle Wörter 
 Für das Programmieren ist das besonders nützlich, weil es das Problem der weitreichenden Abhängigkeiten löst. Wenn eine Variable ganz oben im Code definiert und hunderte Zeilen später genutzt wird, erkennt das Modell diese Verbindung sofort – unabhängig davon, wie weit die beiden Stellen auseinanderliegen. Der Quellcode wird vom Modell also als ein Netz zusammenhängender Logikbausteine verstanden \parencite{vaswaniAttentionAllYou2017}.
 
 \subsubsection{In-Context Learning und Few-Shot Prompting}
-Früher musste man neuronale Netze für neue Aufgaben aufwändig nachtrainieren (\textit{Fine-Tuning}). Moderne LLMs sind jedoch ab einer gewissen Größe so leistungsstark, dass das oft nicht mehr nötig ist.
+Früher musste man neuronale Netze für neue Aufgaben aufwändig nachtrainieren (\textit{Fine-Tuning}). Moderne \ac{LLMs} sind jedoch ab einer gewissen Größe so leistungsstark, dass das oft nicht mehr nötig ist.
 
 \textcite{brownLanguageModelsAre2020} zeigten, dass große Modelle Aufgaben direkt durch die Eingabe (den Prompt) erlernen können. Das nennt man \ac{ICL}. Das Modell nutzt sein allgemeines Wissen, um eine neue Aufgabe anhand der Beschreibung im Prompt zu lösen.
 
@@ -127,24 +127,24 @@ Auch wenn Sprachmodelle Code syntaktisch gut verstehen und übersetzen können, 
 
 \subsubsection{Die Komplexitätsfalle und das probabilistische Paradigma}
 
-Dass LLMs bei langen, sequenziellen Logikketten schwächeln, zeigten \textcite{chenEvaluatingLargeLanguage2021} bereits bei der Evaluation früherer Code-Modelle wie Codex. Sie bewiesen, dass Modelle kurze, isolierte Aufgaben zwar zuverlässig lösen können, die Leistung jedoch drastisch einbricht, sobald eine Aufgabe viele aneinandergereihte Arbeitsschritte erfordert.  Für die automatisierte Migration von SAP-Modellen ist das ein zentrales Problem: Wenn ein Modell gezwungen wird, eine komplett neue Constraint-Architektur mit all ihren Tabellen und Vorbedingungen auf einmal zu entwerfen, überfordert das die kognitive Kapazität (das \textit{Reasoning}) des \ac{LLMs}. Das Modell geht dann in ein rein probabilistisches Paradigma über – es generiert den Code nur noch basierend auf Wahrscheinlichkeiten, ohne die mathematische Logik im Hintergrund tiefgreifend zu prüfen.  Das Paper von \textcite{chenEvaluatingLargeLanguage2021} beschreibt zudem, dass die Wahrscheinlichkeit für einen direkten Treffer im ersten Versuch bei solch komplexen Aufgaben extrem gering ist. Erst wenn ein System in der Lage ist, iterativ Lösungswege zu generieren, diese zu prüfen und zu verfeinern, steigt die Erfolgsquote. Ein monolithischer Ansatz bietet jedoch keinerlei Mechanismus für solche kognitiven Prüfschleifen.  
+Dass \ac{LLMs} bei langen, sequenziellen Logikketten schwächeln, zeigten \textcite{chenEvaluatingLargeLanguage2021} bereits bei der Evaluation früherer Code-Modelle wie Codex. Sie bewiesen, dass Modelle kurze, isolierte Aufgaben zwar zuverlässig lösen können, die Leistung jedoch drastisch einbricht, sobald eine Aufgabe viele aneinandergereihte Arbeitsschritte erfordert.  Für die automatisierte Migration von SAP-Modellen ist das ein zentrales Problem: Wenn ein Modell gezwungen wird, eine komplett neue Constraint-Architektur mit all ihren Tabellen und Vorbedingungen auf einmal zu entwerfen, überfordert das die kognitive Kapazität (das \textit{Reasoning}) des \ac{LLMs}. Das Modell geht dann in ein rein probabilistisches Paradigma über – es generiert den Code nur noch basierend auf Wahrscheinlichkeiten, ohne die mathematische Logik im Hintergrund tiefgreifend zu prüfen.  Das Paper von \textcite{chenEvaluatingLargeLanguage2021} beschreibt zudem, dass die Wahrscheinlichkeit für einen direkten Treffer im ersten Versuch bei solch komplexen Aufgaben extrem gering ist. Erst wenn ein System in der Lage ist, iterativ Lösungswege zu generieren, diese zu prüfen und zu verfeinern, steigt die Erfolgsquote. Ein monolithischer Ansatz bietet jedoch keinerlei Mechanismus für solche kognitiven Prüfschleifen.  
 
 \subsubsection{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}
 
-Neben der sequenziellen Komplexität stellt die globale Vernetzung von Code eine weitere Hürde dar. \textcite{jimenezSwebenchCanLanguage2024} untersuchten mit dem \textit{SWE-bench}-Benchmark reale Software-Projekte und zeigten auf, dass LLMs massive Probleme haben, wenn Code-Bausteine systemweite Folgen nach sich ziehen. Selbst Top-Modelle wie GPT-4 scheiterten im monolithischen Ansatz und konnten kaum $5\%$ der Probleme lösen.  Obwohl bei der Systemtransformation ein völlig neues AVC-Zielmodell generiert wird, lassen sich diese Erkenntnisse direkt auf die SAP-Variantenkonfiguration übertragen:
+Neben der sequenziellen Komplexität stellt die globale Vernetzung von Code eine weitere Hürde dar. \textcite{jimenezSwebenchCanLanguage2024} untersuchten mit dem \textit{SWE-bench}-Benchmark reale Software-Projekte und zeigten auf, dass \ac{LLMs} massive Probleme haben, wenn Code-Bausteine systemweite Folgen nach sich ziehen. Selbst Top-Modelle wie GPT-4 scheiterten im monolithischen Ansatz und konnten kaum $5\%$ der Probleme lösen.  Obwohl bei der Systemtransformation ein völlig neues AVC-Zielmodell generiert wird, lassen sich diese Erkenntnisse direkt auf die SAP-Variantenkonfiguration übertragen:
 \begin{enumerate}
 \item \textbf{Fehlender Überblick über Netzwerke:} Selbst bei der Generierung eines komplett neuen Modells verliert ein monolithisches LLM schnell den Überblick über die strikten, netzwerkartigen Abhängigkeiten der deklarativen Constraint-Architektur. Das Modell generiert beispielsweise isolierte Tabellen für einzelne Merkmale, berücksichtigt dabei aber nicht die globalen Schnittmengen und Wechselwirkungen mit anderen, parallel generierten Constraints. Bei der vernetzten \ac{AVC}-Architektur führt das unweigerlich zu fehlerhafter Logik.
 \item \textbf{Fehlendes Feedback (Blindflug):} Ein monolithischer Ansatz operiert im luftleeren Raum. Das Modell schreibt Code, kann ihn aber nicht autonom verifizieren. In der realen Softwareentwicklung ist Programmieren jedoch ein iterativer Prozess aus Schreiben und Testen. Wird ein Sprachmodell lediglich über einen isolierten Prompt gesteuert und ist nicht architektonisch in eine dynamische Feedback-Schleife (beispielsweise mit einer Test- oder Compilerumgebung) eingebunden, muss es blind raten, ob die erzeugte Struktur funktionsfähig ist.
 \end{enumerate}  Zusammenfassend lässt sich festhalten, dass einfache KI-Prompts für den Aufbau komplexer, voneinander abhängiger Architektur-Modelle ungeeignet sind. Um die Fehleranfälligkeit des fehlenden Feedbacks und der Komplexitätsfalle abzufangen, bedarf es strukturierter Multi-Agenten-Systeme, die Aufgaben in analytische Zwischenschritte dekonstruieren.  
 
-\section{Multi-Agenten-Systeme (MAS)}
+\section{Multi-Agenten-Systeme (\ac{MAS})}
 \subsection{Definition und kognitive Architekturen}
 \label{subsec:definition_und_kognitive_architekturen}
 
 Um die eben beschriebenen Schwächen einzelner Sprachmodelle auszugleichen, setzt die Informatik zunehmend auf \ac{MAS}. Die Idee ist simpel: Statt eine schwere Aufgabe in einen einzigen Prompt zu packen, verteilt man sie auf mehrere spezialisierte KI-Agenten, die zusammen auf ein Ziel hinarbeiten.
 
 \subsubsection{Der Begriff des LLM-basierten Agenten}
-Klassisch wird ein Agent als System definiert, das seine Umwelt wahrnimmt und darauf reagiert \parencite[S. 36]{russellArtificialIntelligenceModern2010}. Bei generativer KI dient das Sprachmodell (LLM) als "Gehirn" des Agenten.
+Klassisch wird ein Agent als System definiert, das seine Umwelt wahrnimmt und darauf reagiert \parencite[S. 36]{russellArtificialIntelligenceModern2010}. Bei generativer \ac{KI} dient das Sprachmodell (LLM) als "Gehirn" des Agenten.
 
 Ein solcher KI-Agent ist mehr als ein normaler Chatbot. Er arbeitet selbstständig, verfolgt Ziele und kann Werkzeuge nutzen. Um einen Agenten zu erstellen, gibt man dem Sprachmodell klare Anweisungen zu seiner Rolle und seinen Aufgaben. Zudem erhält der Agent Zugang zu externen Tools oder Datenbanken.
 
@@ -204,7 +204,7 @@ Um auf Fehler gut reagieren zu können, müssen die Agenten strukturiert nachden
 \subsubsection{Das Fließband-Paradigma}
 \textcite{hongMetaGPTMetaProgramming2024} fassen all diese Muster im \textit{MetaGPT}-Framework zusammen. Sie lassen die Agenten wie am Fließband arbeiten und strikte Arbeitsanweisungen (SOPs) befolgen. Die Agenten chatten dabei nicht frei miteinander, sondern tauschen klar strukturierte Dokumente aus. Die Studie zeigt, dass diese strenge Organisation herkömmliche Ansätze deutlich übertrifft.
 
-\subsection{Entwicklungs-Frameworks für MAS}
+\subsection{Entwicklungs-Frameworks für \ac{MAS}}
 \label{subsec:entwicklungs_frameworks}
 
 Um Agenten-Systeme zu programmieren, greift man meist auf fertige Frameworks zurück. Diese Bibliotheken übernehmen Standardaufgaben wie die Verwaltung von Schnittstellen oder des Gedächtnisses.

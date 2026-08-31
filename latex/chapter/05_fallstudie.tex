@@ -1,9 +1,9 @@
 \chapter{Machbarkeitsanalyse und Selbstversuch}
 \label{ch:explorative_fallstudie}
 
-Während das vorangegangene Kapitel die subjektiven Praxisprobleme und die zeitliche Baseline erhoben hat, beschreiben diese Implikationen zunächst ein reines Praxis-Idealbild. Im Sinne des Design Science Research nach \textcite{hevnerDesignScienceInformation2004} verlagert dieses Kapitel den Fokus daher als zweiter empirischer Baustein auf die technische Ebene der rohen LO-VC-Datenstrukturen.
+Während das vorangegangene Kapitel die subjektiven Praxisprobleme und die zeitliche Baseline erhoben hat, beschreiben diese Implikationen zunächst ein reines Praxis-Idealbild. Im Sinne des \ac{DSR} nach \textcite{hevnerDesignScienceInformation2004} verlagert dieses Kapitel den Fokus daher als zweiter empirischer Baustein auf die technische Ebene der rohen \ac{LO-VC}-Datenstrukturen.
 
-Hierzu wird das Anforderungsprofil zunächst einer Machbarkeitsanalyse unterzogen, um den technologisch automatisierbaren Rahmen abzugrenzen. Die umsetzbaren Anforderungen werden anschließend in einem praktischen Selbstversuch der manuellen Code-Migration systematisch durchlaufen. Aus den dabei identifizierten Mustern, Teilschritten und Transformationsregeln werden die spezifischen Agentenrollen, deren Prompts sowie die initiale Architektur (V1) des Multi-Agenten-Systems abgeleitet.
+Hierzu wird das Anforderungsprofil zunächst einer Machbarkeitsanalyse unterzogen, um den technologisch automatisierbaren Rahmen abzugrenzen. Die umsetzbaren Anforderungen werden anschließend in einem praktischen Selbstversuch der manuellen Code-Migration systematisch durchlaufen. Aus den dabei identifizierten Mustern, Teilschritten und Transformationsregeln werden die spezifischen Agentenrollen, deren Prompts sowie die initiale Architektur (V1) des \ac{MAS} abgeleitet.
 \section{Technologischer Realitätsabgleich und empirische Scope-Definition}
 \label{sec:scope_abgrenzung}
 
@@ -13,7 +13,7 @@ Dieser Abschnitt evaluiert die fünf Kernimplikationen aus Kapitel~\ref{sec:impl
 
 \begin{enumerate}
 \item \textbf{Konsistenzprüfung im Testprozess (Out-of-Scope):}
-Die automatisierte Überführung historischer Testkonfigurationen würde Migrationsprojekte erheblich entlasten. Die Umsetzung in diesem Proof-of-Concept ist jedoch \textit{Out-of-Scope}. Eine solche Funktion erfordert eine tiefe Integration in kundenspezifische Testumgebungen und unstrukturiertes Domänenwissen über Altsysteme. Da sich diese Umgebung im Prototyp nicht ohne großen Zeitaufwand und detailliertes Wissen zu SAP simulieren lässt, können KI-Agenten die Validierung nicht verlässlich übernehmen. Ein dedizierter „Tester-Agent“ wird daher verworfen.
+Die automatisierte Überführung historischer Testkonfigurationen würde Migrationsprojekte erheblich entlasten. Die Umsetzung in diesem \ac{POC} ist jedoch \textit{Out-of-Scope}. Eine solche Funktion erfordert eine tiefe Integration in kundenspezifische Testumgebungen und unstrukturiertes Domänenwissen über Altsysteme. Da sich diese Umgebung im Prototyp nicht ohne großen Zeitaufwand und detailliertes Wissen zu SAP simulieren lässt, können \ac{KI}-Agenten die Validierung nicht verlässlich übernehmen. Ein dedizierter „Tester-Agent“ wird daher verworfen.
 
 \item \textbf{Semantische Analyse und Code-Bereinigung (In-Scope):} 
 Funktional obsolete Altlasten lassen sich direkt im Code identifizieren. Da diese Bereinigung den Entwickler stark entlastet, wird sie in den Scope aufgenommen. Der Selbstversuch dient dazu, wiederkehrende Muster von „totem Code“ zu erkennen. So können dem zukünftigen Analysten-Agenten entsprechende Erkennungsregeln mitgegeben werden.
@@ -28,13 +28,13 @@ Die Baseline zeigt, dass die manuelle Umstrukturierung von Vorbedingungen etwa z
 \setcounter{enumii}{3}
 \item \textbf{Interaktive Assistenz / Consulting-Ansatz (Fokus auf Explainability):}
 Ein frei agierender „Consultant-Agent“, der in einem offenen Dialog strategische Designentscheidungen diskutiert, übersteigt den Rahmen dieses Prototyps. Um dem Praxisbedarf nach Transparenz dennoch gerecht zu werden, wird dieser Ansatz auf das Prinzip der \textit{Explainability} fokussiert. Das System wird so konzipiert, dass es dem Entwickler seine getroffenen architektonischen und syntaktischen Entscheidungen schlüssig in Form von Kommentaren oder kurzen Begründungen darlegt. So bleibt für den Menschen stets nachvollziehbar, warum das System bestimmte Übersetzungspfade gewählt hat. 
-\item \textbf{Einhaltung von AVC-Modellierungsrichtlinien (In-Scope):} 
-Das System muss standardkonformen AVC-Code erzeugen. Obsolete Elemente, wie klassische Z-Funktionen, müssen zwingend durch native AVC-Standardfunktionen ersetzt werden. Der Selbstversuch hilft dabei, die genauen semantischen Äquivalente im AVC-Standard-Repository zu ermitteln.
+\item \textbf{Einhaltung von \ac{AVC}-Modellierungsrichtlinien (In-Scope):} 
+Das System muss standardkonformen \ac{AVC}-Code erzeugen. Obsolete Elemente, wie klassische Z-Funktionen, müssen zwingend durch native \ac{AVC}-Standardfunktionen ersetzt werden. Der Selbstversuch hilft dabei, die genauen semantischen Äquivalente im \ac{AVC}-Standard-Repository zu ermitteln.
 \end{enumerate}
 
 \subsection{Synthese des finalen System-Scopes}
 
-Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen, die \textbf{Einhaltung von AVC-Modellierungsrichtlinien} sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
+Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Sampling und die qualitative Analyse im folgenden Selbstversuch konzentrieren sich folglich ausschließlich auf die \textbf{Code-Bereinigung}, die \textbf{Logik-Transformation} der Vorbedingungen, die \textbf{Einhaltung von \ac{AVC}-Modellierungsrichtlinien} sowie die Integration von \textbf{Explainability} zur Nachvollziehbarkeit der maschinellen Entscheidungen.
 
 \begin{figure}[htbp]
     \centering
@@ -44,7 +44,7 @@ Dieser Realitätsabgleich schärft den Fokus der weiteren Forschung. Das Samplin
 \end{figure}
 
 
-Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von KI-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
+Auch die geplante Multi-Agenten-Architektur wird entsprechend eingegrenzt: Das System verzichtet auf autonome Testumgebungen und interaktive Chatbot-Komponenten. Stattdessen fokussiert sich der Prototyp auf ein spezialisiertes, arbeitsteiliges Kernteam von \ac{KI}-Agenten, welches die Phasen der Datenanalyse, der architektonischen Restrukturierung und der Code-Generierung abdeckt. Die exakte Definition und Ausgestaltung dieser spezifischen Agentenrollen wird direkt aus den Ergebnissen des nun folgenden praktischen Selbstversuchs abgeleitet.
 
 
 
@@ -55,17 +55,17 @@ Um die abstrakten Anforderungen aus der Praxis in konkrete agentische Rollen und
 
 \begin{enumerate}
     \item \textbf{Zielsetzung und Forschungsfragen (Objective \& Research Questions):} 
-    In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers -- dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}. Das Ziel dieses Selbstversuchs ist es, dieses unbewusste Wissen greifbar zu machen und den kognitiven Übersetzungsprozess (Baseline) methodisch zu dekonstruieren, um daraus die Architektur und die System-Prompts des Multi-Agenten-Systems ableiten zu können. Somit beantwortet dieser Selbstversuch sowohl einen Teil der ersten Forschungsfrage als auch die zweite Forschungsfrage.
+    In der Softwaretechnik reicht es für die Automatisierung von Prozessen oft nicht aus, nur den ursprünglichen und den finalen Code zu betrachten. Der eigentliche Wert liegt in den kognitiven Zwischenschritten des Entwicklers -- dem impliziten Erfahrungswissen (\textit{Tacit Knowledge}), das bei der Problemlösung meist unstrukturiert im Hintergrund abläuft \parencite{seamanQualitativeMethodsEmpirical1999}. Das Ziel dieses Selbstversuchs ist es, dieses unbewusste Wissen greifbar zu machen und den kognitiven Übersetzungsprozess (Baseline) methodisch zu dekonstruieren, um daraus die Architektur und die System-Prompts des \ac{MAS} ableiten zu können. Somit beantwortet dieser Selbstversuch sowohl einen Teil der ersten \ac{FF} als auch die zweite \ac{FF}.
 
     \item \textbf{Fallauswahl und Selektionsstrategie (The Case \& Selection Strategy):} 
     Die Datengrundlage für diesen Selbstversuch bildete ein reales Kundenprojekt der \textit{msg systems ag}. Aufgrund strenger Datenschutzvorgaben, Geschäftsgeheimnissen und stark reglementierter Zugriffsrechte auf historische Altdaten war die Auswahl pragmatisch auf dieses spezifische, verfügbare Projekt beschränkt. Ähnlich wie in Kapitel~4 wird also auch hier im Einklang mit \textcite{runesonGuidelinesConductingReporting2009} primär nach Verfügbarkeit ausgewählt. Aus diesem Projekt wurden fünf Merkmale mitsamt ihrem historisch gewachsenen Beziehungswissen für die manuelle Migration ausgewählt. Die Begrenzung auf genau fünf Merkmale ergab sich aus dem praktischen Verlauf: Nach der Bearbeitung zeigte sich, dass sich die grundlegenden kognitiven Schritte stetig wiederholten und inhaltliche Sättigung erreicht war.
 
     \item \textbf{Datenerhebungsmethode (Methods):} 
-    Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. Um das implizite Erfahrungswissen (\textit{Tacit Knowledge}) strukturiert zu erheben, schlüpfte der Autor in die Rolle des Entwicklers und migrierte die realen LO-VC-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wurde der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Schritt wurde in drei klar getrennten Phasen dokumentiert:
+    Das methodische Vorgehen stützt sich auf die Richtlinien für explorative Fallstudien nach \textcite{runesonGuidelinesConductingReporting2009} und die Prinzipien der qualitativen Analyse nach \textcite{seamanQualitativeMethodsEmpirical1999}. Um das implizite Erfahrungswissen (\textit{Tacit Knowledge}) strukturiert zu erheben, schlüpfte der Autor in die Rolle des Entwicklers und migrierte die realen \ac{LO-VC}-Daten manuell. Anstatt dabei eine hochkomplexe theoretische Analysemethode anzuwenden, wurde der Migrationsprozess systematisch so protokolliert, wie er in der Praxis kognitiv abläuft. Jeder Schritt wurde in drei klar getrennten Phasen dokumentiert:
     \begin{itemize}
-        \item \textbf{Bestandsaufnahme (Input):} Festhalten der historischen LO-VC-Strukturen und Vorbedingungen.
+        \item \textbf{Bestandsaufnahme (Input):} Festhalten der historischen \ac{LO-VC}-Strukturen und Vorbedingungen.
         \item \textbf{Kognitive Analyse (Gedankengänge):} Explizite schriftliche Dokumentation der Überlegungen (z.\,B. Identifikation von veraltetem Code oder Architekturentscheidungen zur Bündelung).
-        \item \textbf{Code-Synthese (Output):} Erstellung des aus den Gedankengängen resultierenden AVC-Codes.
+        \item \textbf{Code-Synthese (Output):} Erstellung des aus den Gedankengängen resultierenden \ac{AVC}-Codes.
     \end{itemize}
 
     \item \textbf{Datenauswertung (Data Analysis):} 
@@ -74,10 +74,10 @@ Um die abstrakten Anforderungen aus der Praxis in konkrete agentische Rollen und
 \section{Ergebnisse des Selbstversuchs und Ableitung der kognitiven Architektur}
 \label{sec:ergebnisse_selbstversuch}
 
-Die vollständigen Protokolle der manuellen Migration – inklusive Input-Code, kognitiven Zwischenschritten und finalem AVC-Code – sind aus Gründen der Lesbarkeit im Anhang \ref{subsec:selbstversuch_doku} dokumentiert. Dieser Abschnitt fasst die zentralen Erkenntnisse der Fallstudie zusammen und leitet daraus die Handlungsregeln für die Multi-Agenten-Architektur ab.
+Die vollständigen Protokolle der manuellen Migration – inklusive Input-Code, kognitiven Zwischenschritten und finalem \ac{AVC}-Code – sind aus Gründen der Lesbarkeit im Anhang \ref{subsec:selbstversuch_doku} dokumentiert. Dieser Abschnitt fasst die zentralen Erkenntnisse der Fallstudie zusammen und leitet daraus die Handlungsregeln für die Multi-Agenten-Architektur ab.
 
 \subsection{Kognitive Phasen der manuellen Migration}
-Die Analyse der Protokolle zeigt, dass die Transformation von LO-VC nach AVC weit mehr ist als ein einfacher Syntax-Austausch. 
+Die Analyse der Protokolle zeigt, dass die Transformation von \ac{LO-VC} nach \ac{AVC} weit mehr ist als ein einfacher Syntax-Austausch. 
 
 \begin{figure}[htbp]
     \centering
@@ -86,7 +86,7 @@ Die Analyse der Protokolle zeigt, dass die Transformation von LO-VC nach AVC wei
     \label{fig:selbstversuch}
 \end{figure}
 
-Der Entwickler durchläuft während der Migration unbewusst ein dreistufiges kognitives Modell. Eine bloße 1:1-Übersetzung würde in der neuen AVC-Engine zu fehlerhaftem oder ineffizientem Code führen. Folgende drei Phasen bilden die Blaupause für das zu entwickelnde System:
+Der Entwickler durchläuft während der Migration unbewusst ein dreistufiges kognitives Modell. Eine bloße 1:1-Übersetzung würde in der neuen \ac{AVC}-Engine zu fehlerhaftem oder ineffizientem Code führen. Folgende drei Phasen bilden die Blaupause für das zu entwickelnde System:
 
 
 
@@ -99,30 +99,30 @@ Nach der Bereinigung muss die strukturelle Zielform festgelegt werden. Dies erwi
 \begin{itemize}
     \item Teilen sich verschiedene Einzelwerte dieselben Vorbedingungen, ist es ineffizient, diese einzeln zu übersetzen. Solche Muster müssen erkannt und zu performanten Variantentabellen aggregiert werden.
     \item Sind Tabellen aufgrund komplexer Ungleichungen nicht optimal, müssen die Werte anders gebündelt werden (z.\,B. durch den \texttt{IN}-Operator).
-    \item Zudem muss erkannt werden, welche alten Strukturen (wie der \texttt{INFERENCES}-Block) im AVC gänzlich entfallen.
+    \item Zudem muss erkannt werden, welche alten Strukturen (wie der \texttt{INFERENCES}-Block) im \ac{AVC} gänzlich entfallen.
 \end{itemize}
 
 \item \textbf{Syntaktische Synthese (Die Entwickler-Perspektive)}\\
-Erst wenn dieser logische Bauplan steht, folgt die eigentliche Programmierung nach den strikten AVC-Regeln. Das umfasst das Schreiben der Restriktionen, die korrekte Pfadreferenzierung (z.\,B. \texttt{\$self.} oder \texttt{\$root.}) und das Ersetzen veralteter Operatoren (z.\,B.\ \texttt{ne} durch \texttt{<>}).
+Erst wenn dieser logische Bauplan steht, folgt die eigentliche Programmierung nach den strikten \ac{AVC}-Regeln. Das umfasst das Schreiben der Restriktionen, die korrekte Pfadreferenzierung (z.\,B. \texttt{\$self.} oder \texttt{\$root.}) und das Ersetzen veralteter Operatoren (z.\,B.\ \texttt{ne} durch \texttt{<>}).
 \end{enumerate}
 
 \subsection{Ableitung der V1-Architektur und System-Prompts}
 
 Um diesen komplexen kognitiven Prozess maschinell abzubilden, ist ein einzelnes Sprachmodell (Single-Prompting) ungeeignet. Ein solches Modell wäre mit Bereinigung, Architekturentscheidung und exakter Formatierung gleichzeitig überfordert. Die Ergebnisse des Selbstversuchs erfordern stattdessen eine arbeitsteilige Multi-Agenten-Architektur.
 
-Das in Kapitel 6 konzipierte System wird exakt nach diesem Vorbild aufgebaut: Ein kollaboratives Team aus drei KI-Agenten, unterstützt von einem deterministischen Validierungstool. Aus der Fallstudie lassen sich folgende initiale Rollen und Instruktionen (Prompts) ableiten:
+Das in Kapitel 6 konzipierte System wird exakt nach diesem Vorbild aufgebaut: Ein kollaboratives Team aus drei \ac{KI}-Agenten, unterstützt von einem deterministischen Validierungstool. Aus der Fallstudie lassen sich folgende initiale Rollen und Instruktionen (Prompts) ableiten:
 
 \begin{description}
-\item[Rolle 1: LO-VC Data Analyst \& Cleaner] \hfill \ \newline
+\item[Rolle 1: \ac{LO-VC} Data Analyst \& Cleaner] \hfill \ \newline
 \textbf{Ziel:} Bereinigung der rohen JSON-Eingabedaten.\ \newline
 \textbf{Handlungsregel:} Analysiere komplexe Vorbedingungen. Identifiziere und ignoriere toten Code und alte Kommentare. Erstelle aus den gültigen Werten eine saubere Liste der steuernden Merkmale.
 
-\item[Rolle 2: AVC Table Architect] \hfill \\
+\item[Rolle 2: \ac{AVC} Table Architect] \hfill \\
 \textbf{Ziel:} Entwurf eines logischen Bauplans.\\
 \textbf{Handlungsregel:} Entscheide anhand der bereinigten Daten, welche Merkmale Tabellenspalten bilden. Erkenne identische Vorbedingungen und weise den nachfolgenden Agenten an, diese effizient zusammenzufassen (z.\,B.\ über \texttt{IN()}-Operatoren oder Tabellen).
 
-\item[Rolle 3: AVC Syntax Coder (Synthesizer)] \hfill \\
-\textbf{Ziel:} Übersetzung des Bauplans in fehlerfreien AVC-Code.\\
+\item[Rolle 3: \ac{AVC} Syntax Coder (Synthesizer)] \hfill \\
+\textbf{Ziel:} Übersetzung des Bauplans in fehlerfreien \ac{AVC}-Code.\\
 \textbf{Handlungsregel:} Schreibe den finalen Code (\texttt{TABLE}-Aufrufe und \texttt{RESTRICT}-Constraints). Nutze die korrekten Objektreferenzen (wie \texttt{\$self.}) und wende die aktuellen Standard-Operatoren an.
 \end{description}
 Diese empirisch hergeleitete Agentenstruktur bildet das Fundament für die anstehende technische Entwicklung des Systems.
@@ -130,6 +130,6 @@ Diese empirisch hergeleitete Agentenstruktur bildet das Fundament für die anste
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{grafiken/v1_architektur.pdf}
-    \caption{Architektur-Skizze des Multi-Agenten-Systems (V1).}
+    \caption{Architektur-Skizze des \ac{MAS} (V1).}
     \label{fig:v1_architektur}
 \end{figure}

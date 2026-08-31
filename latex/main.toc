@@ -9,7 +9,7 @@
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{6}{}%
 \contentsline {section}{\numberline {2.1}Domänenspezifische Grundlagen: SAP Variantenkonfiguration}{6}{}%
 \contentsline {subsection}{\numberline {2.1.1}Einführung in die logische Architektur der Variantenkonfiguration}{6}{}%
-\contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (LO-VC) im Kontext der Systemtransformation}{7}{}%
+\contentsline {subsection}{\numberline {2.1.2}Die klassische Variantenkonfiguration (\ac {LO-VC}) im Kontext der Systemtransformation}{7}{}%
 \contentsline {subsection}{\numberline {2.1.3}Die moderne Architektur (AVC) und das Constraint Paradigma}{8}{}%
 \contentsline {subsection}{\numberline {2.1.4}Strukturelle Härte der Migration: Vorbedingungen vs. Constraint-Tabellen}{9}{}%
 \contentsline {section}{\numberline {2.2}Generative künstliche Intelligenz im Software Engineering}{11}{}%
@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Limitationen monolithischer Ansätze}{12}{}%
 \contentsline {subsubsection}{Die Komplexitätsfalle und das probabilistische Paradigma}{13}{}%
 \contentsline {subsubsection}{Das Scheitern an systemweiten Abhängigkeiten und fehlendem Umgebungs-Feedback}{13}{}%
-\contentsline {section}{\numberline {2.3}Multi-Agenten-Systeme (MAS)}{14}{}%
+\contentsline {section}{\numberline {2.3}Multi-Agenten-Systeme (\ac {MAS})}{14}{}%
 \contentsline {subsection}{\numberline {2.3.1}Definition und kognitive Architekturen}{14}{}%
 \contentsline {subsubsection}{Der Begriff des LLM-basierten Agenten}{14}{}%
 \contentsline {subsubsection}{Die kognitive Kern-Anatomie nach Wang et al.}{14}{}%
@@ -31,7 +31,7 @@
 \contentsline {subsubsection}{Werkzeugnutzung und Code-Ausführung}{16}{}%
 \contentsline {subsubsection}{Iterative Fehlerkorrektur (Self-Refinement)}{16}{}%
 \contentsline {subsubsection}{Das Fließband-Paradigma}{16}{}%
-\contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für MAS}{17}{}%
+\contentsline {subsection}{\numberline {2.3.3}Entwicklungs-Frameworks für \ac {MAS}}{17}{}%
 \contentsline {chapter}{\numberline {3}Related Work}{19}{}%
 \contentsline {chapter}{\numberline {4}Experteninterview}{22}{}%
 \contentsline {section}{\numberline {4.1}Methodisches Setup und Durchführung}{22}{}%
@@ -64,36 +64,37 @@
 \contentsline {subsection}{\numberline {6.2.2}Zyklus 2: Code-Refaktorierung, Wissensbasis und strukturelle Halluzinationen}{41}{}%
 \contentsline {subsection}{\numberline {6.2.3}Zyklus 3: Regelbasierte Vorverarbeitung und Domänenunabhängigkeit}{42}{}%
 \contentsline {subsection}{\numberline {6.2.4}Zyklus 4: Die finale neuro-symbolische Architektur und funktionale Abgrenzung}{43}{}%
+\contentsline {subsection}{\numberline {6.2.5}Architektonisches Fazit des finalen Zyklus}{44}{}%
 \contentsline {chapter}{\numberline {7}Qualitative Evaluation}{46}{}%
 \contentsline {section}{\numberline {7.1}Methodisches Setup und Durchführung}{46}{}%
 \contentsline {section}{\numberline {7.2}Ergebnisse der Experten-Evaluation}{48}{}%
 \contentsline {subsection}{\numberline {7.2.1}Nachvollziehbarkeit (Explainability \& Traceability)}{48}{}%
 \contentsline {subsection}{\numberline {7.2.2}Semantische Äquivalenz und Logik (Struktur \& Architektur)}{48}{}%
-\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (AVC-Compliance)}{50}{}%
+\contentsline {subsection}{\numberline {7.2.3}Syntaktische Korrektheit (\ac {AVC}-Compliance)}{49}{}%
 \contentsline {subsection}{\numberline {7.2.4}Praxistauglichkeit und Business Value}{50}{}%
 \contentsline {section}{\numberline {7.3}Limitierungen der Fallstudie (Threats to Validity)}{51}{}%
 \contentsline {chapter}{\numberline {8}Fazit und Ausblick}{53}{}%
 \contentsline {section}{\numberline {8.1}Zusammenfassung der Arbeit}{53}{}%
-\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{54}{}%
+\contentsline {section}{\numberline {8.2}Beantwortung der Forschungsfragen}{53}{}%
 \contentsline {section}{\numberline {8.3}Limitierungen der Arbeit}{56}{}%
 \contentsline {subsection}{\numberline {8.3.1}Eingeschränkte Datenverfügbarkeit und fehlende Ground Truth}{56}{}%
 \contentsline {subsection}{\numberline {8.3.2}Domänenkomplexität und Expertenverfügbarkeit}{56}{}%
-\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{57}{}%
-\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{57}{}%
+\contentsline {section}{\numberline {8.4}Gelernte Lektionen und zukünftige Forschungsfelder}{56}{}%
+\contentsline {subsection}{\numberline {8.4.1}Wissenschaftliche Einordnung: Warum Künstliche Intelligenz?}{56}{}%
 \contentsline {subsection}{\numberline {8.4.2}Technische Weiterentwicklung des Artefakts}{57}{}%
 \contentsline {subsection}{\numberline {8.4.3}Reevaluation der Modellwahl: Code-LLMs für die reine Code-Synthese}{58}{}%
 \contentsline {section}{\numberline {8.5}Schlusswort}{58}{}%
-\contentsline {chapter}{Literaturverzeichnis}{60}{}%
-\contentsline {chapter}{\numberline {A}Interview- und Evaluationsleitfaden}{63}{}%
-\contentsline {section}{\numberline {A.1}Leitfaden Experteninterview}{63}{}%
-\contentsline {section}{\numberline {A.2}Leitfaden Evaluation}{65}{}%
-\contentsline {chapter}{\numberline {B}Codebücher der qualitativen Analyse}{67}{}%
-\contentsline {section}{\numberline {B.1}Codebuch Experteninterview}{67}{}%
-\contentsline {section}{\numberline {B.2}Codebuch Evaluation}{72}{}%
-\contentsline {chapter}{\numberline {C}Dokumentation Selbstversuch}{74}{}%
-\contentsline {section}{\numberline {C.1}Selbstversuch Protokoll}{74}{}%
-\contentsline {section}{\numberline {C.2}Input-JSON für Selbstversuch}{80}{}%
-\contentsline {chapter}{\numberline {D}Beispiel}{91}{}%
-\contentsline {section}{\numberline {D.1}Beispielhafter JSON Input}{91}{}%
-\contentsline {section}{\numberline {D.2}Erstes Beispiel eines Ergebnisses der V1-Architektur}{93}{}%
-\contentsline {section}{\numberline {D.3}Erstes Beispiel des Ergebnisses der finalen Architektur}{94}{}%
+\contentsline {chapter}{Literaturverzeichnis}{59}{}%
+\contentsline {chapter}{\numberline {A}Interview- und Evaluationsleitfaden}{62}{}%
+\contentsline {section}{\numberline {A.1}Leitfaden Experteninterview}{62}{}%
+\contentsline {section}{\numberline {A.2}Leitfaden Evaluation}{64}{}%
+\contentsline {chapter}{\numberline {B}Codebücher der qualitativen Analyse}{66}{}%
+\contentsline {section}{\numberline {B.1}Codebuch Experteninterview}{66}{}%
+\contentsline {section}{\numberline {B.2}Codebuch Evaluation}{71}{}%
+\contentsline {chapter}{\numberline {C}Dokumentation Selbstversuch}{73}{}%
+\contentsline {section}{\numberline {C.1}Selbstversuch Protokoll}{73}{}%
+\contentsline {section}{\numberline {C.2}Input-JSON für Selbstversuch}{79}{}%
+\contentsline {chapter}{\numberline {D}Beispiel}{89}{}%
+\contentsline {section}{\numberline {D.1}Beispielhafter JSON Input}{89}{}%
+\contentsline {section}{\numberline {D.2}Erstes Beispiel eines Ergebnisses der V1-Architektur}{91}{}%
+\contentsline {section}{\numberline {D.3}Erstes Beispiel des Ergebnisses der finalen Architektur}{92}{}%
